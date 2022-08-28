@@ -1,6 +1,6 @@
 import express from "express";
 let router = express.Router();
-let initWebRoutes = (app) =>{
+export default function initWebRoutes(app){
     router.get('/', (req, res) =>{
 return res.send('HELU WORLD');  
     });
