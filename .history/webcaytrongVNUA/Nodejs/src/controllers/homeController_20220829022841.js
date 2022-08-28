@@ -10,7 +10,7 @@ let getHomePage =(req, res) => {
 }
 
 let getAboutPage = (req, res) => {
-    return res.render('about.ejs');
+    return res.render('viewstest/about.ejs');
 }
 
 export default {
