@@ -7,7 +7,7 @@
             return res.render('test/about.ejs');
             }
 
-exports ={
+module.exports ={
     getHomePage:getHomePage,
     getAboutPage:getAboutPage,
    
