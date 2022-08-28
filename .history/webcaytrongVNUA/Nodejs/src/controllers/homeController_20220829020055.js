@@ -6,7 +6,7 @@
 // }
 
 let getHomePage =(req, res) => { 
-    return res.render('homepage.ejs')
+    return res.send('Hello')
 }
 
 let getAboutPage = (req, res) => {
@@ -15,5 +15,5 @@ let getAboutPage = (req, res) => {
 
 export default {
     getHomePage: getHomePage,
-    getAboutPage: getAboutPage
+    // getAboutPage
 };

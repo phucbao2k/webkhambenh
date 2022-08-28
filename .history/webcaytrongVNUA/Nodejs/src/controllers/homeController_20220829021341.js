@@ -13,7 +13,7 @@ let getAboutPage = (req, res) => {
     return res.render('test/about.ejs');
 }
 
-export default {
+exports def {
     getHomePage: getHomePage,
-    getAboutPage: getAboutPage
+    // getAboutPage
 };

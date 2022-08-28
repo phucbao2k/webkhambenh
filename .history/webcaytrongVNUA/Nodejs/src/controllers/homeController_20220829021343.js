@@ -13,7 +13,13 @@ let getAboutPage = (req, res) => {
     return res.render('test/about.ejs');
 }
 
-export default {
+exports define([
+    'require',
+    'dependency'
+], function(require, factory) {
+    'use strict';
+    
+}); {
     getHomePage: getHomePage,
-    getAboutPage: getAboutPage
+    // getAboutPage
 };

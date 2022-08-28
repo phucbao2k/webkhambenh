@@ -15,5 +15,5 @@ let getAboutPage = (req, res) => {
 
 export default {
     getHomePage: getHomePage,
-    getAboutPage: getAboutPage
+    get getAboutPage
 };
