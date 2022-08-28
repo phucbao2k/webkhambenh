@@ -1,0 +1,25 @@
+{
+  "name": "webcaytrongvnua",
+  "version": "1.0.0",
+  "description": "backend nodejs ttcn",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phucbao2k/webcaytrongVNUA.git"
+  },
+  "keywords": [
+    "fullstack",
+    "nodejs",
+    "express",
+    "ttcn"
+  ],
+  "author": "TaBaoPhuc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phucbao2k/webcaytrongVNUA/issues"
+  },
+  "homepage": "https://github.com/phucbao2k/webcaytrongVNUA#readme"
+}
