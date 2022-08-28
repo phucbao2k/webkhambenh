@@ -1,8 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import viewEngine from "./config/viewEngine.js";
-import initWebRoutes from './route/web.js';
-import _ from 'lodash';
+import initWebRoutes from "./route/web.js";
 require('dotenv').config;
 let app = express();
 app.use(bodyParser.json());
@@ -11,7 +10,7 @@ viewEngine(app);
 initWebRoutes(app);
 let port = process.env.PORT || 7070;
 //if port is undefined, default to current 7070
-app.listeners(port,()=>{
+app.listen(port,()=>{
     //callback
 console.log("port is" + port);
 })
