@@ -1,10 +1,10 @@
 import express from "express";
-import {getAboutPage,getHomePage} from "../controllers/homeController.js";
-
+import getHomePage from "../controllers/homeController.js";
+import getAboutPage from "../controllers/homeController.js";
 let router = express.Router();
 export function initWebRoutes(app) {
-    router.get('/', getHomePage());
-    router.get('/', getAboutPage());
+    router.get('/', homegetHomePage());
+    router.get('/', homegetAboutPage());
         router.get('/', (req, res) =>{
 return res.send('HELU WORLD');  
     });

@@ -1,9 +1,9 @@
 
 
-    export function getHomePage (req, res){
+    let getHomePage =(req, res)=>{
         return res.render('homepage.ejs');
         }
-        export function getAboutPage (req, res){
+        let getAboutPage =(req, res)=>{
             return res.render('test/about.ejs');
             }
 
