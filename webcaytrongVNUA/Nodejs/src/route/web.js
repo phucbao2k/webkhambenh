@@ -7,4 +7,3 @@ return res.send('HELU WORLD');
     });
 return app.use("/", router);
 }
-module.exports ={initWebRoutes} ;
