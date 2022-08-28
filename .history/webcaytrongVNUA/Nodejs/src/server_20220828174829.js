@@ -12,5 +12,5 @@ let port = process.env.PORT || 7070;
 //if port is undefined, default to current 7070
 app.listen(port,()=>{
     //callback
-console.log("port is " + port);
+console.log("port is" + port);
 })
