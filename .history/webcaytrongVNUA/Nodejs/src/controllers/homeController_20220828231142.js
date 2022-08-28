@@ -1,6 +1,6 @@
 
 
-    let getHomePage = (req, res) =>{
+    let getHomePage = (req, res) ={
         return res.render('homepage.ejs');
         }
         let getAboutPage = (req, res) =>{

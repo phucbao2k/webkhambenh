@@ -1,14 +1,14 @@
 
 
-    let getHomePage = (req, res) =>{
+    export function getHomePage (req, res){
         return res.render('homepage.ejs');
         }
-        let getAboutPage = (req, res) =>{
+        export function getAboutPage (req, res){
             return res.render('test/about.ejs');
             }
 
-            export {
+            export ={
                 getHomePage,
                 getAboutPage
                
-            };
+            }
