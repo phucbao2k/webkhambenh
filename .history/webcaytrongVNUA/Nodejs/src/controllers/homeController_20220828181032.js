@@ -8,6 +8,6 @@
             }
 
 exports ={
-    getHomePage:getHomePage,
-    getAboutPage:getAboutPage,
+    get:getHomePage,
+    get:getAboutPage,
 }

@@ -8,6 +8,6 @@
             }
 
 exports ={
-    getHomePage:getHomePage,
-    getAboutPage:getAboutPage,
+    homeController:getHomePage,
+    homeController:getAboutPage,
 }

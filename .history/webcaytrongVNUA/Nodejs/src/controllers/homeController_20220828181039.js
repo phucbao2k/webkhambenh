@@ -9,5 +9,5 @@
 
 exports ={
     getHomePage:getHomePage,
-    getAboutPage:getAboutPage,
+    getPage:getAboutPage,
 }
