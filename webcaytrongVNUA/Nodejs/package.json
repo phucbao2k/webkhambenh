@@ -1,0 +1,38 @@
+{
+  "name": "webcaytrongvnua",
+  "version": "1.0.0",
+  "description": "backend nodejs ttcn",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel -node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phucbao2k/webcaytrongVNUA.git"
+  },
+  "keywords": [
+    "fullstack",
+    "nodejs",
+    "express",
+    "ttcn"
+  ],
+  "author": "TaBaoPhuc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phucbao2k/webcaytrongVNUA/issues"
+  },
+  "homepage": "https://github.com/phucbao2k/webcaytrongVNUA#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "nodemon": "^2.0.7"
+  }
+}
