@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 configViewEngine(app);
 initWebRoutes(app);
-connectDB();
+// connectDB();
 let port = process.env.PORT || 7070;
 //if port is undefined, default to current 7070
 app.listen(port,()=>{
