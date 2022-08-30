@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "backend nodejs ttcn",
   "main": "server.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec babel-node src/server.js",
@@ -40,6 +39,7 @@
     "@babel/core": "^7.18.13",
     "@babel/node": "^7.18.10",
     "@babel/preset-env": "^7.12.10",
+    "babel-preset-env": "^1.7.0",
     "nodemon": "^2.0.7",
     "sequelize-cli": "^6.2.0"
   }
