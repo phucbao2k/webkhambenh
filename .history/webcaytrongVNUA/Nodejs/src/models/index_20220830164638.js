@@ -20,10 +20,7 @@ readdirSync(__dirname)
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(file => {
-    const path = require('path');
-const modelPath = path.join(__dirname, './model');
-    const model = require(modelPath).default(sequelize, Sequelize);
-    if (typeof(model) != "function") return;
+    const model = require(path.join(__dirname, file))(sequelize,  Sequelize.DataTypes);;
     db[model.name] = model;
   });
 

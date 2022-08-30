@@ -21,7 +21,10 @@ readdirSync(__dirname)
   })
   .forEach(file => {
     const path = require('path');
-const modelPath = path.join(__dirname, './model');
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize('db_name', 'db_user', 'db_pass', {});
+
+const modelPath = path.join(__dirname, './path/to/model/file');
     const model = require(modelPath).default(sequelize, Sequelize);
     if (typeof(model) != "function") return;
     db[model.name] = model;
