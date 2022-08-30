@@ -20,9 +20,7 @@ readdirSync(__dirname)
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(file => {
-    const path = require('path');
-const modelPath = path.join(__dirname, '/../config/connectDB');
-    const model = require(modelPath).default(sequelize, Sequelize);
+    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes) ;
     db[model.name] = model;
   });
 

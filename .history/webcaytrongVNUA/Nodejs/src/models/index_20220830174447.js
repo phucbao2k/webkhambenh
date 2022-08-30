@@ -23,6 +23,7 @@ readdirSync(__dirname)
     const path = require('path');
 const modelPath = path.join(__dirname, '/../config/connectDB');
     const model = require(modelPath).default(sequelize, Sequelize);
+    if (typeof(model) != "function") return;
     db[model.name] = model;
   });
 
