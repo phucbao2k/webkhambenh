@@ -15,4 +15,4 @@ let connectDB = async() =>{
         console.error('Unable to connect to the database:', error);
       }
 }
-export default connectDB;
+export defaultconnectDB;
