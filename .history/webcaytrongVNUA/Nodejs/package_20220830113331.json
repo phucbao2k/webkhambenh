@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "backend nodejs ttcn",
   "main": "server.js",
- 
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec src/server.js",
+    "start": "nodemon --exec babel-node src/server.js",
     "dev": "nodemon --exec npm start"
   },
   "repository": {
@@ -27,7 +27,7 @@
   "homepage": "https://github.com/phucbao2k/webcaytrongVNUA#readme",
   "dependencies": {
     "@babel/cli": "^7.18.10",
-    "babel-cli": "^7.0.0",
+    "babel-cli": "^6.26.0",
     "body-parser": "^1.19.0",
     "cjs-module": "^1.5.0",
     "dotenv": "^8.2.0",
