@@ -14,7 +14,11 @@ export default (sequelize, DataTypes) => {
   Speciality.init({
     
     description: DataTypes.TEXT,
-    image: DataTypes.STRING
+    image: DataTypes.STRING,
+    lastName: DataTypes.STRING,
+    address: DataTypes.STRING,
+    gender: DataTypes.BOOLEAN,
+    roleid:DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Speciality',
