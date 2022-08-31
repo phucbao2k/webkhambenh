@@ -12,7 +12,7 @@ module.exports = {
       gender: 1,
       image:'Hong co dau',
       roleId:'1',
-      positionId:'1',
+      positionId='1',
      
       createdAt: new Date(),
       updatedAt: new Date()

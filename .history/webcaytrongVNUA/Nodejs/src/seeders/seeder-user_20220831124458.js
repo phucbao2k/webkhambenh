@@ -10,9 +10,6 @@ module.exports = {
       address: 'VN',
       phoneNumber: '0981943577',
       gender: 1,
-      image:'Hong co dau',
-      roleId:'1',
-      positionId:'1',
      
       createdAt: new Date(),
       updatedAt: new Date()
