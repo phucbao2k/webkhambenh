@@ -12,13 +12,10 @@ export default (sequelize, DataTypes) => {
     }
   };
   User.init({
-    
-    email: DataTypes.STRING,
+    id: DataTypes.INTEGER,
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,
-    address: DataTypes.STRING,
-    gender: DataTypes.BOOLEAN,
-    roleid:DataTypes.STRING
+    email: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',

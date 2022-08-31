@@ -12,7 +12,7 @@ export default (sequelize, DataTypes) => {
     }
   };
   User.init({
-    
+    id: DataTypes.STRING,
     email: DataTypes.STRING,
     firstName: DataTypes.STRING,
     lastName: DataTypes.STRING,

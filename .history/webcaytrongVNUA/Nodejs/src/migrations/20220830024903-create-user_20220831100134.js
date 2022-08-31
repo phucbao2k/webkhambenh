@@ -6,7 +6,7 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       email: {
         type: Sequelize.STRING
@@ -23,7 +23,7 @@ type: Sequelize.STRING
      gender:{
       type: Sequelize.BOOLEAN
            },
-           roleid:{
+           rolr:{
             type: Sequelize.STRING
                  },
       createdAt: {
