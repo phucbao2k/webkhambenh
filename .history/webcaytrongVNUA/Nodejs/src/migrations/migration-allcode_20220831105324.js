@@ -31,6 +31,6 @@ type: Sequelize.STRING
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('allcodes');
+    await queryInterface.dropTable('allcode');
   }
 };
