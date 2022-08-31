@@ -5,7 +5,7 @@ let router = express.Router();
 export function initWebRoutes(app) {
     router.get('/', homeController.getHomePage);
     router.get('/about', homeController.getAboutPage);
-    router.get('/crud', homeController.getCRUD);
+    router.get('/crud', h)
     router.get('/', (req, res) => {
         return res.send('HELU WORLD');
     });

@@ -15,7 +15,7 @@ let getAboutPage = (req, res) => {
     return res.render('test/about.ejs');
 }
 let getCRUD = (req, res) => {
-    return res.render('crud.ejs');
+    return
 }
 export default {
     getHomePage: getHomePage,
