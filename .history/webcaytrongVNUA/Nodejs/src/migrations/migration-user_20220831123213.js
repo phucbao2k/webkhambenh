@@ -32,12 +32,6 @@ type: Sequelize.STRING
                  phoneNumber:{
                   type: Sequelize.TEXT
                        },
-                       positionId:{
-                        type: Sequelize.STRING
-                             },
-                             image:{
-                              type: Sequelize.STRING
-                                   },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

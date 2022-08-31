@@ -29,15 +29,9 @@ type: Sequelize.STRING
            roleId:{
             type: Sequelize.STRING
                  },
-                 phoneNumber:{
-                  type: Sequelize.TEXT
+                 keyRole:{
+                  type: Sequelize.STRING
                        },
-                       positionId:{
-                        type: Sequelize.STRING
-                             },
-                             image:{
-                              type: Sequelize.STRING
-                                   },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

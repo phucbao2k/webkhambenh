@@ -33,10 +33,10 @@ type: Sequelize.STRING
                   type: Sequelize.TEXT
                        },
                        positionId:{
-                        type: Sequelize.STRING
+                        type: Sequelize.TEXT
                              },
-                             image:{
-                              type: Sequelize.STRING
+                             phoneNumber:{
+                              type: Sequelize.TEXT
                                    },
       createdAt: {
         allowNull: false,

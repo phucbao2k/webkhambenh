@@ -12,7 +12,7 @@ export default (sequelize, DataTypes) => {
     }
   };
   Speciality.init({
-    name: DataTypes.STRING,
+    
     description: DataTypes.TEXT,
     image: DataTypes.STRING
   }, {

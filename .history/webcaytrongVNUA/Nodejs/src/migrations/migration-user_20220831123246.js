@@ -35,8 +35,8 @@ type: Sequelize.STRING
                        positionId:{
                         type: Sequelize.STRING
                              },
-                             image:{
-                              type: Sequelize.STRING
+                             ima:{
+                              type: Sequelize.TEXT
                                    },
       createdAt: {
         allowNull: false,

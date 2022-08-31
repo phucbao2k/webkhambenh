@@ -26,18 +26,12 @@ type: Sequelize.STRING
      gender:{
       type: Sequelize.BOOLEAN
            },
-           roleId:{
+           role:{
             type: Sequelize.STRING
                  },
-                 phoneNumber:{
-                  type: Sequelize.TEXT
+                 keyRole:{
+                  type: Sequelize.STRING
                        },
-                       positionId:{
-                        type: Sequelize.STRING
-                             },
-                             image:{
-                              type: Sequelize.STRING
-                                   },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

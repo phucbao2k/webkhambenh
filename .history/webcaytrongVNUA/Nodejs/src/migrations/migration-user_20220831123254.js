@@ -36,7 +36,7 @@ type: Sequelize.STRING
                         type: Sequelize.STRING
                              },
                              image:{
-                              type: Sequelize.STRING
+                              type: Sequelize.STING
                                    },
       createdAt: {
         allowNull: false,

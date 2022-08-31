@@ -17,7 +17,7 @@ module.exports = {
       description: {
         type: Sequelize.TEXT
       },
-      files: {
+      description: {
         type: Sequelize.TEXT
       },
     

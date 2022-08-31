@@ -32,11 +32,11 @@ type: Sequelize.STRING
                  phoneNumber:{
                   type: Sequelize.TEXT
                        },
-                       positionId:{
-                        type: Sequelize.STRING
+                       po:{
+                        type: Sequelize.TEXT
                              },
-                             image:{
-                              type: Sequelize.STRING
+                             phoneNumber:{
+                              type: Sequelize.TEXT
                                    },
       createdAt: {
         allowNull: false,
