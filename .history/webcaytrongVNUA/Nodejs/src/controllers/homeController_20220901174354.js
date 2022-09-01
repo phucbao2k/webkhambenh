@@ -18,10 +18,8 @@ let getCRUD = (req, res) => {
     return res.render('crud.ejs');
 }
 let postCRUD = async (req, res) => {
- let message=  await CRUDService.createNewUser(req.body);
- console.log(message);
+   await CRUDService.createNewUser(req.body)
     return res.send('post');
-   
 }
 export default {
     getHomePage: getHomePage,

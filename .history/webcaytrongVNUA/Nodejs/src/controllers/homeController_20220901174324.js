@@ -17,11 +17,9 @@ let getAboutPage = (req, res) => {
 let getCRUD = (req, res) => {
     return res.render('crud.ejs');
 }
-let postCRUD = async (req, res) => {
- let message=  await CRUDService.createNewUser(req.body);
- console.log(message);
+let postCRUD = Á(req, res) => {
+    console.log(req.body);
     return res.send('post');
-   
 }
 export default {
     getHomePage: getHomePage,
