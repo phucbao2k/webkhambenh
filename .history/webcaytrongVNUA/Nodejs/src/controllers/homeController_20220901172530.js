@@ -19,7 +19,7 @@ let getCRUD = (req, res) => {
 }
 let postCRUD = (req, res) => {
     console.log(req.body);
-    return res.send('post');
+    
 }
 export default {
     getHomePage: getHomePage,

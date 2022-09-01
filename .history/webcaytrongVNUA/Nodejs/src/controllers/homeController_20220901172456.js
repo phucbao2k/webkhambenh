@@ -18,9 +18,6 @@ let getCRUD = (req, res) => {
     return res.render('crud.ejs');
 }
 let postCRUD = (req, res) => {
-    console.log(req.body);
-    return res.send('post');
-}
 export default {
     getHomePage: getHomePage,
     getAboutPage: getAboutPage,

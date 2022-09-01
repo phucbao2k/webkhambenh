@@ -20,7 +20,7 @@
 <body>
     <div class="container">
         <h1>HELLO BROS</h1>
-        <form action="/post-crud" method="POST">
+        <form>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="email">Email</label>
@@ -54,31 +54,27 @@
            
             <div class="form-row">
               
-              <div class="form-group col-md-3">
+              <div class="form-group col-md-4">
                 <label for="inputState">Sex</label>
-                <select id="inputState" class="form-control" name="gender">
+                <select id="inputState" class="form-control">
                   <option value="1">Male</option>
                   <option value="0">Female</option>
-                  <option value="2">Other...</option>
+    
                 </select>
               </div>
-              <div class="form-group col-md-3">
-                <label for="inputZip">Role</label>
-                <select id="inputState" class="form-control" name="roleId">
-                    <option value="1">Admin</option>
-                    <option value="0">Doctor</option>
-                    <option value="2">Patient</option>
-                  </select>
+              <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
               </div>
             </div>
-            <!-- <div class="form-group">
+            <div class="form-group">
               <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="gridCheck">
                 <label class="form-check-label" for="gridCheck">
                   Check me out
                 </label>
               </div>
-            </div> -->
+            </div>
             <button type="submit" class="btn btn-primary">Sign in</button>
           </form>
     </div>

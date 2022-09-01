@@ -6,7 +6,7 @@ export function initWebRoutes(app) {
     router.get('/', homeController.getHomePage);
     router.get('/about', homeController.getAboutPage);
     router.get('/crud', homeController.getCRUD);
-    router.post('/post-crud', homeController.postCRUD);
+    router.post('/crud', homeController.getCRUD);
     router.get('/', (req, res) => {
         return res.send('HELU WORLD');
     });
