@@ -1,5 +1,5 @@
 {
-
+  "type": "module",
   "name": "webcaytrongvnua",
   "version": "1.0.0",
   "description": "backend nodejs ttcn",
@@ -7,10 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec  babel-node src/server.js",
-    "dev": "nodemon --exec npm start"
+    "dev": "nodemon --exec npm start",
     
   },
- 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/phucbao2k/webcaytrongVNUA.git"

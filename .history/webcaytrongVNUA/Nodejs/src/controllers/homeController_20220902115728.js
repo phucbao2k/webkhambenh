@@ -1,5 +1,5 @@
-import db from '../models/index.js';
-import CRUDService from '../services/CRUDService.js';
+import db from '../models/index';
+import CRUDService from '../services/CRUDService';
 let getHomePage = async (req, res) => { 
     try{
 let data = await db.User.findAll();
@@ -46,20 +46,20 @@ let getEditCRUD = async (req, res) =>{
 
 
 }
-let putCRUD = async (req, res) => {
-    let data = req.body;
-  let allUsers=  await CRUDService.updateUserData(data);
-  return res.render('displayCRUD.ejs',{
-    dataTable: allUsers
-});
+// let putCRUD = async (req, res) => {
+//     let data = req.body;
+//   let allUsers=  await CRUDService.updateUserData(data);
+//   return res.render('displayCRUD.ejs',{
+//     dataTable: allUsers
+// });
     
-}
+// }
 export default {
     getHomePage: getHomePage,
     getAboutPage: getAboutPage,
     getCRUD: getCRUD,
     postCRUD: postCRUD,
     displayGetCRUD: displayGetCRUD,   
-    getEditCRUD: getEditCRUD,
-   putCRUD: putCRUD
+    // getEditCRUD: getEditCRUD,
+    // putCRUD: putCRUD
 };

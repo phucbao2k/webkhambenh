@@ -63,7 +63,7 @@ reject(e);
 })
 }
 let updateUserData = (data)=>{
-   return new Promise(async (resolve, reject)=>{
+   return new Promise((resolve, reject)=>{
     try{
         let user = await db.User.findOne({
             where:{id: data.id}

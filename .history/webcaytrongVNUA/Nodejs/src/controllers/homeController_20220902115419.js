@@ -1,5 +1,5 @@
-import db from '../models/index.js';
-import CRUDService from '../services/CRUDService.js';
+import db from '../models/index';
+import CRUDService from '../services/CRUDService';
 let getHomePage = async (req, res) => { 
     try{
 let data = await db.User.findAll();
@@ -31,29 +31,29 @@ let displayGetCRUD = async (req, res) => {
     return res.render('displayCRUD.ejs',{
         dataTable: data,
     });}
-let getEditCRUD = async (req, res) =>{
-    let userId = req.query.id;
-    if(userId){
-        let userData = await CRUDService.getUserInfoById(userId);
-       return res.render('editCRUD.ejs',{
-        user: userData
-       });
+// let getEditCRUD = async (req, res) =>{
+//     let userId = req.query.id;
+//     if(userId){
+//         let userData = await CRUDService.getUserInfoById(userId);
+//        return res.render('editCRUD.ejs',{
+//         user: userData
+//        });
         
-    }else{
-        return res.send('ERROR_NAME_NOT_FOUND');
-    }
+//     }else{
+//         return res.send('ERROR_NAME_NOT_FOUND');
+//     }
     
 
 
-}
-let putCRUD = async (req, res) => {
-    let data = req.body;
-  let allUsers=  await CRUDService.updateUserData(data);
-  return res.render('displayCRUD.ejs',{
-    dataTable: allUsers
-});
+// }
+// let putCRUD = async (req, res) => {
+//     let data = req.body;
+//   let allUsers=  await CRUDService.updateUserData(data);
+//   return res.render('displayCRUD.ejs',{
+//     dataTable: allUsers
+// });
     
-}
+// }
 export default {
     getHomePage: getHomePage,
     getAboutPage: getAboutPage,
@@ -61,5 +61,5 @@ export default {
     postCRUD: postCRUD,
     displayGetCRUD: displayGetCRUD,   
     getEditCRUD: getEditCRUD,
-   putCRUD: putCRUD
+    putCRUD: putCRUD
 };

@@ -63,16 +63,16 @@ reject(e);
 })
 }
 let updateUserData = (data)=>{
-   return new Promise(async (resolve, reject)=>{
+   return new Promise((resolve, reject)=>{
     try{
-        let user = await db.User.findOne({
+        let user =  db.User.findOne({
             where:{id: data.id}
         })
         if(user){
             user.firstName = data.firstName;
             user.lastName = data.lastName;
             user.address = data.address;
-            await user.save();
+             user.save();
             let allUsers = await db.User.findAll();
             resolve(allUsers);
         }else{

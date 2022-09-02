@@ -1,5 +1,5 @@
 import bcrypt from 'bcryptjs';
-import db from '../models/index.js';
+import db from '../models/index';
 const salt = bcrypt.genSaltSync(10);
 let createNewUser = async (data)=>{
     return new Promise(async(resolve, reject) =>{
@@ -63,7 +63,7 @@ reject(e);
 })
 }
 let updateUserData = (data)=>{
-   return new Promise(async (resolve, reject)=>{
+   return new Promise((resolve, reject)=>{
     try{
         let user = await db.User.findOne({
             where:{id: data.id}
