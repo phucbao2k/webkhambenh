@@ -25,6 +25,9 @@ let postCRUD = async (req, res) => {
 }
 let displayGetCRUD = async (req, res) => { 
     let data = await CRUDService.getAllUsers();
+    console.log('--------------------------------');
+    console.log(data);
+    console.log('--------------------------------');
     return res.render('displayCRUD.ejs',{
         dataTable: data,
     });}
@@ -70,5 +73,5 @@ export default {
     displayGetCRUD: displayGetCRUD,   
     getEditCRUD: getEditCRUD,
    putCRUD: putCRUD,
-   deleteCRUD: deleteCRUD,
+   deleteUserByID: deleteUserByID,
 };

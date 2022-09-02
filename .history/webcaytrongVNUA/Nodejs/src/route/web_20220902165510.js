@@ -10,7 +10,7 @@ export function initWebRoutes(app) {
     router.get('/get-crud', homeController.displayGetCRUD);
     router.get('/edit-crud', homeController.getEditCRUD);
      router.post('/put-crud', homeController.putCRUD);
-     router.get('/delete-crud', homeController.deleteCRUD);
+     router.post('/delete-crud', homeController.putCRUD);
     router.get('/', (req, res) => {
         return res.send('HELU WORLD');
     });

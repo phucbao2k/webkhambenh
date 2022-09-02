@@ -93,7 +93,7 @@ let user = await db.User.findOne({
 if(user){
 await user.destroy();
 }
-resolve();
+resolve()
 }catch(e){
     reject(e);
 }

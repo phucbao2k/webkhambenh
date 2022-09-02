@@ -93,7 +93,6 @@ let user = await db.User.findOne({
 if(user){
 await user.destroy();
 }
-resolve();
 }catch(e){
     reject(e);
 }
@@ -105,5 +104,4 @@ module.exports ={
      getUserInfoById: getUserInfoById,
     updateUserData:updateUserData,
     deleteUserByID: deleteUserByID,
-  
 }

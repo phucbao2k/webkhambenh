@@ -84,16 +84,12 @@ reject(e);
     }
    })
 }
-let deleteUserByID = (userId)=>{
+let deleteCRUD = (user)=>{
     return new Promise(async(resolve, reject)=>{
 try{
 let user = await db.User.findOne({
-    where: {id: userId}
+    where: {id: id}
 })
-if(user){
-await user.destroy();
-}
-resolve();
 }catch(e){
     reject(e);
 }
@@ -104,6 +100,5 @@ module.exports ={
     getAllUsers:getAllUsers,
      getUserInfoById: getUserInfoById,
     updateUserData:updateUserData,
-    deleteUserByID: deleteUserByID,
-  
+    deleteCRUD: deleteCRUD,
 }

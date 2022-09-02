@@ -84,7 +84,7 @@ reject(e);
     }
    })
 }
-let deleteUserByID = (userId)=>{
+let deletecrud = (userId)=>{
     return new Promise(async(resolve, reject)=>{
 try{
 let user = await db.User.findOne({
@@ -93,7 +93,6 @@ let user = await db.User.findOne({
 if(user){
 await user.destroy();
 }
-resolve();
 }catch(e){
     reject(e);
 }
@@ -105,5 +104,5 @@ module.exports ={
      getUserInfoById: getUserInfoById,
     updateUserData:updateUserData,
     deleteUserByID: deleteUserByID,
-  
+    deleteCRUD: deleteCRUD,
 }

@@ -25,6 +25,9 @@ let postCRUD = async (req, res) => {
 }
 let displayGetCRUD = async (req, res) => { 
     let data = await CRUDService.getAllUsers();
+    console.log('--------------------------------');
+    console.log(data);
+    console.log('--------------------------------');
     return res.render('displayCRUD.ejs',{
         dataTable: data,
     });}
@@ -56,9 +59,6 @@ let deleteCRUD = async (req, res)=>{
     if(id){
         await CRUDService.deleteUserByID(id);
         return res.send('Deleted');
-    }
-    else{
-        return res.send('User not found!');
     }
 
 }
