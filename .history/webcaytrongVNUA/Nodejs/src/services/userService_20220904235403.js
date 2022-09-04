@@ -19,7 +19,7 @@ if(check){
     userData.errCode =0;
     userData.errMessage ='ok';
   
-    delete user.password;
+    delete userData.password;
     userData.user = user;
 }else{
     userData.errCode = 3;

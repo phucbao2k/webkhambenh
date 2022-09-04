@@ -18,8 +18,7 @@ let check = await bcrypt.compareSync(password, user.password);
 if(check){
     userData.errCode =0;
     userData.errMessage ='ok';
-  
-    delete user.password;
+    delete
     userData.user = user;
 }else{
     userData.errCode = 3;
