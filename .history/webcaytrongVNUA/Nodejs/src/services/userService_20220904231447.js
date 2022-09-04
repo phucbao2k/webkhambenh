@@ -17,14 +17,13 @@ if(check){
     userData.errMessage ='ok';
     userData.user = user;
 }else{
-    userData.errCode = 3;
-    userData.errMessage= 'Wrong password';
+    user
 }
     }else{
         userData.errCode =2;
         userData.errMessage ='User not found';
     }
-
+resolve();
 }else{
 userData.errCode =1;
 userData.errMessage = "Your's email isn't exist in our system."
