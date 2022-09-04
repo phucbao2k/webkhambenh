@@ -8,7 +8,6 @@ let isExist  = await checkUserEmail(email);
 
 if(isExist){
     let user = await db.User.findOne({
-        attributes: ['email', 'roleId','password'],
         where: {email: email},
        
         
@@ -42,7 +41,7 @@ resolve(userData);
 let checkUserEmail = (userEmail)=>{
     return new Promise( async(resolve, reject)=>{
         try{
-let user = await db.User.findOne({
+let user = await db.User.find0ne({
     where:{email: userEmail}
 })
 if(user){

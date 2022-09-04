@@ -42,7 +42,7 @@ resolve(userData);
 let checkUserEmail = (userEmail)=>{
     return new Promise( async(resolve, reject)=>{
         try{
-let user = await db.User.findOne({
+let user = await db.User.find0ne({
     where:{email: userEmail}
 })
 if(user){
