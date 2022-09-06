@@ -84,10 +84,15 @@ reject(e);
     }
    })
 }
-let deleteUserByID=(userId)=> {
-    return db.User.destroy({ where: { id: userId } })
-     .then(rows => Promise.resolve(rows === 1))
+let deleteUserByID = (userId)=>{
+   try{
+
    }
+
+
+
+
+    }
 
 module.exports ={
     createNewUser:createNewUser,

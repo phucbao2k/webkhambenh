@@ -84,10 +84,23 @@ reject(e);
     }
    })
 }
-let deleteUserByID=(userId)=> {
-    return db.User.destroy({ where: { id: userId } })
-     .then(rows => Promise.resolve(rows === 1))
-   }
+let deleteUserByID = (userId)=>{
+   
+let user =  db.User.findOne({
+    where: {id: userId}
+})
+if(user){
+    user.destroy({ where: { id: userId } }).then(() => {
+        res.status(200).send('Removed Successfully');
+       }).catch(err => {
+        res.status(500).json({message: 'Deleting data failed.'});
+       
+   
+}
+
+
+
+    }
 
 module.exports ={
     createNewUser:createNewUser,

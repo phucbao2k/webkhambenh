@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss';
-import {getAllUsers} from '../../services/userService'; // nếu muố import 1 function thì ta dùng dấu ngoặc nhọn
+import {getAllUsers} from '../../services/userService'; //
 class UserManage extends Component {
 
    constructor(props) {
