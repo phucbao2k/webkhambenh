@@ -86,7 +86,7 @@ reject(e);
 }
 let deleteUserByID = (userId)=>{
    
-let user =  db.User.findOne({
+let user = await db.User.findOne({
     where: {id: userId}
 })
 if(user){
@@ -95,11 +95,13 @@ if(user){
        })
    
 }
-
-
-
-    }
-
+resolve();
+}
+catch(e){
+    reject(e);
+}
+    })
+}
 module.exports ={
     createNewUser:createNewUser,
     getAllUsers:getAllUsers,

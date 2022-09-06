@@ -85,20 +85,25 @@ reject(e);
    })
 }
 let deleteUserByID = (userId)=>{
-   
-let user =  db.User.findOne({
+  return new Promise(async(resolve, reject)=>{
+ try{
+let user = await db.User.findOne({
     where: {id: userId}
 })
-if(user){
-    user.destroy({ where: { id: userId } }).then(() => {
-        res.status(200).send('Removed Successfully');
-       })
-   
+ if(user){
+//    await user.destroy();
+user.destroy({ where: { id: userId } }).then(() => {
+    res.status(200).send('Removed Successfully');
+   })
+}
+ resolve();
 }
 
+catch(e){
+    reject(e);
+}
+   
 
-
-    }
 
 module.exports ={
     createNewUser:createNewUser,
@@ -106,5 +111,4 @@ module.exports ={
      getUserInfoById: getUserInfoById,
     updateUserData:updateUserData,
     deleteUserByID: deleteUserByID,
-  
 }

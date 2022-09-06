@@ -85,21 +85,27 @@ reject(e);
    })
 }
 let deleteUserByID = (userId)=>{
+//     return new Promise(async(resolve, reject)=>{
+// try{
+// let user = await db.User.findOne({
+//     where: {id: userId}
+// })
+// if(user){
+//    await user.destroy();
    
-let user =  db.User.findOne({
-    where: {id: userId}
-})
-if(user){
-    user.destroy({ where: { id: userId } }).then(() => {
-        res.status(200).send('Removed Successfully');
-       })
-   
+// }
+// resolve();
+// }catch(e){
+//     reject(e);
+// }
+//     })
+usedestroy({ where: { id: req.params.id } }).then(() => {
+    res.status(200).send('Removed Successfully');
+   }).catch((err) => {
+    console.log(err);
+    res.status(500).send('We failed to delete for some reason');
+   });
 }
-
-
-
-    }
-
 module.exports ={
     createNewUser:createNewUser,
     getAllUsers:getAllUsers,
