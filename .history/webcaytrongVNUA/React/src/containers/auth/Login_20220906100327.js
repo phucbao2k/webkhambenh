@@ -28,8 +28,7 @@ class Login extends Component {
 handleLogin = async () =>{
   this.setState({
     errMessage: ''
-    // để clear mã lỗi trong trường hợp lần đăng nhập trước
-    // bị lỗi, lần nhập thông tin sau sẽ hiện ra mã lỗi khác hoặc đăng nhập thành công 
+    // 
   })
   try{
 let data = await handleLoginApi(this.state.username, this.state.password);
