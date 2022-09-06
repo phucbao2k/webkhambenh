@@ -82,10 +82,9 @@ handleShowHidePassword = (event)=>{
                       
                        
                     </div>
-                    <div className="col-12" style={{color:'red'}}>  go
+                    <div className="col-12" style={{color:'red'}}>
                         {this.state.errMessage}
-                    </div>   
-                    {/* Đây là cách cmt của React, và style inline của React được viết như trên kia  */}
+                    </div>
                     <div className="col-12 login-input">
                     <button className="btn-login" onClick ={()=>{this.handleLogin()}}>Login</button>
                     </div>
