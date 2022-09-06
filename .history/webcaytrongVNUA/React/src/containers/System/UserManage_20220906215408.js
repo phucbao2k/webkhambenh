@@ -12,7 +12,6 @@ class UserManage extends Component {
     }
    }
 //để lưu giá trị của 1 biến components, ta dùng state
-//Component là một block code độc lập để phân chia các UI (giao diện người dùng) thành các phân nhỏ riêng lẻ để dễ dàng quản lý và tái sử dụng.
     async componentDidMount() {
 let response = await getAllUsers('ALL');
 if(response && response.errCode ===0){
@@ -25,7 +24,6 @@ if(response && response.errCode ===0){
 
     render() {
         // console.log('check render', this.state)
-        //khi muốn render ra 1 thứ gì đó trong react, chúng ta phải có hàm return, và trong đó bắt buộc là 1 khối
         let arrUsers = this.state.arrUsers;
         return (
            <div className="users-container">
@@ -40,8 +38,7 @@ if(response && response.errCode ===0){
                         <th>Actions</th>
                     </tr>
                     {arrUsers && arrUsers.map((item, index)=>{
-                        // để duyệt 1 vòng lặp, ta có thể dùng function map(), bắt buộc phải return ra 1 thứ gì đó
-                        // thì function map() mới hoạt động được
+                        // console.log('BaoPhuc check map', item, index)
                         return(
                             <tr key={index}>
                                 <td>{item.email}</td>

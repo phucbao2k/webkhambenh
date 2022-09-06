@@ -41,7 +41,7 @@ if(response && response.errCode ===0){
                     </tr>
                     {arrUsers && arrUsers.map((item, index)=>{
                         // để duyệt 1 vòng lặp, ta có thể dùng function map(), bắt buộc phải return ra 1 thứ gì đó
-                        // thì function map() mới hoạt động được
+                        // thì 
                         return(
                             <tr key={index}>
                                 <td>{item.email}</td>

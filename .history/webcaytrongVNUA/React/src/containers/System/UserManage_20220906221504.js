@@ -40,8 +40,7 @@ if(response && response.errCode ===0){
                         <th>Actions</th>
                     </tr>
                     {arrUsers && arrUsers.map((item, index)=>{
-                        // để duyệt 1 vòng lặp, ta có thể dùng function map(), bắt buộc phải return ra 1 thứ gì đó
-                        // thì function map() mới hoạt động được
+                        // để in r
                         return(
                             <tr key={index}>
                                 <td>{item.email}</td>
