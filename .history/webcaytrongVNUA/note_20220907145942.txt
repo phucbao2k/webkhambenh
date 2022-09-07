@@ -1,0 +1,2 @@
+Hàm .destroy() chỉ thực hiện được khi đứng trước nó là 1 object của Sequelize.
+Đối

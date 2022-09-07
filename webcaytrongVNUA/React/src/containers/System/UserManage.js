@@ -5,7 +5,8 @@ import './UserManage.scss';
 import ModalUser from './ModalUser';
 import {getAllUsers} from '../../services/userService'; // nếu muố import 1 function thì ta dùng dấu ngoặc nhọn
 class UserManage extends Component {
-
+// stands for properties and is being used for passing data from one component to another.
+// But the important part here is that data with props are being passed in a uni-directional flow. ( one way from parent to child)
    constructor(props) {
     super(props);
     this.state ={
@@ -34,6 +35,7 @@ this.setState({
     isOpenModalUser: !this.state.isOpenModalUser,
 })
 }
+//toggle nghĩa là click ra bên ngoài, tác dụng là đóng hoặc mở modal
     render() {
         
         // console.log('check render', this.state)
