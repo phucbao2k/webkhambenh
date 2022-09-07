@@ -21,9 +21,7 @@ if(response && response.errCode ===0){
     })
 }
     }
-handleAddNewUser =()=>{
 
-}
 
     render() {
         // console.log('check render', this.state)
@@ -33,8 +31,7 @@ handleAddNewUser =()=>{
            <div className="users-container">
             <div className="title text-center">Manage Users with BaoPhuc</div>
             <div className="mx-1">
-                <button className="btn btn-primary px-3"
-                onClick={()=>this.handleAddNewUser()}><i className="fa-solid fa-plus"></i>Add new user</button>
+                <button className=></button>
             </div>
             <div className="users-table mt-3 mx-1">
                 <table id="customers">

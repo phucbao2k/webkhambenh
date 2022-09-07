@@ -22,7 +22,7 @@ if(response && response.errCode ===0){
 }
     }
 handleAddNewUser =()=>{
-
+alert('DONE')
 }
 
     render() {
