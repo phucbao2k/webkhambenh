@@ -85,40 +85,10 @@ reject(e);
    })
 }
 let deleteUserByID=(userId)=> {
-       return new Promise(async ( resolve, reject)=>{
-         await db.User.findOne({
-            where:{id: userId}
-        })
-       
-        await db.User.destroy({
-            where:{id: userId}
-        })
-        resolve({
-            errCode:0,
-            message: `The user is deleted`
-        })
-    })
+    return db.User.destroy({ where: { id: userId } })
+     .then(rows => Promise.resolve(rows === 1))
    }
-//    let deleteUser = (userId) =>{
-//     return new Promise(async ( resolve, reject)=>{
-//         let foundUser = await db.User.findOne({
-//             where:{id: userId}
-//         })
-//         if(!foundUser){
-//             resolve({
-//                 errCode:2,
-//                 errMessage: `The user isn't exist`
-//             })
-//         }
-//         await db.User.destroy({
-//             where:{id: userId}
-//         })
-//         resolve({
-//             errCode:0,
-//             message: `The user is deleted`
-//         })
-//     })
-// }
+   
 
 module.exports ={
     createNewUser:createNewUser,

@@ -86,10 +86,15 @@ reject(e);
 }
 let deleteUserByID=(userId)=> {
        return new Promise(async ( resolve, reject)=>{
-         await db.User.findOne({
+        let foundUser = await db.User.findOne({
             where:{id: userId}
         })
-       
+        if(!foundUser){
+            resolve({
+                errCode:2,
+                errMessage: `The user isn't exist`
+            })
+        }
         await db.User.destroy({
             where:{id: userId}
         })

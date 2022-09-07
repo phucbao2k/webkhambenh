@@ -86,7 +86,7 @@ reject(e);
 }
 let deleteUserByID=(userId)=> {
        return new Promise(async ( resolve, reject)=>{
-         await db.User.findOne({
+        let user = await db.User.findOne({
             where:{id: userId}
         })
        
