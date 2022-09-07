@@ -11,7 +11,7 @@ const getAllUsers = (inputId)=>{
 }
 const createNewUserService = (data)=>{
     console.log('data from server: ', data);
-    return axios.post('/api/create-new-user', data);
+    return axios.post('/api/create-new-user', data)
 }
-export{handleLoginApi, getAllUsers, createNewUserService}//đối với ReactJs, khi export function để nơi khác truy cập, 
+export{handleLoginApi, getAllUsers}//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export

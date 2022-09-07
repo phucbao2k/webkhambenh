@@ -3,8 +3,8 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss';
 import ModalUser from './ModalUser';
-import {getAllUsers, createNewUserService} from '../../services/userService';
- // nếu muố import 1 function thì ta dùng dấu ngoặc nhọn
+import {getAllUsers, createNewUserService} from '../../see'
+import {getAllUsers} from '../../services/userService'; // nếu muố import 1 function thì ta dùng dấu ngoặc nhọn
 class UserManage extends Component {
 // stands for properties and is being used for passing data from one component to another.
 // But the important part here is that data with props are being passed in a uni-directional flow. ( one way from parent to child)
@@ -18,11 +18,8 @@ class UserManage extends Component {
 //để lưu giá trị của 1 biến components, ta dùng state
 //Component là một block code độc lập để phân chia các UI (giao diện người dùng) thành các phân nhỏ riêng lẻ để dễ dàng quản lý và tái sử dụng.
     async componentDidMount() {
-        await this.getAllUsersFromReact();
-    }
-    getAllUsersFromReact = async()=>{
 let response = await getAllUsers('ALL');
-if(response && response.errCode === 0){
+if(response && response.errCode ===0){
     this.setState({
         arrUsers: response.users
     })
@@ -38,21 +35,6 @@ toggleUserModal =() =>
 this.setState({
     isOpenModalUser: !this.state.isOpenModalUser,
 })
-}
-createNewUser = async(data) =>{
-    try{
-let response = await createNewUserService(data);
-if(response && response.errCode !==0){
-    alert(response.errMessage);
-}else{
-    await this.getAllUsersFromReact(); //
-    this.setState({
-        isOpenModalUser: false,
-    })
-}
-    }catch(e){
-console.log(e);
-    }
 }
 //toggle nghĩa là click ra bên ngoài, tác dụng là đóng hoặc mở modal
     render() {
@@ -72,7 +54,6 @@ console.log(e);
             </div>
             <div className="users-table mt-3 mx-1">
                 <table id="customers">
-                    <tbody>
                     <tr>
                         <th>Email</th>
                         <th>First name</th>
@@ -90,14 +71,12 @@ console.log(e);
                                 <td>{item.lastName}</td>
                                 <td>{item.address}</td>
                                 <td>
-                                    <button className="btn-edit"><i className="fa-solid fa-pencil"></i></button>
-                                    <button className="btn-delete"><i className="fa-solid fa-trash"></i></button>
+                                    <button className="btn-edit"><i class="fa-solid fa-pencil"></i></button>
+                                    <button className="btn-delete"><i class="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
                         )
                     })}
-                    </tbody>
-                   
                 </table>
             </div>
            </div>

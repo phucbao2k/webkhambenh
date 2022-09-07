@@ -73,29 +73,7 @@ console.log(e);
             <div className="users-table mt-3 mx-1">
                 <table id="customers">
                     <tbody>
-                    <tr>
-                        <th>Email</th>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th>Address</th>
-                        <th>Actions</th>
-                    </tr>
-                    {arrUsers && arrUsers.map((item, index)=>{
-                        // để duyệt 1 vòng lặp, ta có thể dùng function map(), bắt buộc phải return ra 1 thứ gì đó
-                        // thì function map() mới hoạt động được
-                        return(
-                            <tr key={index}>
-                                <td>{item.email}</td>
-                                <td>{item.firstName}</td>
-                                <td>{item.lastName}</td>
-                                <td>{item.address}</td>
-                                <td>
-                                    <button className="btn-edit"><i className="fa-solid fa-pencil"></i></button>
-                                    <button className="btn-delete"><i className="fa-solid fa-trash"></i></button>
-                                </td>
-                            </tr>
-                        )
-                    })}
+
                     </tbody>
                    
                 </table>

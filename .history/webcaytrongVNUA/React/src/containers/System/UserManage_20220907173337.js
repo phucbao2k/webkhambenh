@@ -73,6 +73,8 @@ console.log(e);
             <div className="users-table mt-3 mx-1">
                 <table id="customers">
                     <tbody>
+                        
+                    </tbody>
                     <tr>
                         <th>Email</th>
                         <th>First name</th>
@@ -90,14 +92,12 @@ console.log(e);
                                 <td>{item.lastName}</td>
                                 <td>{item.address}</td>
                                 <td>
-                                    <button className="btn-edit"><i className="fa-solid fa-pencil"></i></button>
-                                    <button className="btn-delete"><i className="fa-solid fa-trash"></i></button>
+                                    <button className="btn-edit"><i class="fa-solid fa-pencil"></i></button>
+                                    <button className="btn-delete"><i class="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
                         )
                     })}
-                    </tbody>
-                   
                 </table>
             </div>
            </div>

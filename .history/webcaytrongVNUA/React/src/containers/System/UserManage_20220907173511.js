@@ -91,7 +91,7 @@ console.log(e);
                                 <td>{item.address}</td>
                                 <td>
                                     <button className="btn-edit"><i className="fa-solid fa-pencil"></i></button>
-                                    <button className="btn-delete"><i className="fa-solid fa-trash"></i></button>
+                                    <button className="btn-delete"><i class="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
                         )
