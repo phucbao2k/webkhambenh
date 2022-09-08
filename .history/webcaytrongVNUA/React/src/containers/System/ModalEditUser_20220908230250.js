@@ -36,6 +36,7 @@ address:''
 let user = this.props.currentUser;
 if(user && !_.isEmpty(user)){{
     this.setState({
+        
         email: user.email,
         password: 'hardcode',
         firstName: user.firstName,

@@ -21,7 +21,7 @@ const deleteUserService =(userId)=>{
     })
 }
 const editUserService =(inputData) =>{
-    return axios.put('/api/edit-user', inputData
+    return axios.edit('/api/edit-user', inputData
     );
 }
 export{handleLoginApi, getAllUsers, createNewUserService,deleteUserService,editUserService}//đối với ReactJs, khi export function để nơi khác truy cập, 
