@@ -55,7 +55,7 @@ handleOnChangeInput =(event, id)=>{
         ...copyState
     });
 }
-checkValidateInput = () =>{
+checkValidateEdit = () =>{
     let isValid = true;
     let arrInput = ['firstName','lastName','address'];
     for(let i=0; i< arrInput.length; i++){
@@ -68,7 +68,7 @@ checkValidateInput = () =>{
     return isValid;
 }
 handleSaveUser =() =>{
-let isValid = this.checkValidateInput();
+let isValid = this.checkValidateEdit();
 if(isValid === true){
     //gọi api để tạo modal
     this.props.editUser(this.state, 'DONE!');
