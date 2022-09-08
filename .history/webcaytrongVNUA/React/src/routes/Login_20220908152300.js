@@ -59,7 +59,7 @@ class Login extends Component {
         //sucess
         letuserInfo = {
             "tlid": "0",
-            "tlfullname": "administrator",
+            "tlfullname": "useristrator",
             "custype": "A",
             "accessToken": "eyJhbGciOiJIU"
         }
@@ -166,7 +166,7 @@ const mapDispatchToProps = dispatch => {
     return {
         navigate: (path) => dispatch(push(path)),
        userLoginSuccess: (userInfo) => dispatch(actions.userLoginSuccess(userInfo)),
-     userLoginFail: () => dispatch(actions.USER_LOGIN_FAIL()),
+    //    userLoginFail: () => dispatch(actions.userLoginFail()),
     };
 };
 

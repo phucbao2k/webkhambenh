@@ -10,7 +10,7 @@ import passIcon from '../../src/assets/images/pass.svg';
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
 
-import userService from '../services/userService';
+import adminService from '../services/adminService';
 
 class Login extends Component {
     constructor(props) {
@@ -51,24 +51,24 @@ class Login extends Component {
     processLogin = () => {
         const { username, password } = this.state;
 
-        const {userLoginSuccess,userLoginFail } = this.props;
+        const { adminLoginSuccess, adminLoginFail } = this.props;
         let loginBody = {
-            username: 'user',
+            username: 'admin',
             password: '123456'
         }
         //sucess
-        letuserInfo = {
+        let adminInfo = {
             "tlid": "0",
-            "tlfullname": "administrator",
+            "tlfullname": "Administrator",
             "custype": "A",
             "accessToken": "eyJhbGciOiJIU"
         }
 
-       userLoginSuccess(userInfo);
+        adminLoginSuccess(adminInfo);
         this.refresh();
         this.redirectToSystemPage();
         try {
-           userService.login(loginBody)
+            adminService.login(loginBody)
         } catch (e) {
             console.log('error login : ', e)
         }
@@ -165,8 +165,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         navigate: (path) => dispatch(push(path)),
-       userLoginSuccess: (userInfo) => dispatch(actions.userLoginSuccess(userInfo)),
-     userLoginFail: () => dispatch(actions.USER_LOGIN_FAIL()),
+        adminLoginSuccess: (adminInfo) => dispatch(actions.adminLoginSuccess(adminInfo)),
+        adminLoginFail: () => dispatch(actions.adminLoginFail()),
     };
 };
 
