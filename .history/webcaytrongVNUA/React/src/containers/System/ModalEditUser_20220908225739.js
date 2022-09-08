@@ -57,7 +57,7 @@ handleOnChangeInput =(event, id)=>{
 }
 checkValidateInput = () =>{
     let isValid = true;
-    let arrInput = ['email','password','firstName','lastName','address'];
+    let arrInput = ['''firstName','lastName','address'];
     for(let i=0; i< arrInput.length; i++){
        if(!this.state[arrInput[i]]){
         isValid = false;
