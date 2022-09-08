@@ -10,4 +10,4 @@ sau đó cần 1 hàm(thường là onChange) để bắt được dữ liệu h
 
 ... (there dots): là copy và paste trong ReactJs
 
-với hàm map trong JS, ta không thể dùng lệnh break;
+với hàm map trong JS, ta không thể dùng lệnh break
