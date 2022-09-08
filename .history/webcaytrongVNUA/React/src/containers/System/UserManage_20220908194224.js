@@ -95,15 +95,12 @@ handleEditUser =(user)=>{
              isOpen={this.state.isOpenModalUser}
              toggleFromParent={this.toggleUserModal}
              createNewUser={this.createNewUser}/>
-             {this.state.isOpenModalEditUser &&
-              <ModalEditUser
-              isOpen={this.state.isOpenModalEditUser}
-             toggleFromParent={this.toggleUserEditModal}
-             currentUser={this.state.userEdit}
-             //  createNewUser={this.createNewUser}
-              />
-             }
-            
+             <ModalEditUser
+             isOpen={this.state.isOpenModalEditUser}
+            toggleFromParent={this.toggleUserEditModal}
+            curr
+            //  createNewUser={this.createNewUser}
+             />
             <div className="title text-center">Manage Users with BaoPhuc</div>
             <div className="mx-1">
                 <button className="btn btn-primary px-3"

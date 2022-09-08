@@ -15,8 +15,7 @@ class UserManage extends Component {
     this.state ={
         arrUsers:[],
         isOpenModalUser:false,
-        isOpenModalEditUser:false,
-        userEdit: {}
+        isOpenModalEditUser:false
     }
    }
 //để lưu giá trị của 1 biến components, ta dùng state
@@ -42,11 +41,6 @@ toggleUserModal =() =>
 this.setState({
     isOpenModalUser: !this.state.isOpenModalUser,
 })
-}
-toggleUserEditModal =()=>{
-    this.setState({
-        isOpenModalEditUser: !this.state.isOpenModalEditUser,
-    })
 }
 createNewUser = async(data) =>{
     try{
@@ -79,8 +73,7 @@ else{
 }
 handleEditUser =(user)=>{
     this.setState({
-        isOpenModalEditUser: true,
-        userEdit: user
+        isOpenModal
     })
 }
 //toggle nghĩa là click ra bên ngoài, tác dụng là đóng hoặc mở modal
@@ -95,15 +88,11 @@ handleEditUser =(user)=>{
              isOpen={this.state.isOpenModalUser}
              toggleFromParent={this.toggleUserModal}
              createNewUser={this.createNewUser}/>
-             {this.state.isOpenModalEditUser &&
-              <ModalEditUser
-              isOpen={this.state.isOpenModalEditUser}
-             toggleFromParent={this.toggleUserEditModal}
-             currentUser={this.state.userEdit}
-             //  createNewUser={this.createNewUser}
-              />
-             }
-            
+             <ModalEditUser
+             isOpen={this.state.isOpenModalEditUser}
+            //  toggleFromParent={this.toggleUserModal}
+            //  createNewUser={this.createNewUser}
+             />
             <div className="title text-center">Manage Users with BaoPhuc</div>
             <div className="mx-1">
                 <button className="btn btn-primary px-3"

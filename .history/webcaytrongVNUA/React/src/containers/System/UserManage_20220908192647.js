@@ -15,8 +15,6 @@ class UserManage extends Component {
     this.state ={
         arrUsers:[],
         isOpenModalUser:false,
-        isOpenModalEditUser:false,
-        userEdit: {}
     }
    }
 //để lưu giá trị của 1 biến components, ta dùng state
@@ -42,11 +40,6 @@ toggleUserModal =() =>
 this.setState({
     isOpenModalUser: !this.state.isOpenModalUser,
 })
-}
-toggleUserEditModal =()=>{
-    this.setState({
-        isOpenModalEditUser: !this.state.isOpenModalEditUser,
-    })
 }
 createNewUser = async(data) =>{
     try{
@@ -77,12 +70,6 @@ else{
 
     }
 }
-handleEditUser =(user)=>{
-    this.setState({
-        isOpenModalEditUser: true,
-        userEdit: user
-    })
-}
 //toggle nghĩa là click ra bên ngoài, tác dụng là đóng hoặc mở modal
     render() {
         
@@ -95,15 +82,7 @@ handleEditUser =(user)=>{
              isOpen={this.state.isOpenModalUser}
              toggleFromParent={this.toggleUserModal}
              createNewUser={this.createNewUser}/>
-             {this.state.isOpenModalEditUser &&
-              <ModalEditUser
-              isOpen={this.state.isOpenModalEditUser}
-             toggleFromParent={this.toggleUserEditModal}
-             currentUser={this.state.userEdit}
-             //  createNewUser={this.createNewUser}
-              />
-             }
-            
+             <ModalEditUser
             <div className="title text-center">Manage Users with BaoPhuc</div>
             <div className="mx-1">
                 <button className="btn btn-primary px-3"
@@ -129,7 +108,7 @@ handleEditUser =(user)=>{
                                 <td>{item.lastName}</td>
                                 <td>{item.address}</td>
                                 <td>
-                                    <button className="btn-edit" onClick={()=>this.handleEditUser(item)} ><i className="fa-solid fa-pencil"></i></button>
+                                    <button className="btn-edit"><i className="fa-solid fa-pencil"></i></button>
                                     <button className="btn-delete" onClick={()=>this.handleDeleteUser(item)}><i className="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
