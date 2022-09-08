@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import './UserManage.scss';
 import ModalUser from './ModalUser';
 import {emitter} from '../../utils/emitter';
-import ModalEditUser from './ModalEditUser';
+impor
 import {getAllUsers, createNewUserService, deleteUserService} from '../../services/userService';
  // nếu muố import 1 function thì ta dùng dấu ngoặc nhọn
 class UserManage extends Component {
