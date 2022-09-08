@@ -92,7 +92,7 @@ doEditUser = async (user) =>{
             })
             await this.getAllUsersFromReact()
         }else{
-            alert(res.errCode)
+            alert(res.er)
         }
     }catch(e){
 

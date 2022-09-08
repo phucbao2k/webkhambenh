@@ -5,7 +5,7 @@ import './UserManage.scss';
 import ModalUser from './ModalUser';
 import {emitter} from '../../utils/emitter';
 import ModalEditUser from './ModalEditUser';
-import {getAllUsers, createNewUserService, deleteUserService, editUserService} from '../../services/userService';
+import {getAllUsers, createNewUserService, deleteUserService, edi} from '../../services/userService';
  // nếu muố import 1 function thì ta dùng dấu ngoặc nhọn
 class UserManage extends Component {
 // stands for properties and is being used for passing data from one component to another.
@@ -83,21 +83,7 @@ handleEditUser =(user)=>{
         userEdit: user
     })
 }
-doEditUser = async (user) =>{
-    try{
-        let res = await editUserService(user);
-        if(res && res.errCode === 0){
-            this.setState({
-                isOpenModalEditUser: false
-            })
-            await this.getAllUsersFromReact()
-        }else{
-            alert(res.errCode)
-        }
-    }catch(e){
-
-    }
-
+doEditUser = (user) =>{
 
 }
 //toggle nghĩa là click ra bên ngoài, tác dụng là đóng hoặc mở modal

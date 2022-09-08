@@ -22,9 +22,9 @@ address:''
     listenToEmitter() { 
         emitter.on('EVENT_CLEAR_MODAL_DATA', ()=>{
             this.setState({
-                id: '',
-                email: '',
-                password: '',
+                // id: '',
+                // email: '',
+                // password: '',
                 firstName: '',
                 lastName: ' ',
                 address:''
@@ -57,7 +57,7 @@ handleOnChangeInput =(event, id)=>{
 }
 checkValidateEdit = () =>{
     let isValid = true;
-    let arrInput = ['email','password','firstName','lastName','address'];
+    let arrInput = ['firstName','lastName','address'];
     for(let i=0; i< arrInput.length; i++){
        if(!this.state[arrInput[i]]){
         isValid = false;
@@ -85,7 +85,7 @@ if(isValid === true){
             <ModalBody>
               
                 <div className="modal-user-body">
-                <div className="input-container ">
+                {/* <div className="input-container ">
                         <label>Email</label>
                         <input type="text"
                         onChange={(event)=>{this.handleOnChangeInput(event, "email")}}
@@ -100,7 +100,7 @@ if(isValid === true){
                           value={this.state.password}
                           disabled
                         ></input>
-                    </div>
+                    </div> */}
                     <div className="input-container ">
                         <label>First Name</label>
                         <input type="text"

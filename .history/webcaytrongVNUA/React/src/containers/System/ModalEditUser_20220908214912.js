@@ -55,7 +55,7 @@ handleOnChangeInput =(event, id)=>{
         ...copyState
     });
 }
-checkValidateEdit = () =>{
+checkValidateInput = () =>{
     let isValid = true;
     let arrInput = ['email','password','firstName','lastName','address'];
     for(let i=0; i< arrInput.length; i++){
@@ -68,7 +68,7 @@ checkValidateEdit = () =>{
     return isValid;
 }
 handleSaveUser =() =>{
-let isValid = this.checkValidateEdit();
+let isValid = this.checkValidateInput();
 if(isValid === true){
     //gọi api để tạo modal
     this.props.editUser(this.state, 'DONE!');
@@ -85,7 +85,7 @@ if(isValid === true){
             <ModalBody>
               
                 <div className="modal-user-body">
-                <div className="input-container ">
+                {/* <div className="input-container ">
                         <label>Email</label>
                         <input type="text"
                         onChange={(event)=>{this.handleOnChangeInput(event, "email")}}
@@ -100,7 +100,7 @@ if(isValid === true){
                           value={this.state.password}
                           disabled
                         ></input>
-                    </div>
+                    </div> */}
                     <div className="input-container ">
                         <label>First Name</label>
                         <input type="text"

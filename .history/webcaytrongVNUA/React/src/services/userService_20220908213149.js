@@ -22,7 +22,7 @@ const deleteUserService =(userId)=>{
 }
 const editUserService =(inputData) =>{
     return axios.edit('/api/edit-user', inputData
-    );
+    )
 }
 export{handleLoginApi, getAllUsers,editUserService, createNewUserService,deleteUserService}//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export

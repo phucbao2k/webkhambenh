@@ -68,7 +68,7 @@ checkValidateEdit = () =>{
     return isValid;
 }
 handleSaveUser =() =>{
-let isValid = this.checkValidateEdit();
+let isValid = this.checkValidateInput();
 if(isValid === true){
     //gọi api để tạo modal
     this.props.editUser(this.state, 'DONE!');

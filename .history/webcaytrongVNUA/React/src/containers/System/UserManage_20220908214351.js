@@ -84,20 +84,8 @@ handleEditUser =(user)=>{
     })
 }
 doEditUser = async (user) =>{
-    try{
-        let res = await editUserService(user);
-        if(res && res.errCode === 0){
-            this.setState({
-                isOpenModalEditUser: false
-            })
-            await this.getAllUsersFromReact()
-        }else{
-            alert(res.errCode)
-        }
-    }catch(e){
-
-    }
-
+    try
+let res = await editUserService(user);
 
 }
 //toggle nghĩa là click ra bên ngoài, tác dụng là đóng hoặc mở modal

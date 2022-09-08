@@ -90,9 +90,7 @@ doEditUser = async (user) =>{
             this.setState({
                 isOpenModalEditUser: false
             })
-            await this.getAllUsersFromReact()
-        }else{
-            alert(res.errCode)
+            await this.getAllUsersFromReact
         }
     }catch(e){
 
