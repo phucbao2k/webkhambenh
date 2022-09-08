@@ -8,4 +8,4 @@ state quản lý giá trị các biến hiện tại. Muốn lấy giá trị t�
 sau đó cần 1 hàm(thường là onChange) để bắt được dữ liệu hay sự thay đổi
 
 
-... (there dots): là copy và paste trong ReactJs
+... (there dots)

@@ -6,6 +6,3 @@ thực hiện gán lệnh cho onClick, onChange...
 state quản lý giá trị các biến hiện tại. Muốn lấy giá trị từ components nào, thì ta phải đặt state cho components đấy.
 
 sau đó cần 1 hàm(thường là onChange) để bắt được dữ liệu hay sự thay đổi
-
-
-... (there dots): là copy và paste trong ReactJs
