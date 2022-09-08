@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss';
 import {emitter} from '../../utils/emitter';
-import _ from 'lodash';
+import _ from 'lodash'
 import{Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 class ModalEditUser extends Component {
 
@@ -31,16 +31,7 @@ address:''
     }
 
     componentDidMount() {
-let user = this.props.currentUser;
-if(user && _.isEmpty(user)){{
-    this.setState({
-        email: user.email,
-        password: 'hardcode',
-        firstName: user.firstName,
-        lastName: user.lastName,
-        address:user.address
-    })
-}}
+
     }
 toggle =()=>{
     this.props.toggleFromParent();
@@ -64,11 +55,11 @@ checkValidateInput = () =>{
     }
     return isValid;
 }
-handleSaveUser =() =>{
+handleAddNewUser =() =>{
 let isValid = this.checkValidateInput();
 if(isValid === true){
     //gọi api để tạo modal
-    this.props.editUser(this.state, 'DONE!');
+    this.props.createNewUser(this.state, 'DONE!');
 }
 }
     render() {
@@ -86,16 +77,13 @@ if(isValid === true){
                         <label>Email</label>
                         <input type="text"
                         onChange={(event)=>{this.handleOnChangeInput(event, "email")}}
-                        value={this.state.email}
-                        disabled>
-                        </input>
+                        value={this.state.email}></input>
                     </div>
                     <div className="input-container ">
                         <label>Password</label>
                         <input type="password"
                           onChange={(event)=>{this.handleOnChangeInput(event, "password")}}
                           value={this.state.password}
-                          disabled
                         ></input>
                     </div>
                     <div className="input-container ">
@@ -121,7 +109,7 @@ if(isValid === true){
                
             </ModalBody>
         <ModalFooter>
-            <Button color="primary" className="px-3" onClick={() =>{this.handleSaveUser()}}>Save Changes</Button>
+            <Button color="primary" className="px-3" onClick={() =>{this.handleAddNewUser()}}>Add new user</Button>
             <Button color="secondary" className="px-3" onClick={() =>{this.toggle()}}>Cancel</Button>
         </ModalFooter>
         </Modal>

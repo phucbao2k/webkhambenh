@@ -64,11 +64,11 @@ checkValidateInput = () =>{
     }
     return isValid;
 }
-handleSaveUser =() =>{
+handleAddNewUser =() =>{
 let isValid = this.checkValidateInput();
 if(isValid === true){
     //gọi api để tạo modal
-    this.props.editUser(this.state, 'DONE!');
+    this.props.createNewUser(this.state, 'DONE!');
 }
 }
     render() {

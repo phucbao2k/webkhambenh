@@ -64,11 +64,11 @@ checkValidateInput = () =>{
     }
     return isValid;
 }
-handleSaveUser =() =>{
+handleAddNewUser =() =>{
 let isValid = this.checkValidateInput();
 if(isValid === true){
     //gọi api để tạo modal
-    this.props.editUser(this.state, 'DONE!');
+    this.props.createNewUser(this.state, 'DONE!');
 }
 }
     render() {
@@ -121,7 +121,7 @@ if(isValid === true){
                
             </ModalBody>
         <ModalFooter>
-            <Button color="primary" className="px-3" onClick={() =>{this.handleSaveUser()}}>Save Changes</Button>
+            <Button color="primary" className="px-3" onClick={() =>{this.handleAddNewUser()}}>Add new user</Button>
             <Button color="secondary" className="px-3" onClick={() =>{this.toggle()}}>Cancel</Button>
         </ModalFooter>
         </Modal>

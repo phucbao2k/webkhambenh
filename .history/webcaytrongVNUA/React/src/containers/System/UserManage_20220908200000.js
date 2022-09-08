@@ -83,9 +83,6 @@ handleEditUser =(user)=>{
         userEdit: user
     })
 }
-doEditUser = (user) =>{
-    
-}
 //toggle nghĩa là click ra bên ngoài, tác dụng là đóng hoặc mở modal
     render() {
         
@@ -103,7 +100,7 @@ doEditUser = (user) =>{
               isOpen={this.state.isOpenModalEditUser}
              toggleFromParent={this.toggleUserEditModal}
              currentUser={this.state.userEdit}
-              editUser={this.doEditUser}
+              editUser={this.handle}
               />
              }
             
