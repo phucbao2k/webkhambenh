@@ -43,17 +43,8 @@ class HomeHeader extends Component {
                 <div className="search"><i className="fa-solid fa-magnifying-glass"></i>
                 <input type="text" placeholder='Tìm kiếm loại cây trồng...'></input></div>
                 </div>
-               <div className="content-down">
-               <div className="options">
-                <div className="option-child"></div>
-                <div className="option-child"></div>
-                <div className="option-child"></div>
-                <div className="option-child"></div>
-                <div className="option-child"></div>
-                <div className="option-child"></div>
-               </div>
-               </div>
- 
+               
+                <div className="options"></div>
             </div>
             </React.Fragment>
           

@@ -45,12 +45,7 @@ class HomeHeader extends Component {
                 </div>
                <div className="content-down">
                <div className="options">
-                <div className="option-child"></div>
-                <div className="option-child"></div>
-                <div className="option-child"></div>
-                <div className="option-child"></div>
-                <div className="option-child"></div>
-                <div className="option-child"></div>
+                <div classN></div>
                </div>
                </div>
  

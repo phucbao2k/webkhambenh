@@ -54,12 +54,7 @@
     background-size: cover;
     background-position: center;
     padding: 15px 0;
-    display: flex;
-    flex-direction: column;
-   .content-up{
-    border: 1px solid red;
-    padding-top: 15px;
-    height: 50%;
+   
     .title1{
         color: white;
 text-align: center;
@@ -84,7 +79,7 @@ margin: 0 auto;
 padding: 10px;
 border-radius: 25px;
 background: #CCC;
-    
+    }
     i{
         margin: 0 5px;
     }
@@ -93,17 +88,9 @@ background: #CCC;
         width: 360px;
         background-color: transparent;
         border: none;
-        outline: none;
+        outline: ;
     }
-}
-   }
-.content-down{
-    border: 1px solid green;
-    height: 50%;
     .options{
 
     }
-}
-   
-
 }
