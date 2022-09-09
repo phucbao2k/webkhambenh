@@ -12,11 +12,11 @@
             align-items: center;
             border: 1px solid green;
             .header-logo{
-                background: url('../../assets/vsh.png') center center no-repeat;
+                background: url('../../assets/banner2.png') center center no-repeat;
                 height: 100%;
-                width: 100%;
+                width: %;
                 cursor: pointer;
-                
+                object-fit: contain;
             }
             i{
                 font-size: 25px;
