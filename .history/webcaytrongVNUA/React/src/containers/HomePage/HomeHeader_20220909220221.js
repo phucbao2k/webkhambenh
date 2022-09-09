@@ -36,8 +36,7 @@ class HomeHeader extends Component {
                     <div className="right-content">
                         <div className="support"><i className="fa-solid fa-circle-question"></i><FormattedMessage id="homeheader.support"/></div>
                         <div className="language">
-                        <div className="language-vi">VN</div>
-                        <div className="language-en">EN</div>
+
                         </div>
                         
                     </div>
