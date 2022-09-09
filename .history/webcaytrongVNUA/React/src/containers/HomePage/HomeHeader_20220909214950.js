@@ -67,11 +67,11 @@ class HomeHeader extends Component {
                 </div>
                 <div className="option-child">
                     <div className="icon-child"><i className="fa-brands fa-pagelines"></i></div>
-                    <div className="text-child"><FormattedMessage id="banner.child5"/></div>
+                    <div className="text-child"><FormattedMessage id="banner.child1"/></div>
                 </div>
                 <div className="option-child">
                     <div className="icon-child"><i className="fa-solid fa-sun-plant-wilt"></i></div>
-                    <div className="text-child"><FormattedMessage id="banner.child6"/></div>
+                    <div className="text-child">Khám môi trường</div>
                 </div>
                </div>
                </div>
