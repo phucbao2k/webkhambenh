@@ -65,10 +65,7 @@ class HomeHeader extends Component {
                     <div className="icon-child"></div>
                     <div className="text-child"></div>
                 </div>
-                <div className="option-child">
-                    <div className="icon-child"></div>
-                    <div className="text-child"></div>
-                </div>
+                <div className="option-child"></div>
                </div>
                </div>
  
