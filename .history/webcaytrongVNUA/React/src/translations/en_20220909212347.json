@@ -8,17 +8,17 @@
         "select-doctor":"Choose a good engineer",
         "fee": "Checkup fee",
         "check-health":"Comprehensive plant examination",
-        "support": "Support"
+        "support": "Hỗ trợ"
     },
     "banner":{
-"title1": "MEDICAL BACKGROUND",
-"title2": "COMPREHENSIVE PLANT CARE",
-"child1":"Economic crop inspection",
-"child2":"Remote examination",
-"child3":"General examination",
-"child4":"plant testing",
-"child5":"Bonsai testing",
-"child6":"Environmental examination"
+"title1": "NỀN TẢNG Y TẾ",
+"title2": "CHĂM SÓC CÂY TRỒNG TOÀN DIỆN",
+"child1":"Khám cây trồng kinh tế",
+"child2":"Khám từ xa",
+"child3":"Khám tổng quát",
+"child4":"Xét nghiệm cây trồng",
+"child5":"Khám cây cảnh",
+"child6":"Khám môi trường"
     },
     "common": {
         "add": "Add",

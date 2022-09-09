@@ -1,25 +1,4 @@
 {
-    "homeheader":{
-        "speciality":"Specialization (plant type)",
-        "searchdoctor":"Find engineers by crop type",
-        "health-facility":"Medical facility",
-        "select-room":"Choose a clinic",
-        "doctor":"Doctor",
-        "select-doctor":"Choose a good engineer",
-        "fee": "Checkup fee",
-        "check-health":"Comprehensive plant examination",
-        "support": "Support"
-    },
-    "banner":{
-"title1": "MEDICAL BACKGROUND",
-"title2": "COMPREHENSIVE PLANT CARE",
-"child1":"Economic crop inspection",
-"child2":"Remote examination",
-"child3":"General examination",
-"child4":"plant testing",
-"child5":"Bonsai testing",
-"child6":"Environmental examination"
-    },
     "common": {
         "add": "Add",
         "edit": "Edit",
