@@ -21,7 +21,7 @@ class HomeHeader extends Component {
                         </div>
                         <div className="child-content">
                             <div><b>Kỹ sư</b></div>
-                            <div className="sub-title"> Chọn kỹ sư giỏi </div>
+                            <div className="sub-title"> Chọn chuyên gia giỏi </div>
                         </div>
                         <div className="child-content">
                             <div><b>Gói khám</b></div>

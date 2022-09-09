@@ -20,8 +20,8 @@ class HomeHeader extends Component {
                             <div className="sub-title"> Chọn nơi khám bệnh </div>
                         </div>
                         <div className="child-content">
-                            <div><b>Kỹ sư</b></div>
-                            <div className="sub-title"> Chọn kỹ sư giỏi </div>
+                            <div><b>Chuyên gia</b></div>
+                            <div className="sub-title"> Chọn chuyên gia giỏi </div>
                         </div>
                         <div className="child-content">
                             <div><b>Gói khám</b></div>
