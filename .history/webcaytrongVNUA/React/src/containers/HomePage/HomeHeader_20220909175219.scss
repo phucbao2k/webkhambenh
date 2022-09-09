@@ -101,13 +101,11 @@ background: #CCC;
     border: 1px solid green;
     height: 50%;
     .options{
-        margin-top: 30px;
 width: 100%;
 text-align: center;
 display: flex;
 flex-direction: row;
 justify-content: center;
-gap: 50px;
 .option-child{
     width: 12.5%;
     .icon-child{
@@ -127,11 +125,9 @@ gap: 50px;
     .text-child{
         font-size: 17px;
         font-weight: 500;
-        color: #49bce2;
-        text-shadow: 1px 1px #333;
+        color: w;
         &:hover{
             color: #49bce2;
-            cursor: pointer;
         }
     }
 }

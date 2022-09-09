@@ -66,7 +66,7 @@ class HomeHeader extends Component {
                     <div className="text-child">Khám cây cảnh</div>
                 </div>
                 <div className="option-child">
-                    <div className="icon-child"><i className="fa-solid fa-sun-plant-wilt"></i></div>
+                    <div className="icon-child"><i class="fa-solid fa-sun-plant-wilt"></i></div>
                     <div className="text-child">Khám môi trường</div>
                 </div>
                </div>
