@@ -5,7 +5,7 @@ import './UserManage.scss';
 import {emitter} from '../../utils/emitter';
 import _ from 'lodash';
 
-//lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
+//lodash hỗ trọ
 import{Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 class ModalEditUser extends Component {
 
