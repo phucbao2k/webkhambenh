@@ -12,8 +12,4 @@ sau đó cần 1 hàm(thường là onChange) để bắt được dữ liệu h
 
 với hàm map trong JS, ta không thể dùng lệnh break;
 
-alert không giúp sinh ra 1 object;
-
-để truyền fire events từ con sang cha, ta dùng props
- để truyền fire events từ cha sang con, ta dùng ref
- nếu là con sang cha mà phải thao tác vs database, ta có thể dùng emitter, cơ chế hoạt động của emitter khá giống chat real-time
+alert không giúp sinh ra 1 obj

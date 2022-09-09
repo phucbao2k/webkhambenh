@@ -16,4 +16,4 @@ alert không giúp sinh ra 1 object;
 
 để truyền fire events từ con sang cha, ta dùng props
  để truyền fire events từ cha sang con, ta dùng ref
- nếu là con sang cha mà phải thao tác vs database, ta có thể dùng emitter, cơ chế hoạt động của emitter khá giống chat real-time
+ nếu là con sang cha mà phải thao tác vs database, ta có thể dùng emitter
