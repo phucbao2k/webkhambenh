@@ -27,26 +27,9 @@ class HomeHeader extends Component {
                             <div><b>Gói khám</b></div>
                             <div className="sub-title">Khám toàn diện cho cây trồng</div>
                         </div>
-
-                    </div>
-                    <div className="right-content">
-                        <div className="support"><i className="fa-solid fa-circle-question"></i>Hỗ trợ</div>
-                        <div className="flag">VN</div>
                     </div>
                 </div>
             </div>
         )
     }
 }
-const mapStateToProps = state => {
-    return {
-        isLoggedIn: state.user.isLoggedIn
-    };
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);

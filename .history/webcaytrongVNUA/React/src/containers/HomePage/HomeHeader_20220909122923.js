@@ -38,15 +38,3 @@ class HomeHeader extends Component {
         )
     }
 }
-const mapStateToProps = state => {
-    return {
-        isLoggedIn: state.user.isLoggedIn
-    };
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);

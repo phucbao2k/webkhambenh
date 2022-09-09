@@ -40,7 +40,7 @@ class HomeHeader extends Component {
 }
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.user.isLoggedIn
+        isLoggedIn: state.isLoggedIn
     };
 };
 
