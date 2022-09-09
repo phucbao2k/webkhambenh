@@ -11,7 +11,7 @@ class HomeHeader extends Component {
                 <div className="home-header-content">
                     <div className="left-content">
                     <i className="fa-solid fa-bars-staggered"></i>
-                   
+                    <img className="header-logo" src={logo}/>
                     <div className="header-logo"></div>
                     </div>
                     <div className="center-content">

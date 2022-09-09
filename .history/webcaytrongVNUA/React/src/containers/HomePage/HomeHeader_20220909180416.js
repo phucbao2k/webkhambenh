@@ -1,7 +1,7 @@
 import React, { Component} from 'react';
 import {connect} from 'react-redux';
 import './HomeHeader.scss';
-
+import logo from '../../assets/logo.svg';
 import {FormattedMessage} from 'react-intl';
 class HomeHeader extends Component {
     render(){
@@ -11,7 +11,7 @@ class HomeHeader extends Component {
                 <div className="home-header-content">
                     <div className="left-content">
                     <i className="fa-solid fa-bars-staggered"></i>
-                   
+                    <img className="header"
                     <div className="header-logo"></div>
                     </div>
                     <div className="center-content">

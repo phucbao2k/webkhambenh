@@ -1,8 +1,7 @@
 import React, { Component} from 'react';
 import {connect} from 'react-redux';
 import './HomeHeader.scss';
-
-import {FormattedMessage} from 'react-intl';
+import logo from '../../as'
 class HomeHeader extends Component {
     render(){
         return (
@@ -11,7 +10,6 @@ class HomeHeader extends Component {
                 <div className="home-header-content">
                     <div className="left-content">
                     <i className="fa-solid fa-bars-staggered"></i>
-                   
                     <div className="header-logo"></div>
                     </div>
                     <div className="center-content">
