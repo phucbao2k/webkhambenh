@@ -41,11 +41,11 @@ class HomeHeader extends Component {
                     <div className="right-content">
                         <div className="support"><i className="fa-solid fa-circle-question"></i><FormattedMessage id="homeheader.support"/></div>
                         <div className="language">
-                        <div className={language === LANGUAGES.VI ?'language-vi active':'language-vi'}>
-                            <span onClick={() =>this.changeLanguage(LANGUAGES.VI)}>VN</span>
+                        <div className={language === languages.VI ?'language-vi active':'language-vi'}>
+                            <span onClick={() =>this.changeLanguage(LANGUAGE.VI)}>VN</span>
                             </div>
-                        <div className={language === LANGUAGES.EN ?'language-en active':'language-en'}>
-                            <span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN</span>
+                        <div className={language === languages.EN ?'language-en active':'language-en'}>
+                            <span onClick={() => this.changeLanguage(LANGUAGE.EN)}>EN</span>
                             </div>
                         </div>
                         
