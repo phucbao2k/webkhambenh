@@ -13,7 +13,7 @@ class HomePage extends Component {
             <HomeHeader/>
             <Specialty>
             </Specialty>
-            <div style={{ height: '100%' }}></div>
+            <div style={{ height: '}}></div>
           </div>
         );
     }
