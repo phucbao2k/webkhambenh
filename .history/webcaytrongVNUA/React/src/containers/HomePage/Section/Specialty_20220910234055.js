@@ -45,7 +45,7 @@ class Specialty extends Component{
                         </div>
                         <div className="specialty-customize">
                         <div className="bg-image"></div>
-                            <div>Khám cây trồng công/nông nghiệp 6</div>
+                            <div>Khám cây trồng công/nông nghiệp 1</div>
                         </div>
                     </Slider>
                     </div>

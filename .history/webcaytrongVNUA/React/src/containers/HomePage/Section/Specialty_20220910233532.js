@@ -21,35 +21,27 @@ class Specialty extends Component{
                         <span className="title-section">Chuyên khoa phổ biến</span>
                         <button className="btn-section">Xem thêm</button>
                     </div>
-                    <div className="specialty-body">
+                    <div className></div>
                     <Slider {...settings}>
-                        <div className="specialty-customize">
-                            <div className="bg-image"></div>
-                            <div>Khám cây trồng công/nông nghiệp 1</div>
+                        <div className="img-customize">
+                            <h3>1</h3>
                         </div>
-                        <div className="specialty-customize">
-                        <div className="bg-image"></div>
-                            <div>Khám cây trồng công/nông nghiệp 2</div>
+                        <div className="img-customize">
+                            <h3>2</h3>
                         </div>
-                        <div className="specialty-customize">
-                        <div className="bg-image"></div>
-                            <div>Khám cây trồng công/nông nghiệp 3</div>
+                        <div className="img-customize">
+                            <h3>3</h3>
                         </div>
-                        <div className="specialty-customize">
-                        <div className="bg-image"></div>
-                            <div>Khám cây trồng công/nông nghiệp 4</div>
+                        <div className="img-customize">
+                            <h3>4</h3>
                         </div>
-                        <div className="specialty-customize">
-                        <div className="bg-image"></div>
-                            <div>Khám cây trồng công/nông nghiệp 5</div>
+                        <div className="img-customize">
+                            <h3>5</h3>
                         </div>
-                        <div className="specialty-customize">
-                        <div className="bg-image"></div>
-                            <div>Khám cây trồng công/nông nghiệp 6</div>
+                        <div className="img-customize">
+                            <h3>6</h3>
                         </div>
                     </Slider>
-                    </div>
-                    
                 </div>
             </div>
         );
