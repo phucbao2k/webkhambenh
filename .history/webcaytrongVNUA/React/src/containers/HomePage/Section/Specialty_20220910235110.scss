@@ -1,11 +1,17 @@
-
 .section-specialty{
     height: 330px;
     background: #f5f5f5;
     border: 1px solid red;
 }
-
-
+.slick-prev{
+    border: 1px solid green !important;
+    position: relative !important;
+    left: 0 !important;
+}
+.slick-next{
+    border: 1px solid red !important;
+    right: 0 !important;
+}
 .specialty-container{
     margin: 0 auto;
     display: flex;
@@ -41,34 +47,6 @@
             background: url('../../../assets/background.jpg');
             background-position: center center;
             background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #eee;
-        }
-    }
-    .slick-prev{
-        border: 2px solid #d7d7d7 !important;
-       z-index: 1000 !important;
-       height: 48px !important;
-       width: auto !important;
-       background: #fff !important;
-        left: 0 !important;
-        &:hover{
-            background: #eceaea !important;
-        }
-    }
-    .slick-prev:before,
-    .slick-next:before{
-     font-family: FontAwesome !important;
-    }
-    .slick-next{
-        border: 2px solid #d7d7d7 !important;
-       z-index: 1000 !important;
-       height: 48px !important;
-       width: auto !important;
-       background: #fff !important;
-        left: 0 !important;
-        &:hover{
-            background: #eceaea !important;
         }
     }
 }
