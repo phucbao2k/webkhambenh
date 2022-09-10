@@ -22,5 +22,4 @@ alert không giúp sinh ra 1 object;
 
  React.Fragments giúp ta viết code ngắn hơn mà vẫn render đúng thứ thự của html/css. Link: https://freetuts.net/fragments-trong-reactjs-2433.html
 
- Redux chạy xong xong với React, giống như local storage, lưu trữ mọi biến và giúp quản lý state cho React, nhờ đó, nhiều component chỉ cần gọi
-  state đã lưu từ redux mà không cần thiết phải gọi lại API.
+ E
