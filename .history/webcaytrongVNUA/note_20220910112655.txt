@@ -20,4 +20,4 @@ alert không giúp sinh ra 1 object;
 
  với emitter thì bên nào muốn nhận fire event, thì ta dùng emitter.on(), còn bên nào gửi fire event, thì dùng emitter.emit(),
 
- React.Fragments giúp ta viết code ngắn hơn mà vẫn render đúng thứ thự của html/css. Link: https://freetuts.net/fragments-trong-reactjs-2433.html
+ React.Fragments giúp ta viết code ngắn hơn mà vẫn render đúng thứ thự của html/css
