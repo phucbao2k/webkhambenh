@@ -24,35 +24,10 @@ class Specialty extends Component{
                         <div className="img-customize">
                             <h3>2</h3>
                         </div>
-                        <div className="img-customize">
-                            <h3>3</h3>
-                        </div>
-                        <div className="img-customize">
-                            <h3>4</h3>
-                        </div>
-                        <div className="img-customize">
-                            <h3>5</h3>
-                        </div>
-                        <div className="img-customize">
-                            <h3>6</h3>
-                        </div>
+                        
                     </Slider>
                 </div>
             </div>
-        );
+        )
     }
 }
-const mapStateToProps = state => {
-    return {
-        isLoggedIn: state.user.isLoggedIn,
-        language: state.app.language,
-    };
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-      
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);

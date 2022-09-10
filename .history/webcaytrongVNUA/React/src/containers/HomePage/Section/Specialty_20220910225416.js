@@ -51,8 +51,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-      
+        changeLanguageAppRedux:(language)=> dispatch(changeLanguageApp(language))
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);
