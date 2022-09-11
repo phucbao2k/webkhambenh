@@ -16,7 +16,7 @@ class Specialty extends Component{
             slidesToShow:4,
             slidesToScroll:1
         };
-        // trên đây là setting cho Slider
+        // trên đây là setting 
         // 
         return(
             <div className="section-specialty">

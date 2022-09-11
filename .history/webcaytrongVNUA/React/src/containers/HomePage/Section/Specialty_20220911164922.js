@@ -16,7 +16,7 @@ class Specialty extends Component{
             slidesToShow:4,
             slidesToScroll:1
         };
-        // trên đây là setting cho Slider
+        // 
         // 
         return(
             <div className="section-specialty">
@@ -26,7 +26,7 @@ class Specialty extends Component{
                         <button className="btn-section"><FormattedMessage id="carousel.carousel-2"/></button>
                     </div>
                     <div className="specialty-body">
-                        {/* Dưới đây là cách bọc các ảnh, chữ thành 1 slide lớn, nằm ngang */}
+                        {/* Dưới đây là cách bọc các component thành style trong css */}
                     <Slider {...settings}>
                         <div className="specialty-customize">
                             <div className="bg-image"></div>
