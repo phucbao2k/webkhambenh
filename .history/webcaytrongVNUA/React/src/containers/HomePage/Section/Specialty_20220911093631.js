@@ -67,7 +67,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-       
+        // changeLanguageAppRedux:(language)=> dispatch(changeLanguageApp(language))
     };
 };
 

@@ -3,11 +3,14 @@ import {connect} from 'react-redux';
 import './Specialty.scss';
 import {FormattedMessage} from 'react-intl';
 import Slider from "react-slick";
-
+// import {LANGUAGES} from '../../utils';
+// import {changeLanguageApp} from "../../store/actions"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 class Specialty extends Component{
-   
+    // changeLanguage = (language)=>{
+    //     this.props.changeLanguageAppRedux(language);
+    // }
     render(){
         let settings ={
             dots: false,
@@ -67,7 +70,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-       
+        // changeLanguageAppRedux:(language)=> dispatch(changeLanguageApp(language))
     };
 };
 
