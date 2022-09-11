@@ -27,7 +27,7 @@
         }
         .center-content{
             width: 60%;
-         
+            border: 1px solid orange;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -40,7 +40,7 @@
         }
         .right-content{
             width: 15%;
-          
+            border: 1px solid grey;
             display: flex;
          justify-content: center;
             align-items: center;
@@ -102,8 +102,8 @@
     display: flex;
     flex-direction: column;
    .content-up{
-    // background-image: linear-gradient(rgba(0, 0, 0, 0.25),rgba(255, 255, 255, 0.1));
-  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25),rgba(255, 255, 255, 0.1));
+    border: 1px solid red;
     padding-top: 15px;
     height: 65%;
     .title1{
@@ -144,8 +144,8 @@ background: #CCC;
 }
    }
 .content-down{
-    // background-image: linear-gradient(rgba(0, 0, 0, 0.25),rgba(255, 255, 255, 0.1));
-  
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25),rgba(255, 255, 255, 0.1));
+    border: 1px solid green;
     height: 35%;
     display: flex;
     align-items: flex-end;
