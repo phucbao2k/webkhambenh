@@ -17,13 +17,13 @@ class Specialty extends Component{
             slidesToScroll:1
         };
         // 
-        // 
+        // <FormattedMessage id="carousel.carousel-2"/>
         return(
             <div className="section-specialty">
                 <div  className="specialty-container">
                     <div className="specialty-header">
-                        <span className="title-section"><FormattedMessage id="carousel.carousel-1"/></span>
-                        <button className="btn-section"><FormattedMessage id="carousel.carousel-2"/></button>
+                        <span className="title-section">ép</span>
+                        <button className="btn-section">a</button>
                     </div>
                     <div className="specialty-body">
                     <Slider {...settings}>

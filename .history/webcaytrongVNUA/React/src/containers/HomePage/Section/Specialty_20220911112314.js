@@ -16,8 +16,7 @@ class Specialty extends Component{
             slidesToShow:4,
             slidesToScroll:1
         };
-        // 
-        // 
+        // let language = this.props.language;
         return(
             <div className="section-specialty">
                 <div  className="specialty-container">

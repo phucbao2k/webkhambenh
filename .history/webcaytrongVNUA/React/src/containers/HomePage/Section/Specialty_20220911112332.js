@@ -16,8 +16,7 @@ class Specialty extends Component{
             slidesToShow:4,
             slidesToScroll:1
         };
-        // 
-        // 
+     
         return(
             <div className="section-specialty">
                 <div  className="specialty-container">

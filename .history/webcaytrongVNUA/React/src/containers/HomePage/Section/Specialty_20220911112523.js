@@ -23,7 +23,7 @@ class Specialty extends Component{
                 <div  className="specialty-container">
                     <div className="specialty-header">
                         <span className="title-section"><FormattedMessage id="carousel.carousel-1"/></span>
-                        <button className="btn-section"><FormattedMessage id="carousel.carousel-2"/></button>
+                        <button className="btn-section">a</button>
                     </div>
                     <div className="specialty-body">
                     <Slider {...settings}>
