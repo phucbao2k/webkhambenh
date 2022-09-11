@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import HomeHeader from './HomeHeader';
 import Specialty from './Section/Specialty';
-import MedicalFacility from './Section/MedicalFacility';
+import MedicalFactory from './Section/MedicalFacility';
 import OutStandingDoctor from './Section/OutStandingDoctor';
 import HandBook from './Section/HandBook';
 import './HomePage.scss';
@@ -23,12 +23,9 @@ class HomePage extends Component {
         return (
           <div>
             <HomeHeader/>
-            <Specialty
-                settings ={settings}>
+            <Specialty>
+                settings ={}
             </Specialty>
-            <MedicalFacility settings ={settings}></MedicalFacility>
-            <OutStandingDoctor settings ={settings}></OutStandingDoctor>
-            <HandBook settings ={settings}></HandBook>
             <div style={{ height: '100%' }}></div>
           </div>
         );

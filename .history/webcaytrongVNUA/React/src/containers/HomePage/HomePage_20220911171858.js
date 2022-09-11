@@ -27,8 +27,7 @@ class HomePage extends Component {
                 settings ={settings}>
             </Specialty>
             <MedicalFacility settings ={settings}></MedicalFacility>
-            <OutStandingDoctor settings ={settings}></OutStandingDoctor>
-            <HandBook settings ={settings}></HandBook>
+            <Out
             <div style={{ height: '100%' }}></div>
           </div>
         );
