@@ -36,6 +36,8 @@
                 }
                 &.section-medical-facility{
 background-image: url('../../assets/hvnn1.jpg');
+width: 120px;
+height: 120px;
 
                 }
                 &.section-outstanding-doctor{
@@ -46,6 +48,9 @@ background-image: url('../../assets/hvnn1.jpg');
                 }
                 &.section-handbook{
                     background-image: url('../../assets/camnang.jpg');
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 50%;
                 }
             }
         }
