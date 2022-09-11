@@ -13,12 +13,12 @@
            background: #eceaea !important;
        }
    }
-   .slick-prev:before{
+   .slick-next:before{
     font-family: FontAwesome !important;
     color: red !important;
    }
-   .slick-prev{
-       left: -10px !important;
+   .slick-next{
+       right: 0 !important;
        z-index: 1000 !important;
        height: 48px !important;
        width: 44px !important;
