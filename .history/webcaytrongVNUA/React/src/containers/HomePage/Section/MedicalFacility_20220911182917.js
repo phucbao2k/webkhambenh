@@ -44,19 +44,7 @@ class MedicalFacility extends Component{
                         <div className="bg-image section-medical-facility"></div>
                             <div>Cơ sở chăm sóc cây trồng nổi bật 2</div>
                         </div> */}
- <div className="section-customize">
-                            <div className="customize-border">
-                                <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"></div>
-                                </div>
-                                <div className="position text-center">
-                                <div>Giáo sư, Tiến Sĩ TBP</div>
-                                <div>Cây nào cũng khám được</div>
-                                </div>
-                            </div>
-                            
-                           
-                        </div>
+
                         <div className="section-customize">
                             <div className="customize-border">
                                 <div className="outer-bg">
