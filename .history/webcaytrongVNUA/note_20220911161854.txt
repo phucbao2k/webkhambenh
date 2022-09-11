@@ -25,4 +25,4 @@ alert không giúp sinh ra 1 object;
  Redux chạy xong xong với React, giống như local storage, lưu trữ mọi biến và giúp quản lý state cho React, nhờ đó, nhiều component chỉ cần gọi
   state đã lưu từ redux mà không cần thiết phải gọi lại API.
 
-  đổi ngôn ngữ thì sang điều chỉnh lại file appReducer.js
+  
