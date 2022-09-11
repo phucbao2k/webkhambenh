@@ -4,6 +4,7 @@ import './HomeHeader.scss';
 import {LANGUAGES} from '../../utils';
 import {changeLanguageApp} from "../../store/actions"
 import {FormattedMessage} from 'react-intl';
+import { Helmet } from 'react-helmet';
 class HomeHeader extends Component {
     changeLanguage = (language)=>{
         this.props.changeLanguageAppRedux(language);
@@ -13,7 +14,9 @@ class HomeHeader extends Component {
         console.log("check language: " , language);
         return (
             <React.Fragment>
+                 <Helmet htmlAttributes={{ lang: some.language.from.redux.store }}>
                
+            </Helmet>
   <div className="home-header-container">
                 <div className="home-header-content">
                     <div className="left-content">

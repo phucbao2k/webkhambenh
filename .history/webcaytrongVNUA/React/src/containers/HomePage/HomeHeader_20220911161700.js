@@ -4,6 +4,7 @@ import './HomeHeader.scss';
 import {LANGUAGES} from '../../utils';
 import {changeLanguageApp} from "../../store/actions"
 import {FormattedMessage} from 'react-intl';
+import { Helmet } from 'react-helmet';
 class HomeHeader extends Component {
     changeLanguage = (language)=>{
         this.props.changeLanguageAppRedux(language);
