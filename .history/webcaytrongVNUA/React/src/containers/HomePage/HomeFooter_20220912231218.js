@@ -12,7 +12,7 @@ class HomeFooter extends Component{
             <div className="home-footer">
                 <p>&copy; 2022 Tạ Bảo Phúc
                     <a >
-                    <span className="title-section"><FormattedMessage id="home-footer.more-info"/></span></a>
+                        <span className="></span><FormattedMessage id="home-footer.more-info"/></a>
                 </p>
             </div>
         );
