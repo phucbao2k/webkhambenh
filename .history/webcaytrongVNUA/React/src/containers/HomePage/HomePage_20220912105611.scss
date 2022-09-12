@@ -3,7 +3,7 @@
     color: red !important;
    }
    .slick-next{
-       right: -5px !important;
+       right: 0 !important;
        z-index: 1000 !important;
        height: 48px !important;
        width: 44px !important;
@@ -40,19 +40,18 @@
     .section-body{
         .section-customize{
             .bg-image{
-                width: 314px;
+                width: 100%;
                 height: 150px;
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-color: #eee;
-                
                 &.section-specialty{
                     background-image: url('../../assets/background.jpg');
                 }
                 &.section-medical-facility{
 background-image: url('../../assets/hvnn1.jpg');
-
+margin: ;
                 }
                 &.section-outstanding-doctor{
                     background-image: url('../../assets/bacsi.jpg');  

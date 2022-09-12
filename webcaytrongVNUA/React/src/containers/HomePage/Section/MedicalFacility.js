@@ -27,87 +27,29 @@ class MedicalFacility extends Component{
                     <div className="section-body">
                         {/* Dưới đây là cách bọc các ảnh, chữ thành 1 slide lớn, nằm ngang */}
                     <Slider {...this.props.settings}>
-                    <div className="section-customize">
-                            <div className="customize-border">
-                                <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"></div>
-                                </div>
-                                <div className="position text-center">
-                                <div>Giáo sư, Tiến Sĩ TBP</div>
-                                <div>Cây nào cũng khám được</div>
-                                </div>
-                            </div>
-                            
-                           
+                        <div className="section-customize">
+                            <div className="bg-image section-medical-facility"></div>
+                            <div>Cơ sở chăm sóc cây trồng nổi bật 1</div>
                         </div>
-                        {/* <div className="section-customize">
+                        <div className="section-customize">
                         <div className="bg-image section-medical-facility"></div>
                             <div>Cơ sở chăm sóc cây trồng nổi bật 2</div>
-                        </div> */}
- <div className="section-customize">
-                            <div className="customize-border">
-                                <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"></div>
-                                </div>
-                                <div className="position text-center">
-                                <div>Giáo sư, Tiến Sĩ TBP</div>
-                                <div>Cây nào cũng khám được</div>
-                                </div>
-                            </div>
-                            
-                           
                         </div>
                         <div className="section-customize">
-                            <div className="customize-border">
-                                <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"></div>
-                                </div>
-                                <div className="position text-center">
-                                <div>Giáo sư, Tiến Sĩ TBP</div>
-                                <div>Cây nào cũng khám được</div>
-                                </div>
-                            </div>
-                            
-                           
+                        <div className="bg-image section-medical-facility"></div>
+                            <div>Cơ sở chăm sóc cây trồng nổi bật 3</div>
                         </div>
                         <div className="section-customize">
-                            <div className="customize-border">
-                                <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"></div>
-                                </div>
-                                <div className="position text-center">
-                                <div>Giáo sư, Tiến Sĩ TBP</div>
-                                <div>Cây nào cũng khám được</div>
-                                </div>
-                            </div>
-                            
-                           
+                        <div className="bg-image section-medical-facility"></div>
+                            <div>Cơ sở chăm sóc cây trồng nổi bật 4</div>
                         </div>
                         <div className="section-customize">
-                            <div className="customize-border">
-                                <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"></div>
-                                </div>
-                                <div className="position text-center">
-                                <div>Giáo sư, Tiến Sĩ TBP</div>
-                                <div>Cây nào cũng khám được</div>
-                                </div>
-                            </div>
-                            
-                           
+                        <div className="bg-image section-medical-facility"></div>
+                            <div>Cơ sở chăm sóc cây trồng nổi bật 5</div>
                         </div>
                         <div className="section-customize">
-                            <div className="customize-border">
-                                <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"></div>
-                                </div>
-                                <div className="position text-center">
-                                <div>Giáo sư, Tiến Sĩ TBP</div>
-                                <div>Cây nào cũng khám được</div>
-                                </div>
-                            </div>
-                            
-                           
+                        <div className="bg-image section-medical-facility"></div>
+                            <div>Cơ sở chăm sóc cây trồng nổi bật 6</div>
                         </div>
                     </Slider>
                     </div>
