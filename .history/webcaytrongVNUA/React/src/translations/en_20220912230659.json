@@ -142,9 +142,7 @@
             "remove-assign-success": "Unassign service package to customer successfully",
             "remove-assign-fail": "Fail to unassign service package to customer",
             "sure-delete-assign": "Are you sure to unassign service package to customer?"
-        },
-        "home-footer":{
-"more-info": "This is the youtube channel where i learn web programming, you can visit for more information"
         }
+        "
     }
 }
