@@ -7,7 +7,7 @@ import Header from '../containers/Header/Header';
 
 class System extends Component {
     render() {
-        const { systemMenuPath, isLoggedIn } = this.props;
+        const { systemMenuPath } = this.props;
         return (
             <React.Fragment>
                 {isLoggedIn && <Header/>}
@@ -30,8 +30,7 @@ class System extends Component {
 
 const mapStateToProps = state => {
     return {
-        systemMenuPath: state.app.systemMenuPath,
-        isLoggedIn: state.app.isLoggedIn
+        systemMenuPath: state.app.systemMenuPath
     };
 };
 

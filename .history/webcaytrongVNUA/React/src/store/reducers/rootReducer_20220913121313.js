@@ -17,7 +17,7 @@ const persistCommonConfig = {
 const userPersistConfig = {
     ...persistCommonConfig,
     key: 'user',
-    whitelist: ['isLoggedIn', 'userInfo', 'language']
+    whitelist: ['isLoggedIn', 'userInfo', '']
 };
 
 export default (history) => combineReducers({

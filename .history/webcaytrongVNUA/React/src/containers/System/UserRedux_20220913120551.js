@@ -19,9 +19,7 @@ class UserRedux extends Component {
                 <div className="title">
                     UserRedux
                 </div>
-                <div className="user-redux-body">
-                    <div>Thêm mới người dùng</div>
-                </div>
+                <div className="user-redux-body"></div>
                 </div>
            
         )

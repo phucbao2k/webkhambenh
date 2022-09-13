@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 class UserRedux extends Component {
 
     constructor(props) {
-        super(props);
-        this.state ={};
+        super
     }
 
     componentDidMount() {
@@ -14,16 +13,7 @@ class UserRedux extends Component {
 
     render() {
         return (
-            
-            <div className="user-redux-container" >
-                <div className="title">
-                    UserRedux
-                </div>
-                <div className="user-redux-body">
-                    <div>Thêm mới người dùng</div>
-                </div>
-                </div>
-           
+            <div className="text-center" >Manage products</div>
         )
     }
 

@@ -30,8 +30,7 @@ class System extends Component {
 
 const mapStateToProps = state => {
     return {
-        systemMenuPath: state.app.systemMenuPath,
-        isLoggedIn: state.app.isLoggedIn
+        systemMenuPath: state.app.systemMenuPath
     };
 };
 

@@ -1,27 +1,30 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-class RegisterPackageGroupOrAcc extends Component {
+class UserRedux extends Component {
 
     constructor(props) {
         super(props);
-
+        this.state ={};
     }
 
+    componentDidMount() {
+    }
 
 
     render() {
         return (
-            <div className="text-center">
-                register package group or account
-            </div>)
+            
+            <div className="user-redux-container" >
+                <div></div></div>
+           
+        )
     }
 
 }
 
 const mapStateToProps = state => {
     return {
-
     };
 };
 
@@ -30,4 +33,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(RegisterPackageGroupOrAcc);
+export default connect(mapStateToProps, mapDispatchToProps)(UserRedux);

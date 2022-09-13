@@ -15,14 +15,7 @@ class UserRedux extends Component {
     render() {
         return (
             
-            <div className="user-redux-container" >
-                <div className="title">
-                    UserRedux
-                </div>
-                <div className="user-redux-body">
-                    <div>Thêm mới người dùng</div>
-                </div>
-                </div>
+            <div className="user-redux-container" ><div></div>></div>
            
         )
     }

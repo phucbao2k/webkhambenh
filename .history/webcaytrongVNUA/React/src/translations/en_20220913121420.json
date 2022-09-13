@@ -57,7 +57,7 @@
             "header": "System",
             "system-administrator": {
                 "header": "System Administrator",
-                "user-redux":"Manage users using Redux",
+                "user-redux":""
                 "user-manage": "User manage",
                 "product-manage": "Package manage",
                 "register-package-group-or-account": "Register service package for group/account"

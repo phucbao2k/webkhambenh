@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import { Redirect, Route, Switch } from 'react-router-dom';
 import UserManage from '../containers/System/UserManage';
-import UserRedux from '../containers/System/UserRedux';
-import Header from '../containers/Header/Header';
+import ProductManage from '../containers/System/ProductManage';
+import RegisterPackageGroupOrAcc from '../containers/System/RegisterPackageGroupOrAcc';
 
 class System extends Component {
     render() {
-        const { systemMenuPath, isLoggedIn } = this.props;
+        const { systemMenuPath } = this.props;
         return (
             <React.Fragment>
-                {isLoggedIn && <Header/>}
+                {isLoggedIn}
  <div className="system-container">
                 <div className="system-list">
                     <Switch>
@@ -30,8 +30,7 @@ class System extends Component {
 
 const mapStateToProps = state => {
     return {
-        systemMenuPath: state.app.systemMenuPath,
-        isLoggedIn: state.app.isLoggedIn
+        systemMenuPath: state.app.systemMenuPath
     };
 };
 
