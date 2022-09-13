@@ -185,20 +185,14 @@ if (user){
 let getAllCodeService= (typeInput)=>{
     return new Promise(async(resolve,reject)=>{
         try{
-if(typeInput){
-    let res ={};
-    let allCode = await db.Allcode.findAll({
-        where:{type:typeInput}
-    });
-    res.errCode = 0;
-    res.data = allCode;
-    resolve(res);
+if(!typeInput){
+    resolve({
+        
+        errCode: 1,
+        errMessage: 'Missing required parameters',
+    })
 }else{
       
-        resolve({
-            errCode: 1,
-            errMessage: 'Missing required parameters',
-        })
 }
         }catch(e){
 reject(e);
