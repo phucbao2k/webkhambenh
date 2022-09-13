@@ -18,8 +18,8 @@ class About extends Component{
                     <iframe width="100%" height="320px"
                      src="https://www.youtube.com/embed/21tjOW8BvB4?list=PLncHg6Kn2JT6E38Z3kit9Hnif1xC_9VqI"
                       title="Bài N5: Demo Sản Phẩm Đạt Được Khi Kết Thúc Khóa Học Trên Production |Khóa Học Node.js và React"
-                       frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen></iframe>
+                       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullscreen></iframe>
                     </div>
                     <div className="content-right">
                         <p><FormattedMessage id="home-footer.story"/></p>

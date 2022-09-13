@@ -22,7 +22,7 @@
     }
     .languages{
         display: flex;
-             
+                flex-direction: row;
              
         .language-en{
             margin-right: 15px;

@@ -22,8 +22,8 @@
     }
     .languages{
         display: flex;
-             
-             
+                flex-direction: row;
+                float: right;
         .language-en{
             margin-right: 15px;
             margin-left: 10px;
