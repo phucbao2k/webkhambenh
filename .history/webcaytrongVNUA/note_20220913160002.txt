@@ -3,11 +3,10 @@ Hàm .destroy() chỉ thực hiện được khi đứng trước nó là 1 obje
 Đối với các function(hàm) dùng để xử lý(handle) sự kiện(evenet) onChange, onClick, on... các kiểu, thì ta nên dùng arrow function khi 
 thực hiện gán lệnh cho onClick, onChange...
 
--Props là các biến, data được truyền từ component cha và có thể truy cập được ở cả các component con.
+Props là các biến, data được truyền từ component cha và có thể truy cập được ở cả các component con.
 
--State được khởi tạo và chỉnh sửa và chỉ có thể truy cập bởi chính bản thân component chứa nó.
- -Điểm khác nhau lớn nhất giữa props và state đó là props không thể thay đổi,
--  còn state có thể thay đổi do đó hiệu năng của props tốt hơn state.
+State được khởi tạo và chỉnh sửa và chỉ có thể truy bởi chính bản thân component chứa nó.
+ Điểm khác nhau lớn nhất giữa props và state đó là props không thể thay đổi, còn state có thể thay đổi do đó hiệu năng của props tốt hơn state.
 
 
 ... (there dots): là copy và paste trong ReactJs
