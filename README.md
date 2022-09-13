@@ -1,2 +1,3 @@
 # webcaytrongVNUA
-Website quang ba va buon ban cay trong vnua
+Website kham chua benh cho cay trong
+-Website about medical examination and treatment for plants-
