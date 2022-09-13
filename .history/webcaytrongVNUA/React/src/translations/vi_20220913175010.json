@@ -1,0 +1,51 @@
+{
+    "homeheader":{
+        "speciality":"Chuyên khoa(loại cây trồng)",
+        "searchdoctor":"Tìm kỹ sư theo loại cây trồng",
+        "health-facility":"Cơ sở khám bệnh",
+        "select-room":"Chọn nơi khám bệnh",
+        "doctor":"Kỹ sư",
+        "select-doctor":"Chọn kỹ sư giỏi",
+        "fee": "Gói khám",
+        "check-health":"Khám toàn diện cho cây trồng",
+        "support": "Hỗ trợ",
+        "welcome": "Xin chào"
+    },
+    "banner":{
+"title1": "NỀN TẢNG Y TẾ",
+"title2": "CHĂM SÓC CÂY TRỒNG TOÀN DIỆN",
+"child1":"Khám cây trồng kinh tế",
+"child2":"Khám từ xa",
+"child3":"Khám tổng quát",
+"child4":"Xét nghiệm cây trồng",
+"child5":"Khám cây cảnh",
+"child6":"Khám môi trường"
+    }, "carousel":{
+        "carousel-1":"Chuyên khoa phổ biến",
+        "carousel-2":"Xem thêm",
+        "handbook":"Cẩm nang",
+        "gooddoctor": "Bác sĩ nổi bật tuần qua"
+    },
+    
+   
+    "menu": {
+        "admin":{
+            "manage-user": "User System",
+            "manage-doctor":"Manage doctors",
+            "manage-admin": "Manage admins",
+            "crud": "CRUD user",
+            "crud-redux": "CRUD Redux",
+            "clinic":"Clinics",
+            "manage-clinic":"Manage clinics",
+            "specialty": "Specialties",
+            "manage-specialty":"Quản lý các chuyên ngành",
+            "handbook": "Cẩm nang-tin tức",
+            "manage-handbook":"Quản lý cẩm nang-tin tức"
+        }
+    },
+    
+    "home-footer":{
+"more-info": "Đây là kênh youtube mà tôi học lập trình web, bạn có thể ghé thăm để biết thêm nhiều thông tin hơn",
+"story":"Đây là một kênh youtube chất lượng khá, tuy nghiệp vụ sư phạm củ người dạy chưa cao, nhưng cũng đủ để bạn hiểu được vấn đề, miễn là bạn kiên nhẫn"
+    }
+}
