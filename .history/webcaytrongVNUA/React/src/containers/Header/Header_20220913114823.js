@@ -20,12 +20,7 @@ handleChangeLanguage =(language) => {
                     <Navigator menus={adminMenu} />
                 </div>
 <div className="languages">
-<div className={language === LANGUAGES.VI ?'language-vi active':'language-vi'}>
-                            <span onClick={() =>this.handleChangeLanguage(LANGUAGES.VI)}>VN</span>
-                            </div>
-                        <div className={language === LANGUAGES.EN ?'language-en active':'language-en'}>
-                            <span onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}>EN</span>
-                            </div>
+    
 </div>
                 {/* nút logout */}
                 <div className="btn btn-logout" onClick={processLogout}>
@@ -39,15 +34,13 @@ handleChangeLanguage =(language) => {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.user.isLoggedIn,
-        language: state.app.language,
+        isLoggedIn: state.user.isLoggedIn
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
         processLogout: () => dispatch(actions.processLogout()),
-        changeLanguageAppRedux:(language) => dispatch(actions.changeLanguageApp(language)),
     };
 };
 

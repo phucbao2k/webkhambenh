@@ -39,7 +39,7 @@ handleChangeLanguage =(language) => {
 
 const mapStateToProps = state => {
     return {
-        isLoggedIn: state.user.isLoggedIn,
+        isLoggedIn: state.user.isLoggedIn
         language: state.app.language,
     };
 };
@@ -47,7 +47,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         processLogout: () => dispatch(actions.processLogout()),
-        changeLanguageAppRedux:(language) => dispatch(actions.changeLanguageApp(language)),
     };
 };
 

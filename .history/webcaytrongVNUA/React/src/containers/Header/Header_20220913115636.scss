@@ -31,11 +31,12 @@
             }
         }
         .language-vi{
-           
+            margin-right: 15px;
+            margin-left: 10px;
             cursor: pointer;
             &.active{
                 opacity: 1;
-                color: orange;
+                color: #30d663;
             }
         }
     }
