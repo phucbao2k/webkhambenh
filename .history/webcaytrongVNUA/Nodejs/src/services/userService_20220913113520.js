@@ -202,7 +202,7 @@ if(typeInput){
         })
 }
         }catch(e){
-            console.error(e);
+            console
 reject(e);
         }
     })

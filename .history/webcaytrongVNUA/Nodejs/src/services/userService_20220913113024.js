@@ -186,7 +186,7 @@ let getAllCodeService= (typeInput)=>{
     return new Promise(async(resolve,reject)=>{
         try{
 if(typeInput){
-    console.log(typeInput);
+    console.log(type
     let res ={};
     let allCode = await db.Allcode.findAll({
         where:{type:typeInput}
@@ -202,7 +202,6 @@ if(typeInput){
         })
 }
         }catch(e){
-            console.error(e);
 reject(e);
         }
     })
