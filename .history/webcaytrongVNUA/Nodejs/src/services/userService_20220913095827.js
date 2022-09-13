@@ -191,16 +191,10 @@ if(!typeInput){
         errMessage: 'Missing required parameters',
     })
 }else{
-        let res ={};
-        let allCode = await db.Allcode.findAll({
-            where:{type:typeInput}
-        });
-        res.errCode = 0;
-        res.data = allCode;
-        resolve(res);
+        let res ={}
 }
         }catch(e){
-reject(e);
+
         }
     })
 }
@@ -209,6 +203,5 @@ module.exports ={
     getAllUsers: getAllUsers,
     createNewUser: createNewUser,
     deleteUser: deleteUser,
-    updateUserData: updateUserData,
-    getAllCodeService: getAllCodeService,
+    updateUserData: updateUserData
 }

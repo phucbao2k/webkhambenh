@@ -57,10 +57,7 @@ let getAllCode = async(req, res) => {
 let data = await userService.getAllCodeService(req.query.type);
 return res.status(200).json(data);
     }catch(e){
-return res.status(200).json({
-    errCode: -1,
-    errMessage: 'Error from server'
-})
+
     }
 }
 module.exports ={
@@ -69,5 +66,4 @@ module.exports ={
     handleCreateNewUser: handleCreateNewUser,
     handleDeleteUser: handleDeleteUser,
     handleEditUser: handleEditUser,
-    getAllCode: getAllCode,
 }

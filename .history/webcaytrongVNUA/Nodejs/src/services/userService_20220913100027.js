@@ -200,7 +200,7 @@ if(!typeInput){
         resolve(res);
 }
         }catch(e){
-reject(e);
+r
         }
     })
 }
@@ -209,6 +209,5 @@ module.exports ={
     getAllUsers: getAllUsers,
     createNewUser: createNewUser,
     deleteUser: deleteUser,
-    updateUserData: updateUserData,
-    getAllCodeService: getAllCodeService,
+    updateUserData: updateUserData
 }
