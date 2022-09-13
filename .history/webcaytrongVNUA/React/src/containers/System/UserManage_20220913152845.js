@@ -5,7 +5,7 @@ import './UserManage.scss';
 import ModalUser from './ModalUser';
 import {emitter} from '../../utils/emitter';
 import ModalEditUser from './ModalEditUser';
-// import Header from '../Header/Header';
+import Header from '../Header/Header';
 import {getAllUsers, createNewUserService, deleteUserService, editUserService} from '../../services/userService';
  // nếu muố import 1 function thì ta dùng dấu ngoặc nhọn
 class UserManage extends Component {
@@ -123,7 +123,7 @@ doEditUser = async (user) =>{
               editUser={this.doEditUser}
               />
              }
-            
+            {this.props.isLoggedIn && <Header />}
             <div className="title text-center">Manage Users with BaoPhuc</div>
             <div className="mx-1">
                 <button className="btn btn-primary px-3"

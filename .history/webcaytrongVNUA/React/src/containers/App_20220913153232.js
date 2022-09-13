@@ -13,7 +13,7 @@ import { path } from '../utils'
 import Home from '../routes/Home';
 // import Login from '../routes/Login';
 import Login from '../containers/auth/Login';
-import Header from './Header/Header';
+
 import System from '../routes/System';
 
 import { CustomToastCloseButton } from '../components/CustomToast';
@@ -48,7 +48,7 @@ class App extends Component {
                        
 <div className ="content-container">
 
-
+{this.props.isLoggedIn && <Header />}
                        <CustomScrollbars style={{height: '100vh', width: '100%'}}>
                        <Switch>
                                 <Route path={path.HOME} exact component={(Home)} />

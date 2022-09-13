@@ -26,7 +26,6 @@ handleChangeLanguage =(language) => {
                         <div className={language === LANGUAGES.EN ?'language-en active':'language-en'}>
                             <span onClick={() => this.handleChangeLanguage(LANGUAGES.EN)}>EN</span>
                             </div>
-                            {/* nút logout */}
                             <div className="btn btn-logout" onClick={processLogout}>
                     <i className="fas fa-sign-out-alt"></i>
                 </div>

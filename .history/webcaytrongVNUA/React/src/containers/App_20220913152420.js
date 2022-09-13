@@ -45,7 +45,7 @@ class App extends Component {
                 <Router history={history}>
                     <div className="main-container">
                         {/* <ConfirmModal /> */}
-                       
+                        {this.props.isLoggedIn && <Header />}
 <div className ="content-container">
 
 
