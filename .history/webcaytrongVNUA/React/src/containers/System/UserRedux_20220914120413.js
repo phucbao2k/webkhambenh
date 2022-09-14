@@ -51,27 +51,7 @@ class UserRedux extends Component {
     </div>
   </div>
   <div className="row">
-  <div className="col-md-6 mb-3">
-      <label htmlFor="validationServer03">City</label>
-      <input type="text" className="form-control is-invalid" id="validationServer03" placeholder="City" required/>
-      <div className="invalid-feedback">
-        Please provide a valid city.
-      </div>
-    </div>
-    <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer04">State</label>
-      <input type="text" className="form-control is-invalid" id="validationServer04" placeholder="State" required/>
-      <div className="invalid-feedback">
-        Please provide a valid state.
-      </div>
-    </div>
-    <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer05">Zip</label>
-      <input type="text" className="form-control is-invalid" id="validationServer05" placeholder="Zip" required/>
-      <div className="invalid-feedback">
-        Please provide a valid zip.
-      </div>
-    </div>
+
   </div>
    
   
