@@ -102,8 +102,8 @@ console.log(e);
   <div className="row">
                         <div className="col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.roleid"/></label>
-      <select  className="form-control" name="roleId">
-      {roleIds && roleIds.lenght > 0 ||  roleIds.map((item, index)=>{
+      <select  className="form-control" name="role">
+      {positions && positions.lenght > 0 ||  positions.map((item, index)=>{
                     return(
                         <option key={index}>
                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>

@@ -102,15 +102,13 @@ console.log(e);
   <div className="row">
                         <div className="col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.roleid"/></label>
-      <select  className="form-control" name="roleId">
-      {roleIds && roleIds.lenght > 0 ||  roleIds.map((item, index)=>{
-                    return(
-                        <option key={index}>
-                            {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
-                    )
-                  })
-                  } 
-                  </select>
+      <div className="input-group">
+        
+        <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
+        <div className="invalid-feedback">
+        <FormattedMessage id="create-user.invalid-feedback"/>
+        </div>
+      </div>
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.position"/></label>

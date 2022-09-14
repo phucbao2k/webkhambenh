@@ -8,37 +8,16 @@ class UserRedux extends Component {
     constructor(props) {
         super(props);
         this.state ={
-            genderArr: [],
-            positionArr: [],
-            roleIdArr: [],
+            genderArr: []
         };
     }
 
     async componentDidMount() {
 try{
     let res = await getAllCodeService('gender');
-   
     if(res && res.errCode===0){
         this.setState({genderArr: res.data});
-        
-    }
-}catch(e){
-console.log(e);
-}
-try{
-    let res = await getAllCodeService('position');
-    if(res && res.errCode===0){
-        this.setState({positionArr: res.data});
-        
-    }
-}catch(e){
-    console.log(e);
-}
-try{
-    let res = await getAllCodeService('roleId');
-    if(res && res.errCode===0){
-        this.setState({roleIdArr: res.data});
-        
+        console.log("check res: ",res)
     }
 }catch(e){
 console.log(e);
@@ -48,9 +27,6 @@ console.log(e);
 
     render() {
         let genders = this.state.genderArr;
-        let positions = this.state.positionArr;
-        let roleIds = this.state.roleIdArr;
-      
        let language = this.props.language;
         return (
             
@@ -102,42 +78,36 @@ console.log(e);
   <div className="row">
                         <div className="col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.roleid"/></label>
-      <select  className="form-control" name="roleId">
-      {roleIds && roleIds.lenght > 0 ||  roleIds.map((item, index)=>{
-                    return(
-                        <option key={index}>
-                            {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
-                    )
-                  })
-                  } 
-                  </select>
+      <div className="input-group">
+        
+        <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
+        <div className="invalid-feedback">
+        <FormattedMessage id="create-user.invalid-feedback"/>
+        </div>
+      </div>
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.position"/></label>
     
-      <select  className="form-control" name="position">
-      {positions && positions.lenght > 0 ||  positions.map((item, index)=>{
-                    return(
-                        <option key={index}>
-                            {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
-                    )
-                  })
-                  } 
+      <select  className="form-control" name="roleId">
+                    <option value="1">Admin</option>
+                    <option value="0">Doctor</option>
+                    <option value="2">Patient</option>
                   </select>
       
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServer01"> <FormattedMessage id="create-user.gender"/></label>
      
-      <select className="form-control" name="gender">
-                  {genders && genders.lenght > 0 ||  genders.map((item, index)=>{
+      <select  className="form-control">
+                  {genders && genders.lenght > 0 &&
+                  genders.map((item, index)=>{
                     return(
                         <option key={index}>
-                            {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
+                            {language === LANGUAGES.VI ? item.valueVi : }</option>
                     )
                   })
-                  } 
-                
+                  }
                 </select>
     
     </div>
