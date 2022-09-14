@@ -23,7 +23,7 @@ handleChangeLanguage =(language) => {
     <span className="welcome">
         <FormattedMessage id="homeheader.welcome"></FormattedMessage>, 
         {userInfo && userInfo.firstName && userInfo.lastName? ' '+ userInfo.firstName +' '+ userInfo.lastName: ' '} !
-        {/* Khi có thông tin của userInfo với 2 biến đầy đủ như kia thì ta in ra, không thì trả về giá trị rỗng */}
+        {/* Ý cua */}
     </span> 
 <div className={language === LANGUAGES.VI ?'language-vi active':'language-vi'}>
                             <span onClick={() =>this.handleChangeLanguage(LANGUAGES.VI)}>VN</span>
