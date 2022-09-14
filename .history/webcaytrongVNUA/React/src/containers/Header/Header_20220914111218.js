@@ -23,7 +23,7 @@ handleChangeLanguage =(language) => {
     <span className="welcome">
         <FormattedMessage id="homeheader.welcome"></FormattedMessage>, 
        
-    </span> {userInfo && userInfo.firstName ? userInfo.firstName: ' '} 
+    </span>
 <div className={language === LANGUAGES.VI ?'language-vi active':'language-vi'}>
                             <span onClick={() =>this.handleChangeLanguage(LANGUAGES.VI)}>VN</span>
                             </div>
