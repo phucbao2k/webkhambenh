@@ -70,11 +70,11 @@ let updateUserData = (data)=>{
         })
         if(user){
             user.firstName = data.firstName;
-            user.firstName = data.lastName;
+            user.lastName = data.lastName;
             user.address = data.address;
-            await user.save(
-               
-            );
+            await db.User.save({
+                where:{id: data.id}
+            });
             let allUsers = await db.User.findAll();
             resolve(allUsers);
         }else{
@@ -82,7 +82,7 @@ let updateUserData = (data)=>{
         }
 
     }catch(e){
-        reject(e);
+        rej
 console.log(e.message);
     }
    })

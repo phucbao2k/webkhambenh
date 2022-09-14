@@ -72,8 +72,8 @@ let updateUserData = (data)=>{
             user.firstName = data.firstName;
             user.firstName = data.lastName;
             user.address = data.address;
-            await user.save(
-               
+            await db.User.update(
+                user.firstName,user.firstName,
             );
             let allUsers = await db.User.findAll();
             resolve(allUsers);

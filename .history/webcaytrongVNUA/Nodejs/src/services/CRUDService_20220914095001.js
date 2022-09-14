@@ -70,11 +70,11 @@ let updateUserData = (data)=>{
         })
         if(user){
             user.firstName = data.firstName;
-            user.firstName = data.lastName;
+            user.lastName = data.lastName;
             user.address = data.address;
-            await user.save(
-               
-            );
+            await db.User.update({
+               wh
+            });
             let allUsers = await db.User.findAll();
             resolve(allUsers);
         }else{
