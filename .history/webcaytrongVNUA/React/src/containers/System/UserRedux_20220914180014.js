@@ -46,7 +46,7 @@ class UserRedux extends Component {
 // }
 this.props.getGenderStart();
     }
-componentDidUpdate( prevProps,prevState, snapshot){
+componentDidUpdate( prevProps,prev){
     if(prevProps.genderRedux !== this.props.genderRedux){
         this.setState({
             genderArr: this.props.genderRedux
