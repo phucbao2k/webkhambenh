@@ -75,19 +75,25 @@ console.log(e);
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.password"/></label>
       <div className="input-group">
         
-        <input type="password" className="form-control " id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
-        
+        <input type="password" className="form-control is-valid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
+        <div className="invalid-feedback">
+        <FormattedMessage id="create-user.invalid-feedback"/>
+        </div>
       </div>
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServer01"> <FormattedMessage id="create-user.firstname"/></label>
-      <input type="text" className="form-control " id="validationServer01" placeholder="..."  required/>
-    
+      <input type="text" className="form-control is-invalid" id="validationServer01" placeholder="..."  required/>
+      <div className="invalid-feedback">
+      <FormattedMessage id="create-user.invalid-feedback"/>
+      </div>
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServer02"> <FormattedMessage id="create-user.lastname"/></label>
-      <input type="text" className="form-control " id="validationServer02" placeholder="..."  required/>
-      
+      <input type="text" className="form-control is-invalid" id="validationServer02" placeholder="..."  required/>
+      <div className="invalid-feedback">
+      <FormattedMessage id="create-user.invalid-feedback"/>
+      </div>
     </div>
    
   </div>
@@ -135,21 +141,27 @@ console.log(e);
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServer02"> <FormattedMessage id="create-user.image"/></label>
-      <input type="text" className="form-control " id="validationServer02" placeholder="..."  required/>
-   
+      <input type="text" className="form-control is-invalid" id="validationServer02" placeholder="..."  required/>
+      <div className="invalid-feedback">
+      <FormattedMessage id="create-user.invalid-feedback"/>
+      </div>
     </div>
    
   </div>
   <div className="row">
   <div className="col-md-9 mb-3">
       <label htmlFor="validationServer03"> <FormattedMessage id="create-user.address"/></label>
-      <input type="text" className="form-control " id="validationServer03" placeholder="..." required/>
-     
+      <input type="text" className="form-control is-invalid" id="validationServer03" placeholder="..." required/>
+      <div className="invalid-feedback">
+      <FormattedMessage id="create-user.invalid-feedback"/>
+      </div>
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServer04"> <FormattedMessage id="create-user.phonenumber"/></label>
-      <input type="text" className="form-control " id="validationServer04" placeholder="..." required/>
-      
+      <input type="text" className="form-control is-invalid" id="validationServer04" placeholder="..." required/>
+      <div className="invalid-feedback">
+      <FormattedMessage id="create-user.invalid-feedback"/>
+      </div>
     </div>
     
   </div>

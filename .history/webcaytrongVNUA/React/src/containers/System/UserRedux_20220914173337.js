@@ -75,7 +75,7 @@ console.log(e);
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.password"/></label>
       <div className="input-group">
         
-        <input type="password" className="form-control " id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
+        <input type="password" className="form-control is-valid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
         
       </div>
     </div>
