@@ -14,18 +14,14 @@ class UserRedux extends Component {
     async componentDidMount() {
 try{
     let res = await getAllCodeService('gender');
-    if(res && res.errCode===0){
-        this.setState({genderArr: res.data});
-        console.log("check res: ",res)
-    }
+    if()
 }catch(e){
-console.log(e);
+
 }
     }
 
 
     render() {
-        let genders = this.state.genderArr;
         return (
             
             <div className="user-redux-container" >
@@ -86,7 +82,13 @@ console.log(e);
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.position"/></label>
-    
+      {/* <div className="input-group">
+        
+        <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
+        <div className="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div> */}
       <select id="inputState" class="form-control" name="roleId">
                     <option value="1">Admin</option>
                     <option value="0">Doctor</option>
@@ -96,15 +98,14 @@ console.log(e);
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServer01"> <FormattedMessage id="create-user.gender"/></label>
-     
+      {/* <input type="text" className="form-control is-invalid" id="validationServer01" placeholder="..."  required/>
+      <div className="invalid-feedback">
+       Please enter a valid value
+      </div> */}
       <select id="inputState" class="form-control" name="gender">
-                  {genders && genders.lenght>0 &&
-                  genders.map((item, index)=>{
-                    return(
-                        <option key={index}>{item.valueVi}</option>
-                    )
-                  })
-                  }
+                  <option value="1">Male</option>
+                  <option value="0">Female</option>
+                  <option value="2">Other...</option>
                 </select>
     
     </div>

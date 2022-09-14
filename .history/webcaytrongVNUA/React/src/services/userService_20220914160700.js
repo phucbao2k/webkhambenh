@@ -29,5 +29,5 @@ const getAllCodeService = (inputType)=>{
 }
 export{handleLoginApi, getAllUsers,
      createNewUserService,deleteUserService,
-     editUserService,getAllCodeService}//đối với ReactJs, khi export function để nơi khác truy cập, 
+     editUserService}//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export

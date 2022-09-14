@@ -24,10 +24,6 @@ const editUserService =(inputData) =>{
     return axios.put('/api/edit-user', inputData
     );
 }
-const getAllCodeService = (inputType)=>{
-    return axios.get(`/api/allcode?type=${inputType}`)
-}
 export{handleLoginApi, getAllUsers,
-     createNewUserService,deleteUserService,
-     editUserService,getAllCodeService}//đối với ReactJs, khi export function để nơi khác truy cập, 
+     createNewUserService,deleteUserService,editUserService}//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export

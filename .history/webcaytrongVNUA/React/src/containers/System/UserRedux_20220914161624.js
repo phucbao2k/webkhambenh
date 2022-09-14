@@ -101,7 +101,7 @@ console.log(e);
                   {genders && genders.lenght>0 &&
                   genders.map((item, index)=>{
                     return(
-                        <option key={index}>{item.valueVi}</option>
+                        <option key={index}>{item.val}</option>
                     )
                   })
                   }

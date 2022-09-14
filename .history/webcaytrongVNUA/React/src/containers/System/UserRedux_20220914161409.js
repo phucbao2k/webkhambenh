@@ -96,15 +96,14 @@ console.log(e);
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServer01"> <FormattedMessage id="create-user.gender"/></label>
-     
+      {/* <input type="text" className="form-control is-invalid" id="validationServer01" placeholder="..."  required/>
+      <div className="invalid-feedback">
+       Please enter a valid value
+      </div> */}
       <select id="inputState" class="form-control" name="gender">
-                  {genders && genders.lenght>0 &&
-                  genders.map((item, index)=>{
-                    return(
-                        <option key={index}>{item.valueVi}</option>
-                    )
-                  })
-                  }
+                  <option value="1">Male</option>
+                  <option value="0">Female</option>
+                  <option value="2">Other...</option>
                 </select>
     
     </div>

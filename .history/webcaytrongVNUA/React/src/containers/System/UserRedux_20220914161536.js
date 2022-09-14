@@ -99,12 +99,11 @@ console.log(e);
      
       <select id="inputState" class="form-control" name="gender">
                   {genders && genders.lenght>0 &&
-                  genders.map((item, index)=>{
+                  genders.map(item, index)=>{
                     return(
-                        <option key={index}>{item.valueVi}</option>
+                        <option></option>
                     )
-                  })
-                  }
+                  }}
                 </select>
     
     </div>

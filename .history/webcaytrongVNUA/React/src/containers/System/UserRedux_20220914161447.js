@@ -98,13 +98,7 @@ console.log(e);
       <label htmlFor="validationServer01"> <FormattedMessage id="create-user.gender"/></label>
      
       <select id="inputState" class="form-control" name="gender">
-                  {genders && genders.lenght>0 &&
-                  genders.map((item, index)=>{
-                    return(
-                        <option key={index}>{item.valueVi}</option>
-                    )
-                  })
-                  }
+                  {genders && gender}
                 </select>
     
     </div>
