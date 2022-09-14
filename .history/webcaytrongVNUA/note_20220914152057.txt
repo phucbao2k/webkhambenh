@@ -33,4 +33,4 @@ alert không giúp sinh ra 1 object;
 
   với prj này, sau khi thay đổi thông tin của người dùng, ta cần logout ra bên ngoài rồi đăng nhập lại để redux persit load lại
 
-  muốn tìm path hoặc đặt thêm path cần thao tác, đến file System.js và đặt path khác
+  muốn tìm path
