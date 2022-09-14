@@ -73,7 +73,7 @@ let updateUserData = (data)=>{
             user.firstName = data.lastName;
             user.address = data.address;
             await db.User.update({firstName: data.firstName, lastName: data.lastName, address: data.address},{
-                where:{id: data.id}
+                where:{firstName: data.firstName, lastName: data.lastName, address: data.address}
             }
                 
               
