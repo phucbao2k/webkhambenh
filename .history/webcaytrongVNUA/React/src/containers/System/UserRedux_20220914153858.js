@@ -114,14 +114,14 @@ class UserRedux extends Component {
       <label htmlFor="validationServer03"> <FormattedMessage id="create-user.address"/></label>
       <input type="text" className="form-control is-invalid" id="validationServer03" placeholder="..." required/>
       <div className="invalid-feedback">
-      <FormattedMessage id="create-user.invalid-feedback"/>
+      <FormattedMessage id="create-user.title"/>
       </div>
     </div>
     <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer04"> <FormattedMessage id="create-user.phonenumber"/></label>
+      <label htmlFor="validationServer04">Phone Number</label>
       <input type="text" className="form-control is-invalid" id="validationServer04" placeholder="..." required/>
       <div className="invalid-feedback">
-      <FormattedMessage id="create-user.invalid-feedback"/>
+        Please provide a valid state.
       </div>
     </div>
     
@@ -132,14 +132,14 @@ class UserRedux extends Component {
     <div className="form-check">
       <input className="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required/>
       <label className="form-check-label" htmlFor="invalidCheck3">
-      <FormattedMessage id="create-user.agree"/>
+        Agree to terms and conditions
       </label>
       <div className="invalid-feedback">
-      <FormattedMessage id="create-user.confirm"/>
+        You must agree before submitting.
       </div>
     </div>
   </div>
-  <button className="btn btn-primary" type="submit">  <FormattedMessage id="create-user.submit"/></button>
+  <button className="btn btn-primary" type="submit">Submit form</button>
 
                     </div>
                 </div>

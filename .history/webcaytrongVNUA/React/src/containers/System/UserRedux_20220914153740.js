@@ -67,12 +67,12 @@ class UserRedux extends Component {
         
         <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
         <div className="invalid-feedback">
-        <FormattedMessage id="create-user.invalid-feedback"/>
+          Please choose a username.
         </div>
       </div>
     </div>
     <div className="col-md-3 mb-3">
-      <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.position"/></label>
+      <label htmlFor="validationServerUsername">Position</label>
       {/* <div className="input-group">
         
         <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
@@ -88,7 +88,7 @@ class UserRedux extends Component {
       
     </div>
     <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer01"> <FormattedMessage id="create-user.gender"/></label>
+      <label htmlFor="validationServer01">Gender</label>
       {/* <input type="text" className="form-control is-invalid" id="validationServer01" placeholder="..."  required/>
       <div className="invalid-feedback">
        Please enter a valid value
@@ -101,27 +101,27 @@ class UserRedux extends Component {
     
     </div>
     <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer02"> <FormattedMessage id="create-user.image"/></label>
+      <label htmlFor="validationServer02">Image</label>
       <input type="text" className="form-control is-invalid" id="validationServer02" placeholder="..."  required/>
       <div className="invalid-feedback">
-      <FormattedMessage id="create-user.invalid-feedback"/>
+       Please enter a valid value
       </div>
     </div>
    
   </div>
   <div className="row">
   <div className="col-md-9 mb-3">
-      <label htmlFor="validationServer03"> <FormattedMessage id="create-user.address"/></label>
+      <label htmlFor="validationServer03">Address</label>
       <input type="text" className="form-control is-invalid" id="validationServer03" placeholder="..." required/>
       <div className="invalid-feedback">
-      <FormattedMessage id="create-user.invalid-feedback"/>
+        Please provide a valid city.
       </div>
     </div>
     <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer04"> <FormattedMessage id="create-user.phonenumber"/></label>
+      <label htmlFor="validationServer04">Phone Number</label>
       <input type="text" className="form-control is-invalid" id="validationServer04" placeholder="..." required/>
       <div className="invalid-feedback">
-      <FormattedMessage id="create-user.invalid-feedback"/>
+        Please provide a valid state.
       </div>
     </div>
     
@@ -132,14 +132,14 @@ class UserRedux extends Component {
     <div className="form-check">
       <input className="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" required/>
       <label className="form-check-label" htmlFor="invalidCheck3">
-      <FormattedMessage id="create-user.agree"/>
+        Agree to terms and conditions
       </label>
       <div className="invalid-feedback">
-      <FormattedMessage id="create-user.confirm"/>
+        You must agree before submitting.
       </div>
     </div>
   </div>
-  <button className="btn btn-primary" type="submit">  <FormattedMessage id="create-user.submit"/></button>
+  <button className="btn btn-primary" type="submit">Submit form</button>
 
                     </div>
                 </div>

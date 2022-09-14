@@ -43,9 +43,9 @@
         "roleid": "RoleID",
         "phonenumber": "Phonenumber",
         "image": "Image",
-        "agree":" Agree to terms and conditions.",
-        "confirm": "You must agree before submitting.",
-        "submit":"Confirm & Sign up"
+        "agree":"Đồng ý với các điều khoản và điều kiện.",
+        "confirm": "Bạn cần đồng ý với các điều khoản và điều kiện.",
+        "submit":"Xác nhận- Đăng kí"
 
     },
     "menu": {

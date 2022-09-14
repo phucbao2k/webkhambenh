@@ -135,11 +135,11 @@ class UserRedux extends Component {
       <FormattedMessage id="create-user.agree"/>
       </label>
       <div className="invalid-feedback">
-      <FormattedMessage id="create-user.confirm"/>
+      <FormattedMessage id="create-user.invalid-feedback"/>
       </div>
     </div>
   </div>
-  <button className="btn btn-primary" type="submit">  <FormattedMessage id="create-user.submit"/></button>
+  <button className="btn btn-primary" type="submit">Submit form</button>
 
                     </div>
                 </div>
