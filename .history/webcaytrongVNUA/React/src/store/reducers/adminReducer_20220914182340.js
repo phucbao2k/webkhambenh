@@ -2,8 +2,8 @@ import actionTypes from '../actions/actionTypes';
 
 const initialState = {
    genders:[],
-   roleIds: [],
-   positions: [],
+   roleis: [],
+   position: [],
 }
 
 const adminReducer = (state = initialState, action) => {
