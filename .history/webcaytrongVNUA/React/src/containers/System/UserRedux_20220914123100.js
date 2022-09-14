@@ -80,11 +80,6 @@ class UserRedux extends Component {
           Please choose a username.
         </div>
       </div> */}
-      <select id="inputState" class="form-control" name="roleId">
-                    <option value="1">Admin</option>
-                    <option value="0">Doctor</option>
-                    <option value="2">Patient</option>
-                  </select>
       
     </div>
     <div className="col-md-3 mb-3">

@@ -61,56 +61,7 @@ class UserRedux extends Component {
    
   </div>
   <div className="row">
-                        <div className="col-md-3 mb-3">
-      <label htmlFor="validationServerUsername">RoleID</label>
-      <div className="input-group">
-        
-        <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
-        <div className="invalid-feedback">
-          Please choose a username.
-        </div>
-      </div>
-    </div>
-    <div className="col-md-3 mb-3">
-      <label htmlFor="validationServerUsername">Position</label>
-      {/* <div className="input-group">
-        
-        <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
-        <div className="invalid-feedback">
-          Please choose a username.
-        </div>
-      </div> */}
-      <select id="inputState" class="form-control" name="roleId">
-                    <option value="1">Admin</option>
-                    <option value="0">Doctor</option>
-                    <option value="2">Patient</option>
-                  </select>
-      
-    </div>
-    <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer01">Gender</label>
-      {/* <input type="text" className="form-control is-invalid" id="validationServer01" placeholder="..."  required/>
-      <div className="invalid-feedback">
-       Please enter a valid value
-      </div> */}
-      <select id="inputState" class="form-control" name="gender">
-                  <option value="1">Male</option>
-                  <option value="0">Female</option>
-                  <option value="2">Other...</option>
-                </select>
-    
-    </div>
-    <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer02">Image</label>
-      <input type="text" className="form-control is-invalid" id="validationServer02" placeholder="..."  required/>
-      <div className="invalid-feedback">
-       Please enter a valid value
-      </div>
-    </div>
-   
-  </div>
-  <div className="row">
-  <div className="col-md-9 mb-3">
+  <div className="col-md-6 mb-3">
       <label htmlFor="validationServer03">Address</label>
       <input type="text" className="form-control is-invalid" id="validationServer03" placeholder="..." required/>
       <div className="invalid-feedback">

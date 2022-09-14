@@ -73,18 +73,13 @@ class UserRedux extends Component {
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServerUsername">Position</label>
-      {/* <div className="input-group">
+      <div className="input-group">
         
-        <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
+        {/* <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
         <div className="invalid-feedback">
           Please choose a username.
-        </div>
-      </div> */}
-      <select id="inputState" class="form-control" name="roleId">
-                    <option value="1">Admin</option>
-                    <option value="0">Doctor</option>
-                    <option value="2">Patient</option>
-                  </select>
+        </div> */}
+      </div>
       
     </div>
     <div className="col-md-3 mb-3">

@@ -28,7 +28,7 @@ class UserRedux extends Component {
         <div className="input-group-prepend">
           <span className="input-group-text" id="inputGroupPrepend3">@</span>
         </div>
-        <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
+        <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="Username" aria-describedby="inputGroupPrepend3" required/>
         <div className="invalid-feedback">
           Please choose a username.
         </div>
@@ -38,7 +38,7 @@ class UserRedux extends Component {
       <label htmlFor="validationServerUsername">Password</label>
       <div className="input-group">
         
-        <input type="password" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
+        <input type="password" className="form-control is-invalid" id="validationServerUsername" placeholder="Password" aria-describedby="inputGroupPrepend3" required/>
         <div className="invalid-feedback">
           Please choose a username.
         </div>
@@ -46,14 +46,14 @@ class UserRedux extends Component {
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServer01">First name</label>
-      <input type="text" className="form-control is-invalid" id="validationServer01" placeholder="..."  required/>
+      <input type="text" className="form-control is-invalid" id="validationServer01" placeholder="First name"  required/>
       <div className="invalid-feedback">
        Please enter a valid value
       </div>
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServer02">Last name</label>
-      <input type="text" className="form-control is-invalid" id="validationServer02" placeholder="..."  required/>
+      <input type="text" className="form-control is-invalid" id="validationServer02" placeholder="Last name"  required/>
       <div className="invalid-feedback">
        Please enter a valid value
       </div>
@@ -61,57 +61,8 @@ class UserRedux extends Component {
    
   </div>
   <div className="row">
-                        <div className="col-md-3 mb-3">
-      <label htmlFor="validationServerUsername">RoleID</label>
-      <div className="input-group">
-        
-        <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
-        <div className="invalid-feedback">
-          Please choose a username.
-        </div>
-      </div>
-    </div>
-    <div className="col-md-3 mb-3">
-      <label htmlFor="validationServerUsername">Position</label>
-      {/* <div className="input-group">
-        
-        <input type="text" className="form-control is-invalid" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required/>
-        <div className="invalid-feedback">
-          Please choose a username.
-        </div>
-      </div> */}
-      <select id="inputState" class="form-control" name="roleId">
-                    <option value="1">Admin</option>
-                    <option value="0">Doctor</option>
-                    <option value="2">Patient</option>
-                  </select>
-      
-    </div>
-    <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer01">Gender</label>
-      {/* <input type="text" className="form-control is-invalid" id="validationServer01" placeholder="..."  required/>
-      <div className="invalid-feedback">
-       Please enter a valid value
-      </div> */}
-      <select id="inputState" class="form-control" name="gender">
-                  <option value="1">Male</option>
-                  <option value="0">Female</option>
-                  <option value="2">Other...</option>
-                </select>
-    
-    </div>
-    <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer02">Image</label>
-      <input type="text" className="form-control is-invalid" id="validationServer02" placeholder="..."  required/>
-      <div className="invalid-feedback">
-       Please enter a valid value
-      </div>
-    </div>
-   
-  </div>
-  <div className="row">
-  <div className="col-md-9 mb-3">
-      <label htmlFor="validationServer03">Address</label>
+  <div className="col-md-6 mb-3">
+      <label htmlFor="validationServer03">City</label>
       <input type="text" className="form-control is-invalid" id="validationServer03" placeholder="..." required/>
       <div className="invalid-feedback">
         Please provide a valid city.
@@ -124,7 +75,13 @@ class UserRedux extends Component {
         Please provide a valid state.
       </div>
     </div>
-    
+    <div className="col-md-3 mb-3">
+      <label htmlFor="validationServer05">Zip</label>
+      <input type="text" className="form-control is-invalid" id="validationServer05" placeholder="Zip" required/>
+      <div className="invalid-feedback">
+        Please provide a valid zip.
+      </div>
+    </div>
   </div>
    
   

@@ -80,24 +80,14 @@ class UserRedux extends Component {
           Please choose a username.
         </div>
       </div> */}
-      <select id="inputState" class="form-control" name="roleId">
-                    <option value="1">Admin</option>
-                    <option value="0">Doctor</option>
-                    <option value="2">Patient</option>
-                  </select>
       
     </div>
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServer01">Gender</label>
-      {/* <input type="text" className="form-control is-invalid" id="validationServer01" placeholder="..."  required/>
+      <input type="text" className="form-control is-invalid" id="validationServer01" placeholder="..."  required/>
       <div className="invalid-feedback">
        Please enter a valid value
-      </div> */}
-      <select id="inputState" class="form-control" name="gender">
-                  <option value="1">Male</option>
-                  <option value="0">Female</option>
-                  <option value="2">Other...</option>
-                </select>
+      </div>
     
     </div>
     <div className="col-md-3 mb-3">
