@@ -21,12 +21,12 @@ export const adminMenu = [
         name: 'menu.admin.clinic',
         menus:[
             {
-                name: 'menu.admin.manage-clinic', link: '/system/manage-clinic'
+                name: 'menu.admin.manage-specialty', link: '/system/manage-specialty'
             },
         ]
     },
     {
-        //quản lý chuyên khoa
+        //quản lý phòng khám
         name: 'menu.admin.specialty',
         menus:[
             {
