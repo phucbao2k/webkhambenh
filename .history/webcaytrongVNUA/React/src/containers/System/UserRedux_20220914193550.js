@@ -50,22 +50,17 @@ this.props.getRoleIdStart();
     }
 componentDidUpdate( prevProps,prevState, snapshot){
     if(prevProps.genderRedux !== this.props.genderRedux
-      
+        //  && prevProps.positionRedux !== this.props.positionRedux
+          // && prevProps.roleIdRedux !== this.props.roleIdRedux
           ){
         this.setState({
             genderArr: this.props.genderRedux,
-          
+            // positionArr: this.props.positionRedux,
+            // roleIdRedux: this.props.roleIdRedux
         })
     }
     if(prevProps.positionRedux !== this.props.positionRedux){
-      this.setState({
-        positionArr: this.props.positionRedux,
-      })
-    }
-    if(prevProps.roleIdRedux !== this.props.roleIdRedux){
-      this.setState({
-        roleIdArr: this.props.roleIdRedux,
-      })
+      this.setState
     }
 }
 

@@ -54,7 +54,8 @@ componentDidUpdate( prevProps,prevState, snapshot){
           ){
         this.setState({
             genderArr: this.props.genderRedux,
-          
+            // positionArr: this.props.positionRedux,
+            // roleIdRedux: this.props.roleIdRedux
         })
     }
     if(prevProps.positionRedux !== this.props.positionRedux){
