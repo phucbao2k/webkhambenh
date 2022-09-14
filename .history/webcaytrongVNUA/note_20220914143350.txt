@@ -29,6 +29,4 @@ alert không giúp sinh ra 1 object;
 
   đổi ngôn ngữ thì sang điều chỉnh lại file appReducer.js
 
-  muốn xác định đang có logic bug ở file nào, hãy vào file web.js đầu tiên
-
-  với prj này, sau khi thay đổi thông tin của người dùng, ta cần logout ra bên ngoài rồi đăng nhập lại để redux persit load lại
+  
