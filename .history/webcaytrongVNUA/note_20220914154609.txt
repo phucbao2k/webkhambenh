@@ -35,4 +35,4 @@ alert không giúp sinh ra 1 object;
 
   muốn tìm path hoặc đặt thêm path cần thao tác, đến file System.js và đặt path khác
 
-  axios là 1 thư viện lấy và gửi thông tin từ phía client về server
+  axios là 1 thư viện lấy thông tin từ phía server sang 
