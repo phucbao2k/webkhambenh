@@ -30,7 +30,7 @@ export const fetchPositionStart = () =>{
         try{
 let res = await getAllCodeService("POSITION");
 if(res && res.errCode === 0){
-    dispatch(fetchPositionSuccess(res.data));
+    dispatch(fetchPositionrSuccess(res.data));
 }else{
     dispatch(fetchPositionFailed());
 }
@@ -47,27 +47,4 @@ export const fetchPositionSuccess =(positionData)=>({
 export const fetchPositionFailed =()=>({
     type: actionTypes.FETCH_POSITION_FAILED,
 })
-//roleid
-export const fetchRoleIdStart = () =>{
-    return async(dispatch, getState)=>{
-        try{
-let res = await getAllCodeService("ROLE");
-if(res && res.errCode === 0){
-    dispatch(fetchRoleIdSuccess(res.data));
-}else{
-    dispatch(fetchRoleIdFailed());
-}
-        }catch(e){
-            dispatch(fetchRoleIdFailed());
-            console.log('fetch error: ', e)
-        }
-    }
-}
 
-export const fetchRoleIdSuccess =(roleIdData)=>({
-    type: actionTypes.FETCH_ROLE_SUCCESS,
-    data: roleIdData
-})
-export const fetchRoleIdFailed =()=>({
-    type: actionTypes.FETCH_ROLE_FAILED,
-})

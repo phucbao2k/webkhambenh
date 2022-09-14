@@ -53,9 +53,8 @@ componentDidUpdate( prevProps,prevState, snapshot){
          && prevProps.positionRedux !== this.props.positionRedux
           && prevProps.roleIdRedux !== this.props.roleIdRedux){
         this.setState({
-            genderArr: this.props.genderRedux,
-            positionArr: this.props.positionRedux,
-            roleIdRedux: this.props.roleIdRedux
+            genderArr: this.props.genderRedux
+            p
         })
     }
 }
@@ -194,17 +193,13 @@ componentDidUpdate( prevProps,prevState, snapshot){
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-        genderRedux: state.admin.genders,
-        positionRedux: state.admin.positions,
-        roleIdRedux: state.admin.roleIds
+        genderRedux: state.admin.genders
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        getGenderStart: () => dispatch(actions.fetchGenderStart()),
-        getPositionStart: () => dispatch(actions.fetchPositionStart()),
-        getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
+        getGenderStart: () => dispatch(actions.fetchGenderStart())
     };
 };
 

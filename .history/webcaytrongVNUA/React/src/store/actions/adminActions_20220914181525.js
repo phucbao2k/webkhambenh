@@ -64,10 +64,4 @@ if(res && res.errCode === 0){
     }
 }
 
-export const fetchRoleIdSuccess =(roleIdData)=>({
-    type: actionTypes.FETCH_ROLE_SUCCESS,
-    data: roleIdData
-})
-export const fetchRoleIdFailed =()=>({
-    type: actionTypes.FETCH_ROLE_FAILED,
-})
+

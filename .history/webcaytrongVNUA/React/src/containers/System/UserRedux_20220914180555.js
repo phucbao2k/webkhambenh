@@ -195,16 +195,13 @@ const mapStateToProps = state => {
     return {
         language: state.app.language,
         genderRedux: state.admin.genders,
-        positionRedux: state.admin.positions,
-        roleIdRedux: state.admin.roleIds
+        po
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        getGenderStart: () => dispatch(actions.fetchGenderStart()),
-        getPositionStart: () => dispatch(actions.fetchPositionStart()),
-        getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
+        getGenderStart: () => dispatch(actions.fetchGenderStart())
     };
 };
 

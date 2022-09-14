@@ -58,16 +58,9 @@ if(res && res.errCode === 0){
     dispatch(fetchRoleIdFailed());
 }
         }catch(e){
-            dispatch(fetchRoleIdFailed());
+            dispatch(fetchPositionFailed());
             console.log('fetch error: ', e)
         }
     }
 }
 
-export const fetchRoleIdSuccess =(roleIdData)=>({
-    type: actionTypes.FETCH_ROLE_SUCCESS,
-    data: roleIdData
-})
-export const fetchRoleIdFailed =()=>({
-    type: actionTypes.FETCH_ROLE_FAILED,
-})

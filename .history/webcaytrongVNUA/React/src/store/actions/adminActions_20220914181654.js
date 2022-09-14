@@ -69,5 +69,5 @@ export const fetchRoleIdSuccess =(roleIdData)=>({
     data: roleIdData
 })
 export const fetchRoleIdFailed =()=>({
-    type: actionTypes.FETCH_ROLE_FAILED,
+    type: actionTypes.FETCH_ROLR_FAILED,
 })

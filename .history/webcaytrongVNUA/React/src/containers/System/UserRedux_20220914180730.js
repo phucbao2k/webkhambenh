@@ -203,8 +203,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         getGenderStart: () => dispatch(actions.fetchGenderStart()),
-        getPositionStart: () => dispatch(actions.fetchPositionStart()),
-        getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
+        
     };
 };
 

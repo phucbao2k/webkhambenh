@@ -55,19 +55,12 @@ let res = await getAllCodeService("ROLE");
 if(res && res.errCode === 0){
     dispatch(fetchRoleIdSuccess(res.data));
 }else{
-    dispatch(fetchRoleIdFailed());
+    dispatch(fetchRFailed());
 }
         }catch(e){
-            dispatch(fetchRoleIdFailed());
+            dispatch(fetchPositionFailed());
             console.log('fetch error: ', e)
         }
     }
 }
 
-export const fetchRoleIdSuccess =(roleIdData)=>({
-    type: actionTypes.FETCH_ROLE_SUCCESS,
-    data: roleIdData
-})
-export const fetchRoleIdFailed =()=>({
-    type: actionTypes.FETCH_ROLE_FAILED,
-})

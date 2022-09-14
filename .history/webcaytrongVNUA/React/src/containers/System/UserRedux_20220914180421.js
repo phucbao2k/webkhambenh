@@ -49,13 +49,9 @@ this.props.getPositionStart();
 this.props.getRoleIdStart();
     }
 componentDidUpdate( prevProps,prevState, snapshot){
-    if(prevProps.genderRedux !== this.props.genderRedux
-         && prevProps.positionRedux !== this.props.positionRedux
-          && prevProps.roleIdRedux !== this.props.roleIdRedux){
+    if(prevProps.genderRedux !== this.props.genderRedux && prevProps.positionRedux !== this.props.positionRedux && prevProps.roleIdRedux !== this.props.roleIdRedux){
         this.setState({
-            genderArr: this.props.genderRedux,
-            positionArr: this.props.positionRedux,
-            roleIdRedux: this.props.roleIdRedux
+            genderArr: this.props.genderRedux
         })
     }
 }
@@ -194,17 +190,13 @@ componentDidUpdate( prevProps,prevState, snapshot){
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-        genderRedux: state.admin.genders,
-        positionRedux: state.admin.positions,
-        roleIdRedux: state.admin.roleIds
+        genderRedux: state.admin.genders
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        getGenderStart: () => dispatch(actions.fetchGenderStart()),
-        getPositionStart: () => dispatch(actions.fetchPositionStart()),
-        getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
+        getGenderStart: () => dispatch(actions.fetchGenderStart())
     };
 };
 
