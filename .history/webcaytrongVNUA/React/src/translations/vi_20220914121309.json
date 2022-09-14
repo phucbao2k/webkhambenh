@@ -32,16 +32,16 @@
             "create-user":{
                 "title": "Tạo người dùng mới",
                 "firstname": "Tên",
-                "lastname": "Tên đệm",
-                "invalid-feedback": "Làm ơn hãy nhập giá trị hợp lệ",
-                "email": "Email",
-                "address": "Địa chỉ",
-                "password": "Mật khẩu",
-                "gender": "Giới tính",
-                "position": "Vị trí",
-                "roleid": "ID vai trò",
-                "phonenumber": "Số điện thoại",
-                "image": "Hình ảnh"
+                "lastname": "Last Name",
+                "invalid-feedback": "Please enter a valid value",
+                "email": "Email address",
+                "address": "Address",
+                "password": "Password",
+                "gender": "Gender",
+                "position": "Position",
+                "roleid": "RoleID",
+                "phonenumber": "Phonenumber",
+                "image": "Image"
         
             },
    

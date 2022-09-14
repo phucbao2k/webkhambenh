@@ -39,10 +39,6 @@
         "address": "Address",
         "password": "Password",
         "gender": "Gender",
-        "position": "Position",
-        "roleid": "RoleID",
-        "phonenumber": "Phonenumber",
-        "image": "Image"
 
     },
     "menu": {

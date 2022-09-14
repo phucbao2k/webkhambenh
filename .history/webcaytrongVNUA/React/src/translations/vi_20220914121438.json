@@ -40,8 +40,8 @@
                 "gender": "Giới tính",
                 "position": "Vị trí",
                 "roleid": "ID vai trò",
-                "phonenumber": "Số điện thoại",
-                "image": "Hình ảnh"
+                "phonenumber": "Phonenumber",
+                "image": "Image"
         
             },
    

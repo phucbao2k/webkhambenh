@@ -39,9 +39,9 @@
                 "password": "Mật khẩu",
                 "gender": "Giới tính",
                 "position": "Vị trí",
-                "roleid": "ID vai trò",
-                "phonenumber": "Số điện thoại",
-                "image": "Hình ảnh"
+                "roleid": "ID va",
+                "phonenumber": "Phonenumber",
+                "image": "Image"
         
             },
    

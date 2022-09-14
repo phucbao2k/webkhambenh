@@ -37,11 +37,11 @@
                 "email": "Email",
                 "address": "Địa chỉ",
                 "password": "Mật khẩu",
-                "gender": "Giới tính",
-                "position": "Vị trí",
-                "roleid": "ID vai trò",
-                "phonenumber": "Số điện thoại",
-                "image": "Hình ảnh"
+                "gender": "Giới tisnh",
+                "position": "Position",
+                "roleid": "RoleID",
+                "phonenumber": "Phonenumber",
+                "image": "Image"
         
             },
    

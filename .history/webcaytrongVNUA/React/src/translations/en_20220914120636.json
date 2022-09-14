@@ -31,19 +31,7 @@
 "change-success": "Updated info success! Please logout and re-login "
     },
     "create-user":{
-        "title": "Create new user",
-        "firstname": "First Name",
-        "lastname": "Last Name",
-        "invalid-feedback": "Please enter a valid value",
-        "email": "Email address",
-        "address": "Address",
-        "password": "Password",
-        "gender": "Gender",
-        "position": "Position",
-        "roleid": "RoleID",
-        "phonenumber": "Phonenumber",
-        "image": "Image"
-
+        "title": ""
     },
     "menu": {
         "admin":{
