@@ -92,7 +92,7 @@ doEditUser = async (user) =>{
                 isOpenModalEditUser: false
             })
             await this.getAllUsersFromReact()
-           
+            alert(<FormattedMessage>)
         }else{
             alert(res.errCode)
         }

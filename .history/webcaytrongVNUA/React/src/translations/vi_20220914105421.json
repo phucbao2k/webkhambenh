@@ -27,7 +27,7 @@
         "gooddoctor": "Bác sĩ nổi bật tuần qua"
     },
     "system":{
-        "change-success": "Cập nhật thông tin thành công! Làm ơn đăng xuất và đăng nhập lại để nhận thấy sự thay đổi "
+        "change-success": "Updated info success! Please logout and re-login "
             },
    
     "menu": {

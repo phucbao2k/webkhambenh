@@ -5,6 +5,7 @@ import './UserManage.scss';
 import ModalUser from './ModalUser';
 import {emitter} from '../../utils/emitter';
 import ModalEditUser from './ModalEditUser';
+import {FormattedMessage} from 'react-intl';
 // import Header from '../Header/Header';
 import {getAllUsers, createNewUserService, deleteUserService, editUserService} from '../../services/userService';
  // nếu muố import 1 function thì ta dùng dấu ngoặc nhọn
@@ -92,7 +93,7 @@ doEditUser = async (user) =>{
                 isOpenModalEditUser: false
             })
             await this.getAllUsersFromReact()
-           
+            alert(<FormattedMessage id="system.welcome"></FormattedMessage>)
         }else{
             alert(res.errCode)
         }

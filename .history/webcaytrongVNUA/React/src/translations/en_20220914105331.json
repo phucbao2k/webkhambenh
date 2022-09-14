@@ -28,8 +28,8 @@
         "gooddoctor":"Last week's featured doctor"
     },
     "system":{
-"change-success": "Updated info success! Please logout and re-login "
-    },
+        
+    }
     
     "menu": {
         "admin":{
