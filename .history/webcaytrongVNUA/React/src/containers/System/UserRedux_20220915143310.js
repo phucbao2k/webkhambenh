@@ -141,7 +141,7 @@ componentDidUpdate( prevProps,prevState, snapshot){
                   </select>
       
     </div>
-    <div className="form-group col-md-3 mb-3">
+    <div className="col-md-3 mb-3">
       <label htmlFor="validationServer01"> <FormattedMessage id="create-user.gender"/></label>
      
       <select id="inputState" className="form-control" name="gender">

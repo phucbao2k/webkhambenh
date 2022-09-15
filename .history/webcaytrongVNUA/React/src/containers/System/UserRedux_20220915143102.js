@@ -115,9 +115,9 @@ componentDidUpdate( prevProps,prevState, snapshot){
    
   </div>
   <div className="row">
-                        <div className="form-group col-md-3 mb-3">
+                        <div className="col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.roleid"/></label>
-      <select id="inputState" className="form-control" name="roleId">
+      <select  className="form-control" name="roleId">
       {roleIds && roleIds.lenght > 0 ||  roleIds.map((item, index)=>{
                     return(
                         <option key={index}>
@@ -127,10 +127,10 @@ componentDidUpdate( prevProps,prevState, snapshot){
                   } 
                   </select>
     </div>
-    <div className="form-group col-md-3 mb-3">
+    <div className="col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.position"/></label>
     
-      <select id="inputState" className="form-control" name="position">
+      <select  className="form-control" name="position">
       {positions && positions.lenght > 0 ||  positions.map((item, index)=>{
                     return(
                         <option key={index}>
@@ -141,10 +141,10 @@ componentDidUpdate( prevProps,prevState, snapshot){
                   </select>
       
     </div>
-    <div className="form-group col-md-3 mb-3">
+    <div className="col-md-3 mb-3">
       <label htmlFor="validationServer01"> <FormattedMessage id="create-user.gender"/></label>
      
-      <select id="inputState" className="form-control" name="gender">
+      <select id= className="form-control" name="gender">
                   {genders && genders.lenght > 0 ||  genders.map((item, index)=>{
                     return(
                         <option key={index}>

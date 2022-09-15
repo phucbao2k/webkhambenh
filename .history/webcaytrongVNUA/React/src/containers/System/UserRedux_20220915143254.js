@@ -115,7 +115,7 @@ componentDidUpdate( prevProps,prevState, snapshot){
    
   </div>
   <div className="row">
-                        <div className="form-group col-md-3 mb-3">
+                        <div className="form col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.roleid"/></label>
       <select id="inputState" className="form-control" name="roleId">
       {roleIds && roleIds.lenght > 0 ||  roleIds.map((item, index)=>{
@@ -127,7 +127,7 @@ componentDidUpdate( prevProps,prevState, snapshot){
                   } 
                   </select>
     </div>
-    <div className="form-group col-md-3 mb-3">
+    <div className="col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.position"/></label>
     
       <select id="inputState" className="form-control" name="position">
@@ -141,7 +141,7 @@ componentDidUpdate( prevProps,prevState, snapshot){
                   </select>
       
     </div>
-    <div className="form-group col-md-3 mb-3">
+    <div className="col-md-3 mb-3">
       <label htmlFor="validationServer01"> <FormattedMessage id="create-user.gender"/></label>
      
       <select id="inputState" className="form-control" name="gender">
