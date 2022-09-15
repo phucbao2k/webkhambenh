@@ -293,8 +293,7 @@ onChangeInput = (event, id)=>{
       </div>
     </div>
   </div>
-  <button className="btn btn-primary" type="submit"
-  onClick={()=>this.handleSaveUser()}>  <FormattedMessage id="create-user.submit"/></button>
+  <button className="btn btn-primary" type="submit">  <FormattedMessage id="create-user.submit"/></button>
 
                     </div>
                 </div>
@@ -324,7 +323,7 @@ const mapDispatchToProps = dispatch => {
         getGenderStart: () => dispatch(actions.fetchGenderStart()),
         getPositionStart: () => dispatch(actions.fetchPositionStart()),
         getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
-createNewUser: (data)=> dispatch(actions.createNewUser(data)),
+
     };
 };
 

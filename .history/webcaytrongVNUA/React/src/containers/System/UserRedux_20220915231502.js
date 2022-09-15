@@ -207,7 +207,7 @@ onChangeInput = (event, id)=>{
       onChange={(event) =>{this.onChangeInput(event,'role')}}>
       {roleIds && roleIds.lenght > 0 ||  roleIds.map((item, index)=>{
                     return(
-                        <option key={index} value={item.key}>
+                        <option key={index} val>
                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
                     )
                   })
@@ -221,7 +221,7 @@ onChangeInput = (event, id)=>{
       onChange={(event) =>{this.onChangeInput(event,'position')}}>
       {positions && positions.lenght > 0 ||  positions.map((item, index)=>{
                     return(
-                        <option key={index} value={item.key}>
+                        <option key={index}>
                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
                     )
                   })
@@ -236,7 +236,7 @@ onChangeInput = (event, id)=>{
       onChange={(event) =>{this.onChangeInput(event,'gender')}}>
                   {genders && genders.lenght > 0 ||  genders.map((item, index)=>{
                     return(
-                        <option key={index} value={item.key}>
+                        <option key={index}>
                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
                     )
                   })
@@ -293,8 +293,7 @@ onChangeInput = (event, id)=>{
       </div>
     </div>
   </div>
-  <button className="btn btn-primary" type="submit"
-  onClick={()=>this.handleSaveUser()}>  <FormattedMessage id="create-user.submit"/></button>
+  <button className="btn btn-primary" type="submit">  <FormattedMessage id="create-user.submit"/></button>
 
                     </div>
                 </div>
@@ -324,7 +323,7 @@ const mapDispatchToProps = dispatch => {
         getGenderStart: () => dispatch(actions.fetchGenderStart()),
         getPositionStart: () => dispatch(actions.fetchPositionStart()),
         getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
-createNewUser: (data)=> dispatch(actions.createNewUser(data)),
+
     };
 };
 

@@ -324,7 +324,7 @@ const mapDispatchToProps = dispatch => {
         getGenderStart: () => dispatch(actions.fetchGenderStart()),
         getPositionStart: () => dispatch(actions.fetchPositionStart()),
         getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
-createNewUser: (data)=> dispatch(actions.createNewUser(data)),
+createNewUser: (data)=> dispatch
     };
 };
 

@@ -202,12 +202,10 @@ onChangeInput = (event, id)=>{
   <div className="row">
                         <div className="form-group col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.roleid"/></label>
-      <select id="inputState" className="form-control" 
-    
-      onChange={(event) =>{this.onChangeInput(event,'role')}}>
+      <select id="inputState" className="form-control" name="roleId">
       {roleIds && roleIds.lenght > 0 ||  roleIds.map((item, index)=>{
                     return(
-                        <option key={index} value={item.key}>
+                        <option key={index}>
                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
                     )
                   })
@@ -217,11 +215,10 @@ onChangeInput = (event, id)=>{
     <div className="form-group col-md-3 mb-3">
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.position"/></label>
     
-      <select id="inputState" className="form-control" 
-      onChange={(event) =>{this.onChangeInput(event,'position')}}>
+      <select id="inputState" className="form-control" name="position">
       {positions && positions.lenght > 0 ||  positions.map((item, index)=>{
                     return(
-                        <option key={index} value={item.key}>
+                        <option key={index}>
                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
                     )
                   })
@@ -232,11 +229,10 @@ onChangeInput = (event, id)=>{
     <div className="form-group col-md-3 mb-3">
       <label htmlFor="validationServer01"> <FormattedMessage id="create-user.gender"/></label>
      
-      <select id="inputState" className="form-control" 
-      onChange={(event) =>{this.onChangeInput(event,'gender')}}>
+      <select id="inputState" className="form-control" name="gender">
                   {genders && genders.lenght > 0 ||  genders.map((item, index)=>{
                     return(
-                        <option key={index} value={item.key}>
+                        <option key={index}>
                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
                     )
                   })
@@ -248,8 +244,8 @@ onChangeInput = (event, id)=>{
     <div className="col-md-3 mb-3">
       <label htmlFor="validationServer04"> <FormattedMessage id="create-user.phonenumber"/></label>
       <input type="text" className="form-control " id="validationServer04" placeholder="..." required
-      value={phoneNumber}
-      onChange={(event) =>{this.onChangeInput(event,'phoneNumber')}}/>
+      value={email}
+      onChange={(event) =>{this.onChangeInput(event,'email')}}/>
       
     </div>
    
@@ -258,9 +254,7 @@ onChangeInput = (event, id)=>{
   <div className="row">
   <div className="col-md-9 mb-3">
       <label htmlFor="validationServer03"> <FormattedMessage id="create-user.address"/></label>
-      <input type="text" className="form-control " id="validationServer03" placeholder="..." required
-      value={address}
-      onChange={(event) =>{this.onChangeInput(event,'address')}}/>
+      <input type="text" className="form-control " id="validationServer03" placeholder="..." required/>
      
     </div>
     <div className="col-md-3 mb-3">
@@ -293,8 +287,7 @@ onChangeInput = (event, id)=>{
       </div>
     </div>
   </div>
-  <button className="btn btn-primary" type="submit"
-  onClick={()=>this.handleSaveUser()}>  <FormattedMessage id="create-user.submit"/></button>
+  <button className="btn btn-primary" type="submit">  <FormattedMessage id="create-user.submit"/></button>
 
                     </div>
                 </div>
@@ -324,7 +317,7 @@ const mapDispatchToProps = dispatch => {
         getGenderStart: () => dispatch(actions.fetchGenderStart()),
         getPositionStart: () => dispatch(actions.fetchPositionStart()),
         getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
-createNewUser: (data)=> dispatch(actions.createNewUser(data)),
+
     };
 };
 
