@@ -122,23 +122,7 @@ handleSaveUser = ()=>{
   })
 }
 checkValidateInput=()=>{
-  let isValid = true;
-  let arrCheck = ['email', 'password', 'firstName', 'lastName', 'address', 'phoneNumber']
-  for (let i = 0; i < arrCheck.length; i++){
-    if(!this.state[arrCheck[i]]){
-      isValid = false;
-      alert('This input is required: ' + arrCheck[i]);
-      break;
-    }
-  }
-  return isValid;
-}
-onChangeInput = (event, id)=>{
-  let copyState = {...this.state}
-  copyState[id] = event.target.value;
-  this.setState({
-    ...copyState,
-  })
+  let isValid = true
 }
     render() {
         let genders = this.state.genderArr;

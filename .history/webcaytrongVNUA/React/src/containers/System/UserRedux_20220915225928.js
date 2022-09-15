@@ -128,17 +128,8 @@ checkValidateInput=()=>{
     if(!this.state[arrCheck[i]]){
       isValid = false;
       alert('This input is required: ' + arrCheck[i]);
-      break;
     }
   }
-  return isValid;
-}
-onChangeInput = (event, id)=>{
-  let copyState = {...this.state}
-  copyState[id] = event.target.value;
-  this.setState({
-    ...copyState,
-  })
 }
     render() {
         let genders = this.state.genderArr;

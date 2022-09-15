@@ -137,7 +137,7 @@ onChangeInput = (event, id)=>{
   let copyState = {...this.state}
   copyState[id] = event.target.value;
   this.setState({
-    ...copyState,
+    
   })
 }
     render() {

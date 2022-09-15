@@ -131,14 +131,7 @@ checkValidateInput=()=>{
       break;
     }
   }
-  return isValid;
-}
-onChangeInput = (event, id)=>{
-  let copyState = {...this.state}
-  copyState[id] = event.target.value;
-  this.setState({
-    ...copyState,
-  })
+  return
 }
     render() {
         let genders = this.state.genderArr;
