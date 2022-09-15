@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { LANGUAGES } from '../../utils';
-import './UserRedux.scss'
 import * as actions from '../../store/actions';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
@@ -199,9 +198,8 @@ openPreviewImage = ()=>{
       onChange={(event)=> this.handleOnChangeImage(event)}/>
       <label className="label-upload" htmlFor="previewImg">Upload<i className="fa-solid fa-upload"></i></label>
       <div className="preview-image" style={{backgroundImage: `url(${this.state.previewImgURL})`}}
-      onClick={() => this.openPreviewImage()}
       >
-        
+        onClick={() => this.openPreviewImage()}
       </div>
       </div>
       
