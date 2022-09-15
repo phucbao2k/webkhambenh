@@ -40,7 +40,7 @@
         "password": "Password",
         "gender": "Gender",
         "position": "Position",
-        "roleid": "Titles",
+        "roleid": "titles",
         "phonenumber": "Phonenumber",
         "image": "Image",
         "agree":" Agree to terms and conditions.",
