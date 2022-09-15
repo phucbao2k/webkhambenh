@@ -3,7 +3,6 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { LANGUAGES } from '../../utils';
 import * as actions from '../../store/actions';
-import Lightbox from 'react-image-lightbox';
 class UserRedux extends Component {
 
     constructor(props) {

@@ -3,7 +3,6 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { LANGUAGES } from '../../utils';
 import * as actions from '../../store/actions';
-import Lightbox from 'react-image-lightbox';
 class UserRedux extends Component {
 
     constructor(props) {
@@ -156,12 +155,12 @@ componentDidUpdate( prevProps,prevState, snapshot){
                 </select>
     
     </div>
+    
     <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer04"> <FormattedMessage id="create-user.phonenumber"/></label>
-      <input type="text" className="form-control " id="validationServer04" placeholder="..." required/>
-      
-    </div>
+      <label htmlFor="validationServer02"> <FormattedMessage id="create-user.image"/></label>
+      <input type="text" className="form-control " id="validationServer02" placeholder="..."  required/>
    
+    </div>
    
   </div>
   <div className="row">
@@ -171,9 +170,9 @@ componentDidUpdate( prevProps,prevState, snapshot){
      
     </div>
     <div className="col-md-3 mb-3">
-      <label htmlFor="validationServer02"> <FormattedMessage id="create-user.image"/></label>
-      <input type="text" className="form-control " id="validationServer02" placeholder="..."  required/>
-   
+      <label htmlFor="validationServer04"> <FormattedMessage id="create-user.phonenumber"/></label>
+      <input type="text" className="form-control " id="validationServer04" placeholder="..." required/>
+      
     </div>
     
   </div>
