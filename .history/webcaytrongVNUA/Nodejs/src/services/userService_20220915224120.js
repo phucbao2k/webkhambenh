@@ -109,13 +109,13 @@ if(check === true){
     await db.User.create({
         email: data.email,
         password: hashPasswordFromBcrypt,
-        firstName: data.firstName,
+        firstName: data.firstName,PÓ
         lastName: data.lastName,
         address: data.address,
         phoneNumber: data.phoneNumber,
         gender: data.gender,
         roleId: data.roleId,
-positionId: data.positionId
+
     })
 }
 

@@ -113,9 +113,8 @@ if(check === true){
         lastName: data.lastName,
         address: data.address,
         phoneNumber: data.phoneNumber,
-        gender: data.gender,
-        roleId: data.roleId,
-positionId: data.positionId
+        gender: data.gender
+        roleId: data.roleId
     })
 }
 

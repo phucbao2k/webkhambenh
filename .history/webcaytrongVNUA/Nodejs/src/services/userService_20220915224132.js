@@ -115,7 +115,7 @@ if(check === true){
         phoneNumber: data.phoneNumber,
         gender: data.gender,
         roleId: data.roleId,
-positionId: data.positionId
+position
     })
 }
 

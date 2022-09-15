@@ -114,8 +114,7 @@ if(check === true){
         address: data.address,
         phoneNumber: data.phoneNumber,
         gender: data.gender,
-        roleId: data.roleId,
-positionId: data.positionId
+        roleId: data.roleId
     })
 }
 
