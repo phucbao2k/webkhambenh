@@ -41,9 +41,7 @@ alert không giúp sinh ra 1 object;
 
   hàm componentDidUpdate( prevProps,prevState, snapshot) luôn luôn chạy khi app chạy thành công, muốn hàm đó chạy thì ta phải
   đặt điều kiện so sánh trước và sau của các props rồi thực hiện hành động ta muốn.
-   VD:
-   
-   componentDidUpdate( prevProps,prevState, snapshot){
+   VD:componentDidUpdate( prevProps,prevState, snapshot){
     if(prevProps.genderRedux !== this.props.genderRedux
       
           ){

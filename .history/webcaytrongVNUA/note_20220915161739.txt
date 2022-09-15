@@ -40,26 +40,4 @@ alert không giúp sinh ra 1 object;
   muốn fire 1 actions của redux(hay là gọi 1 action của redux, ta phải bọc dispatch vào trong hàm đó).
 
   hàm componentDidUpdate( prevProps,prevState, snapshot) luôn luôn chạy khi app chạy thành công, muốn hàm đó chạy thì ta phải
-  đặt điều kiện so sánh trước và sau của các props rồi thực hiện hành động ta muốn.
-   VD:
-   
-   componentDidUpdate( prevProps,prevState, snapshot){
-    if(prevProps.genderRedux !== this.props.genderRedux
-      
-          ){
-        this.setState({
-            genderArr: this.props.genderRedux,
-          
-        })
-    }
-    if(prevProps.positionRedux !== this.props.positionRedux){
-      this.setState({
-        positionArr: this.props.positionRedux,
-      })
-    }
-    if(prevProps.roleIdRedux !== this.props.roleIdRedux){
-      this.setState({
-        roleIdArr: this.props.roleIdRedux,
-      })
-    }
-}
+  đặt điều kiện so sánh trước và sau của các props rồi thực hiện hành đọng. VD:
