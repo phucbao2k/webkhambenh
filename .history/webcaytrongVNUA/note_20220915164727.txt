@@ -65,4 +65,4 @@ alert không giúp sinh ra 1 object;
 }
 
 
-trong 1 object {} thì không thể có dấu ()
+trong 1 object {} thì không thể có 
