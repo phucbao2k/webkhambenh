@@ -118,7 +118,6 @@ handleSaveUser = ()=>{
     phoneNumbers: this.state.phoneNumber,
     gender: this.state.gender,
     roleId: this.state.role,
-    positionId: this.state.position
   })
 }
     render() {

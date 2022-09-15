@@ -115,10 +115,9 @@ handleSaveUser = ()=>{
     firstName: this.state.firstName,
     lastName: this.state.lastName,
     address: this.state.address,
-    phoneNumbers: this.state.phoneNumber,
+    phoneNumbers: this.state.phoneNumbers,
     gender: this.state.gender,
-    roleId: this.state.role,
-    positionId: this.state.position
+    rol
   })
 }
     render() {

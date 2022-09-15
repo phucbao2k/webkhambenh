@@ -22,10 +22,6 @@ class UserRedux extends Component {
             firstName: '',
             lastName:'',
             phoneNumber: '',
-            address: '',
-            position: '',
-            role: '',
-            avatar: '',
         };
     }
 
@@ -66,25 +62,19 @@ componentDidUpdate( prevProps,prevState, snapshot){
     if(prevProps.genderRedux !== this.props.genderRedux
       
           ){
-            let arrGenders = this.props.genderRedux;
         this.setState({
-            genderArr: arrGenders,
-            gender: arrGenders && arrGenders.length ? arrGenders[0].key : ''
+            genderArr: this.props.genderRedux,
           
         })
     }
     if(prevProps.positionRedux !== this.props.positionRedux){
-      let arrPositions = this.props.positionRedux;
       this.setState({
-        positionArr: arrPositions,
-        position: arrPositions && arrPositions.length > 0 ? arrPositions[0].key : '',
+        positionArr: this.props.positionRedux,
       })
     }
     if(prevProps.roleIdRedux !== this.props.roleIdRedux){
-      let arrRoles = this.props.roleIdRedux;
       this.setState({
-        roleIdArr: arrRoles,
-        role: arrRoles && arrRoles.lenght > 0 ? arrRoles[0].key : ''
+        roleIdArr: this.props.roleIdRedux,
       })
     }
 }
@@ -95,7 +85,6 @@ handleOnChangeImage = (event)=>{
     let objectUrl = URL.createObjectURL(file);
     this.setState({
       previewImgURL: objectUrl,
-      avatar: file
     })
   }
 }
@@ -103,22 +92,6 @@ openPreviewImage = ()=>{
   if(!this.state.previewImgURL) return;
   this.setState({
     isOpen: true
-  })
-}
-handleSaveUser = ()=>{
-  let isValid = this.checkValidateInput();
-  if(isValid ===false) return;
-
-  this.props.createNewUser({
-    email: this.state.email,
-    password: this.state.password,
-    firstName: this.state.firstName,
-    lastName: this.state.lastName,
-    address: this.state.address,
-    phoneNumbers: this.state.phoneNumber,
-    gender: this.state.gender,
-    roleId: this.state.role,
-    positionId: this.state.position
   })
 }
     render() {
