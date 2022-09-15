@@ -88,9 +88,3 @@ if(res && res.errCode ===0){
         }
     }
 }
-export const saveUserSuccess = () => ({
-    type: 'CREATE_USER_SUCCESS',
-})
-export const saveUserFailed = () => ({
-    type: 'CREATE_USER_FAILED',
-});

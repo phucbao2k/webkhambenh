@@ -80,17 +80,10 @@ console.log('Tạ Bảo Phúc tự làm hết- check create user redux: ', res)
 if(res && res.errCode ===0){
     dispatch(saveUserSuccess());
 }else{
-    dispatch(saveUserFailed());
+    dispatch
 }
         }catch(e){
-            dispatch(saveUserFailed());
-            console.log('check err: ',e)
+
         }
     }
 }
-export const saveUserSuccess = () => ({
-    type: 'CREATE_USER_SUCCESS',
-})
-export const saveUserFailed = () => ({
-    type: 'CREATE_USER_FAILED',
-});
