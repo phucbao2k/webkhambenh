@@ -157,7 +157,6 @@ export const editUser =(data)=>{
                 dispatch(editUserSuccess())
                 dispatch(fetchAllUsersStart());
             }else{
-                console.log(res.errCode);
                 toast.error('Error editing user');
                 dispatch(editUserFailed());
                
