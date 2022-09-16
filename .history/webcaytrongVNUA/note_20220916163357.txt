@@ -74,4 +74,4 @@ dispatch(type: actionTypes....)  ở file đó và chạy các câu lệnh phía
 sau đó nhảy vào file Redux,
  (riêng câu lệnh dispatch nếu không có gì ở phía dưới thì nhảy vào switch/case file Reducer),
 
- sau đó chạy vào componentDidUpdate trong file redux
+ sau đó chạy vào componentDidUpdate tr

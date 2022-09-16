@@ -138,7 +138,7 @@ onChangeInput = (event, id)=>{
        let language = this.props.language;
        let {email, password, firstName, lastName, phoneNumber,address,gender,position,role
       ,avatar}= this.state;
-      //đây là cách viết của ES7
+      //đây là các
         return (
             
             <div className="user-redux-container" >
