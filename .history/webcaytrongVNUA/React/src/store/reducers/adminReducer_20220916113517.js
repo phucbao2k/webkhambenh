@@ -85,11 +85,6 @@ const adminReducer = (state = initialState, action) => {
                         return{
                             ...state,
                         }
-                        case actionTypes.FETCH_ALL_USER_FAILED:
-                            state.users = [];
-                            return{
-                                ...state,
-                            }
 
         default:
             return state;
