@@ -33,9 +33,7 @@ handleDeleteUser=(user)=>{
     this.props.deleteUserRedux(user.id);
 }
 
-handleEditUser =(user)=>{
-    this.props.handleEditUserFromParentKey(user)
-}
+handleEditUser
     render() {
         
      
@@ -69,8 +67,7 @@ handleEditUser =(user)=>{
                                 <td>{item.lastName}</td>
                                 <td>{item.address}</td>
                                 <td>
-                                    <button className="btn-edit" 
-                                    onClick={()=> this.handleEditUser(item)}><i className="fa-solid fa-pencil"></i></button>
+                                    <button className="btn-edit" ><i className="fa-solid fa-pencil"></i></button>
                                     <button className="btn-delete" onClick={()=>this.handleDeleteUser(item)}><i className="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>

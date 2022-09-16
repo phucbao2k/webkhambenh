@@ -70,7 +70,7 @@ handleEditUser =(user)=>{
                                 <td>{item.address}</td>
                                 <td>
                                     <button className="btn-edit" 
-                                    onClick={()=> this.handleEditUser(item)}><i className="fa-solid fa-pencil"></i></button>
+                                    onc><i className="fa-solid fa-pencil"></i></button>
                                     <button className="btn-delete" onClick={()=>this.handleDeleteUser(item)}><i className="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>

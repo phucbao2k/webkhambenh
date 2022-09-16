@@ -3,11 +3,11 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './TableManageUser.scss';
 import * as actions from "../../store/actions";
-
+// import Header from '../Header/Header';
 
  // nếu muốn import 1 function thì ta dùng dấu ngoặc nhọn
 class TableManageUser extends Component {
-// PROPS stands for properties and is being used for passing data from one component to another.
+// stands for properties and is being used for passing data from one component to another.
 // But the important part here is that data with props are being passed in a uni-directional flow. ( one way from parent to child)
    constructor(props) {
     super(props);
@@ -20,7 +20,14 @@ class TableManageUser extends Component {
      componentDidMount() {
       this.props.fetchUserRedux();
     }
-
+//     getAllUsersFromReact = async()=>{
+// let response = await getAllUsers('ALL');
+// if(response && response.errCode === 0){
+//     this.setState({
+//         arrUsers: response.users
+//     })
+// }
+//     }
 componentDidUpdate(prevProps, prevState, snapshot){
     if(prevProps.listUsers !== this.props.listUsers){
         this.setState({
@@ -33,9 +40,7 @@ handleDeleteUser=(user)=>{
     this.props.deleteUserRedux(user.id);
 }
 
-handleEditUser =(user)=>{
-    this.props.handleEditUserFromParentKey(user)
-}
+
     render() {
         
      
@@ -69,8 +74,7 @@ handleEditUser =(user)=>{
                                 <td>{item.lastName}</td>
                                 <td>{item.address}</td>
                                 <td>
-                                    <button className="btn-edit" 
-                                    onClick={()=> this.handleEditUser(item)}><i className="fa-solid fa-pencil"></i></button>
+                                    <button className="btn-edit" ><i className="fa-solid fa-pencil"></i></button>
                                     <button className="btn-delete" onClick={()=>this.handleDeleteUser(item)}><i className="fa-solid fa-trash"></i></button>
                                 </td>
                             </tr>
