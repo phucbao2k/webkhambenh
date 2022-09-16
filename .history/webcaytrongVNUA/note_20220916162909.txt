@@ -71,5 +71,4 @@ Luồng chạy của JS:
 Đầu tiên sẽ chạy vào constructor, sau đó chạy vào hàm render(), sau đó chạy vào hàm
 componentDidMount, sau đó sẽ chạy sang file chứa các action đã fire, sau đó chạy đến hàm
 dispatch(type: actionTypes....) trong action đã fire ở file đó và chạy các câu lệnh phía dưới,
-sau đó nhảy vào file Redux,
- (riêng câu lệnh dispatch nếu không có gì ở phía dưới thì nhảy vào switch/case file Reducer)
+sau đó nhảy vào switch case hoặc file  ở file reducer chứa type: actionTypes.... đó.
