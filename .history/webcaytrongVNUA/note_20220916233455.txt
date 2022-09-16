@@ -79,9 +79,3 @@ sau đó nhảy vào file Redux,
 
  Muốn thao tác với redux, việc đầu tiên là định nghĩa tên của action đó trong actionTypes, sau đó export
  ở các file khác như appActions/ adminActions/ userActions.
-
- Tiếp tới, viết các hàm để dispatch() các action vừa viết đó(bắt buộc).
-
-
- mapStateToProps() là lấy state của redux rồi bơm vào props của reactjs
- mapDispatchToProps() là lấy câu lệnh của redux rồi bơm vào props của reactjs
