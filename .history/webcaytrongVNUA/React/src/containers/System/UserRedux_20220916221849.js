@@ -149,12 +149,12 @@ checkValidateInput=()=>{
 }
 onChangeInput = (event, id)=>{
   let copyState = {...this.state}
+  
   copyState[id] = event.target.value;
   this.setState({
     ...copyState,
   })
 }
-
 handleEditUserFromParent = (user)=>{
   this.setState({
     email: user.email,

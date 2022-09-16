@@ -149,6 +149,7 @@ checkValidateInput=()=>{
 }
 onChangeInput = (event, id)=>{
   let copyState = {...this.state}
+  console.log('this.state', this.state);
   copyState[id] = event.target.value;
   this.setState({
     ...copyState,
