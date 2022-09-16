@@ -200,7 +200,7 @@ handleEditUserFromParent = (user)=>{
         <input type="email" className="form-control" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required
         value={email}
         onChange={(event) =>{this.onChangeInput(event,'email')}}
-        disabled={this.state.action === CRUD_ACTIONS.EDIT ? true: false}/>
+        disabled={this.state.action === CRUD_ACTIONS}/>
        
       </div>
     </div>
@@ -211,8 +211,7 @@ handleEditUserFromParent = (user)=>{
         <input type="password" className="form-control " id="validationServerUsername" placeholder="..."
          aria-describedby="inputGroupPrepend3" required
          value={password}
-        onChange={(event) =>{this.onChangeInput(event,'password')}}
-        disabled={this.state.action === CRUD_ACTIONS.EDIT ? true: false}/>
+        onChange={(event) =>{this.onChangeInput(event,'password')}}/>
         
       </div>
     </div>
@@ -237,8 +236,7 @@ handleEditUserFromParent = (user)=>{
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.roleid"/></label>
       <select id="inputState" className="form-control" 
     
-      onChange={(event) =>{this.onChangeInput(event,'role')}}
-      value={role}>
+      onChange={(event) =>{this.onChangeInput(event,'role')}}>
       {roleIds && roleIds.lenght > 0 ||  roleIds.map((item, index)=>{
                     return(
                         <option key={index} value={item.key}>
@@ -252,8 +250,7 @@ handleEditUserFromParent = (user)=>{
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.position"/></label>
     
       <select id="inputState" className="form-control" 
-      onChange={(event) =>{this.onChangeInput(event,'position')}}
-      value={position}>
+      onChange={(event) =>{this.onChangeInput(event,'position')}}>
       {positions && positions.lenght > 0 ||  positions.map((item, index)=>{
                     return(
                         <option key={index} value={item.key}>
@@ -268,8 +265,7 @@ handleEditUserFromParent = (user)=>{
       <label htmlFor="validationServer01"> <FormattedMessage id="create-user.gender"/></label>
      
       <select id="inputState" className="form-control" 
-      onChange={(event) =>{this.onChangeInput(event,'gender')}}
-      value={gender}>
+      onChange={(event) =>{this.onChangeInput(event,'gender')}}>
                   {genders && genders.lenght > 0 ||  genders.map((item, index)=>{
                     return(
                         <option key={index} value={item.key}>
@@ -330,18 +326,11 @@ handleEditUserFromParent = (user)=>{
     </div>
   </div>
   <div  className="col-12 my-3">
-  <button className={this.state.action === CRUD_ACTIONS.EDIT? "btn btn-warning":"btn btn-primary"} type="submit"
-  onClick={()=>this.handleSaveUser()}>
-    {this.state.action ===CRUD_ACTIONS.EDIT?
-    <FormattedMessage id="manage-user.edit"></FormattedMessage>
-  : <FormattedMessage id="manage-user.save"></FormattedMessage>}
-      {/* <FormattedMessage id="create-user.submit"/> */}
-      </button>
+  <button className="btn btn-primary" type="submit"
+  onClick={()=>this.handleSaveUser()}>  <FormattedMessage id="create-user.submit"/></button>
   </div>
  <div className="col-12 mb-5">
-  <TableManageUser
-  handleEditUserFromParentKey={this.handleEditUserFromParent}
-  action={this.state.action}/>
+  <TableManageUser/>
  </div>
 
                     </div>
@@ -374,8 +363,7 @@ const mapDispatchToProps = dispatch => {
         getPositionStart: () => dispatch(actions.fetchPositionStart()),
         getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
 createNewUser: (data)=> dispatch(actions.createNewUser(data)),
-fetchUserRedux: ()=> dispatch(actions.fetchAllUsersStart()),
-editUserRedux: (data)=> dispatch(actions.editUserRedux(data))
+fetchUserRedux: ()=> dispatch(actions.fetchAllUsersStart())
     };
 };
 

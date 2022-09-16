@@ -339,9 +339,7 @@ handleEditUserFromParent = (user)=>{
       </button>
   </div>
  <div className="col-12 mb-5">
-  <TableManageUser
-  handleEditUserFromParentKey={this.handleEditUserFromParent}
-  action={this.state.action}/>
+  <TableManageUser/>
  </div>
 
                     </div>
@@ -374,8 +372,7 @@ const mapDispatchToProps = dispatch => {
         getPositionStart: () => dispatch(actions.fetchPositionStart()),
         getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
 createNewUser: (data)=> dispatch(actions.createNewUser(data)),
-fetchUserRedux: ()=> dispatch(actions.fetchAllUsersStart()),
-editUserRedux: (data)=> dispatch(actions.editUserRedux(data))
+fetchUserRedux: ()=> dispatch(actions.fetchAllUsersStart())
     };
 };
 

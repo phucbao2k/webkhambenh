@@ -375,7 +375,7 @@ const mapDispatchToProps = dispatch => {
         getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
 createNewUser: (data)=> dispatch(actions.createNewUser(data)),
 fetchUserRedux: ()=> dispatch(actions.fetchAllUsersStart()),
-editUserRedux: (data)=> dispatch(actions.editUserRedux(data))
+edit
     };
 };
 

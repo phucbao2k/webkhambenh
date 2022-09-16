@@ -334,14 +334,11 @@ handleEditUserFromParent = (user)=>{
   onClick={()=>this.handleSaveUser()}>
     {this.state.action ===CRUD_ACTIONS.EDIT?
     <FormattedMessage id="manage-user.edit"></FormattedMessage>
-  : <FormattedMessage id="manage-user.save"></FormattedMessage>}
-      {/* <FormattedMessage id="create-user.submit"/> */}
-      </button>
+  :}
+      <FormattedMessage id="create-user.submit"/></button>
   </div>
  <div className="col-12 mb-5">
-  <TableManageUser
-  handleEditUserFromParentKey={this.handleEditUserFromParent}
-  action={this.state.action}/>
+  <TableManageUser/>
  </div>
 
                     </div>
@@ -374,8 +371,7 @@ const mapDispatchToProps = dispatch => {
         getPositionStart: () => dispatch(actions.fetchPositionStart()),
         getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
 createNewUser: (data)=> dispatch(actions.createNewUser(data)),
-fetchUserRedux: ()=> dispatch(actions.fetchAllUsersStart()),
-editUserRedux: (data)=> dispatch(actions.editUserRedux(data))
+fetchUserRedux: ()=> dispatch(actions.fetchAllUsersStart())
     };
 };
 

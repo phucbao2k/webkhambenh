@@ -238,7 +238,7 @@ handleEditUserFromParent = (user)=>{
       <select id="inputState" className="form-control" 
     
       onChange={(event) =>{this.onChangeInput(event,'role')}}
-      value={role}>
+      value={}>
       {roleIds && roleIds.lenght > 0 ||  roleIds.map((item, index)=>{
                     return(
                         <option key={index} value={item.key}>
@@ -330,18 +330,11 @@ handleEditUserFromParent = (user)=>{
     </div>
   </div>
   <div  className="col-12 my-3">
-  <button className={this.state.action === CRUD_ACTIONS.EDIT? "btn btn-warning":"btn btn-primary"} type="submit"
-  onClick={()=>this.handleSaveUser()}>
-    {this.state.action ===CRUD_ACTIONS.EDIT?
-    <FormattedMessage id="manage-user.edit"></FormattedMessage>
-  : <FormattedMessage id="manage-user.save"></FormattedMessage>}
-      {/* <FormattedMessage id="create-user.submit"/> */}
-      </button>
+  <button className="btn btn-primary" type="submit"
+  onClick={()=>this.handleSaveUser()}>  <FormattedMessage id="create-user.submit"/></button>
   </div>
  <div className="col-12 mb-5">
-  <TableManageUser
-  handleEditUserFromParentKey={this.handleEditUserFromParent}
-  action={this.state.action}/>
+  <TableManageUser/>
  </div>
 
                     </div>
@@ -374,8 +367,7 @@ const mapDispatchToProps = dispatch => {
         getPositionStart: () => dispatch(actions.fetchPositionStart()),
         getRoleIdStart: () => dispatch(actions.fetchRoleIdStart()),
 createNewUser: (data)=> dispatch(actions.createNewUser(data)),
-fetchUserRedux: ()=> dispatch(actions.fetchAllUsersStart()),
-editUserRedux: (data)=> dispatch(actions.editUserRedux(data))
+fetchUserRedux: ()=> dispatch(actions.fetchAllUsersStart())
     };
 };
 

@@ -63,10 +63,7 @@
             "manage-handbook":"Manage handbooks"
         }
     },
-    "manage-user":{
-"edit": "Edit user",
-"save": "Save user"
-    },
+    ""
         "home-footer":{
 "more-info": "This is the youtube channel where i learn web programming, you can visit for more information",
 "story":"This is a good quality youtube channel, although the teacher's pedagogy is not high, it is enough for you to understand the problem, as long as you are patient."
