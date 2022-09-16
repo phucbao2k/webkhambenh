@@ -151,7 +151,7 @@ let deleteUser = (userId) =>{
 let updateUserData = (data)=>{
     return new Promise(async(resolve, reject)=>{
         try{
-if(!data.id ){
+if(!data.id ||){
     resolve({
         errCode: 200,
         errMessage: 'Missing required parameters'
