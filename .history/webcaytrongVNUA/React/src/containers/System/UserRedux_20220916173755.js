@@ -159,15 +159,6 @@ handleEditUserFromParent = (user)=>{
     email: user.email,
     password: '????????????????????????????????????????',
     firstName: user.firstName,
-    lastName: user.lastName,
-    phoneNumber: user.phoneNumber,
-    address: user.address,
-    gender: user.gender,
-    role: user.roleId,
-    position: user.positionId,
-    avatar: '',
-    action: CRUD_ACTIONS.EDIT,
-    userEditId: user.id
   })
 }
     render() {

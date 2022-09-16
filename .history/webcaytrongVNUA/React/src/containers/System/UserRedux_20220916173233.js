@@ -105,35 +105,19 @@ handleSaveUser = ()=>{
   let isValid = this.checkValidateInput();
   if(isValid ===false) return;
   let{action}=this.state;
-  if(action ===CRUD_ACTIONS.CREATE){
-    this.props.createNewUser({
-      email: this.state.email,
-      password: this.state.password,
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      address: this.state.address,
-      phoneNumber: this.state.phoneNumber,
-      gender: this.state.gender,
-      roleId: this.state.role,
-      positionId: this.state.position
-    })
-  }
-  if(action === CRUD_ACTIONS.EDIT){
-    this.props.editUserRedux({
-      id: this.state.userEditId,
-      email: this.state.email,
-      password: this.state.password,
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      address: this.state.address,
-      phoneNumber: this.state.phoneNumber,
-      gender: this.state.gender,
-      roleId: this.state.role,
-      positionId: this.state.position
-    })
-  }
+  
 
-
+  this.props.createNewUser({
+    email: this.state.email,
+    password: this.state.password,
+    firstName: this.state.firstName,
+    lastName: this.state.lastName,
+    address: this.state.address,
+    phoneNumber: this.state.phoneNumber,
+    gender: this.state.gender,
+    roleId: this.state.role,
+    positionId: this.state.position
+  })
 }
 checkValidateInput=()=>{
   let isValid = true;
@@ -152,22 +136,6 @@ onChangeInput = (event, id)=>{
   copyState[id] = event.target.value;
   this.setState({
     ...copyState,
-  })
-}
-handleEditUserFromParent = (user)=>{
-  this.setState({
-    email: user.email,
-    password: '????????????????????????????????????????',
-    firstName: user.firstName,
-    lastName: user.lastName,
-    phoneNumber: user.phoneNumber,
-    address: user.address,
-    gender: user.gender,
-    role: user.roleId,
-    position: user.positionId,
-    avatar: '',
-    action: CRUD_ACTIONS.EDIT,
-    userEditId: user.id
   })
 }
     render() {

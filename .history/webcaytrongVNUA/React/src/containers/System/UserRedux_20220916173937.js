@@ -167,7 +167,7 @@ handleEditUserFromParent = (user)=>{
     position: user.positionId,
     avatar: '',
     action: CRUD_ACTIONS.EDIT,
-    userEditId: user.id
+    userEditId
   })
 }
     render() {

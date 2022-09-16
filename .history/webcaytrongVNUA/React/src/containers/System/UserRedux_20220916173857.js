@@ -165,9 +165,6 @@ handleEditUserFromParent = (user)=>{
     gender: user.gender,
     role: user.roleId,
     position: user.positionId,
-    avatar: '',
-    action: CRUD_ACTIONS.EDIT,
-    userEditId: user.id
   })
 }
     render() {
