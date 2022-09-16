@@ -156,22 +156,11 @@ export const editUser =(data)=>{
                 toast.success('Successfully edited user');
                 dispatch(editUserSuccess())
                 dispatch(fetchAllUsersStart());
-            }else{
-                toast.error('Error editing user');
-                dispatch(editUserFailed());
             }
 
         }
         catch(e){
-        toast.error("Update the user error!");
-        dispatch(editUserFailed());
-        console.log('Edit user failed', e)
+        
         }
     }
 }
-export const editUserSuccess = ()=>({
-    type: actionTypes.EDIT_USER_SUCCESS
-})
-export const editUserFailed = ()=>({
-    type: actionTypes.EDIT_USER_FAILED 
-})
