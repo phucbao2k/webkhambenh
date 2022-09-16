@@ -158,8 +158,8 @@ export const editUser =(data)=>{
                 dispatch(fetchAllUsersStart());
             }else{
                 
-                toast.success('Please reload page to sea changes.');
-                dispatch(editUserSuccess());
+                toast.error('Please reload page to sea changes.');
+                dispatch(editUserFailed());
                
             }
 
