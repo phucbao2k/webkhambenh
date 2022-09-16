@@ -72,10 +72,7 @@ class App extends Component {
                         hideProgressBar={false}
                         newestOnTop={false}
                         closeOnClick
-                        rtl={false}
-                        pauseOnFocusLoss
-                        draggable
-                        pauseOnHover/>
+                        />
                     </div>
                 </Router>
             </Fragment>

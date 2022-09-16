@@ -74,8 +74,7 @@ class App extends Component {
                         closeOnClick
                         rtl={false}
                         pauseOnFocusLoss
-                        draggable
-                        pauseOnHover/>
+                        dragg/>
                     </div>
                 </Router>
             </Fragment>
