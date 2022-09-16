@@ -72,7 +72,7 @@ handleEditUser =(user)=>{
                                     <button className="btn-edit" 
                                     onClick={()=> this.handleEditUser(item)}><i className="fa-solid fa-pencil"></i></button>
                                     <button className="btn-delete" onClick={()=>this.handleDeleteUser(item)}><i className="fa-solid fa-trash"></i></button>
-                                    {/* item là 1 object lưu trữ tất cả thông tin của người dùng */}
+                                    {/*  */}
                                 </td>
                             </tr>
                         )

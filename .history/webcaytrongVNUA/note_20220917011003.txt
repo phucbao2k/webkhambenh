@@ -84,7 +84,7 @@ sau đó nhảy vào file Redux,
 
  Khi muốn thực thi 1 hàm ở redux trên phía react, ta phải fire tên của funtion đó ra, 
  tên function đó thường được người dùng tự định nghĩa ở hàm mapStateToProps() với các
- câu lệnh nhỏ, với bên trái là tên người dùng tự định nghĩa, bên phải là function đã được định nghĩa bên redux.
+ câu lệnh nhỏ, với bên trái là tên người dùng tự định nghia
 
 
  mapStateToProps() là lấy state của redux rồi bơm vào props của reactjs

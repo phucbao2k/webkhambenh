@@ -368,8 +368,8 @@ const mapStateToProps = state => {
         listUsers: state.admin.users
     };
 };
-//những cái biến state ở trên hàm mapStateToProps được khai báo trùng với các biến ở trên file này, không cần khai báo ở file
-//khác và có thể sử dụng ở file khác, vế trái là ta tự khai báo
+//những cái biến sts ở trên hàm mapStateToProps được khai báo trùng với các biến ở trên file này, không cần khai báo ở file
+//khác và có thể sử dụng ở file khác
 const mapDispatchToProps = dispatch => {
     return {
         getGenderStart: () => dispatch(actions.fetchGenderStart()),
