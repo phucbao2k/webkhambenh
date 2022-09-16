@@ -113,7 +113,8 @@ handleDeleteUser=(user)=>{
         // console.log('check render', this.state)
         //khi muốn render ra 1 thứ gì đó trong react, chúng ta phải có hàm return, và trong đó bắt buộc là 1 khối
         let arrUsers = this.state.usersRedux;
-        
+        console.log('check all users', this.props.listUsers);
+        console.log('check state', this.state.usersRedux);
         return (
            <div className="users-container">
              

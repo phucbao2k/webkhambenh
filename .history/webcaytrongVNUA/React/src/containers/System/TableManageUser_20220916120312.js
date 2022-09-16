@@ -113,45 +113,47 @@ handleDeleteUser=(user)=>{
         // console.log('check render', this.state)
         //khi muốn render ra 1 thứ gì đó trong react, chúng ta phải có hàm return, và trong đó bắt buộc là 1 khối
         let arrUsers = this.state.usersRedux;
-        
+        console.log('check all users', this.props.listUsers);
+        console.log('check state', this.state.usersRedux);
         return (
-           <div className="users-container">
+          
              
          
            
            
-            <div className="users-table mt-3 mx-1">
-            <div className="title text-center">Manage Users with TaBaoPhuc</div>
-                <table id="TableManageUser">
-                    <tbody>
-                    <tr>
-                        <th>Email</th>
-                        <th>First name</th>
-                        <th>Last name</th>
-                        <th>Address</th>
-                        <th>Actions</th>
+            // <div className="users-table mt-3 mx-1">
+            // {/* <div className="title text-center">Manage Users with TaBaoPhuc</div> */}
+                
+            // </div>
+            <table id="TableManageUser">
+            <tbody>
+            <tr>
+                <th>Email</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Address</th>
+                <th>Actions</th>
+            </tr>
+            {arrUsers && arrUsers.length>0 || arrUsers.map((item, index)=>{
+                // để duyệt 1 vòng lặp, ta có thể dùng function map(), bắt buộc phải return ra 1 thứ gì đó
+                // thì function map() mới hoạt động được
+                return(
+                    <tr key={index}>
+                        <td>{item.email}</td>
+                        <td>{item.firstName}</td>
+                        <td>{item.lastName}</td>
+                        <td>{item.address}</td>
+                        <td>
+                            <button className="btn-edit" ><i className="fa-solid fa-pencil"></i></button>
+                            <button className="btn-delete" onClick={()=>this.handleDeleteUser(item)}><i className="fa-solid fa-trash"></i></button>
+                        </td>
                     </tr>
-                    {arrUsers && arrUsers.length>0 && arrUsers.map((item, index)=>{
-                        // để duyệt 1 vòng lặp, ta có thể dùng function map(), bắt buộc phải return ra 1 thứ gì đó
-                        // thì function map() mới hoạt động được
-                        return(
-                            <tr key={index}>
-                                <td>{item.email}</td>
-                                <td>{item.firstName}</td>
-                                <td>{item.lastName}</td>
-                                <td>{item.address}</td>
-                                <td>
-                                    <button className="btn-edit" ><i className="fa-solid fa-pencil"></i></button>
-                                    <button className="btn-delete" onClick={()=>this.handleDeleteUser(item)}><i className="fa-solid fa-trash"></i></button>
-                                </td>
-                            </tr>
-                        )
-                    })}
-                    </tbody>
-                   
-                </table>
-            </div>
-           </div>
+                )
+            })}
+            </tbody>
+           
+        </table>
+           
         );
     }
 

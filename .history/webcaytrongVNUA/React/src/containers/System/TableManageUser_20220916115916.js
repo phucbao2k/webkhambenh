@@ -113,15 +113,15 @@ handleDeleteUser=(user)=>{
         // console.log('check render', this.state)
         //khi muốn render ra 1 thứ gì đó trong react, chúng ta phải có hàm return, và trong đó bắt buộc là 1 khối
         let arrUsers = this.state.usersRedux;
-        
+        console.log('check all users', this.props.listUsers);
+        console.log('check state', this.state.usersRedux);
         return (
-           <div className="users-container">
+          
              
          
-           
+            <div className="title text-center">Manage Users with TaBaoPhuc</div>
            
             <div className="users-table mt-3 mx-1">
-            <div className="title text-center">Manage Users with TaBaoPhuc</div>
                 <table id="TableManageUser">
                     <tbody>
                     <tr>
@@ -131,7 +131,7 @@ handleDeleteUser=(user)=>{
                         <th>Address</th>
                         <th>Actions</th>
                     </tr>
-                    {arrUsers && arrUsers.length>0 && arrUsers.map((item, index)=>{
+                    {arrUsers && arrUsers.length>0 || arrUsers.map((item, index)=>{
                         // để duyệt 1 vòng lặp, ta có thể dùng function map(), bắt buộc phải return ra 1 thứ gì đó
                         // thì function map() mới hoạt động được
                         return(
