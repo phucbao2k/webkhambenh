@@ -151,7 +151,7 @@ let deleteUser = (userId) =>{
 let updateUserData = (data)=>{
     return new Promise(async(resolve, reject)=>{
         try{
-if(!data.id || !data.roleId || !data.positionId || !data.gender){
+if(!data.id){
     resolve({
         errCode: 2,
         errMessage: 'Missing required parameters'
@@ -167,8 +167,7 @@ if (user){
     user.address= data.address;
     user.roleId = data.roleId;
     user.positionId= data.positionId;
-    user.gender= data.gender;
-    user.phoneNumber= data.phoneNumber;
+    us
    await user.save();
    resolve({
     errCode: 0,
