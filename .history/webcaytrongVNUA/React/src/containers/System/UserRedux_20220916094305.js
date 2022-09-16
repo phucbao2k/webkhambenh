@@ -24,7 +24,7 @@ class UserRedux extends Component {
             phoneNumber: '',
             address: '',
             position: '',
-            role: '',
+            roleId: '',
             avatar: '',
         };
     }
@@ -115,7 +115,7 @@ handleSaveUser = ()=>{
     firstName: this.state.firstName,
     lastName: this.state.lastName,
     address: this.state.address,
-    phoneNumber: this.state.phoneNumber,
+    phoneNumbers: this.state.phoneNumber,
     gender: this.state.gender,
     roleId: this.state.role,
     positionId: this.state.position
@@ -204,7 +204,7 @@ onChangeInput = (event, id)=>{
       <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.roleid"/></label>
       <select id="inputState" className="form-control" 
     
-      onChange={(event) =>{this.onChangeInput(event,'role')}}>
+      onChange={(event) =>{this.onChangeInput(event,'roleId')}}>
       {roleIds && roleIds.lenght > 0 ||  roleIds.map((item, index)=>{
                     return(
                         <option key={index} value={item.key}>

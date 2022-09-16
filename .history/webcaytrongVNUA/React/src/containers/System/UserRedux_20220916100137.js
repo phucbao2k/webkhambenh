@@ -84,7 +84,7 @@ componentDidUpdate( prevProps,prevState, snapshot){
       let arrRoles = this.props.roleIdRedux;
       this.setState({
         roleIdArr: arrRoles,
-        role: arrRoles && arrRoles.lenght > 0 ? arrRoles[0].key : ''
+        roleId: arrRoles && arrRoles.lenght > 0 ? arrRoles[0].key : ''
       })
     }
 }
@@ -117,7 +117,7 @@ handleSaveUser = ()=>{
     address: this.state.address,
     phoneNumber: this.state.phoneNumber,
     gender: this.state.gender,
-    roleId: this.state.role,
+    roleId: this.state.roleId,
     positionId: this.state.position
   })
 }
@@ -146,7 +146,7 @@ onChangeInput = (event, id)=>{
         let roleIds = this.state.roleIdArr;
       let isGetGenders = this.props.isLoadingGenders;
        let language = this.props.language;
-       let {email, password, firstName, lastName, phoneNumber,address,gender,position,role
+       let {email, password, firstName, lastName, phoneNumber,address,gender,position,roleId
       ,avatar}= this.state;
         return (
             

@@ -146,7 +146,7 @@ onChangeInput = (event, id)=>{
         let roleIds = this.state.roleIdArr;
       let isGetGenders = this.props.isLoadingGenders;
        let language = this.props.language;
-       let {email, password, firstName, lastName, phoneNumber,address,gender,position,role
+       let {email, password, firstName, lastName, phoneNumber,address,gender,position,roleId
       ,avatar}= this.state;
         return (
             
