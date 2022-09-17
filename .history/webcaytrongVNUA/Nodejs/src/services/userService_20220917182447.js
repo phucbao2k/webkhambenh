@@ -170,9 +170,7 @@ if (user){
     user.positionId= data.positionId;
     user.gender= data.gender;
     user.phoneNumber= data.phoneNumber;
-    if(data.avatar){
-user.image = data.avatar;
-    }
+    if(user)
    await user.save();
    resolve({
     errCode: 0,

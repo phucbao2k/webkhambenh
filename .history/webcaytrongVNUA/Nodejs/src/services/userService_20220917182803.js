@@ -171,7 +171,7 @@ if (user){
     user.gender= data.gender;
     user.phoneNumber= data.phoneNumber;
     if(data.avatar){
-user.image = data.avatar;
+user.image = dat
     }
    await user.save();
    resolve({
