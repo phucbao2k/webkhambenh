@@ -175,7 +175,7 @@ imageBase64 = new Buffer(user.image, 'base64').toString('binary');
     role: user.roleId,
     position: user.positionId,
     avatar: '',
-    previewImgURL: imageBase64,
+    previewImgURL: im
     action: CRUD_ACTIONS.EDIT,
     userEditId: user.id
   })

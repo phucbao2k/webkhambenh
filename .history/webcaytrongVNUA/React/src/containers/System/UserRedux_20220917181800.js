@@ -162,7 +162,7 @@ onChangeInput = (event, id)=>{
 handleEditUserFromParent = (user)=>{
   let imageBase64 = '';
   if(user.image){
-imageBase64 = new Buffer(user.image, 'base64').toString('binary');
+imageBase64 = new Buffer(user.image,)
   }
   this.setState({
     email: user.email,
@@ -175,7 +175,6 @@ imageBase64 = new Buffer(user.image, 'base64').toString('binary');
     role: user.roleId,
     position: user.positionId,
     avatar: '',
-    previewImgURL: imageBase64,
     action: CRUD_ACTIONS.EDIT,
     userEditId: user.id
   })

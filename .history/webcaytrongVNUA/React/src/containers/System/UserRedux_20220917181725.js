@@ -7,7 +7,6 @@ import TableManageUser from './TableManageUser';
 import * as actions from '../../store/actions';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
-import { isBuffer } from 'lodash';
 class UserRedux extends Component {
 
     constructor(props) {
@@ -162,7 +161,7 @@ onChangeInput = (event, id)=>{
 handleEditUserFromParent = (user)=>{
   let imageBase64 = '';
   if(user.image){
-imageBase64 = new Buffer(user.image, 'base64').toString('binary');
+imageBase64 = 
   }
   this.setState({
     email: user.email,
@@ -175,7 +174,6 @@ imageBase64 = new Buffer(user.image, 'base64').toString('binary');
     role: user.roleId,
     position: user.positionId,
     avatar: '',
-    previewImgURL: imageBase64,
     action: CRUD_ACTIONS.EDIT,
     userEditId: user.id
   })
