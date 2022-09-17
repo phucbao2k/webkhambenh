@@ -2,7 +2,7 @@
 
 export function up(queryInterface, Sequelize) {
     return Promise.all([
-        queryInterface.changeColumn('Users', 'image', {
+        queryInterface.changeColumn('Users', 'image', {npx
             type: Sequelize.BLOB('long'),
             allowNull: true,
         })
