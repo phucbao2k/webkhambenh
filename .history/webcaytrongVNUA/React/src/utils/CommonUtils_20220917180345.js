@@ -4,9 +4,7 @@ class CommonUtils {
         {
             const reader = new FileReader();
             reader.readAsDataUrRL(file);
-            reader.onload = () => resolve(reader.result);
-            reader.onerror = error => reject(error);
-        });
+        })
     }
 }
 

@@ -6,7 +6,7 @@ class CommonUtils {
             reader.readAsDataUrRL(file);
             reader.onload = () => resolve(reader.result);
             reader.onerror = error => reject(error);
-        });
+        })
     }
 }
 
