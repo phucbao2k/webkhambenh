@@ -92,4 +92,4 @@ sau đó nhảy vào file Redux,
 
 
  khi gán data ở hàm setState, vế trái ta tự định nghĩa, vế phải phải viết đúng
- tên cột trong database, khi thao tác thì lại thao tác với tên ta tự đặt.
+ tên c

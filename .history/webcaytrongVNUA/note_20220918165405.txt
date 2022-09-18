@@ -91,5 +91,4 @@ sau đó nhảy vào file Redux,
  mapDispatchToProps() là lấy câu lệnh của redux rồi bơm vào props của reactjs
 
 
- khi gán data ở hàm setState, vế trái ta tự định nghĩa, vế phải phải viết đúng
- tên cột trong database, khi thao tác thì lại thao tác với tên ta tự đặt.
+ khi gán data ở hàm setState, 
