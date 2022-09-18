@@ -91,4 +91,4 @@ sau đó nhảy vào file Redux,
  mapDispatchToProps() là lấy câu lệnh của redux rồi bơm vào props của reactjs
 
 
-khi gán data, bên nào có this.state thì bên đó không phải là tên cột mặc định của database
+khi gán data, 
