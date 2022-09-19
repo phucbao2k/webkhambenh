@@ -55,7 +55,7 @@ if(item.image){
     imageBase64 = new Buffer(item.image, 'base64').toString('binary');
 }
 let nameVi = `${item.positionData.valueVi}, ${item.firstName} ${item.lastName}`;
-let nameEn = `${item.positionData.valueEn}, ${item.lastName} ${item.firstName}`;
+let nameEn = `${item.positionData.valueEn}, ${item.firstName} ${item.firstName}`;
 return(
 <div className="section-customize" key={index}>
                             <div className="customize-border">
