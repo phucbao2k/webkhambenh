@@ -4,15 +4,8 @@ let getTopDoctorHome = async(req, res)=>{
     if(!limit) limit = 10;
     try{
         let response = await doctorService.getTopDoctorHome(+limit);
-        return res.status(200).json(response);
+        return 
     }catch(e){
-console.log(e);
-return res.status(200).json({
-    errCode: -1,
-    message: 'Error from server...'
-})
+
     }
-}
-module.exports={
-    getTopDoctorHome: getTopDoctorHome
 }

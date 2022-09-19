@@ -8,11 +8,7 @@ let getTopDoctorHome = async(req, res)=>{
     }catch(e){
 console.log(e);
 return res.status(200).json({
-    errCode: -1,
-    message: 'Error from server...'
+    
 })
     }
-}
-module.exports={
-    getTopDoctorHome: getTopDoctorHome
 }

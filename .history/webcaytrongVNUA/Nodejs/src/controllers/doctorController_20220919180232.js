@@ -1,0 +1,1 @@
+import doctorService from './s'
