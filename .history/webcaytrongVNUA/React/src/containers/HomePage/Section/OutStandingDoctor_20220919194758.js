@@ -56,8 +56,9 @@ if(item.image){
 }
 let nameVi = `${item.positionData.valueVi}, ${item.lastName}, ${item.firstName}`;
 let nameEn = `${item.positionData.valueEn}, ${item.lastName}, ${item.firstName}`;
-return(
-<div className="section-customize" key={index}>
+                        })}
+                        
+                        <div className="section-customize" key={index}>
                             <div className="customize-border">
                                 <div className="outer-bg">
                                 <div className="bg-image section-outstanding-doctor"
@@ -73,10 +74,6 @@ return(
                             
                            
                         </div>
-)
-                        })}
-                     
-                        
                         {/* <div className="section-customize" key={index}>
                             <div className="customize-border">
                                 <div className="outer-bg">

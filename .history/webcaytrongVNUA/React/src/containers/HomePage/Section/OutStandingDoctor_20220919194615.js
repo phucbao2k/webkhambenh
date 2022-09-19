@@ -52,12 +52,12 @@ class OutStandingDoctor extends Component{
                         arrDoctors.map((item, index)=>{
                             let imageBase64 ='';
 if(item.image){
-    imageBase64 = new Buffer(item.image, 'base64').toString('binary');
+    imageBase64 = new isBuffer(item.image, 'base64').toString('binary');
 }
 let nameVi = `${item.positionData.valueVi}, ${item.lastName}, ${item.firstName}`;
 let nameEn = `${item.positionData.valueEn}, ${item.lastName}, ${item.firstName}`;
-return(
-<div className="section-customize" key={index}>
+                        })}
+                        <div className="section-customize" key={index}>
                             <div className="customize-border">
                                 <div className="outer-bg">
                                 <div className="bg-image section-outstanding-doctor"
@@ -73,10 +73,6 @@ return(
                             
                            
                         </div>
-)
-                        })}
-                     
-                        
                         {/* <div className="section-customize" key={index}>
                             <div className="customize-border">
                                 <div className="outer-bg">
