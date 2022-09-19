@@ -9,11 +9,11 @@ export default (sequelize, DataTypes) => {
      */
     static associate(models) {
       Allcode.hasMany(models.User, {foreignKey: 'positionId', as:'positionData'})
-      Allcode.hasMany(models.User,{foreignKey:'gender', as: 'genderData'})
+      Allcode.hasMany(models.User)
     }
   };
   Allcode.init({ 
-    keyMap: DataTypes.STRING,
+    key: DataTypes.STRING,
     type: DataTypes.STRING,
     valueEn: DataTypes.STRING,
     valueVi: DataTypes.STRING
