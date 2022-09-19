@@ -21,10 +21,7 @@ resolve({
     data: users
 })
 }catch(e){
-    console.log(e);
+    console.log
 }
     })
-}
-modulle.exports ={
-    getTopDoctorHome: getTopDoctorHome
 }

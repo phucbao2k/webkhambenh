@@ -1,7 +1,7 @@
 import express from "express";
 import homeController from "../controllers/homeController.js";
 import userController from "../controllers/userController.js";
-import doctorController from "../controllers/doctorController.js";
+import doctor
 let router = express.Router();
 export function initWebRoutes(app) {
     router.get('/', homeController.getHomePage);
@@ -18,7 +18,7 @@ export function initWebRoutes(app) {
      router.put('/api/edit-user', userController.handleEditUser);
      router.delete('/api/delete-user', userController.handleDeleteUser);
      router.get('/api/allcode', userController.getAllCode);
-router.get('/api/top-doctor-home', doctorController.getTopDoctorHome);
+
     router.get('/', (req, res) => {
         return res.send('HELU WORLD');
     });

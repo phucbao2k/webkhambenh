@@ -13,18 +13,8 @@ include:[
     {model: db.Allcode, as:'positionData', attributes:['valueEn', 'valueVi']},
     {model: db.Allcode, as:'genderData', attributes:['valueEn', 'valueVi']}
 ],
-raw: true,
-nest: true
+raw
 })
-resolve({
-    errCode: 0,
-    data: users
-})
-}catch(e){
-    console.log(e);
-}
+}catch(e){}
     })
-}
-modulle.exports ={
-    getTopDoctorHome: getTopDoctorHome
 }

@@ -17,14 +17,8 @@ raw: true,
 nest: true
 })
 resolve({
-    errCode: 0,
-    data: users
+    err
 })
-}catch(e){
-    console.log(e);
-}
+}catch(e){}
     })
-}
-modulle.exports ={
-    getTopDoctorHome: getTopDoctorHome
 }

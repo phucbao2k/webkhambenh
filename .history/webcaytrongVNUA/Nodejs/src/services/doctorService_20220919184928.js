@@ -16,15 +16,6 @@ include:[
 raw: true,
 nest: true
 })
-resolve({
-    errCode: 0,
-    data: users
-})
-}catch(e){
-    console.log(e);
-}
+}catch(e){}
     })
-}
-modulle.exports ={
-    getTopDoctorHome: getTopDoctorHome
 }

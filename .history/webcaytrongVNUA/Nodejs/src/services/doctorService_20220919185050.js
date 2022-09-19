@@ -26,5 +26,5 @@ resolve({
     })
 }
 modulle.exports ={
-    getTopDoctorHome: getTopDoctorHome
+    get
 }

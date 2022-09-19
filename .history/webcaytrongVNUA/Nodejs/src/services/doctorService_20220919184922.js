@@ -14,17 +14,8 @@ include:[
     {model: db.Allcode, as:'genderData', attributes:['valueEn', 'valueVi']}
 ],
 raw: true,
-nest: true
+nest
 })
-resolve({
-    errCode: 0,
-    data: users
-})
-}catch(e){
-    console.log(e);
-}
+}catch(e){}
     })
-}
-modulle.exports ={
-    getTopDoctorHome: getTopDoctorHome
 }
