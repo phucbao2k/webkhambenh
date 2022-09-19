@@ -87,8 +87,8 @@ sau đó nhảy vào file Redux,
  câu lệnh nhỏ, với bên trái là tên người dùng tự định nghĩa, bên phải là function đã được định nghĩa bên redux.
 
 
- mapStateToProps() là lấy state của redux(Thường nằm trong file Reducer) rồi bơm vào props của reactjs
- mapDispatchToProps() là lấy câu lệnh của redux(Thường nằm trong file Action) rồi bơm vào props của reactjs
+ mapStateToProps() là lấy state của redux(Thường nằm trong file reducer) rồi bơm vào props của reactjs
+ mapDispatchToProps() là lấy câu lệnh của redux rồi bơm vào props của reactjs
 
 
 khi gán data, bên nào có this.state thì bên đó không phải là tên cột mặc định của database
