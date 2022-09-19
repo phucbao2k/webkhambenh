@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {FormattedMessage} from 'react-intl';
 import Slider from "react-slick";
-import * as actions from "../../../store/actions";
+import * as actions from "../actions";
 import {LANGUAGES} from "../../../utils";
 import { isBuffer } from 'lodash';
 
@@ -60,92 +60,77 @@ let nameEn = `${item.positionData.valueEn}, ${item.lastName}, ${item.firstName}`
                             <div className="customize-border">
                                 <div className="outer-bg">
                                 <div className="bg-image section-outstanding-doctor"
-                                style={{backgroundImage: `url(${imageBase64})`}}/>
+                                style={{backgroundImage: `url(${imageBase})`}}>
 
-                               
+                                </div>
                                 </div>
                                 <div className="position text-center">
-                                <div>{language===LANGUAGES.VI ? nameVi: nameEn}</div>
+                                <div>Giáo sư, Tiến Sĩ TBP</div>
                                 <div>Cây nào cũng khám được</div>
                                 </div>
                             </div>
                             
                            
                         </div>
-                        <div className="section-customize" key={index}>
+                        <div className="section-customize">
                             <div className="customize-border">
                                 <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"
-                                style={{backgroundImage: `url(${imageBase64})`}}/>
-
-                               
+                                <div className="bg-image section-outstanding-doctor"></div>
                                 </div>
                                 <div className="position text-center">
-                                <div>{language===LANGUAGES.VI ? nameVi: nameEn}</div>
+                                <div>Giáo sư, Tiến Sĩ TBP</div>
                                 <div>Cây nào cũng khám được</div>
                                 </div>
                             </div>
                             
                            
                         </div>
-                        <div className="section-customize" key={index}>
+                        <div className="section-customize">
                             <div className="customize-border">
                                 <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"
-                                style={{backgroundImage: `url(${imageBase64})`}}/>
-
-                               
+                                <div className="bg-image section-outstanding-doctor"></div>
                                 </div>
                                 <div className="position text-center">
-                                <div>{language===LANGUAGES.VI ? nameVi: nameEn}</div>
+                                <div>Giáo sư, Tiến Sĩ TBP</div>
                                 <div>Cây nào cũng khám được</div>
                                 </div>
                             </div>
                             
                            
                         </div>
-                        <div className="section-customize" key={index}>
+                        <div className="section-customize">
                             <div className="customize-border">
                                 <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"
-                                style={{backgroundImage: `url(${imageBase64})`}}/>
-
-                               
+                                <div className="bg-image section-outstanding-doctor"></div>
                                 </div>
                                 <div className="position text-center">
-                                <div>{language===LANGUAGES.VI ? nameVi: nameEn}</div>
+                                <div>Giáo sư, Tiến Sĩ TBP</div>
                                 <div>Cây nào cũng khám được</div>
                                 </div>
                             </div>
                             
                            
                         </div>
-                        <div className="section-customize" key={index}>
+                        <div className="section-customize">
                             <div className="customize-border">
                                 <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"
-                                style={{backgroundImage: `url(${imageBase64})`}}/>
-
-                               
+                                <div className="bg-image section-outstanding-doctor"></div>
                                 </div>
                                 <div className="position text-center">
-                                <div>{language===LANGUAGES.VI ? nameVi: nameEn}</div>
+                                <div>Giáo sư, Tiến Sĩ TBP</div>
                                 <div>Cây nào cũng khám được</div>
                                 </div>
                             </div>
                             
                            
                         </div>
-                        <div className="section-customize" key={index}>
+                        <div className="section-customize">
                             <div className="customize-border">
                                 <div className="outer-bg">
-                                <div className="bg-image section-outstanding-doctor"
-                                style={{backgroundImage: `url(${imageBase64})`}}/>
-
-                               
+                                <div className="bg-image section-outstanding-doctor"></div>
                                 </div>
                                 <div className="position text-center">
-                                <div>{language===LANGUAGES.VI ? nameVi: nameEn}</div>
+                                <div>Giáo sư, Tiến Sĩ TBP</div>
                                 <div>Cây nào cũng khám được</div>
                                 </div>
                             </div>
@@ -164,13 +149,12 @@ const mapStateToProps = state => {
     return {
         isLoggedIn: state.user.isLoggedIn,
         language: state.app.language,
-        topDoctorRedux: state.admin.topDoctors
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-       loadTopDoctors:()=>dispatch(actions.fetchTopDoctor())
+       
     };
 };
 
