@@ -164,7 +164,7 @@ handleEditUserFromParent = (user)=>{
   if(user.image){
 imageBase64 = new Buffer(user.image, 'base64').toString('binary');
 //Buffer cung cấp cách xử lý dữ liệu dạng nhị phân, 
-//câu lệnh trên xử lý dữ liệu BLOB (được mã hóa là base64) sang dữ liệu binary 
+//câu lệnh trên xử lý dữ liệu (đu) base64 sang dữ liệu binary và rồi 
   }
   this.setState({
     email: user.email,
