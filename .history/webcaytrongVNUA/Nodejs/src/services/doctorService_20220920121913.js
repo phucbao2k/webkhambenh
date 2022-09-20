@@ -5,7 +5,7 @@ try{
 let users = await db.User.findAll({
      limit: limitInput,
     where: {roleId: 'R2'},
-
+order: [[ 'DESC']],
 attributes:{
     exclude:['password']
 },
