@@ -37,25 +37,24 @@ componentDidMount() {
 componentDidUpdate(prevProps, prevState, snapshot){
     
 }
- handleEditorChange = ({html, text})=>{
+ handleEditorChange({html, text}){
     this.setState({
         contentMarkdown: text,
         contentHTML: html,
     })
+    console.log('check edit change', html, text);
 }
 
 handleSaveContentMarkdown =()=>{
-   console.log('check state: ', this.state)
+    alert('save content markdown');
 }
 handleChange = (selectedDoctor) => {
     this.setState({ selectedDoctor }, () =>
-      console.log(`Doctor selected:`, this.state.selectedDoctor)
+      console.log(`Option selected:`, this.state.selectedDoctor)
     );
   };
   handleOnChangeDesc = (event)=>{
-this.setState({
-    description: event.target.value
-})
+
   }
     render() {
         
@@ -85,7 +84,7 @@ this.setState({
 <div className="content-right">
 <label>Thông tin giới thiệu:</label>
     <textarea className="form-control" rows="4"
-    onChange ={(event)=>this.handleOnChangeDesc(event)}
+    onChange ={(event)=>this.handleOnChangeDesc(e)}
     value={this.state.description}>
         ...
     </textarea>

@@ -78,7 +78,7 @@ this.setState({
     <label>Chọn bác sĩ:</label>
     <Select
         value={this.state.selectedDoctor}
-        onChange={this.handleChange}
+        onChange={this.handleChange()}
         options={options}
      />
 </div>

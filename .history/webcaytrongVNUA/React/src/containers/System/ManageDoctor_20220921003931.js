@@ -9,11 +9,7 @@ import 'react-markdown-editor-lite/lib/index.css';
 import Select from 'react-select';
 const mdParser = new MarkdownIt();
 
-const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' },
-  ];
+
  // nếu muốn import 1 function thì ta dùng dấu ngoặc nhọn
 class ManageDoctor extends Component {
 // PROPS stands for properties and is being used for passing data from one component to another.
@@ -23,8 +19,7 @@ class ManageDoctor extends Component {
     this.state ={
       contentMarkdown: '',
       contentHTML:'',
-      selectedDoctor: '',
-      description: '',
+      selectedOption: '',
     }
    }
 //để lưu giá trị của 1 biến components, ta dùng state
@@ -37,26 +32,18 @@ componentDidMount() {
 componentDidUpdate(prevProps, prevState, snapshot){
     
 }
- handleEditorChange = ({html, text})=>{
-    this.setState({
-        contentMarkdown: text,
-        contentHTML: html,
-    })
+ handleEditorChange({html, text}){
+    console.log('check edit change', html, text);
 }
 
 handleSaveContentMarkdown =()=>{
-   console.log('check state: ', this.state)
+    alert('save content markdown');
 }
-handleChange = (selectedDoctor) => {
-    this.setState({ selectedDoctor }, () =>
-      console.log(`Doctor selected:`, this.state.selectedDoctor)
+handleChange = (selectedOption) => {
+    this.setState({ selectedOption }, () =>
+      console.log(`Option selected:`, this.state.selectedOption)
     );
   };
-  handleOnChangeDesc = (event)=>{
-this.setState({
-    description: event.target.value
-})
-  }
     render() {
         
      
@@ -73,20 +60,18 @@ this.setState({
              <div className="users-table mt-3 mx-1">
              <div className="title text-center">Manage Doctors with TaBaoPhuc</div>
                 <div className="more-info">
-<div className="content-left form-group">
+<div className="content-left">
    
     <label>Chọn bác sĩ:</label>
     <Select
-        value={this.state.selectedDoctor}
+        value={selectedOption}
         onChange={this.handleChange}
         options={options}
-     />
+      />
 </div>
 <div className="content-right">
 <label>Thông tin giới thiệu:</label>
-    <textarea className="form-control" rows="4"
-    onChange ={(event)=>this.handleOnChangeDesc(event)}
-    value={this.state.description}>
+    <textarea className="form-control">
         ...
     </textarea>
     

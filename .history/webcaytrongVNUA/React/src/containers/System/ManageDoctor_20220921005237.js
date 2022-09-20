@@ -23,8 +23,7 @@ class ManageDoctor extends Component {
     this.state ={
       contentMarkdown: '',
       contentHTML:'',
-      selectedDoctor: '',
-      description: '',
+      selectedOption: '',
     }
    }
 //để lưu giá trị của 1 biến components, ta dùng state
@@ -37,26 +36,21 @@ componentDidMount() {
 componentDidUpdate(prevProps, prevState, snapshot){
     
 }
- handleEditorChange = ({html, text})=>{
+ handleEditorChange({html, text}){
     this.setState({
-        contentMarkdown: text,
-        contentHTML: html,
+        conte
     })
+    console.log('check edit change', html, text);
 }
 
 handleSaveContentMarkdown =()=>{
-   console.log('check state: ', this.state)
+    alert('save content markdown');
 }
-handleChange = (selectedDoctor) => {
-    this.setState({ selectedDoctor }, () =>
-      console.log(`Doctor selected:`, this.state.selectedDoctor)
+handleChange = (selectedOption) => {
+    this.setState({ selectedOption }, () =>
+      console.log(`Option selected:`, this.state.selectedOption)
     );
   };
-  handleOnChangeDesc = (event)=>{
-this.setState({
-    description: event.target.value
-})
-  }
     render() {
         
      
@@ -77,16 +71,14 @@ this.setState({
    
     <label>Chọn bác sĩ:</label>
     <Select
-        value={this.state.selectedDoctor}
+        value={this.state.selectedOption}
         onChange={this.handleChange}
         options={options}
      />
 </div>
 <div className="content-right">
 <label>Thông tin giới thiệu:</label>
-    <textarea className="form-control" rows="4"
-    onChange ={(event)=>this.handleOnChangeDesc(event)}
-    value={this.state.description}>
+    <textarea className="form-control" rows="4">
         ...
     </textarea>
     

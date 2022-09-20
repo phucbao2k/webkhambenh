@@ -42,10 +42,11 @@ componentDidUpdate(prevProps, prevState, snapshot){
         contentMarkdown: text,
         contentHTML: html,
     })
+    console.log('check edit change', html, text);
 }
 
 handleSaveContentMarkdown =()=>{
-   console.log('check state: ', this.state)
+    alert('save content markdown');
 }
 handleChange = (selectedDoctor) => {
     this.setState({ selectedDoctor }, () =>
@@ -78,7 +79,7 @@ this.setState({
     <label>Chọn bác sĩ:</label>
     <Select
         value={this.state.selectedDoctor}
-        onChange={this.handleChange}
+        onChange={()=>this.handleChange()}
         options={options}
      />
 </div>
