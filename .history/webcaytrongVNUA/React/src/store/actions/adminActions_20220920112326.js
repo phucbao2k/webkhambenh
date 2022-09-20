@@ -104,7 +104,7 @@ export const fetchAllUsersStart = () => {
         try{
             let res = await getAllUsers("ALL");
             let res1 = await getTopDoctorHomeService(2);
-            console.log("check top: ",res1);
+            console.log(""res1);
             if(res && res.errCode === 0){
                 dispatch(fetchAllUsersSuccess(res.users.reverse()))
             }else{
