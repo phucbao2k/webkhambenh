@@ -105,5 +105,4 @@ vd:
         dataDoctors: res.data
     })
 
-trong hàm mapStateToProps(), phần admin/app/user... trong các câu lệnh phía dưới chính là phần
-đại diện cho các file adminReducer/userReducer/appReducer...
+trong hàm mapStateToProps(), phần admin/app/
