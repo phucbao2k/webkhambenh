@@ -16,10 +16,10 @@ class HomePage extends Component {
     render() {
         let settings ={
             dots: false,
-            infinite:false,
+            isFinite:false,
             speed: 500,
             slidesToShow:4,
-            slidesToScroll:1,
+            slidesToScroll:1
         };
 
         return (
@@ -29,8 +29,7 @@ class HomePage extends Component {
                 settings ={settings}>
             </Specialty>
             <MedicalFacility settings ={settings}></MedicalFacility>
-            <OutStandingDoctor 
-            settings ={settings}/>
+            <OutStandingDoctor />
             <HandBook settings ={settings}></HandBook>
           <About />
           <HomeFooter ></HomeFooter>
