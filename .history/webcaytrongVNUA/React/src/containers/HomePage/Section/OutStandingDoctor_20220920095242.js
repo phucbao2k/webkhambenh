@@ -48,7 +48,7 @@ class OutStandingDoctor extends Component{
 
                         {/* Dưới đây là cách bọc các ảnh, chữ thành 1 slide lớn, nằm ngang */}
                     <Slider {...this.props.settings}>
-                        {arrDoctors && arrDoctors.lenght > 0 ||
+                        {arrDoctors && arrDoctors.lenght>0 ||
                         arrDoctors.map((item, index)=>{
                             let imageBase64 ='';
 if(item.image){
