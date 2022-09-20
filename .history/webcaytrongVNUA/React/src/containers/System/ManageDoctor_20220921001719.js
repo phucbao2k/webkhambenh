@@ -35,7 +35,7 @@ componentDidUpdate(prevProps, prevState, snapshot){
 }
 
 handleSaveContentMarkdown =()=>{
-    alert('save content markdown');
+    alert()
 }
     render() {
         

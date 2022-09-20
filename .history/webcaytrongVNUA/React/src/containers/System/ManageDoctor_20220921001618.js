@@ -34,9 +34,7 @@ componentDidUpdate(prevProps, prevState, snapshot){
     console.log('check edit change', html, text);
 }
 
-handleSaveContentMarkdown =()=>{
-    alert('save content markdown');
-}
+
     render() {
         
      
@@ -60,7 +58,7 @@ handleSaveContentMarkdown =()=>{
             </div>
 
            <button
-           onClick={()=> this.handleSaveContentMarkdown()}
+           onClick={()}
            className="save-content-doctor">Done! Save</button>
 </div>
 

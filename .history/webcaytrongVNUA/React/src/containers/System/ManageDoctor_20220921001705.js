@@ -34,9 +34,7 @@ componentDidUpdate(prevProps, prevState, snapshot){
     console.log('check edit change', html, text);
 }
 
-handleSaveContentMarkdown =()=>{
-    alert('save content markdown');
-}
+handleSaveContentMarkdown
     render() {
         
      

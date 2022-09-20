@@ -16,8 +16,7 @@ class ManageDoctor extends Component {
    constructor(props) {
     super(props);
     this.state ={
-      contentMarkdown: '',
-      contentHTML:'',
+      contentMarkdow
     }
    }
 //để lưu giá trị của 1 biến components, ta dùng state
@@ -34,9 +33,7 @@ componentDidUpdate(prevProps, prevState, snapshot){
     console.log('check edit change', html, text);
 }
 
-handleSaveContentMarkdown =()=>{
-    alert('save content markdown');
-}
+
     render() {
         
      
@@ -59,9 +56,7 @@ handleSaveContentMarkdown =()=>{
 </div>
             </div>
 
-           <button
-           onClick={()=> this.handleSaveContentMarkdown()}
-           className="save-content-doctor">Done! Save</button>
+           
 </div>
 
 
