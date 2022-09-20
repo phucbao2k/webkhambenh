@@ -21,16 +21,12 @@ class ManageDoctor extends Component {
    }
 //để lưu giá trị của 1 biến components, ta dùng state
 //Component là một block code độc lập để phân chia các UI (giao diện người dùng) thành các phân nhỏ riêng lẻ để dễ dàng quản lý và tái sử dụng.
-    
-componentDidMount() {
+     componentDidMount() {
      
     }
 
 componentDidUpdate(prevProps, prevState, snapshot){
     
-}
- handleEditorChange({html, text}){
-    console.log('check edit change', html, text);
 }
 
 
@@ -52,7 +48,7 @@ componentDidUpdate(prevProps, prevState, snapshot){
                 
              </div>
              <div className="manage-doctor-editor">
-<MdEditor style ={{height:'500px'}} renderHTML={text=> mdParser.render(text)} onChange={()=>this.handleEditorChange}/>
+<MdEditor style ={{height:'500px'}} renderHTML={text=> mdParser.render(text)} onChange={handleEditorChange}/>
 </div>
             </div>
 

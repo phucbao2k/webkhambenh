@@ -7,7 +7,9 @@ import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 import 'react-markdown-editor-lite/lib/index.css';
 const mdParser = new MarkdownIt();
-
+function handleEditorChange({html, text}){
+    console.log('check edit change', html, text);
+}
 
  // nếu muốn import 1 function thì ta dùng dấu ngoặc nhọn
 class ManageDoctor extends Component {
@@ -16,29 +18,35 @@ class ManageDoctor extends Component {
    constructor(props) {
     super(props);
     this.state ={
-      
+       usersRedux: []
     }
    }
 //để lưu giá trị của 1 biến components, ta dùng state
 //Component là một block code độc lập để phân chia các UI (giao diện người dùng) thành các phân nhỏ riêng lẻ để dễ dàng quản lý và tái sử dụng.
-    
-componentDidMount() {
-     
+     componentDidMount() {
+      this.props.fetchUserRedux();
     }
 
 componentDidUpdate(prevProps, prevState, snapshot){
-    
-}
- handleEditorChange({html, text}){
-    console.log('check edit change', html, text);
+    if(prevProps.listUsers !== this.props.listUsers){
+        this.setState({
+            usersRedux: this.props.listUsers,
+        })
+    }
 }
 
+handleDeleteUser=(user)=>{
+    this.props.deleteUserRedux(user.id);
+}
 
+handleEditUser =(user)=>{
+    this.props.handleEditUserFromParentKey(user)
+}
     render() {
         
      
         //khi muốn render ra 1 thứ gì đó trong react, chúng ta phải có hàm return, và trong đó bắt buộc là 1 khối
-      
+        let arrUsers = this.state.usersRedux;
         
         return (
 <div className='manage-doctor-container'>
@@ -51,9 +59,6 @@ componentDidUpdate(prevProps, prevState, snapshot){
              <div className="title text-center">Manage Doctors with TaBaoPhuc</div>
                 
              </div>
-             <div className="manage-doctor-editor">
-<MdEditor style ={{height:'500px'}} renderHTML={text=> mdParser.render(text)} onChange={()=>this.handleEditorChange}/>
-</div>
             </div>
 
            

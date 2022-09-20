@@ -29,7 +29,7 @@ componentDidMount() {
 componentDidUpdate(prevProps, prevState, snapshot){
     
 }
- handleEditorChange({html, text}){
+function handleEditorChange({html, text}){
     console.log('check edit change', html, text);
 }
 
@@ -52,7 +52,7 @@ componentDidUpdate(prevProps, prevState, snapshot){
                 
              </div>
              <div className="manage-doctor-editor">
-<MdEditor style ={{height:'500px'}} renderHTML={text=> mdParser.render(text)} onChange={()=>this.handleEditorChange}/>
+<MdEditor style ={{height:'500px'}} renderHTML={text=> mdParser.render(text)} onChange={handleEditorChange}/>
 </div>
             </div>
 
