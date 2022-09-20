@@ -26,7 +26,7 @@ class OutStandingDoctor extends Component{
     render(){
         let settings ={
             dots: false,
-            isFinite: false,
+            isFinite: true,
             speed: 500,
             slidesToShow:4,
             slidesToScroll:1

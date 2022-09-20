@@ -24,13 +24,13 @@ class OutStandingDoctor extends Component{
     this.props.loadTopDoctors();
    }
     render(){
-        let settings ={
-            dots: false,
-            isFinite: false,
-            speed: 500,
-            slidesToShow:4,
-            slidesToScroll:1
-        };
+        // let settings ={
+        //     dots: false,
+        //     isFinite: true,
+        //     speed: 500,
+        //     slidesToShow:4,
+        //     slidesToScroll:1
+        // };
         // trên đây là setting cho Slider
         // 
         let arrDoctors = this.state.arrDoctors;
