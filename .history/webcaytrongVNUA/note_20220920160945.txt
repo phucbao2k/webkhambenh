@@ -97,10 +97,4 @@ Việc dùng promise để chắc chắn code luôn ra được kết quả(tron
 
 trong import, .. tức là nhảy ra thư mục ở bên ngoài.
 
-actions mà ta thấy trong file Reducer chính là những câu lệnh có trong dispatch({}) của file actions
-vd: 
-
-  dispatch({
-        type: actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
-        dataDoctors: res.data
-    })
+s

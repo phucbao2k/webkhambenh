@@ -191,7 +191,7 @@ if(res&&res.errCode===0){
         dataDoctors: res.data
     })
 
-    //trong hàm dispatch kia thì object trên chính là action trong redux
+    //trong hàm dispatch kia thì 
 }else{
     dispatch({
         type: actionTypes.FETCH_TOP_DOCTORS_FAILED
