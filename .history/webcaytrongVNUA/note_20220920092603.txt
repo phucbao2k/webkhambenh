@@ -93,4 +93,4 @@ sau đó nhảy vào file Redux,
 
 khi gán data, bên nào có this.state thì bên đó không phải là tên cột mặc định của database
 
-Việc dùng promise để chắc chắn code luôn ra được kết quả(trong cả trường hợp đúng lẫn sai)
+
