@@ -21,7 +21,7 @@ resolve({
     data: users
 })
 }catch(e){
-  reject(e);
+  rej
 }
     })
 }
