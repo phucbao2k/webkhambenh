@@ -95,4 +95,4 @@ khi gán data, bên nào có this.state thì bên đó không phải là tên c�
 
 Việc dùng promise để chắc chắn code luôn ra được kết quả(trong cả trường hợp đúng lẫn sai)
 
-trong import, .. tức là nhảy ra thư mục ở bên ngoài.
+
