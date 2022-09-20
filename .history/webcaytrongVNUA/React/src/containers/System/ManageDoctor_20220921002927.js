@@ -19,7 +19,6 @@ class ManageDoctor extends Component {
     this.state ={
       contentMarkdown: '',
       contentHTML:'',
-      selectedOption: '',
     }
    }
 //để lưu giá trị của 1 biến components, ta dùng state
@@ -63,7 +62,7 @@ handleSaveContentMarkdown =()=>{
 </div>
 <div className="content-right">
     <label>Chọn bác sĩ:</label>
-    
+    <input className="form-control"/>
 </div>
                 </div>
              </div>

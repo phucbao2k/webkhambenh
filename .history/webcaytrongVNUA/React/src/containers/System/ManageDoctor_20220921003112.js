@@ -19,7 +19,6 @@ class ManageDoctor extends Component {
     this.state ={
       contentMarkdown: '',
       contentHTML:'',
-      selectedOption: '',
     }
    }
 //để lưu giá trị của 1 biến components, ta dùng state

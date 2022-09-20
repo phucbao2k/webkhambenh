@@ -6,7 +6,6 @@ import * as actions from "../../store/actions";
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 import 'react-markdown-editor-lite/lib/index.css';
-import Select from 'react-select';
 const mdParser = new MarkdownIt();
 
 
@@ -19,7 +18,6 @@ class ManageDoctor extends Component {
     this.state ={
       contentMarkdown: '',
       contentHTML:'',
-      selectedOption: '',
     }
    }
 //để lưu giá trị của 1 biến components, ta dùng state
@@ -60,10 +58,6 @@ handleSaveContentMarkdown =()=>{
     <textarea className="form-control">
         ...
     </textarea>
-</div>
-<div className="content-right">
-    <label>Chọn bác sĩ:</label>
-    
 </div>
                 </div>
              </div>
