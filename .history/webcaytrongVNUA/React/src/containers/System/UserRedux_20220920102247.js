@@ -251,7 +251,7 @@ imageBase64 = new Buffer(user.image, 'base64').toString('binary');
     
       onChange={(event) =>{this.onChangeInput(event,'role')}}
       value={role}>
-      {roleIds && roleIds.length > 0 &&  roleIds.map((item, index)=>{
+      {roleIds && roleIds.length > 0 ||  roleIds.map((item, index)=>{
                     return(
                         <option key={index} value={item.keyMap}>
                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
@@ -266,7 +266,7 @@ imageBase64 = new Buffer(user.image, 'base64').toString('binary');
       <select id="inputState" className="form-control" 
       onChange={(event) =>{this.onChangeInput(event,'position')}}
       value={position}>
-      {positions && positions.length > 0 &&  positions.map((item, index)=>{
+      {positions && positions.length > 0 ||  positions.map((item, index)=>{
                     return(
                         <option key={index} value={item.keyMap}>
                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
@@ -282,7 +282,7 @@ imageBase64 = new Buffer(user.image, 'base64').toString('binary');
       <select id="inputState" className="form-control" 
       onChange={(event) =>{this.onChangeInput(event,'gender')}}
       value={gender}>
-                  {genders && genders.length > 0 &&  genders.map((item, index)=>{
+                  {genders && genders.length > 0 ||  genders.map((item, index)=>{
                     return(
                         <option key={index} value={item.keyMap}>
                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}</option>
