@@ -8,7 +8,7 @@ import MdEditor from 'react-markdown-editor-lite';
 import 'react-markdown-editor-lite/lib/index.css';
 const mdParser = new MarkdownIt();
 function handleEditorChange({html, text}){
-    console.log('check edit change', html, text);
+    console.log('check edit change');
 }
 
  // nếu muốn import 1 function thì ta dùng dấu ngoặc nhọn
@@ -49,49 +49,45 @@ handleEditUser =(user)=>{
         let arrUsers = this.state.usersRedux;
         
         return (
-<React.Fragment>
-<div className="users-container">
+           <div className="users-container">
              
          
            
            
-             <div className="users-table mt-3 mx-1">
-             <div className="title text-center">Manage Users with TaBaoPhuc</div>
-                 <table id="TableManageUser">
-                     <tbody>
-                     <tr>
-                         <th>Email</th>
-                         <th>First name</th>
-                         <th>Last name</th>
-                         <th>Address</th>
-                         <th>Actions</th>
-                     </tr>
-                     {arrUsers && arrUsers.length>0 && arrUsers.map((item, index)=>{
-                         // để duyệt 1 vòng lặp, ta có thể dùng function map(), bắt buộc phải return ra 1 thứ gì đó
-                         // thì function map() mới hoạt động được
-                         return(
-                             <tr key={index}>
-                                 <td>{item.email}</td>
-                                 <td>{item.firstName}</td>
-                                 <td>{item.lastName}</td>
-                                 <td>{item.address}</td>
-                                 <td>
-                                     <button className="btn-edit" 
-                                     onClick={()=> this.handleEditUser(item)}><i className="fa-solid fa-pencil"></i></button>
-                                     <button className="btn-delete" onClick={()=>this.handleDeleteUser(item)}><i className="fa-solid fa-trash"></i></button>
-                                     {/* item là 1 object lưu trữ tất cả thông tin của người dùng */}
-                                 </td>
-                             </tr>
-                         )
-                     })}
-                     </tbody>
-                    
-                 </table>
-             </div>
+            <div className="users-table mt-3 mx-1">
+            <div className="title text-center">Manage Users with TaBaoPhuc</div>
+                <table id="TableManageUser">
+                    <tbody>
+                    <tr>
+                        <th>Email</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Address</th>
+                        <th>Actions</th>
+                    </tr>
+                    {arrUsers && arrUsers.length>0 && arrUsers.map((item, index)=>{
+                        // để duyệt 1 vòng lặp, ta có thể dùng function map(), bắt buộc phải return ra 1 thứ gì đó
+                        // thì function map() mới hoạt động được
+                        return(
+                            <tr key={index}>
+                                <td>{item.email}</td>
+                                <td>{item.firstName}</td>
+                                <td>{item.lastName}</td>
+                                <td>{item.address}</td>
+                                <td>
+                                    <button className="btn-edit" 
+                                    onClick={()=> this.handleEditUser(item)}><i className="fa-solid fa-pencil"></i></button>
+                                    <button className="btn-delete" onClick={()=>this.handleDeleteUser(item)}><i className="fa-solid fa-trash"></i></button>
+                                    {/* item là 1 object lưu trữ tất cả thông tin của người dùng */}
+                                </td>
+                            </tr>
+                        )
+                    })}
+                    </tbody>
+                   
+                </table>
             </div>
-            <MdEditor style ={{height:'500px'}} renderHTML={text=> mdParser.render(text)} onChange={handleEditorChange}/>
-</React.Fragment>
-          
+           </div>
         );
     }
 

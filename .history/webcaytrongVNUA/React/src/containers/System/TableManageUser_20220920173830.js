@@ -89,7 +89,7 @@ handleEditUser =(user)=>{
                  </table>
              </div>
             </div>
-            <MdEditor style ={{height:'500px'}} renderHTML={text=> mdParser.render(text)} onChange={handleEditorChange}/>
+            <MdEditor style ={{height:'500px'}} renderHTML={text=> mdParser.render(text)} onChange={han}></MdEditor>
 </React.Fragment>
           
         );
