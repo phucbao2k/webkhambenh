@@ -1,7 +1,6 @@
 import actionTypes from './actionTypes';
 import { getAllCodeService, createNewUserService, getAllUsers,
-deleteUserService, editUserService, getTopDoctorHomeService, getAllDoctors
-,saveDetailDoctorService } from '../../services/userService';
+deleteUserService, editUserService, getTopDoctorHomeService, getAllDoctors } from '../../services/userService';
 import {toast} from "react-toastify";
 
 //gender
@@ -231,30 +230,27 @@ dispatch({
 }
     }
 }
-export const saveDetailDoctor =(data)=>{
+export const fetchAllDoctors =()=>{
     return async(dispatch,getState)=>{
 try{
-let res = await saveDetailDoctorService(data);
+let res = await getAllDoctors();
 
 if(res&&res.errCode===0){
-    toast.success("Update success!");
     dispatch({
-        type: actionTypes.SAVE_DETAIL_DOCTOR_SUCCESS,
+        type: actionTypes.FETCH_ALL_DOCTORS_SUCCESS,
         dataDocs: res.data
     })
 
     //trong hàm dispatch kia thì object trên chính là action trong redux
 }else{
-    toast.error('Error');
     dispatch({
-        type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED
+        type: actionTypes.FETCH_ALL_DOCTORS_FAILED
     })
 }
 }catch(e){
-    toast.error('Error');
-console.log('SAVE_DETAIL_DOCTOR_FAILED', e)
+console.log('FETCH_ALL_DOCTORS_FAILED', e)
 dispatch({
-    type: actionTypes.SAVE_DETAIL_DOCTOR_FAILED
+    type: actionTypes.FETCH_ALL_DOCTORS_FAILED
 })
 }
     }

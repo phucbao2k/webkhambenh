@@ -77,7 +77,7 @@ handleSaveContentMarkdown =()=>{
     contentHTML: this.state.contentHTML,
     contentMarkdown: this.state.contentMarkdown,
     description: this.state.description,
-    doctorId: this.state.selectedDoctor.value
+    doctorId: this.state.selectedDoctor.value,
  })
 }
 handleChange = (selectedDoctor) => {

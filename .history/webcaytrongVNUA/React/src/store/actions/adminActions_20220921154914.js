@@ -231,7 +231,7 @@ dispatch({
 }
     }
 }
-export const saveDetailDoctor =(data)=>{
+export const saveDetailDoctorAct =(data)=>{
     return async(dispatch,getState)=>{
 try{
 let res = await saveDetailDoctorService(data);

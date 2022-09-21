@@ -11,7 +11,9 @@ import Select from 'react-select';
 const mdParser = new MarkdownIt();
 
 const options = [
-   
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' },
   ];
  // nếu muốn import 1 function thì ta dùng dấu ngoặc nhọn
 class ManageDoctor extends Component {
@@ -74,10 +76,7 @@ componentDidUpdate(prevProps, prevState, snapshot){
 
 handleSaveContentMarkdown =()=>{
  this.props.saveDetailDoctor({
-    contentHTML: this.state.contentHTML,
-    contentMarkdown: this.state.contentMarkdown,
-    description: this.state.description,
-    doctorId: this.state.selectedDoctor.value
+    contentHTML: this.state
  })
 }
 handleChange = (selectedDoctor) => {

@@ -1,7 +1,7 @@
 import actionTypes from './actionTypes';
 import { getAllCodeService, createNewUserService, getAllUsers,
 deleteUserService, editUserService, getTopDoctorHomeService, getAllDoctors
-,saveDetailDoctorService } from '../../services/userService';
+ } from '../../services/userService';
 import {toast} from "react-toastify";
 
 //gender
@@ -231,7 +231,7 @@ dispatch({
 }
     }
 }
-export const saveDetailDoctor =(data)=>{
+export const saveDetailDoctorAct =(data)=>{
     return async(dispatch,getState)=>{
 try{
 let res = await saveDetailDoctorService(data);
