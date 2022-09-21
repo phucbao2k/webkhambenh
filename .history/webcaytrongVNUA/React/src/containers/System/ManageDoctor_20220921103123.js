@@ -23,7 +23,7 @@ class ManageDoctor extends Component {
     this.state ={
       contentMarkdown: '',
       contentHTML:'',
-      //tạo hai biến content này để lưu giá trị kiểu text và lưu gia trị kiểu html
+      //tạo hai biến content này để lưu giá trị kiểu text và lưu 
       selectedDoctor: '',
       description: '',
     }
