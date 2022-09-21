@@ -1,6 +1,6 @@
 import actionTypes from './actionTypes';
 import { getAllCodeService, createNewUserService, getAllUsers,
-deleteUserService, editUserService, getTopDoctorHomeService, getAllDoctors } from '../../services/userService';
+deleteUserService, editUserService, getTopDoctorHomeService } from '../../services/userService';
 import {toast} from "react-toastify";
 
 //gender
@@ -205,27 +205,27 @@ dispatch({
 }
     }
 }
-export const fetchAllDoctor =()=>{
+export const fetchTopDoctor =()=>{
     return async(dispatch,getState)=>{
 try{
-let res = await getAllDoctors();
+let res = await getTopDoctorHomeService('');
 
 if(res&&res.errCode===0){
     dispatch({
-        type: actionTypes.FETCH_ALL_DOCTORS_SUCCESS,
+        type: actionTypes.FETCH_TOP_DOCTORS_SUCCESS,
         dataDoctors: res.data
     })
 
     //trong hàm dispatch kia thì object trên chính là action trong redux
 }else{
     dispatch({
-        type: actionTypes.FETCH_ALL_DOCTORS_FAILED
+        type: actionTypes.FETCH_TOP_DOCTORS_FAILED
     })
 }
 }catch(e){
-console.log('FETCH_ALL_DOCTORS_FAILED', e)
+console.log('FETCH_TOP_DOCTORS_FAILED', e)
 dispatch({
-    type: actionTypes.FETCH_ALL_DOCTORS_FAILED
+    type: actionTypes.FETCH_TOP_DOCTORS_FAILED
 })
 }
     }

@@ -219,13 +219,13 @@ if(res&&res.errCode===0){
     //trong hàm dispatch kia thì object trên chính là action trong redux
 }else{
     dispatch({
-        type: actionTypes.FETCH_ALL_DOCTORS_FAILED
+        type: actionTypes.FETCH_TOP_DOCTORS_FAILED
     })
 }
 }catch(e){
-console.log('FETCH_ALL_DOCTORS_FAILED', e)
+console.log('FETCH_TOP_DOCTORS_FAILED', e)
 dispatch({
-    type: actionTypes.FETCH_ALL_DOCTORS_FAILED
+    type: actionTypes.FETCH_TOP_DOCTORS_FAILED
 })
 }
     }

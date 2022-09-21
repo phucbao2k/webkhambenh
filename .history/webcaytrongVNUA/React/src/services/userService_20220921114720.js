@@ -31,10 +31,9 @@ const getTopDoctorHomeService =(limit)=>{
     return axios.get(`/api/top-doctor-home?limit=${limit}`)
 }
 const getAllDoctors =()=>{
-    return axios.get(`/api/top-all-doctor`)
+    return axios.get(`/api/top-doctor-home?limit=${limit}`)
 }
 export{handleLoginApi, getAllUsers,
      createNewUserService,deleteUserService,
-     editUserService,getAllCodeService,getTopDoctorHomeService,
-    getAllDoctors}//đối với ReactJs, khi export function để nơi khác truy cập, 
+     editUserService,getAllCodeService,getTopDoctorHomeService}//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export
