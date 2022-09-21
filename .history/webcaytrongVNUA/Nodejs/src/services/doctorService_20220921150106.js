@@ -55,12 +55,7 @@ resolve({
 await db.Markdown.save({
     contentHTML: inputData.contentHTML,
     contentMarkdown: inputData.contentMarkdown,
-    description: inputData.description,
-    doctorId: inputData.doctorId
-})
-resolve({
-    errCode: 0,
-    errMessage: 'Success!'
+    descr
 })
 }
         }catch(e){

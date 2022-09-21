@@ -60,7 +60,7 @@ await db.Markdown.save({
 })
 resolve({
     errCode: 0,
-    errMessage: 'Success!'
+    mes
 })
 }
         }catch(e){

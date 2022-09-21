@@ -24,15 +24,8 @@ return res.status(200).json(doctors)
 }
 let postInforDoctor =async(req,res)=>{
     try{
-let response = await doctorService.saveDetailInforDoctor(req.body);
-return response.status(200).json(response);
-    }catch(e){
-console.log(e)
-return res.status(200).json({
-    errCode: -1,
-    errMessage: 'Error from the server'
-})
-    }
+
+    }catch(e)
 }
 module.exports={
     getTopDoctorHome: getTopDoctorHome,

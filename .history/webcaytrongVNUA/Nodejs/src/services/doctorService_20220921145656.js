@@ -43,31 +43,7 @@ resolve({
         }
     })
 }
-let saveDetailInforDoctor =(inputData)=>{
-    return new Promise(async(resolve,reject)=>{
-        try{
-if(!inputData.id || !inputData.contentHTML || !inputData.contentMarkdown){
-resolve({
-    errCode: 1,
-    errMessage: 'Missing parameters'
-})
-}else{
-await db.Markdown.save({
-    contentHTML: inputData.contentHTML,
-    contentMarkdown: inputData.contentMarkdown,
-    description: inputData.description,
-    doctorId: inputData.doctorId
-})
-resolve({
-    errCode: 0,
-    errMessage: 'Success!'
-})
-}
-        }catch(e){
-
-        }
-    })
-}
+let saveDetailInforDoctor =(input)
 module.exports ={
     getTopDoctorHome: getTopDoctorHome,
     getAllDoctors: getAllDoctors,

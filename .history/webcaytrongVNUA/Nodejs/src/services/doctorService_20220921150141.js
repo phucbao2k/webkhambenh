@@ -59,8 +59,7 @@ await db.Markdown.save({
     doctorId: inputData.doctorId
 })
 resolve({
-    errCode: 0,
-    errMessage: 'Success!'
+    er
 })
 }
         }catch(e){

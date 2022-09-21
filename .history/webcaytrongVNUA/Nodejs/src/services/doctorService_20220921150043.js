@@ -52,16 +52,7 @@ resolve({
     errMessage: 'Missing parameters'
 })
 }else{
-await db.Markdown.save({
-    contentHTML: inputData.contentHTML,
-    contentMarkdown: inputData.contentMarkdown,
-    description: inputData.description,
-    doctorId: inputData.doctorId
-})
-resolve({
-    errCode: 0,
-    errMessage: 'Success!'
-})
+await db.Markdown.save
 }
         }catch(e){
 

@@ -25,11 +25,11 @@ module.exports = {
         type: Sequelize.INTEGER
     },
     specialtyId:{
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.INTEGER
     },
     clinicId:{
-        allowNull: true,
+        allowNull: false,
         type: Sequelize.INTEGER
     },
       createdAt: {

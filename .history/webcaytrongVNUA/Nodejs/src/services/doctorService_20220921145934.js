@@ -48,20 +48,10 @@ let saveDetailInforDoctor =(inputData)=>{
         try{
 if(!inputData.id || !inputData.contentHTML || !inputData.contentMarkdown){
 resolve({
-    errCode: 1,
-    errMessage: 'Missing parameters'
+    errCode
 })
 }else{
-await db.Markdown.save({
-    contentHTML: inputData.contentHTML,
-    contentMarkdown: inputData.contentMarkdown,
-    description: inputData.description,
-    doctorId: inputData.doctorId
-})
-resolve({
-    errCode: 0,
-    errMessage: 'Success!'
-})
+
 }
         }catch(e){
 
