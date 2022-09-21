@@ -44,7 +44,7 @@ buildDataInputSelect = (inputData)=>{
             let object = {};
             let labelVi = `${item.lastName} ${item.firstName}`;
             let labelEn = `${item.firstName} ${item.lastName}`;
-            object.label = language ===LANGUAGES.VI ? labelVi: labelEn;
+            object.label = language ===LANGUAGES ? labelVi: labelEn;
             object.value= item.id;
             result.push(object);
         })
@@ -59,13 +59,7 @@ componentDidUpdate(prevProps, prevState, snapshot){
             listDoctors: dataSelect
         })
     }
-    if(prevProps.language !== this.props.language){
-        let dataSelect = this.buildDataInputSelect(this.props.allDoctors)
-        this.setState({
-            listDoctors: dataSelect
-        })
-
-    }
+    if(prevProps.language !==)
 }
  handleEditorChange = ({html, text})=>{
     this.setState({
