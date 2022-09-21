@@ -37,5 +37,5 @@ return res.status(200).json({
 module.exports={
     getTopDoctorHome: getTopDoctorHome,
     getAllDoctors: getAllDoctors,
-    postInforDoctor: postInforDoctor
+    postInforDoctor: postInforDoctor,
 }
