@@ -112,4 +112,4 @@ trong hàm mapStateToProps(), phần admin/app/user... trong các câu lệnh ph
 
 muốn tạo 1 route mới(kiểu như phân trang, thì nhớ đến class chứa nội dung mà ta muốn xếp, để thêm link và name ),
  sau đó chạy đến file App để nhập route, path, component mà ta muốn đặt (nhớ phải import class đó),
-rồi sau đó có thể hoặc không export const path thêm ở file constant.js
+rồi sau đó có thể hoặc không export const  thêm 
