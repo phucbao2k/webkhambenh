@@ -110,5 +110,4 @@ trong hàm mapStateToProps(), phần admin/app/user... trong các câu lệnh ph
 
 để render động từ database khi có update, ta phải đặt constructor với các state mà ta muốn hiển thị
 
-muốn tạo 1 route mới(kiểu như phân trang, thì nhớ đến menuApp để thêm link và name ), sau đó chạy đến file App để nhận path cần tìm,
-rồi sau đó xem route, path, component (chi tiết xem ở video #66)
+muốn tạo 1 route mới(kiểu như phân trang, thì nhớ đến menu app)
