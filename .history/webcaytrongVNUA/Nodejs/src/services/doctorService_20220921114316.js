@@ -29,15 +29,9 @@ let getAllDoctors = ()=>{
     return new Promise(async(resolve, reject)=>{
         try{
 let doctors = await db.User.findAll({
-where:{roleId: 'R2'},
-attributes:{
-    exclude:['password', 'image']
-},
+where:{roleId: 'R2'}
 })
-resolve({
-    errCode: 0,
-    data: doctors
-})
+resolve
         }catch(e){
             reject(e);
         }

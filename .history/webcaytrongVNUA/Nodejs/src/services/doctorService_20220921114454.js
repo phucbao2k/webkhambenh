@@ -30,9 +30,7 @@ let getAllDoctors = ()=>{
         try{
 let doctors = await db.User.findAll({
 where:{roleId: 'R2'},
-attributes:{
-    exclude:['password', 'image']
-},
+attributes
 })
 resolve({
     errCode: 0,

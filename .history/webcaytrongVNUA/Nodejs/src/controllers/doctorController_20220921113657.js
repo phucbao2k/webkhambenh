@@ -13,10 +13,9 @@ return res.status(200).json({
 })
     }
 }
-let getAllDoctors = async (req, res)=>{
+let getAllDoctors = (req, res)=>{
 try{
-let doctors = await doctorService.getAllDoctors();
-return res.status(200).json(doctors)
+let doctors = await doctorService
 }catch(e){
     console.log(e)
     return res.status(200).json
