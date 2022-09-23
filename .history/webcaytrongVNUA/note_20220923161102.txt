@@ -119,6 +119,4 @@ muốn tạo 1 API mới, kết hợp với reactJS, xem bài 67.
 Mô tả về cách viết các quan hệ trong sequelize:
 
 A.hasOne(B), thì khóa ngoại chính là khóa chính của bảng B 
-A.belongsTo(B), thì khóa ngoại chính là khóa chính của bảng A 
-Muốn tạo quan hệ nhiều nhiều, ta nên tạo 1 bảng mới chứa các thông tin chung của 2 bảng rồi làm 
-nên các mối quan hệ 1 nhiều. VD: https://tanducits.com/thu-thuat/tong-quan-ve-moi-quan-he-relationships-giua-cac-bang-trong-access
+A.belongsTo(B), thì khóa ngoại chính là khóa chính của bảng A
