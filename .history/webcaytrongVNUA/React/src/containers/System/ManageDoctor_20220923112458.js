@@ -81,7 +81,7 @@ handleSaveContentMarkdown =()=>{
     contentMarkdown: this.state.contentMarkdown,
     description: this.state.description,
     doctorId: this.state.selectedDoctor.value
-    //doctorId: this.state.selectedDoctor.value dùng để gán giá trị item.id cho doctorId rồi lưu vào db
+    //doctorId: this.state.selectedDoctor.value dùng để gán giá trị item.id cho doctorId rồi 
  })
 }
 handleChange = (selectedDoctor) => {

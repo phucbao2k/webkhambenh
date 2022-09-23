@@ -114,4 +114,3 @@ muốn tạo 1 route mới(kiểu như phân trang mới trong reactJS, thì nh�
  sau đó chạy đến file App để nhập route, path, component mà ta muốn đặt (nhớ phải import class đó),
 rồi sau đó có thể hoặc không export const path thêm ở file constant.js
 
-muốn tạo 1 API mới, kết hợp với reactJS, xem bài 67.
