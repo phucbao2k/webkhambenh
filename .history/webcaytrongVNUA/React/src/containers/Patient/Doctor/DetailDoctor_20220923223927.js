@@ -20,9 +20,8 @@ class DetailDoctor extends Component {
             if(res && res.errCode === 0){
                 this.setState({
                     detailDoctor : res.data
-                   
+                    console
                 })
-                console.log(res.data);
                 
             }
         }

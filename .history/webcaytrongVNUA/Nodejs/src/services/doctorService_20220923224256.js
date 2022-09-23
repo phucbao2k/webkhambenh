@@ -104,7 +104,7 @@ nest: true
     })
 }
         }catch(e){
-reject(e);
+rej
         }
     })
 }

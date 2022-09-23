@@ -16,13 +16,11 @@ class DetailDoctor extends Component {
         if(this.props.match && this.props.match.params && this.props.match.params.id){
             let id = this.props.match.params.id;
             let res = await getDetailInforDoctor(id);
-           
+            console.log()
             if(res && res.errCode === 0){
                 this.setState({
                     detailDoctor : res.data
-                   
                 })
-                console.log(res.data);
                 
             }
         }
