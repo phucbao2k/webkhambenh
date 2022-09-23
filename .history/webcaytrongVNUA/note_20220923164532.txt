@@ -125,4 +125,4 @@ nên các mối quan hệ 1 nhiều. VD: https://tanducits.com/thu-thuat/tong-qu
 
 
 Khi viết một hàm mà muốn thao tác với object thông qua ID của object, ta phải truyền id đó vào
-bằng câu lệnh (req.query.id)
+bằng câu lệnh re

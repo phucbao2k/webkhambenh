@@ -124,5 +124,3 @@ Muốn tạo quan hệ nhiều nhiều, ta nên tạo 1 bảng mới chứa các
 nên các mối quan hệ 1 nhiều. VD: https://tanducits.com/thu-thuat/tong-quan-ve-moi-quan-he-relationships-giua-cac-bang-trong-access
 
 
-Khi viết một hàm mà muốn thao tác với object thông qua ID của object, ta phải truyền id đó vào
-bằng câu lệnh (req.query.id)
