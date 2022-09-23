@@ -16,7 +16,7 @@ return res.status(200).json({
 let getAllDoctors = async (req, res)=>{
 try{
 let doctors = await doctorService.getAllDoctors();
-//lấy hết tất cả logic của doctorService rồi gán vào hàm này
+//lấy hết tất cả logic của doctor
 return res.status(200).json(doctors)
 }catch(e){
     console.log(e)

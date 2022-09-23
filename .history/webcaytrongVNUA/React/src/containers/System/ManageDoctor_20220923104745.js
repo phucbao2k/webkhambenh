@@ -47,7 +47,7 @@ buildDataInputSelect = (inputData)=>{
             object.label = language ===LANGUAGES.VI ? labelVi: labelEn;
             object.value= item.id;
             result.push(object);
-            //options trong react được cấu thành từ 2 phần: Value và label
+            
         })
        
     }
