@@ -30,24 +30,8 @@ class DetailDoctor extends Component {
         let {detailDoctor}= this.state;
         let nameVi = '', nameEn = '';
         if(detailDoctor && detailDoctor.positionData){
-            nameVi = `${detailDoctor.positionData.valueVi}, ${detailDoctor.firstName} ${detailDoctor.lastName}`;
-            nameEn = `${detailDoctor.positionData.valueVi}, ${detailDoctor.lastName} ${detailDoctor.firstName}`
+            
         }
-        return(
-            <>
-            <HomeHeader
-            isShowBanner={false}/>
-            <div className="doctor-detail-container">
-                <div className="intro-doctor">
-                    <div className="content-left"
-                    style={{backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})`}}>
-
-                    </div>
-                    
-                </div>
-            </div>
-            </>
-        )
     }
 
 }

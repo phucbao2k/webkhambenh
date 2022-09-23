@@ -39,10 +39,6 @@ class DetailDoctor extends Component {
             isShowBanner={false}/>
             <div className="doctor-detail-container">
                 <div className="intro-doctor">
-                    <div className="content-left"
-                    style={{backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})`}}>
-
-                    </div>
                     
                 </div>
             </div>
