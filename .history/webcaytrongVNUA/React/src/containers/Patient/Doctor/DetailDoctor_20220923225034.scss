@@ -1,16 +1,17 @@
 .doctor-detail-container{
-    height: 100%;
+    height: auto;
     margin: 0 auto;
    
     .intro-doctor{
         display: flex;
        
         .content-left{
-           
+            width: 20%;
             background: center center no-repeat;
-            width: 120px;
-            height: 120px;
+            width: auto;
             border-radius: 50%;
+            height: 120px;
+            margin: 10px 20px;
         }
         .content-right{
             width: 80%;
