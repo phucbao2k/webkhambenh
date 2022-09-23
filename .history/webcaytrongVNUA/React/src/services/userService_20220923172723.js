@@ -36,12 +36,9 @@ const getAllDoctors =()=>{
 const saveDetailDoctorService =(data)=>{
 return axios.post('/api/save-infor-doctors', data)
 }
-const getDetailInforDoctor = (inputId)=>{
-    return axios.get(`/api/get-detail-doctor-by-id?${inputId}`)
-}
 export{handleLoginApi, getAllUsers,
      createNewUserService,deleteUserService,
      editUserService,getAllCodeService,getTopDoctorHomeService,
     getAllDoctors, saveDetailDoctorService,
-getDetailInforDoctor}//đối với ReactJs, khi export function để nơi khác truy cập, 
+getDeta}//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export
