@@ -9,7 +9,7 @@ class DetailDoctor extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            detailDoctor: {}
+            detailDoctor: [{}]
         }
     }
     async componentDidMount(){
@@ -17,10 +17,7 @@ class DetailDoctor extends Component {
             let id = this.props.match.params.id;
             let res = await getDetailInforDoctor(id);
             if(res && res.errCode === 0){
-                this.setState({
-                    detailDoctor : res.data
-                })
-                
+                detailDoctor = res.data;
             }
         }
     }
