@@ -55,7 +55,6 @@ if(item.image){
 }
 let nameVi = `${item.positionData.valueVi}, ${item.firstName} ${item.lastName}`;
 let nameEn = `${item.positionData.valueEn}, ${item.lastName} ${item.firstName}`;
-//Những câu lệnh nằm trên hàm return sẽ có khả năng áp dụng toàn bộ vào hàm return phía sau, tùy ý đồ của chúng ta
 return(
 <div className="section-customize" key={index} onClick={() => this.handleViewDetailDoctor(item)}>
                             <div className="customize-border">
