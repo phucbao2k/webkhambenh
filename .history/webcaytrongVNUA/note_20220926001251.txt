@@ -136,15 +136,10 @@ khi muốn show hay hiện 1 thứ gì đó ở link mới, chỉ cần định 
 nơi
 
 
-ĐỊNH NGHĨA VỀ THIS.PROPS.MATCH.PARAMS. 
-A match object contains information about how a <Route path> matched the URL.
-
-
 để lấy thông tin doctor(ở phần logic database), lần lượt ta xem qua các class sau: web.js, doctorController.js, doctorService.js(NodeJs)
  và DetailDoctor.js, UserService.js, OutStandingDoctor.js(React)
 
  Còn ở phần tạo route, sẽ nằm trong file constant.js, App.js.
   Lưu ý: Route path ở file App.js và api ở userService.js có thể thay đổi linh hoạt tùy nơi 
 
-  raw= true tức là ta đang định danh về sequelize object hoặc object thuộc hệ csdl tương đương, còn raw =false sẽ định nghĩa về kiểu 
-  javascript object
+  raw= true tức là ta đang định danh về seque

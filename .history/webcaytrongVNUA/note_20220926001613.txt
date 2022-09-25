@@ -135,11 +135,7 @@ Những câu lệnh nằm trên hàm return sẽ có khả năng áp dụng toà
 khi muốn show hay hiện 1 thứ gì đó ở link mới, chỉ cần định nghĩa isShowHeader, isShowBanner... hay gì đó rồi set giá trị true false cho từng
 nơi
 
-
-ĐỊNH NGHĨA VỀ THIS.PROPS.MATCH.PARAMS. 
-A match object contains information about how a <Route path> matched the URL.
-
-
+ĐI
 để lấy thông tin doctor(ở phần logic database), lần lượt ta xem qua các class sau: web.js, doctorController.js, doctorService.js(NodeJs)
  và DetailDoctor.js, UserService.js, OutStandingDoctor.js(React)
 
