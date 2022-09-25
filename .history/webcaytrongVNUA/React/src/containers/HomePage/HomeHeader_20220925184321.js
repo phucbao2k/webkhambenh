@@ -25,7 +25,7 @@ class HomeHeader extends Component {
                     <div className="left-content">
                     <i className="fa-solid fa-bars-staggered"></i>
                    
-                    <img className="header-logo"  onClick={()=> this.returnToHome()}></img>
+                    <img className="header-logo" src={logo} onClick={}></img>
                     </div>
                     <div className="center-content">
                         <div className="child-content">
@@ -119,4 +119,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeHeader)) ;
+export default connect(mapStateToProps, mapDispatchToProps)(HomeHeader);

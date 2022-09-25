@@ -53,27 +53,13 @@ resolve({
     errMessage: 'Missing parameters'
 })
 }else{
-    if(inputData.action ==='CREATE'){
-        await db.Markdown.create({
-            contentHTML: inputData.contentHTML,
-            contentMarkdown: inputData.contentMarkdown,
-            description: inputData.description,
-            doctorId: inputData.doctorId
-        })
-    }else if(inputData.action ==='EDIT'){
-let doctorMarkdown = await db.Markdown.findOne({
-    where:{doctorId: inputData.doctorId},
-    raw: false
+    if()
+await db.Markdown.create({
+    contentHTML: inputData.contentHTML,
+    contentMarkdown: inputData.contentMarkdown,
+    description: inputData.description,
+    doctorId: inputData.doctorId
 })
-if(doctorMarkdown){
-    doctorMarkdown.contentMarkdown = inputData.contentMarkdown;
-    doctorMarkdown.description = inputData.description;
-    doctorMarkdown.contentHTML = inputData.contentHTML;
-    doctorMarkdown.updateAt = new Date();
-    await doctorMarkdown.save();
-}
-    }
-
 resolve({
     errCode: 0,
     errMessage: 'Success!'

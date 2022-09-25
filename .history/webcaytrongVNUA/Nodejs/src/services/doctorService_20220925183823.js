@@ -65,13 +65,7 @@ let doctorMarkdown = await db.Markdown.findOne({
     where:{doctorId: inputData.doctorId},
     raw: false
 })
-if(doctorMarkdown){
-    doctorMarkdown.contentMarkdown = inputData.contentMarkdown;
-    doctorMarkdown.description = inputData.description;
-    doctorMarkdown.contentHTML = inputData.contentHTML;
-    doctorMarkdown.updateAt = new Date();
-    await doctorMarkdown.save();
-}
+if(doctorMarkdown)
     }
 
 resolve({

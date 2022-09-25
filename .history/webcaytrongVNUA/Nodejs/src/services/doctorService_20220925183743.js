@@ -62,16 +62,8 @@ resolve({
         })
     }else if(inputData.action ==='EDIT'){
 let doctorMarkdown = await db.Markdown.findOne({
-    where:{doctorId: inputData.doctorId},
-    raw: false
+    where:{doctor}
 })
-if(doctorMarkdown){
-    doctorMarkdown.contentMarkdown = inputData.contentMarkdown;
-    doctorMarkdown.description = inputData.description;
-    doctorMarkdown.contentHTML = inputData.contentHTML;
-    doctorMarkdown.updateAt = new Date();
-    await doctorMarkdown.save();
-}
     }
 
 resolve({

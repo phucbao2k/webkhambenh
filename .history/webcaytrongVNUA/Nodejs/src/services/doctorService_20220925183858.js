@@ -68,9 +68,6 @@ let doctorMarkdown = await db.Markdown.findOne({
 if(doctorMarkdown){
     doctorMarkdown.contentMarkdown = inputData.contentMarkdown;
     doctorMarkdown.description = inputData.description;
-    doctorMarkdown.contentHTML = inputData.contentHTML;
-    doctorMarkdown.updateAt = new Date();
-    await doctorMarkdown.save();
 }
     }
 
