@@ -135,9 +135,7 @@ Những câu lệnh nằm trên hàm return sẽ có khả năng áp dụng toà
 khi muốn show hay hiện 1 thứ gì đó ở link mới, chỉ cần định nghĩa isShowHeader, isShowBanner... hay gì đó rồi set giá trị true false cho từng
 nơi
 
+để lấy thông tin doctor(ở phần logic database), lần lượt ta xem qua các class sau: web.js, doctorController.js, doctorService.js(NodeJs) và DetailDoctor.js,
+ userService.js(React)
 
-để lấy thông tin doctor(ở phần logic database), lần lượt ta xem qua các class sau: web.js, doctorController.js, doctorService.js(NodeJs)
- và DetailDoctor.js, UserService.js, OutStandingDoctor.js(React)
-
- Còn ở phần tạo route, sẽ nằm trong file constant.js, App.js.
-  Lưu ý: Route path ở file App.js và api ở userService.js có thể thay đổi linh hoạt tùy nơi 
+ Còn ở phần tạo route lấy sẽ nằm trong 
