@@ -31,7 +31,15 @@ class OutStandingDoctor extends Component{
     
    }
     render(){
-     
+        // let settings ={
+        //     dots: false,
+        //     infinite: false,
+        //     speed: 500,
+        //     slidesToShow:4,
+        //     slidesToScroll:1
+        // };
+        // trên đây là setting cho Slider
+        // 
         let arrDoctors = this.state.arrDoctors;
         let {language} = this.props;
        
