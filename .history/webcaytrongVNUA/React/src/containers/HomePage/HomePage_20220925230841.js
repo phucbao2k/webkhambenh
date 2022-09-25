@@ -25,7 +25,7 @@ class HomePage extends Component {
         return (
           <div>
             <HomeHeader isShowBanner={true}/>
-            {/* đặt giá trị mặc định cho isShowBanner của HomeHeader là true */}
+            {/* đặt giá trị mặc định cho  */}
             <Specialty
                 settings ={settings}>
             </Specialty>

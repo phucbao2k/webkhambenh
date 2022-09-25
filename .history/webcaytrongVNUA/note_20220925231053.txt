@@ -132,5 +132,4 @@ trong html css, muốn phần trong reactjs nào có chuyển trang, thì viết
 
 Những câu lệnh nằm trên hàm return sẽ có khả năng áp dụng toàn bộ vào hàm return phía sau, tùy ý đồ của chúng ta
 
-khi muốn show hay hiện 1 thứ gì đó ở link mới, chỉ cần định nghĩa isShowHeader, isShowBanner... hay gì đó rồi set giá trị true false cho từng
-nơi
+khi muốn show hay hiện 1 thứ gì đó
