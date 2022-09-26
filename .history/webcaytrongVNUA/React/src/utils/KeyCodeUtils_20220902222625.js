@@ -10,7 +10,7 @@ class KeyCodeUtils {
 
     static E = 69;
 
-    static ESCAPE = 27;
+    static ESCAPE = 27; 
 
     static isNavigation(e) {
         return (e >= 33 && e <= 40) || e === 9 || e === 8 || e === 46 || e === 14 || e === 13;
