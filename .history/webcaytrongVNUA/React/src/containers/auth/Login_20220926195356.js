@@ -84,7 +84,7 @@ handleShowHidePassword = (event)=>{
                          className="form-control" placeholder="Enter your password"
                          value={this.state.password}
                           onChange={(event)=>{this.handleOnChangePassword(event)}}
-                          onKeyDown={(event)=> this.handleKeyDown(event)} ></input>
+                          onKeyDown= ></input>
                         <span onClick ={()=>{this.handleShowHidePassword()}}>
                             
                             <i className={this.state.isShowPassword ? 'fa-solid fa-eye' :'fa-regular fa-eye-slash'}></i>

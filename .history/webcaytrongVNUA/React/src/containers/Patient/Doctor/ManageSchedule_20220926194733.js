@@ -19,6 +19,7 @@ class ManageSchedule extends Component {
         return (
 <React.Fragment>
     <div >Manage Schedule</div>
+    h7
 </React.Fragment>
 
 

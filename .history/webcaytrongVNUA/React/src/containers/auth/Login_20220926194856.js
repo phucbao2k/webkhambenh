@@ -58,11 +58,7 @@ handleShowHidePassword = (event)=>{
     isShowPassword: !this.state.isShowPassword
   })
    }
-   handleKeyDown = (event) =>{
-    if(event.key === 'Enter' || event.keyCode === 26){
-      this.handleLogin();
-    }
-   }
+   handleKeyDown = (event)
     render() {
       //JSX
 
@@ -74,17 +70,12 @@ handleShowHidePassword = (event)=>{
                     <div className="col-12  text-login">Login </div>
                     <div className="col-12 form-group login-input">
                         <label>Username:</label>
-                        <input type="text" className="form-control" placeholder="Enter your username"
-                         value={this.state.username} onChange={(event)=>this.handleOnChangeUsername(event)}></input>
+                        <input type="text" className="form-control" placeholder="Enter your username" value={this.state.username} onChange={(event)=>this.handleOnChangeUsername(event)}></input>
                     </div>
                     <div className="col-12 form-group login-input">
                         <label>Password:</label>
                         <div className="cus-password-input">
-                        <input type={this.state.isShowPassword ? 'text' : 'password'}
-                         className="form-control" placeholder="Enter your password"
-                         value={this.state.password}
-                          onChange={(event)=>{this.handleOnChangePassword(event)}}
-                          onKeyDown={(event)=> this.handleKeyDown(event)} ></input>
+                        <input type={this.state.isShowPassword ? 'text' : 'password'} className="form-control" placeholder="Enter your password"value={this.state.password} onChange={(event)=>this.handleOnChangePassword(event)} ></input>
                         <span onClick ={()=>{this.handleShowHidePassword()}}>
                             
                             <i className={this.state.isShowPassword ? 'fa-solid fa-eye' :'fa-regular fa-eye-slash'}></i>

@@ -80,11 +80,7 @@ handleShowHidePassword = (event)=>{
                     <div className="col-12 form-group login-input">
                         <label>Password:</label>
                         <div className="cus-password-input">
-                        <input type={this.state.isShowPassword ? 'text' : 'password'}
-                         className="form-control" placeholder="Enter your password"
-                         value={this.state.password}
-                          onChange={(event)=>{this.handleOnChangePassword(event)}}
-                          onKeyDown={(event)=> this.handleKeyDown(event)} ></input>
+                        <input type={this.state.isShowPassword ? 'text' : 'password'} className="form-control" placeholder="Enter your password"value={this.state.password} onChange={(event)=>this.handleOnChangePassword(event)} ></input>
                         <span onClick ={()=>{this.handleShowHidePassword()}}>
                             
                             <i className={this.state.isShowPassword ? 'fa-solid fa-eye' :'fa-regular fa-eye-slash'}></i>
