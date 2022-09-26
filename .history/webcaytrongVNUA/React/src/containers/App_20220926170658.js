@@ -9,7 +9,7 @@ import CustomScrollbars from "../components/CustomScrollbars";
 import { userIsAuthenticated, userIsNotAuthenticated } from '../hoc/authentication';
 import DetailDoctor from './Patient/Doctor/DetailDoctor';
 import { path } from '../utils'
-import Doctor from '../routes/Doctor';
+import Doctor from '../'
 import Home from '../routes/Home';
 
 import Login from '../containers/auth/Login';
@@ -54,7 +54,6 @@ class App extends Component {
                                 <Route path={path.HOME} exact component={(Home)} />
                                 <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
                                 <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
-                                <Route path ={'/doctor/'} component={userIsAuthenticated(Doctor)}/>
                                 <Route path={path.HOMEPAGE} component={HomePage}/>
                                 <Route path={path.DETAIL_DOCTOR} component={ DetailDoctor}/>
                             </Switch>
