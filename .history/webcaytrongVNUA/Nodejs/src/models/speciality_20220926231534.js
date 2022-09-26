@@ -1,7 +1,7 @@
 'use strict';
 import { Model } from 'sequelize';
 export default (sequelize, DataTypes) => {
-  class Schedule extends Model {
+  class Speciality extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -11,16 +11,13 @@ export default (sequelize, DataTypes) => {
       // define association here
     }
   };
-  Schedule.init({
-
-    currentNumber: DataTypes.INTEGER,
-    maxNumber: DataTypes.INTEGER,
-    date: DataTypes.DATE,
-    timeType: DataTypes.STRING,
-    doctorId: DataTypes.STRING
+  Speciality.init({
+    name: DataTypes.STRING,
+    description: DataTypes.TEXT,
+    image: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Schedule',
+    modelName: 'Speciality',
   });
-  return Schedule;
+  return Speciality;
 };
