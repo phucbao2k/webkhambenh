@@ -62,9 +62,7 @@
             "handbook": "Handbook",
             "manage-handbook":"Manage handbooks"
         },
-        "doctor":{
-            "manage-schedule": "Manage Doctor's schedule"
-        }
+        
     },
     "manage-user":{
 "edit": "Edit user",
