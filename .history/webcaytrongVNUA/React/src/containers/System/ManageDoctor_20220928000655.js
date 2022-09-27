@@ -59,7 +59,7 @@ class ManageDoctor extends Component {
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.allDoctors !== this.props.allDoctors) {
-            //allDoctors đã được lấy từ file AdminReducer
+            //allDoctors đã được lấy từ file Admin
             let dataSelect = this.buildDataInputSelect(this.props.allDoctors)
             this.setState({
                 listDoctors: dataSelect

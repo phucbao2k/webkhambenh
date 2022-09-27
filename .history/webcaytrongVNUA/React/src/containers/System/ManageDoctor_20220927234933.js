@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { CRUD_ACTIONS, LANGUAGES } from '../../utils';
 import './ManageDoctor.scss';
 import * as actions from "../../store/actions";
-//import actions ở trên để lấy data
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 import 'react-markdown-editor-lite/lib/index.css';
@@ -59,7 +58,6 @@ class ManageDoctor extends Component {
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.allDoctors !== this.props.allDoctors) {
-            //allDoctors đã được lấy từ file AdminReducer
             let dataSelect = this.buildDataInputSelect(this.props.allDoctors)
             this.setState({
                 listDoctors: dataSelect

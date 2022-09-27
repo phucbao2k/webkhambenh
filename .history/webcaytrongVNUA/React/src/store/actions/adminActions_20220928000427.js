@@ -216,8 +216,9 @@ export const fetchAllDoctors = () => {
             if (res && res.errCode === 0) {
                 dispatch({
                     type: actionTypes.FETCH_ALL_DOCTORS_SUCCESS,
+                
                     dataDocs: res.data
-                    //dataDocs được sử dụng ở file adminReducer.js
+                    //data
                 })
 
                 //trong hàm dispatch kia thì object trên chính là action trong redux
