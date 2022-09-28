@@ -80,34 +80,7 @@ class ManageSchedule extends Component {
             })
         }
     }
-    handleSaveSchedule = ()=>{
-        let{rangeTime, selectedDoctor, currentDate} = this.state;
-        let result = [];
-        if(!currentDate){
-            toast.error("Invalid date!");
-        }
-        if(selectedDoctor && _.isEmpty(selectedDoctor)){
-            toast.error("Invalid selected doctor! ");
-            return;
-        }
-        let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
-        if (rangeTime && rangeTime.length > 0 ){
-            let selectedTime = rangeTime.filter(item => item.isSelected===true);
-            if(selectedTime && selectedTime.length > 0){
-                selectedTime.map((schedule, index)=>{
-                    let object = {};
-                    object.doctorId = selectedDoctor.value;
-                    object.date = formatedDate;
-                    object.time - schedule.keyMap;
-                    result.push(object);
-                })
-            }else{
-                toast.error("Invalid selected time! ");
-                return;
-            }
-        }
-        console.log('hoi dan it channel check result: ', result);
-    }
+    handleSaveSched
     render() {
         let { rangeTime } = this.state;
         let { language } = this.props;
@@ -147,17 +120,14 @@ class ManageSchedule extends Component {
                             {rangeTime && rangeTime.length > 0 &&
                                 rangeTime.map((item, index) => {
                                     return (
-                                        <button className={item.isSelected === true ?
-                                         "btn btn-schedule active":"btn btn-schedule"}
-                                          key={index} onClick={() => this.handleClickBtnTime(item)}>
+                                        <button className="btn btn-schedule" key={index}>
                                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
                                         </button>
                                     )
                                 })}
                         </div>
                         <div className="col-12">
-                            <button className="btn btn-primary btn-save-schedule"
-                            onClick = {() => this.handleSaveSchedule()}>
+                            <button className="btn btn-primary btn-save-schedule">
                                 <FormattedMessage id="manage-schedule.save" />
                             </button>
                         </div>

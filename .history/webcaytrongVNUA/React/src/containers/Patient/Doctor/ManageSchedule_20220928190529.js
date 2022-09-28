@@ -96,17 +96,10 @@ class ManageSchedule extends Component {
             if(selectedTime && selectedTime.length > 0){
                 selectedTime.map((schedule, index)=>{
                     let object = {};
-                    object.doctorId = selectedDoctor.value;
-                    object.date = formatedDate;
-                    object.time - schedule.keyMap;
-                    result.push(object);
+                    object.doctorId = selectedDoctor.value
                 })
-            }else{
-                toast.error("Invalid selected time! ");
-                return;
             }
         }
-        console.log('hoi dan it channel check result: ', result);
     }
     render() {
         let { rangeTime } = this.state;
@@ -147,17 +140,14 @@ class ManageSchedule extends Component {
                             {rangeTime && rangeTime.length > 0 &&
                                 rangeTime.map((item, index) => {
                                     return (
-                                        <button className={item.isSelected === true ?
-                                         "btn btn-schedule active":"btn btn-schedule"}
-                                          key={index} onClick={() => this.handleClickBtnTime(item)}>
+                                        <button className="btn btn-schedule" key={index}>
                                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
                                         </button>
                                     )
                                 })}
                         </div>
                         <div className="col-12">
-                            <button className="btn btn-primary btn-save-schedule"
-                            onClick = {() => this.handleSaveSchedule()}>
+                            <button className="btn btn-primary btn-save-schedule">
                                 <FormattedMessage id="manage-schedule.save" />
                             </button>
                         </div>

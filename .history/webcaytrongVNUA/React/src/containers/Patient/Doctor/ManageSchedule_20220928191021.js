@@ -147,17 +147,14 @@ class ManageSchedule extends Component {
                             {rangeTime && rangeTime.length > 0 &&
                                 rangeTime.map((item, index) => {
                                     return (
-                                        <button className={item.isSelected === true ?
-                                         "btn btn-schedule active":"btn btn-schedule"}
-                                          key={index} onClick={() => this.handleClickBtnTime(item)}>
+                                        <button className={item.isSelected === true ? "btn"} key={index}>
                                             {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
                                         </button>
                                     )
                                 })}
                         </div>
                         <div className="col-12">
-                            <button className="btn btn-primary btn-save-schedule"
-                            onClick = {() => this.handleSaveSchedule()}>
+                            <button className="btn btn-primary btn-save-schedule">
                                 <FormattedMessage id="manage-schedule.save" />
                             </button>
                         </div>
