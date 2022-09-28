@@ -87,7 +87,7 @@ class ManageSchedule extends Component {
             toast.error("Invalid date!");
             
         }
-        if (selectedOption && _.isEmpty(selectedOption)) {
+        if (selectedOption && _.isEmpty(selectedDoctor)) {
             toast.error("Invalid selected doctor! ");
           console.log('check doctor: ', this.state)
             return;
