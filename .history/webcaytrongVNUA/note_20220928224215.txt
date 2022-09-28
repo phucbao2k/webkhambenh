@@ -150,5 +150,4 @@ A match object contains information about how a <Route path> matched the URL.
   javascript object, mục đích đặt raw = false là để tránh hiện tượng .save() .... is not a function...
 
 
-  khi tạo 1 hàm onChange, ta phải bắt buộc lưu state cho nó luôn, thì khi kết thúc, component đó mới nhận ra sự thay đổi của state trước
-  và sau
+  khi tạo 1 hàm onChange, ta phải bắt buộc lưu

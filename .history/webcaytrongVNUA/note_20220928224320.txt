@@ -151,4 +151,4 @@ A match object contains information about how a <Route path> matched the URL.
 
 
   khi tạo 1 hàm onChange, ta phải bắt buộc lưu state cho nó luôn, thì khi kết thúc, component đó mới nhận ra sự thay đổi của state trước
-  và sau
+  
