@@ -154,9 +154,10 @@ A match object contains information about how a <Route path> matched the URL.
   và sau
 
 
-Mấy câu điều kiện như trên:
- if (prevProps.allDoctors !== this.props.allDoctors) {
-            
-        }
 
-Là để check xem khi API đã trả về dữ liệu rồi thì làm gì...
+ if (prevProps.allDoctors !== this.props.allDoctors) {
+            let dataSelect = this.buildDataInputSelect(this.props.allDoctors)
+            this.setState({
+                listDoctors: dataSelect
+            })
+        }

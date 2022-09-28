@@ -159,4 +159,4 @@ Mấy câu điều kiện như trên:
             
         }
 
-Là để check xem khi API đã trả về dữ liệu rồi thì làm gì...
+Là để check xem khi API đã tả
