@@ -67,8 +67,6 @@ class ManageSchedule extends Component {
     handleOnChangeDatePicker = (date) => {
         this.setState({
             currentDate: date[0]
-            //thư viện date này sẽ trả về 1 array nhiều phần tử
-            // nếu ta bấm liên tục nhiều lần, vì vậy date[0] là để lấy giá trị ngày đầu tiên trong array
         })
     }
     handleClickBtnTime = (time) => {
@@ -145,7 +143,7 @@ class ManageSchedule extends Component {
                                 className="form-control"
                                 onChange={this.handleOnChangeDatePicker}
                                 minDate={new Date()}
-                                //minDate là để lấy ngày hiện tại
+                                //min
                             />
 
                         </div>

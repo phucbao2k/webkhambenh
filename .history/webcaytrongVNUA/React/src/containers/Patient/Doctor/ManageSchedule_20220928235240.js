@@ -67,8 +67,7 @@ class ManageSchedule extends Component {
     handleOnChangeDatePicker = (date) => {
         this.setState({
             currentDate: date[0]
-            //thư viện date này sẽ trả về 1 array nhiều phần tử
-            // nếu ta bấm liên tục nhiều lần, vì vậy date[0] là để lấy giá trị ngày đầu tiên trong array
+            //thư viện date này sẽ trả về 1 array
         })
     }
     handleClickBtnTime = (time) => {
