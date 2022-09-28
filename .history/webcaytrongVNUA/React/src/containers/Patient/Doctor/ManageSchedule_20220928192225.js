@@ -41,7 +41,7 @@ class ManageSchedule extends Component {
                 data = data.map(item => ({ ...item, isSelected: false }))
             }
             this.setState({
-                rangeTime: data
+                rangeTime: this.props.allScheduleTime
             })
         }
     }
