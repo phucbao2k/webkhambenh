@@ -81,13 +81,13 @@ class ManageSchedule extends Component {
         }
     }
     handleSaveSchedule = () => {
-        let { rangeTime, selectedDoctor, currentDate } = this.state;
+        let { rangeTime, selectedoctor, currentDate } = this.state;
         let result = [];
         if (!currentDate) {
             toast.error("Invalid date!");
             
         }
-        if (selectedDoctor && _.isEmpty(selectedDoctor)) {
+        if (selecteDoctor && _.isEmpty(selecteDoctor)) {
             toast.error("Invalid selected doctor! ");
           console.log('check doctor: ', this.state)
             return;
@@ -98,7 +98,7 @@ class ManageSchedule extends Component {
             if (selectedTime && selectedTime.length > 0) {
                 selectedTime.map((schedule, index) => {
                     let object = {};
-                    object.doctorId = selectedDoctor.value;
+                    object.doctorId = selectedOption.value;
                     object.date = formatedDate;
                     object.time = schedule.keyMap;
                     result.push(object);
