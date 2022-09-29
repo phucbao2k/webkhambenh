@@ -60,10 +60,9 @@ class ManageSchedule extends Component {
                 object.value = item.id;
                 result.push(object)
             })
-          
         }
         return result;
-        
+        console.log('check input data: ', inputData);
     }
     handleChangeSelect = async (selectedOption) => {
         this.setState({ selectedDoctor: selectedOption });

@@ -60,7 +60,6 @@ class ManageSchedule extends Component {
                 object.value = item.id;
                 result.push(object)
             })
-          
         }
         return result;
         

@@ -60,10 +60,8 @@ class ManageSchedule extends Component {
                 object.value = item.id;
                 result.push(object)
             })
-          
         }
         return result;
-        
     }
     handleChangeSelect = async (selectedOption) => {
         this.setState({ selectedDoctor: selectedOption });

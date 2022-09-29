@@ -60,7 +60,7 @@ class ManageSchedule extends Component {
                 object.value = item.id;
                 result.push(object)
             })
-          
+            console.log('check input data: ', inputData);
         }
         return result;
         

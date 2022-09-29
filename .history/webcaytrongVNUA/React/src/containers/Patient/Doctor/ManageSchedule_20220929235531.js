@@ -51,7 +51,7 @@ class ManageSchedule extends Component {
         let result = [];
         let { language } = this.props;
         if (inputData && inputData.length > 0) {
-          
+            console.log(inputData);
             inputData.map((item, index) => {
                 let object = {};
                 let labelEn = `${item.lastName} ${item.firstName}`;
@@ -60,10 +60,8 @@ class ManageSchedule extends Component {
                 object.value = item.id;
                 result.push(object)
             })
-          
         }
         return result;
-        
     }
     handleChangeSelect = async (selectedOption) => {
         this.setState({ selectedDoctor: selectedOption });
