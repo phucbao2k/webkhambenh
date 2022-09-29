@@ -39,7 +39,7 @@ alert không giúp sinh ra 1 object;
 
   muốn fire 1 actions của redux(hay là gọi 1 action của redux, ta phải bọc dispatch vào trong hàm đó).
 
-  componentDidMount chạy sau khi render thành công, sau đó nó sẽ ghi đè lên props (cụ thể là this.props);
+  component
 
   hàm componentDidUpdate( prevProps,prevState, snapshot) luôn luôn chạy khi app chạy thành công, muốn hàm đó chạy thì ta phải
   đặt điều kiện so sánh trước và sau của các props rồi thực hiện hành động ta muốn.
