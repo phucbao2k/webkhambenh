@@ -103,7 +103,7 @@ class ManageSchedule extends Component {
             let selectedTime = rangeTime.filter(item => item.isSelected === true);
             if (selectedTime && selectedTime.length > 0) {
                 selectedTime.map((schedule, index) => {
-                    // chúng ta thay schedule bằng cái gì cũng được, react tự hiểu đấy là 1 phần tử của arr đó
+                    // chúng ta thay schedule bằng cái gì cũng được, react tự hiểu
                     let object = {};
                     object.doctorId = selectedDoctor.value;
                     object.date = formatedDate;

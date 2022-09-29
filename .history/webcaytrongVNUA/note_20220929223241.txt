@@ -164,4 +164,3 @@ Là để check xem khi API đã trả về dữ liệu rồi thì làm gì...
 lodash là 1 thư viện giúp ta thao tác với object
 
 
-map() dùng để lặp và duyệt các phần tử trong mảng
