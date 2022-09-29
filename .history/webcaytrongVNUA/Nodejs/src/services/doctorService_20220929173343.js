@@ -177,5 +177,5 @@ module.exports = {
     getAllDoctors: getAllDoctors,
     saveDetailInforDoctor: saveDetailInforDoctor,
     getDetailDoctorById: getDetailDoctorById,
-    bulkCreateSchedule: bulkCreateSchedule
+    bu
 }

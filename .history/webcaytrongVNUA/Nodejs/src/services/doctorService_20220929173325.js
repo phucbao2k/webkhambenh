@@ -167,8 +167,7 @@ resolve({
 })
 }
         }catch(e){
-console.log(e);
-reject(e);
+console.log(e)
         }
     })
 }
@@ -176,6 +175,5 @@ module.exports = {
     getTopDoctorHome: getTopDoctorHome,
     getAllDoctors: getAllDoctors,
     saveDetailInforDoctor: saveDetailInforDoctor,
-    getDetailDoctorById: getDetailDoctorById,
-    bulkCreateSchedule: bulkCreateSchedule
+    getDetailDoctorById: getDetailDoctorById
 }

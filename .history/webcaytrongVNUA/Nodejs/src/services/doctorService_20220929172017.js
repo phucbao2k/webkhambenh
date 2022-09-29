@@ -138,37 +138,10 @@ if(!data.arrSchedule || !data.doctorId || !data.formatedDate){
     })
 }else{
 let schedule = data.arrSchedule;
-if(schedule && schedule.length >0){
-    schedule = schedule.map(item => {
-        item.maxNumber = MAX_NUMBER_SCHEDULE;
-        return item;
-    })
-}
-let existing = await db.Schedule.findAll({
-    where: {doctorId: data.doctorId, date: data.formatedDate},
-    attributes: ['timeType', 'date', 'doctorId', 'maxNumber'],
-    raw: true
-});
-if(existing && existing.length > 0){
-    existing = existing.map(item =>{
-        item.date = new Date(item.date).getTime();
-        return item;
-    })
-}
-let toCreate = _.differenceWith(schedule, existing,(a,b)=>{
-    return a.timeType === b.timeType && a.date === b.date;
-});
-if(toCreate && toCreate.length >0){
-    await db.Schedule.bulkCreate(toCreate);
-}
-resolve({
-    errCode: 0,
-    errMessage:'ok bro'
-})
+if(schedule &&)
 }
         }catch(e){
-console.log(e);
-reject(e);
+
         }
     })
 }
@@ -176,6 +149,5 @@ module.exports = {
     getTopDoctorHome: getTopDoctorHome,
     getAllDoctors: getAllDoctors,
     saveDetailInforDoctor: saveDetailInforDoctor,
-    getDetailDoctorById: getDetailDoctorById,
-    bulkCreateSchedule: bulkCreateSchedule
+    getDetailDoctorById: getDetailDoctorById
 }

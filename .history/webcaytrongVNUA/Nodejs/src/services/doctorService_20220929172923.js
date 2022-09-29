@@ -155,20 +155,9 @@ if(existing && existing.length > 0){
         return item;
     })
 }
-let toCreate = _.differenceWith(schedule, existing,(a,b)=>{
-    return a.timeType === b.timeType && a.date === b.date;
-});
-if(toCreate && toCreate.length >0){
-    await db.Schedule.bulkCreate(toCreate);
-}
-resolve({
-    errCode: 0,
-    errMessage:'ok bro'
-})
 }
         }catch(e){
-console.log(e);
-reject(e);
+
         }
     })
 }
@@ -176,6 +165,5 @@ module.exports = {
     getTopDoctorHome: getTopDoctorHome,
     getAllDoctors: getAllDoctors,
     saveDetailInforDoctor: saveDetailInforDoctor,
-    getDetailDoctorById: getDetailDoctorById,
-    bulkCreateSchedule: bulkCreateSchedule
+    getDetailDoctorById: getDetailDoctorById
 }

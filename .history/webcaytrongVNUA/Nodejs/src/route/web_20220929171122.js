@@ -22,7 +22,7 @@ export function initWebRoutes(app) {
     router.get('/api/get-all-doctors', doctorController.getAllDoctors);
     router.post('/api/save-infor-doctors', doctorController.postInforDoctor);
     router.get('/api/get-detail-doctor-by-id', doctorController.getDetailDoctorById);
-    router.post('api/bulk-create-schedule', doctorController.bulkCreateSchedule);
+    router.post('api')
     router.get('/', (req, res) => {
         return res.send('HELU WORLD');
     });

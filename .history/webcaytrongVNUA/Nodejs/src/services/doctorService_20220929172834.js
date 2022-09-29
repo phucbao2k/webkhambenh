@@ -150,25 +150,11 @@ let existing = await db.Schedule.findAll({
     raw: true
 });
 if(existing && existing.length > 0){
-    existing = existing.map(item =>{
-        item.date = new Date(item.date).getTime();
-        return item;
-    })
+    existing = existing
 }
-let toCreate = _.differenceWith(schedule, existing,(a,b)=>{
-    return a.timeType === b.timeType && a.date === b.date;
-});
-if(toCreate && toCreate.length >0){
-    await db.Schedule.bulkCreate(toCreate);
-}
-resolve({
-    errCode: 0,
-    errMessage:'ok bro'
-})
 }
         }catch(e){
-console.log(e);
-reject(e);
+
         }
     })
 }
@@ -176,6 +162,5 @@ module.exports = {
     getTopDoctorHome: getTopDoctorHome,
     getAllDoctors: getAllDoctors,
     saveDetailInforDoctor: saveDetailInforDoctor,
-    getDetailDoctorById: getDetailDoctorById,
-    bulkCreateSchedule: bulkCreateSchedule
+    getDetailDoctorById: getDetailDoctorById
 }

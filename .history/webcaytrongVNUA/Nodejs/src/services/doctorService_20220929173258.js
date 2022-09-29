@@ -162,13 +162,11 @@ if(toCreate && toCreate.length >0){
     await db.Schedule.bulkCreate(toCreate);
 }
 resolve({
-    errCode: 0,
-    errMessage:'ok bro'
+    errCode: 0;
 })
 }
         }catch(e){
-console.log(e);
-reject(e);
+
         }
     })
 }
@@ -176,6 +174,5 @@ module.exports = {
     getTopDoctorHome: getTopDoctorHome,
     getAllDoctors: getAllDoctors,
     saveDetailInforDoctor: saveDetailInforDoctor,
-    getDetailDoctorById: getDetailDoctorById,
-    bulkCreateSchedule: bulkCreateSchedule
+    getDetailDoctorById: getDetailDoctorById
 }

@@ -163,12 +163,11 @@ if(toCreate && toCreate.length >0){
 }
 resolve({
     errCode: 0,
-    errMessage:'ok bro'
+    errMessage:'o'
 })
 }
         }catch(e){
-console.log(e);
-reject(e);
+
         }
     })
 }
@@ -176,6 +175,5 @@ module.exports = {
     getTopDoctorHome: getTopDoctorHome,
     getAllDoctors: getAllDoctors,
     saveDetailInforDoctor: saveDetailInforDoctor,
-    getDetailDoctorById: getDetailDoctorById,
-    bulkCreateSchedule: bulkCreateSchedule
+    getDetailDoctorById: getDetailDoctorById
 }
