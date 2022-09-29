@@ -39,15 +39,12 @@ const saveDetailDoctorService = (data) => {
 const getDetailInforDoctor = (inputId) => {
     return axios.get(`/api/get-detail-doctor-by-id?id=${inputId}`)
 }
-const saveBulkScheduleDoctor =(data) =>{
-    return axios.post('/api/bulk-create-schedule', data)
-}
+const saveBulkScheduleDoctor =(data)
 export {
     handleLoginApi, getAllUsers,
     createNewUserService, deleteUserService,
     editUserService, getAllCodeService, getTopDoctorHomeService,
     getAllDoctors, saveDetailDoctorService,
-    getDetailInforDoctor,
-    saveBulkScheduleDoctor
+    getDetailInforDoctor
 }//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export

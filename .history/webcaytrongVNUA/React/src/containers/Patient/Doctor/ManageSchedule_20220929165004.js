@@ -119,8 +119,7 @@ class ManageSchedule extends Component {
             doctorId: selectedDoctor.value,
             formatedDate: formatedDate
         })
-        console.log('bao phuc check result: ', result);
-        console.log('check res: saveBulkScheduleDoctor : ', res);
+        console.log('hoi dan it channel check result: ', result);
     }
     render() {
         let { rangeTime } = this.state;

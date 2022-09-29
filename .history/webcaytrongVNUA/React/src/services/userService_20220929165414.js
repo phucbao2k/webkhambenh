@@ -47,7 +47,6 @@ export {
     createNewUserService, deleteUserService,
     editUserService, getAllCodeService, getTopDoctorHomeService,
     getAllDoctors, saveDetailDoctorService,
-    getDetailInforDoctor,
-    saveBulkScheduleDoctor
+    getDetailInforDoctor
 }//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export

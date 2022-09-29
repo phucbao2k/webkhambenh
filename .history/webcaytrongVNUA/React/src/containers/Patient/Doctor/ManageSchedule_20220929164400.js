@@ -9,7 +9,7 @@ import DatePicker from '../../../components/Input/DatePicker';
 import moment from 'moment';
 import { toast } from "react-toastify";
 import _ from 'lodash';
-import {saveBulkScheduleDoctor} from '../../../services/userService';
+import {saveBulkSche}
 class ManageSchedule extends Component {
     // PROPS stands for properties and is being used for passing data from one component to another.
     // But the important part here is that data with props are being passed in a uni-directional flow. ( one way from parent to child)
@@ -84,7 +84,7 @@ class ManageSchedule extends Component {
             })
         }
     }
-    handleSaveSchedule = async () => {
+    handleSaveSchedule = () => {
         let { rangeTime, selectedDoctor, currentDate } = this.state;
         let result = [];
         if (!currentDate) {
@@ -96,9 +96,7 @@ class ManageSchedule extends Component {
           console.log('check doctor: ', this.state)
             return;
         }
-
-        // let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
-        let formatedDate = new Date(currentDate).getTime();
+        let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
         if (rangeTime && rangeTime.length > 0) {
             let selectedTime = rangeTime.filter(item => item.isSelected === true);
             if (selectedTime && selectedTime.length > 0) {
@@ -106,7 +104,7 @@ class ManageSchedule extends Component {
                     let object = {};
                     object.doctorId = selectedDoctor.value;
                     object.date = formatedDate;
-                    object.timeType = schedule.keyMap;
+                    object.time = schedule.keyMap;
                     result.push(object);
                 })
             } else {
@@ -114,13 +112,7 @@ class ManageSchedule extends Component {
                 return;
             }
         }
-        let res = await saveBulkScheduleDoctor({
-            arrShedule: result,
-            doctorId: selectedDoctor.value,
-            formatedDate: formatedDate
-        })
-        console.log('bao phuc check result: ', result);
-        console.log('check res: saveBulkScheduleDoctor : ', res);
+        console.log('hoi dan it channel check result: ', result);
     }
     render() {
         let { rangeTime } = this.state;

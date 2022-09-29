@@ -117,10 +117,9 @@ class ManageSchedule extends Component {
         let res = await saveBulkScheduleDoctor({
             arrShedule: result,
             doctorId: selectedDoctor.value,
-            formatedDate: formatedDate
+            formatedDate: formated
         })
-        console.log('bao phuc check result: ', result);
-        console.log('check res: saveBulkScheduleDoctor : ', res);
+        console.log('hoi dan it channel check result: ', result);
     }
     render() {
         let { rangeTime } = this.state;

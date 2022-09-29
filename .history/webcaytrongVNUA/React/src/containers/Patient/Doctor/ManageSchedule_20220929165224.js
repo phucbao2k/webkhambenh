@@ -120,7 +120,7 @@ class ManageSchedule extends Component {
             formatedDate: formatedDate
         })
         console.log('bao phuc check result: ', result);
-        console.log('check res: saveBulkScheduleDoctor : ', res);
+        console.log('check res')
     }
     render() {
         let { rangeTime } = this.state;

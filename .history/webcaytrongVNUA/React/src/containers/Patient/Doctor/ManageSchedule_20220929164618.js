@@ -98,7 +98,7 @@ class ManageSchedule extends Component {
         }
 
         // let formatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
-        let formatedDate = new Date(currentDate).getTime();
+        let formatedDate = new Date()
         if (rangeTime && rangeTime.length > 0) {
             let selectedTime = rangeTime.filter(item => item.isSelected === true);
             if (selectedTime && selectedTime.length > 0) {
@@ -106,7 +106,7 @@ class ManageSchedule extends Component {
                     let object = {};
                     object.doctorId = selectedDoctor.value;
                     object.date = formatedDate;
-                    object.timeType = schedule.keyMap;
+                    object.time = schedule.keyMap;
                     result.push(object);
                 })
             } else {
@@ -114,13 +114,7 @@ class ManageSchedule extends Component {
                 return;
             }
         }
-        let res = await saveBulkScheduleDoctor({
-            arrShedule: result,
-            doctorId: selectedDoctor.value,
-            formatedDate: formatedDate
-        })
-        console.log('bao phuc check result: ', result);
-        console.log('check res: saveBulkScheduleDoctor : ', res);
+        console.log('hoi dan it channel check result: ', result);
     }
     render() {
         let { rangeTime } = this.state;
