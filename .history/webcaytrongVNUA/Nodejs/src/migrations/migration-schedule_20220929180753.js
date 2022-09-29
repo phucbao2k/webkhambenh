@@ -20,9 +20,7 @@ module.exports = {
       doctorId: {
         type: Sequelize.INTEGER
       },
-      date:{
-type: Sequelize.DATE
-      },
+      dat
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
