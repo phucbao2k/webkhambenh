@@ -36,7 +36,7 @@ class ManageDoctor extends Component {
 
     componentDidMount() {
         this.props.fetchAllDoctors()
-        //tất cả dữ liệu lấy được từ fetchAllDoctors sẽ được ghi vào props cha, cụ thể là this.props;
+        //tất cả dữ liệu lấy được từ fetchAllDoctors sẽ được ghi vào props cha
     }
     buildDataInputSelect = (inputData) => {
         console.log("check input data", inputData)

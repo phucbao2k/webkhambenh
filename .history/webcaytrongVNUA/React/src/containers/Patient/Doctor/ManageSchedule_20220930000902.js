@@ -48,7 +48,7 @@ class ManageSchedule extends Component {
         }
     }
     buildDataInputSelect = (inputData) => {
-        //chúng ta có thể đặt là inputData hoặc gì cũng ok, vì nó phụ thuộc vào props ở bên dưới
+        //chúng ta có thể đặt là inputData hoặc gì cũng ok, vì nó phụ thuộc vào 
         let result = [];
         let { language } = this.props;
         if (inputData && inputData.length > 0) {
