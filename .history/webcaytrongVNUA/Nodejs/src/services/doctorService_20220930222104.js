@@ -191,7 +191,7 @@ else{
             {model: db.Allcode, as: 'timeTypeData', attributes: ['valueEn', 'valueVi']},
         ],
         raw: false,
-        nest: true
+        
     })
     if (!dataSchedule) dataSchedule = [];
 

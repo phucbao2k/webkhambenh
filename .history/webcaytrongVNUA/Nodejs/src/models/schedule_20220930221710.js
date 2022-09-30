@@ -9,8 +9,7 @@ export default (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Schedule.belongsTo(models.Allcode,
-        {foreignKey: 'timeType', targetKey: 'keyMap', as: 'timeTypeData'})
+      Schedule.belongsTo(models.All)
     }
   };
   Schedule.init({
