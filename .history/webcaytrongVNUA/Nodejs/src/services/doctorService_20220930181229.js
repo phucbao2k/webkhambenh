@@ -189,12 +189,11 @@ else{
         }
     })
     if (!dataSchedule) dataSchedule = [];
-
+}
 resolve({
     errCode: 0,
     data: dataSchedule
 })
-}
         }catch(e){
 reject(e);
         }
