@@ -62,14 +62,11 @@ class DetailDoctor extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="container schedule-doctor">
-                        <div className="content-left">
-                            <DoctorSchedule
-                                doctorIdFromParent={detailDoctor && detailDoctor.id ? detailDoctor.id : -1} />
-                            <div className="content-right">
-
-                            </div>
-                        </div>
+                    <div className="schedule-doctor">
+<div className="content-left">
+    <DoctorSchedule 
+    doc/>
+</div>
                     </div>
                     <div className="container detail-infor-doctor">
                         {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
