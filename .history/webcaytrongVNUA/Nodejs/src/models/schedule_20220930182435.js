@@ -17,7 +17,7 @@ export default (sequelize, DataTypes) => {
     maxNumber: DataTypes.INTEGER,
     date: DataTypes.STRING,
     timeType: DataTypes.STRING,
-    doctorId: DataTypes.INTEGER
+    doctorId: DataTypes.IN
   }, {
     sequelize,
     modelName: 'Schedule',
