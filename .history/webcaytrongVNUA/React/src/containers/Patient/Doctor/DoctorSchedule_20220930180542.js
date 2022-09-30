@@ -79,4 +79,4 @@ const mapDispatchToProps = dispatch => {
 
     };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(DoctorSchedule);
+export default connect(mapStateToProps, mapDispatchToProps)(D)

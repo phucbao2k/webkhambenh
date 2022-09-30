@@ -74,9 +74,4 @@ const mapStateToProps = (state) =>{
         language: state.app.language,
     };
 };
-const mapDispatchToProps = dispatch => {
-    return{
-
-    };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(DoctorSchedule);
+const mapDis

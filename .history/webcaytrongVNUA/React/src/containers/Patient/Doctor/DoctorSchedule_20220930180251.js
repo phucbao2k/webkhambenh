@@ -63,20 +63,9 @@ class DoctorSchedule extends Component{
                     </select>
                 </div>
                 <div className="all-available-time">
-
+                    
                 </div>
             </div>
-        );
+        )
     }
 }
-const mapStateToProps = (state) =>{
-    return{
-        language: state.app.language,
-    };
-};
-const mapDispatchToProps = dispatch => {
-    return{
-
-    };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(DoctorSchedule);

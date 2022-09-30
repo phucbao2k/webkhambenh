@@ -53,30 +53,11 @@ class DoctorSchedule extends Component{
                     <select onChange={(event) => this.handleOnChangeSelect(event)}>
                         {allDays && allDays.length>0 &&
                         allDays.map((item, index) => {
-                            return (
-                                <option value={item.value}
-                                key={index}>
-                                    {item.label}
-                                </option>
-                            )
+                            return
                         })}
                     </select>
                 </div>
-                <div className="all-available-time">
-
-                </div>
             </div>
-        );
+        )
     }
 }
-const mapStateToProps = (state) =>{
-    return{
-        language: state.app.language,
-    };
-};
-const mapDispatchToProps = dispatch => {
-    return{
-
-    };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(DoctorSchedule);
