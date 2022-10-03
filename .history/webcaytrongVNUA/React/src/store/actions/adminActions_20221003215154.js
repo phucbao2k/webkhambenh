@@ -299,21 +299,11 @@ let data ={
     resPayment: resPayment.data,
     resProvince: resProvince.data
 }
-dispatch(fetchRequiredDoctorInforSuccess(data))
-            }else{
-                dispatch(fetchRequiredDoctorInforFailed());  
+dispatch(fetchRequiredDoctor)
             }
 
         } catch (e) {
-            dispatch(fetchRequiredDoctorInforFailed());
-            console.log('fetchRequiredDoctorInforFailed', e);
+
         }
     }
 }
-export const fetchRequiredDoctorInforSuccess =(allRequiredData) =>({
-    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS,
-    data: allRequiredData
-})
-export const fetchRequiredDoctorInforFailed = () => ({
-    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_FAILED,
-})

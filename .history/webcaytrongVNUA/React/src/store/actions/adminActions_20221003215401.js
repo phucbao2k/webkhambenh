@@ -310,10 +310,4 @@ dispatch(fetchRequiredDoctorInforSuccess(data))
         }
     }
 }
-export const fetchRequiredDoctorInforSuccess =(allRequiredData) =>({
-    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS,
-    data: allRequiredData
-})
-export const fetchRequiredDoctorInforFailed = () => ({
-    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_FAILED,
-})
+export

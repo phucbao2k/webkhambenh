@@ -294,26 +294,11 @@ export const getRequiredDoctorInfor = () => {
             if( resPrice && resPrice.errCode === 0
                 && resPayment && resPayment.errCode === 0
                 && resProvince && resProvince.errCode === 0){
-let data ={
-    resPrice: resPrice.data,
-    resPayment: resPayment.data,
-    resProvince: resProvince.data
-}
-dispatch(fetchRequiredDoctorInforSuccess(data))
-            }else{
-                dispatch(fetchRequiredDoctorInforFailed());  
+let 
             }
 
         } catch (e) {
-            dispatch(fetchRequiredDoctorInforFailed());
-            console.log('fetchRequiredDoctorInforFailed', e);
+
         }
     }
 }
-export const fetchRequiredDoctorInforSuccess =(allRequiredData) =>({
-    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS,
-    data: allRequiredData
-})
-export const fetchRequiredDoctorInforFailed = () => ({
-    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_FAILED,
-})

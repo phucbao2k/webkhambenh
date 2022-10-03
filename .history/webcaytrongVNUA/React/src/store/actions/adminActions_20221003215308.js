@@ -301,19 +301,11 @@ let data ={
 }
 dispatch(fetchRequiredDoctorInforSuccess(data))
             }else{
-                dispatch(fetchRequiredDoctorInforFailed());  
+                dispatch(fetchRequiredDoctorInforFailed())  
             }
 
         } catch (e) {
-            dispatch(fetchRequiredDoctorInforFailed());
-            console.log('fetchRequiredDoctorInforFailed', e);
+            dispatch(fetchRequiredDoctorInforFailed())
         }
     }
 }
-export const fetchRequiredDoctorInforSuccess =(allRequiredData) =>({
-    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_SUCCESS,
-    data: allRequiredData
-})
-export const fetchRequiredDoctorInforFailed = () => ({
-    type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_FAILED,
-})
