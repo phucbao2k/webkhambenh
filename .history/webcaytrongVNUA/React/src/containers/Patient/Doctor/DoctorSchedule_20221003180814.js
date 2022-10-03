@@ -99,16 +99,19 @@ class DoctorSchedule extends Component {
                                 )
                             })}
                     </select>
-                </div>
+            </div>
+            
                 <div className="all-available-time">
                     <div className="text-calendar">
                         <i className="fa-regular fa-calendar-days">
                             <span><FormattedMessage id="patient.detail-doctor.schedule" /></span>
                         </i>
                     </div>
+              
                     <div className="time-content">
+
                         {allAvailableTime && allAvailableTime.length > 0 ?
-                        <>
+                          
                                 <div className=" time-content-btns">
                                     {allAvailableTime.map((item, index) => {
                                         let timeDisplay = language === LANGUAGES.VI ?
@@ -121,6 +124,7 @@ class DoctorSchedule extends Component {
 
                                     }
                                 </div>
+
                                 <div className="book-free">
                                     <span>
                                         <FormattedMessage id="patient.detail-doctor.choose" />
@@ -128,14 +132,14 @@ class DoctorSchedule extends Component {
                                         <FormattedMessage id="patient.detail-doctor.book-free" />
                                     </span>
                                 </div>
-                        </>
-                        : <div className= " no-schedule">
+
+
+: <div className= " no-schedule">
     <FormattedMessage id=" patient.detail-doctor.no-schedule"/>
 </div>
-    }
-                    </div>
-                </div>
-                </div>
+                        }
+                            </div>
+                        
                 
            
 
@@ -144,6 +148,7 @@ class DoctorSchedule extends Component {
     }
     
 }
+
 const mapStateToProps = (state) => {
     return {
                         language: state.app.language,

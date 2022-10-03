@@ -87,54 +87,7 @@ class DoctorSchedule extends Component {
         let { language } = this.props;
         return (
             <div className="doctor-schedule-container">
-                <div className="all-schedule">
-                    <select onChange={(event) => this.handleOnChangeSelect(event)}>
-                        {allDays && allDays.length > 0 &&
-                            allDays.map((item, index) => {
-                                return (
-                                    <option value={item.value}
-                                        key={index}>
-                                        {item.label}
-                                    </option>
-                                )
-                            })}
-                    </select>
-                </div>
-                <div className="all-available-time">
-                    <div className="text-calendar">
-                        <i className="fa-regular fa-calendar-days">
-                            <span><FormattedMessage id="patient.detail-doctor.schedule" /></span>
-                        </i>
-                    </div>
-                    <div className="time-content">
-                        {allAvailableTime && allAvailableTime.length > 0 ?
-                        <>
-                                <div className=" time-content-btns">
-                                    {allAvailableTime.map((item, index) => {
-                                        let timeDisplay = language === LANGUAGES.VI ?
-                                            item.timeTypeData.valueVi : item.timeTypeData.valueEn;
-                                        return (
-                                            <button key={index}> {timeDisplay}
-                                            </button>
-                                        )
-                                    })
-
-                                    }
-                                </div>
-                                <div className="book-free">
-                                    <span>
-                                        <FormattedMessage id="patient.detail-doctor.choose" />
-                                        <i className="fa-solid fa-hand-point-up"></i>
-                                        <FormattedMessage id="patient.detail-doctor.book-free" />
-                                    </span>
-                                </div>
-                        </>
-                        : <div className= " no-schedule">
-    <FormattedMessage id=" patient.detail-doctor.no-schedule"/>
-</div>
-    }
-                    </div>
-                </div>
+                <div className=""></div>
                 </div>
                 
            

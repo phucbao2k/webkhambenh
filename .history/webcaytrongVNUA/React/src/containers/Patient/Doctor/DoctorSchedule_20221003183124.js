@@ -129,10 +129,9 @@ class DoctorSchedule extends Component {
                                     </span>
                                 </div>
                         </>
-                        : <div className= " no-schedule">
-    <FormattedMessage id=" patient.detail-doctor.no-schedule"/>
-</div>
-    }
+                            : <div className=" no-schedule">
+                                <FormattedMessage id=" patient.detail-doctor.no-schedule" />
+                            </div>
                     </div>
                 </div>
                 </div>

@@ -107,37 +107,31 @@ class DoctorSchedule extends Component {
                         </i>
                     </div>
                     <div className="time-content">
+
                         {allAvailableTime && allAvailableTime.length > 0 ?
-                        <>
+                            <>
                                 <div className=" time-content-btns">
                                     {allAvailableTime.map((item, index) => {
                                         let timeDisplay = language === LANGUAGES.VI ?
                                             item.timeTypeData.valueVi : item.timeTypeData.valueEn;
                                         return (
-                                            <button key={index}> {timeDisplay}
-                                            </button>
+                                            <button key={index}> {timeDisplay}</button>
                                         )
                                     })
 
                                     }
                                 </div>
-                                <div className="book-free">
-                                    <span>
-                                        <FormattedMessage id="patient.detail-doctor.choose" />
-                                        <i className="fa-solid fa-hand-point-up"></i>
-                                        <FormattedMessage id="patient.detail-doctor.book-free" />
-                                    </span>
-                                </div>
-                        </>
-                        : <div className= " no-schedule">
-    <FormattedMessage id=" patient.detail-doctor.no-schedule"/>
+
+<div className=" book-free">
+    <span>
+        <FormattedMessage id="patient.detail-doc"/>
+    </span>
 </div>
-    }
-                    </div>
-                </div>
-                </div>
+
+
+                            </div>
                 
-           
+            </div>
 
                     );
            
