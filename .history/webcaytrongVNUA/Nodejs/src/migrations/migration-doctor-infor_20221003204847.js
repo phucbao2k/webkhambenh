@@ -40,6 +40,7 @@ module.exports = {
                 type: Sequelize.INTEGER,
                 allowNull: false,
             },
+           
             createdAt: {
                 allowNull: false,
                 type: Sequelize.DATE
@@ -51,6 +52,6 @@ module.exports = {
         });
     },
     down: async (queryInterface, Sequelize) => {
-        await queryInterface.dropTable('doctor_infor');
+        await queryInterface.dropTable('Users');
     }
 };

@@ -37,8 +37,13 @@ module.exports = {
                
             },
             count: {
-                type: Sequelize.INTEGER,
-                allowNull: false,
+                type: Sequelize.TEXT
+            },
+            positionId: {
+                type: Sequelize.STRING
+            },
+            image: {
+                type: Sequelize.STRING
             },
             createdAt: {
                 allowNull: false,
@@ -51,6 +56,6 @@ module.exports = {
         });
     },
     down: async (queryInterface, Sequelize) => {
-        await queryInterface.dropTable('doctor_infor');
+        await queryInterface.dropTable('Users');
     }
 };

@@ -16,29 +16,29 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: false,
             },
-            provinceId: {
-                type: Sequelize.STRING,
-                allowNull: false,
+            province: {
+                type: Sequelize.STRING
             },
-            paymentId: {
-                type: Sequelize.STRING,
-                allowNull: false,
+            lastName: {
+                type: Sequelize.STRING
             },
-            addressClinic: {
-                type: Sequelize.STRING,
-                allowNull: false,
+            address: {
+                type: Sequelize.STRING
             },
-            nameClinic: {
-                type: Sequelize.STRING,
-                allowNull: false,
+            gender: {
+                type: Sequelize.STRING
             },
-            note: {
-                type: Sequelize.STRING,
-               
+            roleId: {
+                type: Sequelize.STRING
             },
-            count: {
-                type: Sequelize.INTEGER,
-                allowNull: false,
+            phoneNumber: {
+                type: Sequelize.TEXT
+            },
+            positionId: {
+                type: Sequelize.STRING
+            },
+            image: {
+                type: Sequelize.STRING
             },
             createdAt: {
                 allowNull: false,
@@ -51,6 +51,6 @@ module.exports = {
         });
     },
     down: async (queryInterface, Sequelize) => {
-        await queryInterface.dropTable('doctor_infor');
+        await queryInterface.dropTable('Users');
     }
 };
