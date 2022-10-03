@@ -69,7 +69,7 @@ class DetailDoctor extends Component {
                     <div className="container schedule-doctor">
                         <div className="content-left">
                             <DoctorSchedule
-                                doctorIdFromParent={this.state.currentDoctorId}/>
+                                doctorIdFromParent={detailDoctor && detailDoctor.id ? detailDoctor.id : -1} />
                             <div className="content-right">
 
                             </div>

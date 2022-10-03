@@ -58,7 +58,7 @@ class DoctorSchedule extends Component {
         if (this.props.language !== prevProps.language) {
             let allDays = this.getArrDays(this.props.language);
             this.setState({
-                allDays: allDays
+                allAvailableTime: res.data ? res.data : []
             })
         }
         if (this.props.doctorIdFromParent !== prevProps.doctorIdFromParent) {
