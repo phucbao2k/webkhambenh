@@ -1,6 +1,7 @@
 import db from '../models/index';
 require('dotenv').config();
 import _ from 'lodash';
+import { ToastUtil } from '../../../React/src/utils';
 const MAX_NUMBER_SCHEDULE = process.env.MAX_NUMBER_SCHEDULE;
 // require dotenv ở trên là đề xử lý được các câu lệnh trong file .env(giống như import thư viện)
 //process.env là để xử lý câu lệnh trong file .env(giống như 1 hàm nằm trong thư viện)
@@ -167,7 +168,7 @@ resolve({
 }
         }catch(e){
 console.log(e);
-
+ToastUtil.
 reject(e);
         }
     })

@@ -156,7 +156,7 @@ let existing = await db.Schedule.findAll({
 let toCreate = _.differenceWith(schedule, existing,(a,b)=>{
     return a.timeType === b.timeType && +a.date === +b.date;
 });
-//insert data
+
 if(toCreate && toCreate.length >0){
     await db.Schedule.bulkCreate(toCreate);
 }
@@ -167,7 +167,6 @@ resolve({
 }
         }catch(e){
 console.log(e);
-
 reject(e);
         }
     })

@@ -152,11 +152,15 @@ let existing = await db.Schedule.findAll({
     attributes: ['timeType', 'date', 'doctorId', 'maxNumber'],
     raw: true
 });
-// compare data
+// if(existing && existing.length > 0){
+//     existing = existing.map(item =>{
+//         item.date = new Date(item.date).getTime();
+//         return item;
+//     })
+// }
 let toCreate = _.differenceWith(schedule, existing,(a,b)=>{
     return a.timeType === b.timeType && +a.date === +b.date;
 });
-//insert data
 if(toCreate && toCreate.length >0){
     await db.Schedule.bulkCreate(toCreate);
 }
@@ -167,7 +171,6 @@ resolve({
 }
         }catch(e){
 console.log(e);
-
 reject(e);
         }
     })
