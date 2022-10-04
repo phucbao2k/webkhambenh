@@ -160,7 +160,7 @@ class ManageDoctor extends Component {
                         <div className="title text-center">
                             <FormattedMessage id="admin.manage-doctor.title" />
                         </div>
-                        <div className=" more-info">
+                        <div className="more-info">
                             <div className="content-left form-group">
 
                                 <label><FormattedMessage id="admin.manage-doctor.select-doctor" /></label>
@@ -181,7 +181,7 @@ class ManageDoctor extends Component {
 
                             </div>
                         </div>
-                        <div className=" more-infor-extra row">
+                        <div className="more-infor-extra row">
                             <div className="col-4 form-group">
                                 <label>Chọn giá</label>
                                 <Select
@@ -223,7 +223,7 @@ class ManageDoctor extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="container-fluid manage-doctor-editor">
+                    <div className="container manage-doctor-editor">
                         <MdEditor style={{ height: '500px' }} renderHTML={text => mdParser.render(text)}
                             onChange={this.handleEditorChange}
                             value={this.state.contentMarkdown} />

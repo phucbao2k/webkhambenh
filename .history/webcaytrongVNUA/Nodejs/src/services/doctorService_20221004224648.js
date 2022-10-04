@@ -2,8 +2,7 @@ import db from '../models/index';
 require('dotenv').config();
 import _ from 'lodash';
 const MAX_NUMBER_SCHEDULE = process.env.MAX_NUMBER_SCHEDULE;
-// require dotenv ở trên là đề xử lý được các câu lệnh trong file .env(giống như import thư viện)
-//process.env là để xử lý câu lệnh trong file .env(giống như 1 hàm nằm trong thư viện)
+// 
 let getTopDoctorHome = (limitInput) => {
     return new Promise(async (resolve, reject) => {
         try {

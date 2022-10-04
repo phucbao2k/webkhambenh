@@ -181,7 +181,7 @@ class ManageDoctor extends Component {
 
                             </div>
                         </div>
-                        <div className=" more-infor-extra row">
+                        <div className="container-fluid more-infor-extra row">
                             <div className="col-4 form-group">
                                 <label>Chọn giá</label>
                                 <Select
