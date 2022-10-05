@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import './DoctorSchedule.scss';
 import moment from 'moment';
 import localization from 'moment/locale/vi';
-//import locale như vậy để moment hiểu và ưu tiên việc xử lý tiếng việt(trong time)
+//import locale như vậy để 
 import { LANGUAGES } from '../../../utils';
 import { getScheduleDoctorByDate } from '../../../services/userService';
 import { FormattedMessage } from 'react-intl';
@@ -53,8 +53,6 @@ class DoctorSchedule extends Component {
             object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
             allDays.push(object);
         }
-        //hàm for ở trên dùng để duyệt ngày, vd duyệt lần đầu(i=0), thời gian sẽ là ngày hiện tại add 0,
-        //sau đấy lặp dần và tăng tiến, tạo thành ngày mai, ngày kia....
         return allDays;
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {

@@ -54,7 +54,7 @@ class DoctorSchedule extends Component {
             allDays.push(object);
         }
         //hàm for ở trên dùng để duyệt ngày, vd duyệt lần đầu(i=0), thời gian sẽ là ngày hiện tại add 0,
-        //sau đấy lặp dần và tăng tiến, tạo thành ngày mai, ngày kia....
+        //sau đấy lặp dần và tăng tiến, tạo thành ngày mai, ngày kia
         return allDays;
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {
