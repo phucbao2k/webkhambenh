@@ -72,8 +72,8 @@ class ManageDoctor extends Component {
             if (type === 'PRICE') {
                 inputData.map((item, index) => {
                     let object = {};
-                    let labelEn = `${item.valueEn} USD`;
-                    let labelVi = `${item.valueVi}`;
+                    let labelEn = `${item.} `;
+                    let labelVi = `${item.firstName} ${item.lastName}`;
                     object.label = language === LANGUAGES.VI ? labelVi : labelEn;
                     object.value = item.id;
                     result.push(object);
@@ -82,8 +82,8 @@ class ManageDoctor extends Component {
             if (type === 'PAYMENT' || type === 'PROVINCE') {
                 inputData.map((item, index) => {
                     let object = {};
-                    let labelEn = `${item.valueEn}`;
-                    let labelVi = ` ${item.valueVi }`;
+                    let labelEn = `${item.lastName} ${item.firstName} `;
+                    let labelVi = `${item.firstName} ${item.lastName}`;
                     object.label = language === LANGUAGES.VI ? labelVi : labelEn;
                     object.value = item.id;
                     result.push(object);

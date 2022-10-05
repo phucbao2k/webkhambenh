@@ -72,8 +72,8 @@ class ManageDoctor extends Component {
             if (type === 'PRICE') {
                 inputData.map((item, index) => {
                     let object = {};
-                    let labelEn = `${item.valueEn} USD`;
-                    let labelVi = `${item.valueVi}`;
+                    let labelEn = `${item.lastName} ${item.firstName} `;
+                    let labelVi = `${item.firstName} ${item.lastName}`;
                     object.label = language === LANGUAGES.VI ? labelVi : labelEn;
                     object.value = item.id;
                     result.push(object);
@@ -82,8 +82,8 @@ class ManageDoctor extends Component {
             if (type === 'PAYMENT' || type === 'PROVINCE') {
                 inputData.map((item, index) => {
                     let object = {};
-                    let labelEn = `${item.valueEn}`;
-                    let labelVi = ` ${item.valueVi }`;
+                    let labelEn = `${item.lastName} ${item.firstName} `;
+                    let labelVi = `${item.firstName} ${item.lastName}`;
                     object.label = language === LANGUAGES.VI ? labelVi : labelEn;
                     object.value = item.id;
                     result.push(object);
@@ -143,9 +143,9 @@ class ManageDoctor extends Component {
             description: this.state.description,
             doctorId: this.state.selectedDoctor.valueOf(),
             action: hasOldData === true ? CRUD_ACTIONS.EDIT : CRUD_ACTIONS.CREATE,
-            selectedPrice: this.state.selectedPrice.valueOf(),
-            selectedPayment: this.state.selectedPayment.valueOf(),
-            selectProvince: this.state.selectProvince.valueOf(),
+            selectedPrice: this.state.selectedPrice.value,
+            selectedPayment: this.state.selectedPayment.value,
+            selectProvince: this.state.selectProvince.value,
             nameClinic: this.state.nameClinic,
             addressClinic: this.state.addressClinic,
             note: this.state.note,
