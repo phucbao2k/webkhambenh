@@ -176,5 +176,5 @@ require dotenv là đề xử lý được các câu lệnh trong file .env(gi�
 process.env là để xử lý câu lệnh trong file .env(giống như 1 hàm nằm trong thư viện)
 
 
-req.query là lấy giá trị của 1 cột(kiểu id, firstName, lastName), chủ yếu dùng trong method GET, với đường link có tham số
-req.body là lấy toàn bộ giá trị cột trong bảng, chủ yếu dùng trong method PUT, với đường link ko có tham số
+req.query là lấy giá trị của 1 cột(kiểu id, firstName, lastName), chủ yếu dùng trong method GET, 
+req.body là lấy toàn bộ giá trị cột trong bảng, chủ yếu dùng trong method PUT
