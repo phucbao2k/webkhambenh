@@ -182,6 +182,4 @@ req.body là lấy toàn bộ giá trị cột trong bảng, chủ yếu dùng t
 với điều kiện where khi findAll() hoặc findOne():
 vế trái là key trong db, vế phải là key ta tự định nghĩa
 
-Kiểu dữ liệu TIMESTAMP trong moment có thể để ở cả dạng số và chữ, tùy người dùng định nghĩa, tuy nhiên nên để kiểu số, 
-để dễ convert ngày/tháng/năm, tháng/năm/ngày, tháng/ngày/năm...
-
+Kiểu dữ liệu TIMESTAMP trong moment có thể để ở cả dạng số và chữ, tùy người dùng định nghĩa, tuy nhiên nên để kiểu số tru
