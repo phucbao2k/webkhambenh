@@ -271,9 +271,8 @@ class ManageDoctor extends Component {
                             </div>
                             <div className="col-4 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.note" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeText(event, 'note')}
-                                    value={this.state.note}
+                                <Select
+                                    placeholder={'...'}
                                 />
                             </div>
                         </div>

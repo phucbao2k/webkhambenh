@@ -232,48 +232,38 @@ class ManageDoctor extends Component {
                                     onChange={this.handleChangeSelectDoctorInfor}
                                     options={this.state.listPrice}
                                     placeholder={<FormattedMessage id="admin.manage-doctor.price" />}
-                                    name="selectedPrice"
                                 />
                             </div>
                             <div className="col-4 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.payment" /></label>
+                                <label>Chọn phương thức thanh toán</label>
                                 <Select
-                                    value={this.state.selectedPayment}
-                                    onChange={this.handleChangeSelectDoctorInfor}
                                     options={this.state.listPayment}
-                                    placeholder={<FormattedMessage id="admin.manage-doctor.payment" />}
-                                    name="selectedPayment"
+                                    placeholder={'...'}
                                 />
                             </div>
                             <div className="col-4 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.province" /></label>
+                                <label>Chọn tỉnh thành</label>
                                 <Select
-                                    value={this.state.selectProvince}
-                                    onChange={this.handleChangeSelectDoctorInfor}
                                     options={this.state.listProvince}
-                                    placeholder={<FormattedMessage id="admin.manage-doctor.province" />}
-                                    name="selectProvince"
+                                    placeholder={'...'}
                                 />
                             </div>
                             <div className="col-4 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.nameClinic" /></label>
-                                <input className="form-control"
-                                    onChange={(event)=> this.handleOnChangeText(event, 'nameClinic')}
-                                    value={this.state.nameClinic}
+                                <label>Tên phòng khám</label>
+                                <Select
+                                    placeholder={'...'}
                                 />
                             </div>
                             <div className="col-4 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.addressClinic" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeText(event, 'addressClinic')}
-                                    value={this.state.addressClinic}
+                                <label>Địa chỉ phòng khám</label>
+                                <Select
+                                    placeholder={'...'}
                                 />
                             </div>
                             <div className="col-4 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.note" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeText(event, 'note')}
-                                    value={this.state.note}
+                                <label>Ghi chú</label>
+                                <Select
+                                    placeholder={'...'}
                                 />
                             </div>
                         </div>

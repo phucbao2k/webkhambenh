@@ -263,17 +263,16 @@ class ManageDoctor extends Component {
                                 />
                             </div>
                             <div className="col-4 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.addressClinic" /></label>
+                                <label>Địa chỉ phòng khám</label>
                                 <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeText(event, 'addressClinic')}
-                                    value={this.state.addressClinic}
+                                    onChange={(event) => this.handleOnChangeText(event, 'nameClinic')}
+                                    value={this.state.nameClinic}
                                 />
                             </div>
                             <div className="col-4 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.note" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeText(event, 'note')}
-                                    value={this.state.note}
+                                <label>Ghi chú</label>
+                                <Select
+                                    placeholder={'...'}
                                 />
                             </div>
                         </div>
