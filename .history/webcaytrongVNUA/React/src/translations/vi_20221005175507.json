@@ -52,8 +52,8 @@
     "payment": "Phương thức thanh toán",
     "province": "Tỉnh thành",
     "nameClinic": "Tên phòng khám",
-    "addressClinic": "Địa chỉ phòng khám",
-    "note": "Ghi chú"
+    "addressClinic": "Clinic's address",
+    "note": "Note"
 }
     },
     "system": {

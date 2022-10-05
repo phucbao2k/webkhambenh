@@ -47,13 +47,13 @@
     "select-doctor": "Chọn bác sĩ",
     "intro": "Thông tin giới thiệu",
     "add": "Tạo thông tin",
-    "save": "Lưu thông tin",
-    "price": "Gía khám bệnh",
-    "payment": "Phương thức thanh toán",
-    "province": "Tỉnh thành",
-    "nameClinic": "Tên phòng khám",
-    "addressClinic": "Địa chỉ phòng khám",
-    "note": "Ghi chú"
+    "save": "Lưu thông tin"
+    "price": "Price",
+    "payment": "Payment",
+    "province": "Province",
+    "nameClinic": "Clinic's name",
+    "addressClinic": "Clinic's address",
+    "note": "Note"
 }
     },
     "system": {

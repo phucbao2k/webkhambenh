@@ -51,9 +51,6 @@
             "price": "Price",
             "payment": "Payment",
             "province": "Province",
-            "nameClinic":"Clinic's name",
-            "addressClinic": "Clinic's address",
-            "note": "Note"
         }
     },
     "system": {
