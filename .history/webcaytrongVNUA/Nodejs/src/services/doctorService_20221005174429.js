@@ -93,20 +93,7 @@ let saveDetailInforDoctor = (inputData) => {
                     doctorInfor.priceId = inputData.selectedPrice;
                     doctorInfor.provinceId = inputData.selectProvince;
                     doctorInfor.paymentId = inputData.selectedPayment;
-                    doctorInfor.nameClinic = inputData.nameClinic;
-                    doctorInfor.addressClinic = inputData.addressClinic;
-                    doctorInfor.note = inputData.note;
-                    await doctorInfor.save();
-                }else{
-                    await db.Doctor_Infor.create({
-                        doctorId: inputData.doctorId,
-                        priceId:inputData.selectedPrice,
-                        provinceId: inputData.selectProvince,
-                        paymentId: inputData.selectedPayment,
-                        nameClinic: inputData.nameClinic,
-                        addressClinic: inputData.addressClinic,
-                        note: inputData.note,
-                    })
+                    doctorInfor.nameClinic
                 }
                 resolve({
                     errCode: 0,

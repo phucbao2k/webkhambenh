@@ -24,7 +24,7 @@ export default (sequelize, DataTypes) => {
     }, {
         sequelize,
         modelName: 'Doctor_Infor',
-        freezeTableName: true
+        free
     });
     return Doctor_Infor;
 };

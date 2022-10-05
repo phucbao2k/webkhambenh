@@ -53,7 +53,7 @@ let saveDetailInforDoctor = (inputData) => {
         try {
             if (!inputData.doctorId || !inputData.contentHTML || !inputData.contentMarkdown
                 || !inputData.action
-                || !inputData.selectedPrice || !inputData.selectedPayment || !inputData.selectProvince
+                || !inputData.selectedPrice || !inputData.selectedPayment || !inputData.selecteProvince
                 || !inputData.nameClinic || !inputData.addressClinic || !inputData.note) {
                 resolve({
                     errCode: 1,
@@ -88,26 +88,7 @@ let saveDetailInforDoctor = (inputData) => {
                     },
                     raw: false
                 })
-                if(doctorInfor) {
-                    doctorInfor.doctorId = inputData.doctorId;
-                    doctorInfor.priceId = inputData.selectedPrice;
-                    doctorInfor.provinceId = inputData.selectProvince;
-                    doctorInfor.paymentId = inputData.selectedPayment;
-                    doctorInfor.nameClinic = inputData.nameClinic;
-                    doctorInfor.addressClinic = inputData.addressClinic;
-                    doctorInfor.note = inputData.note;
-                    await doctorInfor.save();
-                }else{
-                    await db.Doctor_Infor.create({
-                        doctorId: inputData.doctorId,
-                        priceId:inputData.selectedPrice,
-                        provinceId: inputData.selectProvince,
-                        paymentId: inputData.selectedPayment,
-                        nameClinic: inputData.nameClinic,
-                        addressClinic: inputData.addressClinic,
-                        note: inputData.note,
-                    })
-                }
+                if(doctorInfor) {}
                 resolve({
                     errCode: 0,
                     errMessage: 'Success!'

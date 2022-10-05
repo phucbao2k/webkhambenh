@@ -53,7 +53,7 @@ let saveDetailInforDoctor = (inputData) => {
         try {
             if (!inputData.doctorId || !inputData.contentHTML || !inputData.contentMarkdown
                 || !inputData.action
-                || !inputData.selectedPrice || !inputData.selectedPayment || !inputData.selectProvince
+                || !inputData.selectedPrice || !inputData.selectedPayment || !inputData.selecteProvince
                 || !inputData.nameClinic || !inputData.addressClinic || !inputData.note) {
                 resolve({
                     errCode: 1,
@@ -81,33 +81,8 @@ let saveDetailInforDoctor = (inputData) => {
                         await doctorMarkdown.save();
                     }
                 }
-                //upsert to Doctor_infor table
-                let doctorInfor = await db.Doctor_Infor.findOne({
-                    where: {
-                        doctorId: inputData.doctorId,
-                    },
-                    raw: false
-                })
-                if(doctorInfor) {
-                    doctorInfor.doctorId = inputData.doctorId;
-                    doctorInfor.priceId = inputData.selectedPrice;
-                    doctorInfor.provinceId = inputData.selectProvince;
-                    doctorInfor.paymentId = inputData.selectedPayment;
-                    doctorInfor.nameClinic = inputData.nameClinic;
-                    doctorInfor.addressClinic = inputData.addressClinic;
-                    doctorInfor.note = inputData.note;
-                    await doctorInfor.save();
-                }else{
-                    await db.Doctor_Infor.create({
-                        doctorId: inputData.doctorId,
-                        priceId:inputData.selectedPrice,
-                        provinceId: inputData.selectProvince,
-                        paymentId: inputData.selectedPayment,
-                        nameClinic: inputData.nameClinic,
-                        addressClinic: inputData.addressClinic,
-                        note: inputData.note,
-                    })
-                }
+//upsert to Doctor_infor table
+let doctorInfor = await getDetailDoctorByI
                 resolve({
                     errCode: 0,
                     errMessage: 'Success!'
@@ -158,79 +133,79 @@ let getDetailDoctorById = (inputId) => {
         }
     })
 }
-let bulkCreateSchedule = (data) => {
-    return new Promise(async (resolve, reject) => {
-        try {
+let bulkCreateSchedule = (data)=>{
+    return new Promise(async(resolve, reject)=>{
+        try{
 
-            if (!data.arrSchedule || !data.doctorId || !data.formatedDate) {
-                resolve({
-                    errCode: 1,
-                    errMessage: 'Missing required fields'
-                })
-            } else {
-                let schedule = data.arrSchedule;
-                if (schedule && schedule.length > 0) {
-                    schedule = schedule.map(item => {
-                        item.maxNumber = MAX_NUMBER_SCHEDULE;
-                        return item;
-                    })
-                }
-                //find data
-                let existing = await db.Schedule.findAll({
-                    where: { doctorId: data.doctorId, date: data.formatedDate },
-                    attributes: ['timeType', 'date', 'doctorId', 'maxNumber'],
-                    raw: true
-                });
-                // compare data
-                let toCreate = _.differenceWith(schedule, existing, (a, b) => {
-                    return a.timeType === b.timeType && +a.date === +b.date;
-                });
-                //insert data
-                if (toCreate && toCreate.length > 0) {
-                    await db.Schedule.bulkCreate(toCreate);
-                }
-                resolve({
-                    errCode: 0,
-                    errMessage: 'ok bro'
-                })
-            }
-        } catch (e) {
-            console.log(e);
+if(!data.arrSchedule || !data.doctorId || !data.formatedDate){
+    resolve({
+        errCode: 1,
+        errMessage: 'Missing required fields'
+    })
+}else{
+let schedule = data.arrSchedule;
+if(schedule && schedule.length >0){
+    schedule = schedule.map(item => {
+        item.maxNumber = MAX_NUMBER_SCHEDULE;
+        return item;
+    })
+}
+//find data
+let existing = await db.Schedule.findAll({
+    where: {doctorId: data.doctorId, date: data.formatedDate},
+    attributes: ['timeType', 'date', 'doctorId', 'maxNumber'],
+    raw: true
+});
+// compare data
+let toCreate = _.differenceWith(schedule, existing,(a,b)=>{
+    return a.timeType === b.timeType && +a.date === +b.date;
+});
+//insert data
+if(toCreate && toCreate.length >0){
+    await db.Schedule.bulkCreate(toCreate);
+}
+resolve({
+    errCode: 0,
+    errMessage:'ok bro'
+})
+}
+        }catch(e){
+console.log(e);
 
-            reject(e);
+reject(e);
         }
     })
 }
-let getScheduleByDate = (doctorId, date) => {
-    return new Promise(async (resolve, reject) => {
-        try {
-            if (!doctorId || !date) {
-                resolve({
-                    errCode: 1,
-                    errMessage: 'Missing required parameters'
-                })
-            }
-            else {
-                let dataSchedule = await db.Schedule.findAll({
-                    where: {
-                        doctorId: doctorId,
-                        date: date
-                    },
-                    include: [
-                        { model: db.Allcode, as: 'timeTypeData', attributes: ['valueEn', 'valueVi'] },
-                    ],
-                    raw: false,
-                    nest: true
-                })
-                if (!dataSchedule) dataSchedule = [];
+let getScheduleByDate = (doctorId, date)=>{
+    return new Promise(async(resolve, reject)=>{
+        try{
+if(!doctorId || !date){
+    resolve({
+        errCode: 1,
+        errMessage: 'Missing required parameters'
+    })
+}
+else{
+    let dataSchedule = await db.Schedule.findAll({
+        where:{
+            doctorId: doctorId,
+            date: date
+        },
+        include: [
+            {model: db.Allcode, as: 'timeTypeData', attributes: ['valueEn', 'valueVi']},
+        ],
+        raw: false,
+        nest: true
+    })
+    if (!dataSchedule) dataSchedule = [];
 
-                resolve({
-                    errCode: 0,
-                    data: dataSchedule
-                })
-            }
-        } catch (e) {
-            reject(e);
+resolve({
+    errCode: 0,
+    data: dataSchedule
+})
+}
+        }catch(e){
+reject(e);
         }
     })
 }

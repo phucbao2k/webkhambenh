@@ -105,7 +105,6 @@ let saveDetailInforDoctor = (inputData) => {
                         paymentId: inputData.selectedPayment,
                         nameClinic: inputData.nameClinic,
                         addressClinic: inputData.addressClinic,
-                        note: inputData.note,
                     })
                 }
                 resolve({
