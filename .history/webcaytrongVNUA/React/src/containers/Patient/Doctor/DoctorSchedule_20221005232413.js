@@ -51,8 +51,7 @@ class DoctorSchedule extends Component {
 
             }
             object.value = moment(new Date()).add(i, 'days').startOf('day').valueOf();
-            //startOf là thời gian bắt đầu của new Date, cụ thể là 00:00:00
-            //valueOf convert sang dạng milisecond của unix timeStamp
+            //startOf là bắt đầu của new Date, cụ thể là 00:00:00
             allDays.push(object);
         }
         //hàm for ở trên dùng để duyệt ngày, vd duyệt lần đầu(i=0), thời gian sẽ là ngày hiện tại add 0,
