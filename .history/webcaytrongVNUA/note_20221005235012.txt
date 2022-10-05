@@ -180,4 +180,4 @@ req.query là lấy giá trị của 1 cột(kiểu id, firstName, lastName), ch
 req.body là lấy toàn bộ giá trị cột trong bảng, chủ yếu dùng trong method PUT, với đường link ko có tham số
 
 với điều kiện where khi findAll() hoặc findOne():
-vế trái là key trong db, vế phải là key ta tự định nghĩa
+vế trái là key trong db, vế phải là key 
