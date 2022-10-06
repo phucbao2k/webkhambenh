@@ -144,13 +144,8 @@ let getDetailDoctorById = (inputId) => {
                             model: db.Doctor_Infor,
                             attributes:{
                                 exclude:['id','doctorId']
-                            },
-                            include:[
-                                {model: db.Allcode, as:'priceTypeData', attributes: ['valueEn', 'valueVi']},
-                                { model: db.Allcode, as: 'provinceTypeData', attributes: ['valueEn', 'valueVi'] },
-                                { model: db.Allcode, as: 'paymentTypeData', attributes: ['valueEn', 'valueVi'] },
-                            ]
-                        },
+                            }
+                        }
                     ],
                     raw: false,
                     nest: true
