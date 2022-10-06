@@ -196,8 +196,7 @@ let bulkCreateSchedule = (data) => {
                 let toCreate = _.differenceWith(schedule, existing, (a, b) => {
                     return a.timeType === b.timeType && +a.date === +b.date;
                     // a = '5'; b = +a;
-                    // => b= 5. 
-                    //Đây là cách convert từ string sang số
+                    // => b= 5
                 });
                 //insert data
                 if (toCreate && toCreate.length > 0) {

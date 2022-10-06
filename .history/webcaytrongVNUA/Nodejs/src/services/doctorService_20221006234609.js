@@ -197,7 +197,7 @@ let bulkCreateSchedule = (data) => {
                     return a.timeType === b.timeType && +a.date === +b.date;
                     // a = '5'; b = +a;
                     // => b= 5. 
-                    //Đây là cách convert từ string sang số
+                    //Đây là cách convert từ số
                 });
                 //insert data
                 if (toCreate && toCreate.length > 0) {

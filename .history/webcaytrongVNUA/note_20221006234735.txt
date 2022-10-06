@@ -189,5 +189,5 @@ Kiểu dữ liệu TIMESTAMP trong moment có thể để ở cả dạng số v
 *MẸO:
 a = '5'; b = +a;
 => b= 5. 
-Đây là cách convert từ string sang số
+                    //Đây là cách convert từ string sang số
 

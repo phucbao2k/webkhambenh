@@ -186,8 +186,5 @@ Kiểu dữ liệu TIMESTAMP trong moment có thể để ở cả dạng số v
 để dễ convert ngày/tháng/năm, tháng/năm/ngày, tháng/ngày/năm...
 
 
-*MẸO:
-a = '5'; b = +a;
-=> b= 5. 
-Đây là cách convert từ string sang số
+
 
