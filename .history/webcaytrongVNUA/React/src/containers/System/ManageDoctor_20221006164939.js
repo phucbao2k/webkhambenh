@@ -198,10 +198,7 @@ class ManageDoctor extends Component {
                 contentHTML: '',
                 contentMarkdown: '',
                 description: '',
-                hasOldData: false,
-                addressClinic: '',
-                nameClinic: '',
-                note: ''
+                hasOldData: false
             })
         }
 

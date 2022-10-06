@@ -200,8 +200,7 @@ class ManageDoctor extends Component {
                 description: '',
                 hasOldData: false,
                 addressClinic: '',
-                nameClinic: '',
-                note: ''
+                nameClinic: ''
             })
         }
 

@@ -186,11 +186,7 @@ class ManageDoctor extends Component {
                 description: markdown.description,
                 hasOldData: true,
                 addressClinic: addressClinic,
-                nameClinic: nameClinic,
-                note: note,
-                selectedPayment: selectedPayment,
-                selectedPrice: selectedPrice,
-                selectProvince: selectProvince
+                
             })
             //để lấy thông tin từ bảng markdown rồi in ra màn hình, ta có thể gọi api như trên, rồi dùng hàm setState
         } else {
@@ -198,10 +194,7 @@ class ManageDoctor extends Component {
                 contentHTML: '',
                 contentMarkdown: '',
                 description: '',
-                hasOldData: false,
-                addressClinic: '',
-                nameClinic: '',
-                note: ''
+                hasOldData: false
             })
         }
 

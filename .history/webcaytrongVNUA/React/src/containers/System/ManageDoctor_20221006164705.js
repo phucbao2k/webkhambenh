@@ -171,26 +171,14 @@ class ManageDoctor extends Component {
                 priceId = res.data.Doctor_Infor.priceId;
                 provinceId = res.data.Doctor_Infor.provinceId;
                 selectedPayment = listPayment.find(item => {
-                    return item && item.value ===paymentId
-                })
-                selectedPrice = listPrice.find(item => {
-                    return item && item.value === priceId
-                })
-                selectProvince = listProvince.find(item => {
-                    return item && item.value === provinceId
+                    return
                 })
             }
             this.setState({
                 contentHTML: markdown.contentHTML,
                 contentMarkdown: markdown.contentMarkdown,
                 description: markdown.description,
-                hasOldData: true,
-                addressClinic: addressClinic,
-                nameClinic: nameClinic,
-                note: note,
-                selectedPayment: selectedPayment,
-                selectedPrice: selectedPrice,
-                selectProvince: selectProvince
+                hasOldData: true
             })
             //để lấy thông tin từ bảng markdown rồi in ra màn hình, ta có thể gọi api như trên, rồi dùng hàm setState
         } else {
@@ -198,10 +186,7 @@ class ManageDoctor extends Component {
                 contentHTML: '',
                 contentMarkdown: '',
                 description: '',
-                hasOldData: false,
-                addressClinic: '',
-                nameClinic: '',
-                note: ''
+                hasOldData: false
             })
         }
 
