@@ -110,7 +110,6 @@ class DoctorSchedule extends Component {
                         <i className="fa-regular fa-calendar-days">
                            
                         </i>
-                        <span><FormattedMessage id="patient.detail-doctor.schedule" /></span>
                     </div>
                     <div className="time-content">
                         {allAvailableTime && allAvailableTime.length > 0 ?
