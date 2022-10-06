@@ -16,7 +16,7 @@ class DetailDoctor extends Component {
     }
     async componentDidMount() {
         if (this.props.match && this.props.match.params && this.props.match.params.id) {
-            //nếu props này match với database ở trong api, và match vs db có tham số, và match vs tham số tồn tại ở db đó(id)
+            //
             let id = this.props.match.params.id;
             this.setState({
                 currentDoctorId: id
