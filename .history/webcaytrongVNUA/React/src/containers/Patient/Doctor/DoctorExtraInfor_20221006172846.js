@@ -54,24 +54,11 @@ class DoctorExtraInfor extends Component {
                                 <span className="left">
                                     Gía khám
                                 </span>
-                                <span className="right">350.000 VND</span>
+                                <span className=""></span>
                             </div>
-                            <div className="note">
-                                Được ưu tiến khám trước khi đặt khám qua trang web này.
-                            </div>
-                            <div className="payment">
-                                Người dùng có thể thanh toán bằng hình thức tiền mặt hoặc thẻ tín dụng
-                            </div>
-
-                        </div>
-                        <div className="hide-price">
-                            <span onClick={() => this.showHideDetailInfor(false)}>
-                                Ẩn bảng giá
-                            </span>
                         </div>
 
-                        </>
-                        }
+                        </>}
                     
                 </div>
             </div>

@@ -60,18 +60,11 @@ class DoctorExtraInfor extends Component {
                                 Được ưu tiến khám trước khi đặt khám qua trang web này.
                             </div>
                             <div className="payment">
-                                Người dùng có thể thanh toán bằng hình thức tiền mặt hoặc thẻ tín dụng
+                                
                             </div>
-
-                        </div>
-                        <div className="hide-price">
-                            <span onClick={() => this.showHideDetailInfor(false)}>
-                                Ẩn bảng giá
-                            </span>
                         </div>
 
-                        </>
-                        }
+                        </>}
                     
                 </div>
             </div>
