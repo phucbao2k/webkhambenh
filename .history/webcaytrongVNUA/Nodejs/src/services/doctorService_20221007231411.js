@@ -89,7 +89,7 @@ let saveDetailInforDoctor = (inputData) => {
                     },
                     raw: false
                 })
-                if (doctorInfor) {
+                if(doctorInfor) {
                     doctorInfor.doctorId = inputData.doctorId;
                     doctorInfor.priceId = inputData.selectedPrice;
                     doctorInfor.provinceId = inputData.selectProvince;
@@ -98,10 +98,10 @@ let saveDetailInforDoctor = (inputData) => {
                     doctorInfor.addressClinic = inputData.addressClinic;
                     doctorInfor.note = inputData.note;
                     await doctorInfor.save();
-                } else {
+                }else{
                     await db.Doctor_Infor.create({
                         doctorId: inputData.doctorId,
-                        priceId: inputData.selectedPrice,
+                        priceId:inputData.selectedPrice,
                         provinceId: inputData.selectProvince,
                         paymentId: inputData.selectedPayment,
                         nameClinic: inputData.nameClinic,
@@ -143,11 +143,11 @@ let getDetailDoctorById = (inputId) => {
                         { model: db.Allcode, as: 'positionData', attributes: ['valueEn', 'valueVi'] },
                         {
                             model: db.Doctor_Infor,
-                            attributes: {
-                                exclude: ['id', 'doctorId']
+                            attributes:{
+                                exclude:['id','doctorId']
                             },
-                            include: [
-                                { model: db.Allcode, as: 'priceTypeData', attributes: ['valueEn', 'valueVi'] },
+                            include:[
+                                {model: db.Allcode, as:'priceTypeData', attributes: ['valueEn', 'valueVi']},
                                 { model: db.Allcode, as: 'provinceTypeData', attributes: ['valueEn', 'valueVi'] },
                                 { model: db.Allcode, as: 'paymentTypeData', attributes: ['valueEn', 'valueVi'] },
                             ]
@@ -249,40 +249,14 @@ let getScheduleByDate = (doctorId, date) => {
         }
     })
 }
-let getExtraInforDoctorById = (idInput) => {
-    return new Promise(async (resolve, reject) => {
-        try {
-            if (!idInput) {
-                resolve({
-                    errCode: 1,
-                    errMessage: 'Missing required parameters'
-                })
-            } else {
-                let data = await db.Doctor_Infor.findOne({
-                    where: {
-                        doctorId: idInput
-                    },
-                    attributes: {
-                        exclude: ['id', 'doctorId']
-                    },
-                    include: [
-                        { model: db.Allcode, as: 'priceTypeData', attributes: ['valueEn', 'valueVi'] },
-                        { model: db.Allcode, as: 'provinceTypeData', attributes: ['valueEn', 'valueVi'] },
-                        { model: db.Allcode, as: 'paymentTypeData', attributes: ['valueEn', 'valueVi'] },
-                    ],
-                    raw: false,
-                    nest: true
-                })
-                if (!data) data = {};
-                resolve({
-                    errCode: 0,
-                    data: data
-                })
-            }
-        } catch (e) {
-            reject(e);
-        }
-    })
+let getExtraInforDoctorById = async (req, res) =>{
+    try{
+let infor = await doctorService.getExtraInforDoctorById(req.query.id);
+return res.status(200).json(infor);
+    }catch(e){
+console.log(e);
+return res.status(200)
+    }
 }
 module.exports = {
     getTopDoctorHome: getTopDoctorHome,
@@ -290,7 +264,5 @@ module.exports = {
     saveDetailInforDoctor: saveDetailInforDoctor,
     getDetailDoctorById: getDetailDoctorById,
     bulkCreateSchedule: bulkCreateSchedule,
-    getScheduleByDate: getScheduleByDate,
-    getExtraInforDoctorById: getExtraInforDoctorById
-
+    getScheduleByDate: getScheduleByDate
 }
