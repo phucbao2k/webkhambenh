@@ -39,8 +39,7 @@
             "no-schedule": " Bác sĩ không có lịch hẹn khám trong thời gian này, vui lòng chọn ngày khác",
             "choose": "Chọn ",
             "book-free": " và đặt (miễn phí) "
-        },
-         "extra-infor-doctor": {
+        } "extra-infor-doctor": {
             "text-address": "Địa chỉ khám",
             "price": "Gía khám: ",
             "detail": "Xem chi tiết",

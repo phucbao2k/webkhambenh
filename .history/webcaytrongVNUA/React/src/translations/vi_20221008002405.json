@@ -40,12 +40,12 @@
             "choose": "Chọn ",
             "book-free": " và đặt (miễn phí) "
         },
-         "extra-infor-doctor": {
-            "text-address": "Địa chỉ khám",
-            "price": "Gía khám: ",
-            "detail": "Xem chi tiết",
-            "payment": "Khách hàng có thể thanh toán chi phí bằng các hình thức: ",
-            "hide-price": "Ẩn bảng giá"
+        "extra-infor-doctor":{
+            "text-address": "Address of examination",
+            "price": "Examination price: ",
+            "detail": "See details",
+            "payment": "The patient can pay the cost in the form of: ",
+            "hide-price": "Hide"
         }
     },
     "admin":{

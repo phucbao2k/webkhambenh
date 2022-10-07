@@ -41,10 +41,10 @@
             "book-free": " and book (free)! "
         },
         "extra-infor-doctor": {
-            "text-address": "Address of examination",
-            "price": "Examination price: ",
-            "detail": "See details",
-            "payment": "The customer can pay the cost in the form of: ",
+            "text-address": "Địa chỉ khám",
+            "price": "Gía khám: ",
+            "detail": "Xem chi tiết",
+            "payment": "Khách hàng có thể : ",
             "hide-price": "Hide price list"
         }
     },
