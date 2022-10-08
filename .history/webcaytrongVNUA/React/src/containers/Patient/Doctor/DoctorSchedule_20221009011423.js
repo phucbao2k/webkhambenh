@@ -7,7 +7,7 @@ import localization from 'moment/locale/vi';
 import { LANGUAGES } from '../../../utils';
 import { getScheduleDoctorByDate } from '../../../services/userService';
 import { FormattedMessage } from 'react-intl';
-import BookingModal from './Modal/BookingModal';
+import BookingModal from './Modal'
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);
@@ -137,9 +137,7 @@ class DoctorSchedule extends Component {
                                         let timeDisplay = language === LANGUAGES.VI ?
                                             item.timeTypeData.valueVi : item.timeTypeData.valueEn;
                                         return (
-                                            <button key={index}
-                                            className={language === LANGUAGES.VI ? 'btn-vie': 'btn-en'}
-                                            onClick={()=> this.handleClickScheduleTime(item)}> {timeDisplay}
+                                            <button key={index}> {timeDisplay}
                                             </button>
                                         )
                                     })
