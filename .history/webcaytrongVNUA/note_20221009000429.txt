@@ -196,5 +196,5 @@ this.props.match && this.props.match.params && this.props.match.params.id:
 
 
 KHI CONSOLE CỦA ReactJs BÁO biến undefined với biến được gọi(lấy từ redux), thì ta sang redux xem console log check
-bên đó biến đấy có bị undefined hay không, nếu có check syntax và logic cả hai bên 
+bên đó biến đấy có bị undefined hay không, nếu có check syntax 
 

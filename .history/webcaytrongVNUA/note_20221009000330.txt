@@ -195,6 +195,5 @@ this.props.match && this.props.match.params && this.props.match.params.id:
 ---nếu props này match với database ở trong api, và match vs db có tham số, và match vs tham số tồn tại ở db đó(id)
 
 
-KHI CONSOLE CỦA ReactJs BÁO biến undefined với biến được gọi(lấy từ redux), thì ta sang redux xem console log check
-bên đó biến đấy có bị undefined hay không, nếu có check syntax và logic cả hai bên 
+KHI CONSOLE CỦA ReactJs BÁO biến undefined với biến được gọi(lấy từ redux), 
 

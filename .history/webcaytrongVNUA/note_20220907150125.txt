@@ -1,2 +1,0 @@
-Hàm .destroy() chỉ thực hiện được khi đứng trước nó là 1 object của Sequelize.
-Đối với các function(hàm) dùng để xử lý(handle) sự kiện(evenet) onChange, onClick, on... các kiểu, thì ta buộc phải dùng arrow function
