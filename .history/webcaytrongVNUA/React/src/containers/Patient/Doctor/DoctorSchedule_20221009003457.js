@@ -7,15 +7,13 @@ import localization from 'moment/locale/vi';
 import { LANGUAGES } from '../../../utils';
 import { getScheduleDoctorByDate } from '../../../services/userService';
 import { FormattedMessage } from 'react-intl';
-import BookingModal from './Modal/BookingModal';
+import BookingModal from './'
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);
         this.state = {
             allDays: [],
-            allAvailableTime: [],
-            isOpenModalBooking: false,
-            dataScheduleTimeModal: {}
+            allAvailableTime: []
         }
     }
     async componentDidMount() {
@@ -90,24 +88,10 @@ class DoctorSchedule extends Component {
             console.log('check res', res);
         }
     }
-    handleClickScheduleTime =(time)=> {
-        this.setState({
-            isOpenModalBooking:true,
-            dataScheduleTimeModal:time, 
-        })
-    }
-    closeBookingClose = ()=>{
-        this.setState({
-            isOpenModalBooking:false
-        })
-    }
     render() {
-        let { allDays, allAvailableTime, isOpenModalBooking, dataScheduleTimeModal } = this.state;
+        let { allDays, allAvailableTime } = this.state;
         let { language } = this.props;
         return (
-            <React.Fragment>
-
-           
             <div className="doctor-schedule-container">
                 <div className="all-schedule">
                     <select onChange={(event) => this.handleOnChangeSelect(event)}>
@@ -159,12 +143,9 @@ class DoctorSchedule extends Component {
                     </div>
                 </div>
                 </div>
-                <BookingModal 
-                isOpenModal={isOpenModalBooking}
-                closeBookingClose= {this.closeBookingClose}
-                dataTime={dataScheduleTimeModal}/>
+                
            
-            </React.Fragment>
+
                     );
            
     }

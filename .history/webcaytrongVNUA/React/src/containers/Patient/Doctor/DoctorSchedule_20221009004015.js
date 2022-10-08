@@ -102,12 +102,9 @@ class DoctorSchedule extends Component {
         })
     }
     render() {
-        let { allDays, allAvailableTime, isOpenModalBooking, dataScheduleTimeModal } = this.state;
+        let { allDays, allAvailableTime } = this.state;
         let { language } = this.props;
         return (
-            <React.Fragment>
-
-           
             <div className="doctor-schedule-container">
                 <div className="all-schedule">
                     <select onChange={(event) => this.handleOnChangeSelect(event)}>
@@ -159,12 +156,10 @@ class DoctorSchedule extends Component {
                     </div>
                 </div>
                 </div>
-                <BookingModal 
-                isOpenModal={isOpenModalBooking}
-                closeBookingClose= {this.closeBookingClose}
-                dataTime={dataScheduleTimeModal}/>
+                <BookingModal open
+                
            
-            </React.Fragment>
+
                     );
            
     }
