@@ -18,11 +18,11 @@ module.exports = {
             },
             provinceId: {
                 type: Sequelize.STRING,
-                allowNull: false,
+               
             },
             paymentId: {
                 type: Sequelize.STRING,
-                allowNull: false,
+                
             },
             addressClinic: {
                 type: Sequelize.STRING,

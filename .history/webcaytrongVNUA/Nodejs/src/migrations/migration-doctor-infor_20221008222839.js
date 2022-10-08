@@ -22,7 +22,7 @@ module.exports = {
             },
             paymentId: {
                 type: Sequelize.STRING,
-                allowNull: false,
+                
             },
             addressClinic: {
                 type: Sequelize.STRING,
