@@ -199,6 +199,4 @@ KHI CONSOLE CỦA ReactJs BÁO biến undefined với biến được gọi(lấ
 bên đó biến đấy có bị undefined hay không, nếu có check syntax và logic cả hai bên 
 
 
-//CÁCH DEBUG:
-Vì js là ngôn ngữ đơn luồng, mọi thứ sẽ được thực hiện tuần tự, nên khi debug chúng ta sẽ phải đặt bug
-ở đầu mỗi hàm(lần lượt từ trên xuống dưới, muốn kiểm tra đang ở file nào thì vào source để inspect rồi vào App.js để lấy Route path)
+//
