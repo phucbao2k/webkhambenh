@@ -221,7 +221,7 @@ class ManageDoctor extends Component {
             ...stateCopy
         })
     }
-    //thêm id vào để tái tận dụng cho các state khác nhau, chỉ việc thay id = tên state chúng ta muốn ở các component là dùng được.
+    //thêm id vào để tái tận dụng cho các state sau, chỉ việc thay tên id vào là dùng được.
     render() {
 
         let { hasOldData } = this.state;
