@@ -288,8 +288,7 @@ let getProfileDoctorById = (inputId) => {
         try{
 if(!inputId){
     resolve({
-        errCode: 1,
-        errMessage: 'Missing required parameters'
+        errCode: 1
     })
 }
         }catch(e){

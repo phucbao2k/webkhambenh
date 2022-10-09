@@ -286,15 +286,8 @@ let getExtraInforDoctorById = (idInput) => {
 let getProfileDoctorById = (inputId) => {
     return new Promise( async (resolve, reject)=>{
         try{
-if(!inputId){
-    resolve({
-        errCode: 1,
-        errMessage: 'Missing required parameters'
-    })
-}
-        }catch(e){
 
-        }
+        }catch(e)
     })
 }
 module.exports = {
