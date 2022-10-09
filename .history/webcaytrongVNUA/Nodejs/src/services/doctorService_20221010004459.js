@@ -323,11 +323,10 @@ if(!inputId){
     if(!data) data ={};
     resolve({
         errCode: 0,
-        data: data
     })
 }
         }catch(e){
-            reject(e);
+
         }
     })
 }

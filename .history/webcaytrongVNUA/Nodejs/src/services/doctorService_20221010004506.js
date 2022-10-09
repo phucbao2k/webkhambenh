@@ -327,7 +327,7 @@ if(!inputId){
     })
 }
         }catch(e){
-            reject(e);
+
         }
     })
 }

@@ -321,13 +321,10 @@ if(!inputId){
         data.image = new Buffer(data.image, 'base64').toString('binary');
     }
     if(!data) data ={};
-    resolve({
-        errCode: 0,
-        data: data
-    })
+    resolve
 }
         }catch(e){
-            reject(e);
+
         }
     })
 }

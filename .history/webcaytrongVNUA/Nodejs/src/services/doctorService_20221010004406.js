@@ -318,16 +318,11 @@ if(!inputId){
         nest: true
     })
     if(data && data.image){
-        data.image = new Buffer(data.image, 'base64').toString('binary');
+        data.image = new Buffer(data.image, 'base64').toString('b')
     }
-    if(!data) data ={};
-    resolve({
-        errCode: 0,
-        data: data
-    })
 }
         }catch(e){
-            reject(e);
+
         }
     })
 }
