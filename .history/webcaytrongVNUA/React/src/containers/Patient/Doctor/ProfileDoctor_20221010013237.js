@@ -52,30 +52,30 @@ class ProfileDoctor extends Component {
         }
         return (
             <div className="profile-doctor-container">
-                <div className="intro-doctor">
-                    <div className="content-left"
-                        style={{ backgroundImage: `url(${dataProfile && dataProfile.image ? dataProfile.image : ''})` }}>
-
-                    </div>
-                    <div className="content-right">
-                        <div className="up">
-                            {language === LANGUAGES.VI ? nameVi : nameEn}
-                        </div>
-                        <div className="down">
-                            {dataProfile && dataProfile.Markdown && dataProfile.Markdown.description
-                                &&
-                                <span>
-                                    {dataProfile.Markdown.description}</span>}
-                        </div>
-                    </div>
-                </div>
-                <div className="price">
+<div className="intro-doctor">
+    <div className="content-left"
+                        style= style={{ backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})` }}>
+        
+    </div>
+    <div className="content-right">
+        <div className="up">
+            {language === LANGUAGES.VI ? nameVi: nameEn}
+        </div>
+        <div className="down">
+            {dataProfile && dataProfile.Markdown && dataProfile.Markdown.description
+            &&
+            <span>
+                {dataProfile.Markdown.description}</span>}
+        </div>
+    </div>
+</div>
+<div className="price">
                     <FormattedMessage id="patient.extra-infor-doctor.price" />
                     {dataProfile && dataProfile.Doctor_Infor && language === LANGUAGES.VI
                         &&
                         <NumberFormat
                             className="currency"
-                            value={dataProfile.Doctor_Infor.priceTypeData.valueVi}
+                        value={dataProfile.Doctor_Infor.priceTypeData.valueVi}
                             displayType={'text'}
                             thousandSeparator={true}
                             suffix={'VND'}
@@ -84,13 +84,13 @@ class ProfileDoctor extends Component {
                     {dataProfile && dataProfile.Doctor_Infor && language === LANGUAGES.EN &&
                         <NumberFormat
                             className="currency"
-                            value={dataProfile.Doctor_Infor.priceTypeData.valueEn}
+                        value={dataProfile.Doctor_Infor.priceTypeData.valueEn}
                             displayType={'text'}
                             thousandSeparator={true}
                             suffix={'USD'}
                         />
                     }
-                </div>
+</div>
             </div>
         )
     }
