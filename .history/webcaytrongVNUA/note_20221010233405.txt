@@ -203,4 +203,4 @@ bên đó biến đấy có bị undefined hay không, nếu có check syntax v�
 Vì js là ngôn ngữ đơn luồng, mọi thứ sẽ được thực hiện tuần tự, nên khi debug chúng ta sẽ phải đặt bug
 ở đầu mỗi hàm(lần lượt từ trên xuống dưới, muốn kiểm tra đang ở file nào thì vào source để inspect rồi vào App.js để lấy Route path)
 
-//attributes trong nodejs để lấy hoặc loại bỏ giá trị các trường trong db
+//include trong 
