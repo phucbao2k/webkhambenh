@@ -87,10 +87,7 @@ renderTimeBooking = (dataTime) => {
                                     <span>
                                         {dataProfile.Markdown.description}</span>}
                             </>
-                            :
-                            <>
-                            {this.renderTimeBooking(dataTime)}
-                            </>}
+                            :}
                            
                         </div>
                     </div>

@@ -52,8 +52,7 @@ class BookingModal extends Component {
                         <div className="doctor-infor">
                             <ProfileDoctor
                                 doctorId={doctorId} 
-                                isShowDescriptionDoctor={false}
-                                dataTime={dataTime}/>
+                                isShowDescription={false}/>
                         </div>
                         <div className="price">
                             Gía khám 350.000 VND

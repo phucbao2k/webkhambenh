@@ -61,8 +61,8 @@ renderTimeBooking = (dataTime) => {
     return <></>
 }
     render() {
-        let { dataProfile} = this.state;
-        let { language, isShowDescriptionDoctor, dataTime } = this.props;
+        let { dataProfile, isShow } = this.state;
+        let { language } = this.props;
         let nameVi = '', nameEn = '';
         if (dataProfile && dataProfile.positionData) {
             nameVi = `${dataProfile.positionData.valueVi}, ${dataProfile.firstName} ${dataProfile.lastName}`;
@@ -80,18 +80,10 @@ renderTimeBooking = (dataTime) => {
                             {language === LANGUAGES.VI ? nameVi : nameEn}
                         </div>
                         <div className="down">
-                            {isShowDescriptionDoctor === true ? 
-                            <>
-                                {dataProfile && dataProfile.Markdown && dataProfile.Markdown.description
-                                    &&
-                                    <span>
-                                        {dataProfile.Markdown.description}</span>}
-                            </>
-                            :
-                            <>
-                            {this.renderTimeBooking(dataTime)}
-                            </>}
-                           
+                            {dataProfile && dataProfile.Markdown && dataProfile.Markdown.description
+                                &&
+                                <span>
+                                    {dataProfile.Markdown.description}</span>}
                         </div>
                     </div>
                 </div>

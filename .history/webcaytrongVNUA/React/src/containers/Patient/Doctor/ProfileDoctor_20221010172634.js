@@ -80,7 +80,7 @@ renderTimeBooking = (dataTime) => {
                             {language === LANGUAGES.VI ? nameVi : nameEn}
                         </div>
                         <div className="down">
-                            {isShowDescriptionDoctor === true ? 
+                            {isShowDescription === true ? 
                             <>
                                 {dataProfile && dataProfile.Markdown && dataProfile.Markdown.description
                                     &&

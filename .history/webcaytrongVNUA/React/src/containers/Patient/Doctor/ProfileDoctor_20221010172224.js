@@ -80,18 +80,11 @@ renderTimeBooking = (dataTime) => {
                             {language === LANGUAGES.VI ? nameVi : nameEn}
                         </div>
                         <div className="down">
-                            {isShowDescriptionDoctor === true ? 
-                            <>
-                                {dataProfile && dataProfile.Markdown && dataProfile.Markdown.description
-                                    &&
-                                    <span>
-                                        {dataProfile.Markdown.description}</span>}
-                            </>
-                            :
-                            <>
-                            {this.renderTimeBooking(dataTime)}
-                            </>}
-                           
+                            {isShowDescriptionDoctor}
+                            {dataProfile && dataProfile.Markdown && dataProfile.Markdown.description
+                                &&
+                                <span>
+                                    {dataProfile.Markdown.description}</span>}
                         </div>
                     </div>
                 </div>

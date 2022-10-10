@@ -89,7 +89,7 @@ renderTimeBooking = (dataTime) => {
                             </>
                             :
                             <>
-                            {this.renderTimeBooking(dataTime)}
+                            {this.renderTimeBooking(data)}
                             </>}
                            
                         </div>

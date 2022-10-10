@@ -52,17 +52,13 @@ renderTimeBooking = (dataTime) => {
         moment.unix(+dataTime.date / 1000).format('ddd -DD/MM/YYYY') :
             moment.unix(+dataTime.date / 1000).locale('en').format('ddd -MM/DD/YYYY')
             return(
-                <>
-                <div>{time} -{date}</div>
-                <div>Miễn phí đặt lịch</div>
-                </>
+                
             )
     }
-    return <></>
 }
     render() {
-        let { dataProfile} = this.state;
-        let { language, isShowDescriptionDoctor, dataTime } = this.props;
+        let { dataProfile } = this.state;
+        let { language } = this.props;
         let nameVi = '', nameEn = '';
         if (dataProfile && dataProfile.positionData) {
             nameVi = `${dataProfile.positionData.valueVi}, ${dataProfile.firstName} ${dataProfile.lastName}`;
@@ -80,18 +76,10 @@ renderTimeBooking = (dataTime) => {
                             {language === LANGUAGES.VI ? nameVi : nameEn}
                         </div>
                         <div className="down">
-                            {isShowDescriptionDoctor === true ? 
-                            <>
-                                {dataProfile && dataProfile.Markdown && dataProfile.Markdown.description
-                                    &&
-                                    <span>
-                                        {dataProfile.Markdown.description}</span>}
-                            </>
-                            :
-                            <>
-                            {this.renderTimeBooking(dataTime)}
-                            </>}
-                           
+                            {dataProfile && dataProfile.Markdown && dataProfile.Markdown.description
+                                &&
+                                <span>
+                                    {dataProfile.Markdown.description}</span>}
                         </div>
                     </div>
                 </div>
