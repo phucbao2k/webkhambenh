@@ -9,7 +9,7 @@ if( !data.email || !data.doctorId || !data.timeType || !data.date){
         errMessage: 'Missing required fields'
     })
 }else{
-    let user = await db.User.findOrCreate({
+    let user = await db.User.findcreate({
         where: {email: data.email},
         defaults:{
             email: data.email,
@@ -18,12 +18,15 @@ if( !data.email || !data.doctorId || !data.timeType || !data.date){
     });
     console.log('check customer: ', user[0])
     if(user && user[0]){
-        await db.Booking.create({        
+        await db.Booking.create({
+            where: {patientId: user[0].id},
+            defaults:{
                 statusId: 'S1',
                 doctorId: data.doctorId,
                 patientId: user[0].id,
                 date: data.date,
                 timeType: data.timeType
+            }
         })
     }
     resolve({

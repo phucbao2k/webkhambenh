@@ -18,12 +18,15 @@ if( !data.email || !data.doctorId || !data.timeType || !data.date){
     });
     console.log('check customer: ', user[0])
     if(user && user[0]){
-        await db.Booking.create({        
+        await db.Booking.create({
+            
+           
                 statusId: 'S1',
                 doctorId: data.doctorId,
                 patientId: user[0].id,
                 date: data.date,
                 timeType: data.timeType
+            }
         })
     }
     resolve({
