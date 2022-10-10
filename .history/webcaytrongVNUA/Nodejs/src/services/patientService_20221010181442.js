@@ -16,7 +16,7 @@ if( !data.email || !data.doctorId || !data.timeType || !data.date){
             roleId: 'R3'
         },
     });
-    console.log('check customer: ', user[0])
+    console.log('check customer: ', user[])
     if(user && user[0]){
         await db.Booking.findOrCreate({
             where: {patientId: user[0].id},
