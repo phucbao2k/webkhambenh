@@ -1,0 +1,1 @@
+import patientService from '../services/patientService';
