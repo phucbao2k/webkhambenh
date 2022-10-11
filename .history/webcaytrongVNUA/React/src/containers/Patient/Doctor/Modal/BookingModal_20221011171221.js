@@ -91,7 +91,7 @@ class BookingModal extends Component {
         });
     }
     handleConfirmBooking = async () => {
-        let date = new Date(this.state.birthday).getTime();
+        let date = new Date( this.state.birthday).getTime();
         let res = await postPatientBookAppointment({
             fullName: this.state.fullName,
             phoneNumber: this.state.phoneNumber,
@@ -99,16 +99,8 @@ class BookingModal extends Component {
             address: this.state.address,
             reason: this.state.reason,
             date: date,
-            selectedGender: this.state.selectedGender.value,
-            doctorId: this.state.doctorId,
-            timeType: this.state.timeType,
+            sele
         })
-        if (res && res.errCode === 0) {
-            toast.success("Booking a new appointment succeed!")
-            this.props.closeBookingClose();
-        } else {
-            toast.error("Booking a new appointment failed!")
-        }
     }
     render() {
         let { isOpenModal, closeBookingClose, dataTime } = this.props;

@@ -72,44 +72,15 @@ class BookingModal extends Component {
 
         }
     }
-    handleOnChangeInput = (event, id) => {
-        let valueInput = event.target.value;
-        let stateCopy = { ...this.state };
-        stateCopy[id] = valueInput;
-        this.setState({
-            ...stateCopy
-        })
-    }
-    handleOnChangeDatePicker = (date) => {
-        this.setState({
-            birthday: date[0]
-        })
-    }
-    handleChangeSelect = (selectedOption) => {
-        this.setState({
-            selectedGender: selectedOption
-        });
-    }
-    handleConfirmBooking = async () => {
-        let date = new Date(this.state.birthday).getTime();
-        let res = await postPatientBookAppointment({
-            fullName: this.state.fullName,
-            phoneNumber: this.state.phoneNumber,
-            email: this.state.email,
-            address: this.state.address,
-            reason: this.state.reason,
-            date: date,
-            selectedGender: this.state.selectedGender.value,
-            doctorId: this.state.doctorId,
-            timeType: this.state.timeType,
-        })
-        if (res && res.errCode === 0) {
-            toast.success("Booking a new appointment succeed!")
-            this.props.closeBookingClose();
-        } else {
-            toast.error("Booking a new appointment failed!")
-        }
-    }
+handleOnChangeInput = (event,id) => {
+    let valueInput = event.target.value;
+    let stateCopy = { ...this.state};
+    stateCopy[id] = valueInput;
+    this.setState({
+        ...stateCopy
+    })
+}
+
     render() {
         let { isOpenModal, closeBookingClose, dataTime } = this.props;
         let doctorId = '';

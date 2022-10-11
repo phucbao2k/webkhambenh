@@ -9,8 +9,8 @@ import DatePicker from '../../../../components/Input/DatePicker';
 import { LANGUAGES } from '../../../utils';
 import * as actions from "../../store/actions";
 import Select from "react-select";
-import { toast } from "react-toastify";
-import { postPatientBookAppointment } from "../../../../services/userService";
+import {toast} from "react-toastify";
+import {postPatientBookAppointment} from "../../../../services/userService";
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 
 class BookingModal extends Component {
@@ -18,98 +18,43 @@ class BookingModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            fullName: '',
-            phoneNumber: '',
-            email: '',
-            address: '',
-            reason: '',
-            birthday: '',
-            selectedGender: '',
-            doctorId: '',
-            genders: '',
-            timeType: ''
+fullName: '',
+phoneNumber: '',
+email: '',
+address: '',
+reason: '',
+birthday: '',
+selectedGender: '',
+doctorId: '',
+genders: '',
+timeType: ''
         }
 
     }
 
 
     async componentDidMount() {
-        this.props.getGenders();
+this.props.getGenders();
     }
     buildDataGender = (data) => {
         let result = [];
         let language = this.props.language;
-        if (data && data.length > 0) {
+        if(data && data.length >0){
             data.map(item => {
                 let object = {};
                 object.label = language === LANGUAGES.VI ? item.valueVi : item.valueEn;
                 object.value = item.keyMap;
-                result.push(object);
+                result.push
             })
         }
-        return result;
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
-            this.setState({
-                genders: this.buildDataGender(this.props.genders)
-            })
-        }
-        if (this.props.genders !== prevProps.genders) {
-            this.setState({
-                genders: this.buildDataGender(this.props.genders)
-            })
-        }
-        if (this.props.dataTime !== prevProps.dataTime) {
-            if (this.props.dataTime && !_.isEmpty(this.props.dataTime)) {
-                let doctorId = this.props.dataTime.doctorId;
-                let timeType = this.props.dataTime.timeType;
-                this.setState({
-                    doctorId: doctorId,
-                    timeType: timeType
-                })
-            }
 
         }
     }
-    handleOnChangeInput = (event, id) => {
-        let valueInput = event.target.value;
-        let stateCopy = { ...this.state };
-        stateCopy[id] = valueInput;
-        this.setState({
-            ...stateCopy
-        })
-    }
-    handleOnChangeDatePicker = (date) => {
-        this.setState({
-            birthday: date[0]
-        })
-    }
-    handleChangeSelect = (selectedOption) => {
-        this.setState({
-            selectedGender: selectedOption
-        });
-    }
-    handleConfirmBooking = async () => {
-        let date = new Date(this.state.birthday).getTime();
-        let res = await postPatientBookAppointment({
-            fullName: this.state.fullName,
-            phoneNumber: this.state.phoneNumber,
-            email: this.state.email,
-            address: this.state.address,
-            reason: this.state.reason,
-            date: date,
-            selectedGender: this.state.selectedGender.value,
-            doctorId: this.state.doctorId,
-            timeType: this.state.timeType,
-        })
-        if (res && res.errCode === 0) {
-            toast.success("Booking a new appointment succeed!")
-            this.props.closeBookingClose();
-        } else {
-            toast.error("Booking a new appointment failed!")
-        }
-    }
+
+
     render() {
         let { isOpenModal, closeBookingClose, dataTime } = this.props;
         let doctorId = '';
@@ -133,9 +78,9 @@ class BookingModal extends Component {
                     <div className="booking-modal-body">
                         <div className="doctor-infor">
                             <ProfileDoctor
-                                doctorId={doctorId}
+                                doctorId={doctorId} 
                                 isShowDescriptionDoctor={false}
-                                dataTime={dataTime} />
+                                dataTime={dataTime}/>
                         </div>
                         <div className="price">
                             Gía khám 350.000 VND

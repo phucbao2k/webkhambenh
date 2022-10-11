@@ -61,55 +61,15 @@ class BookingModal extends Component {
             })
         }
         if (this.props.dataTime !== prevProps.dataTime) {
-            if (this.props.dataTime && !_.isEmpty(this.props.dataTime)) {
-                let doctorId = this.props.dataTime.doctorId;
-                let timeType = this.props.dataTime.timeType;
-                this.setState({
-                    doctorId: doctorId,
-                    timeType: timeType
-                })
-            }
+            if(this.props.dataTime && !_.isEmpty(this.props.dataTime))
+            this.setState({
+               doctorId: doctorId,
+               timeType: timeType
+            })
+        }
+    }
 
-        }
-    }
-    handleOnChangeInput = (event, id) => {
-        let valueInput = event.target.value;
-        let stateCopy = { ...this.state };
-        stateCopy[id] = valueInput;
-        this.setState({
-            ...stateCopy
-        })
-    }
-    handleOnChangeDatePicker = (date) => {
-        this.setState({
-            birthday: date[0]
-        })
-    }
-    handleChangeSelect = (selectedOption) => {
-        this.setState({
-            selectedGender: selectedOption
-        });
-    }
-    handleConfirmBooking = async () => {
-        let date = new Date(this.state.birthday).getTime();
-        let res = await postPatientBookAppointment({
-            fullName: this.state.fullName,
-            phoneNumber: this.state.phoneNumber,
-            email: this.state.email,
-            address: this.state.address,
-            reason: this.state.reason,
-            date: date,
-            selectedGender: this.state.selectedGender.value,
-            doctorId: this.state.doctorId,
-            timeType: this.state.timeType,
-        })
-        if (res && res.errCode === 0) {
-            toast.success("Booking a new appointment succeed!")
-            this.props.closeBookingClose();
-        } else {
-            toast.error("Booking a new appointment failed!")
-        }
-    }
+
     render() {
         let { isOpenModal, closeBookingClose, dataTime } = this.props;
         let doctorId = '';
