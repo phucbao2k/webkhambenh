@@ -271,7 +271,7 @@ class BookingModal extends Component {
 const mapStateToProps = state => {
     return {
         language: state.app.language
-        // genders: state.admin.genders
+        genders: state.admin.genders
     };
 };
 

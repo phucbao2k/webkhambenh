@@ -26,7 +26,7 @@ class BookingModal extends Component {
             reason: '',
             plantName: '',
             specialtyName: '',
-            // selectedGender: '',
+            selectedGender: '',
             doctorId: '',
             genders: '',
             timeType: '',
@@ -42,30 +42,30 @@ class BookingModal extends Component {
     async componentDidMount() {
         this.props.getGenders();
     }
-    // buildDataGender = (data) => {
-    //     let result = [];
-    //     let language = this.props.language;
-    //     if (data && data.length > 0) {
-    //         data.map(item => {
-    //             let object = {};
-    //             object.label = language === LANGUAGES.VI ? item.valueVi : item.valueEn;
-    //             object.value = item.keyMap;
-    //             result.push(object);
-    //         })
-    //     }
-    //     return result;
-    // }
+    buildDataGender = (data) => {
+        let result = [];
+        let language = this.props.language;
+        if (data && data.length > 0) {
+            data.map(item => {
+                let object = {};
+                object.label = language === LANGUAGES.VI ? item.valueVi : item.valueEn;
+                object.value = item.keyMap;
+                result.push(object);
+            })
+        }
+        return result;
+    }
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
             this.setState({
                 genders: this.buildDataGender(this.props.genders)
             })
         }
-        // if (this.props.genders !== prevProps.genders) {
-        //     this.setState({
-        //         genders: this.buildDataGender(this.props.genders)
-        //     })
-        // }
+        if (this.props.genders !== prevProps.genders) {
+            this.setState({
+                genders: this.buildDataGender(this.props.genders)
+            })
+        }
         if (this.props.dataTime !== prevProps.dataTime) {
             if (this.props.dataTime && !_.isEmpty(this.props.dataTime)) {
                 let doctorId = this.props.dataTime.doctorId;
@@ -218,13 +218,13 @@ class BookingModal extends Component {
                                         value={this.state.date}
                                         />
                                     </div> */}
-                                    {/* <div className="col-6 form-group">
+                                    <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.gender" /></label>
                                         <Select
                                         value={this.state.selectedGender}
                                         onChange={this.handleChangeSelect}
                                         options={this.state.genders}/>
-                                    </div> */}
+                                    </div>
                                     <div className="col-6 form-group">
                                         <label><FormattedMessage id="patient.booking-modal.plantName" /></label>
                                         <input className="form-control"
@@ -270,8 +270,8 @@ class BookingModal extends Component {
 
 const mapStateToProps = state => {
     return {
-        language: state.app.language
-        // genders: state.admin.genders
+        language: state.app.language,
+        genders: state.admin.genders
     };
 };
 
