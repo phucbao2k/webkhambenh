@@ -206,9 +206,6 @@ class BookingModal extends Component {
                                     <div className="col-6 form-group">
                                         <label>Giới tính</label>
                                         <Select
-                                        value={this.state.selectedGender}
-                                        onChange={this.handleChangeSelect}
-                                        options={this.state.genders}/>
                                     </div>
                                     <div className="col-6 form-group">
                                         <label><FormattedMessage id="patient.booking-modal.plantName" /></label>

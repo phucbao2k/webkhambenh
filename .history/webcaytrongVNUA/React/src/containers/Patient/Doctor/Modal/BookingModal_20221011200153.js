@@ -208,7 +208,7 @@ class BookingModal extends Component {
                                         <Select
                                         value={this.state.selectedGender}
                                         onChange={this.handleChangeSelect}
-                                        options={this.state.genders}/>
+                                        options={this.state}/>
                                     </div>
                                     <div className="col-6 form-group">
                                         <label><FormattedMessage id="patient.booking-modal.plantName" /></label>
