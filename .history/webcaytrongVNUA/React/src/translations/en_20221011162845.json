@@ -57,9 +57,9 @@
             "birthday": "Date of birth",
             "gender": "Gender",
             "btnConfirm": "Confirm",
-            "btnCancel": "Cancel",
-            "priceBooking": "Free booking",
-            "price": "Price: "
+            "btnCancel": "Hủy",
+            "priceBooking": "Miễn phí đặt lịch",
+            "price": "Gía khám: "
         }
     },
     "admin": {

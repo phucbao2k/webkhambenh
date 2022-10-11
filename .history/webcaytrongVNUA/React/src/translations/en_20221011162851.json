@@ -58,8 +58,8 @@
             "gender": "Gender",
             "btnConfirm": "Confirm",
             "btnCancel": "Cancel",
-            "priceBooking": "Free booking",
-            "price": "Price: "
+            "priceBooking": "Miễn phí đặt lịch",
+            "price": "Gía khám: "
         }
     },
     "admin": {

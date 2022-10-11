@@ -54,12 +54,12 @@
             "email": "Email address",
             "address": "Contact address",
             "reason": "Reason for examination",
-            "birthday": "Date of birth",
-            "gender": "Gender",
-            "btnConfirm": "Confirm",
-            "btnCancel": "Cancel",
-            "priceBooking": "Free booking",
-            "price": "Price: "
+            "birthday": "Ngày sinh",
+            "gender": "Giới tính",
+            "btnConfirm": "Xác nhận",
+            "btnCancel": "Hủy",
+            "priceBooking": "Miễn phí đặt lịch",
+            "price": "Gía khám: "
         }
     },
     "admin": {

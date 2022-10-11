@@ -48,18 +48,18 @@
             "hide-price": "Hide price list"
         },
         "booking-modal": {
-            "title": "Information to book a medical appointment",
-            "fullName": "First and last name",
-            "phoneNumber": "Phone number",
-            "email": "Email address",
-            "address": "Contact address",
-            "reason": "Reason for examination",
-            "birthday": "Date of birth",
-            "gender": "Gender",
-            "btnConfirm": "Confirm",
-            "btnCancel": "Cancel",
-            "priceBooking": "Free booking",
-            "price": "Price: "
+            "title": "Thông tin đặt lịch khám bệnh",
+            "fullName": "Họ và tên",
+            "phoneNumber": "Số điện thoại",
+            "email": "Địa chỉ email",
+            "address": "Địa chỉ liên lạc",
+            "reason": "Lý do khám",
+            "birthday": "Ngày sinh",
+            "gender": "Giới tính",
+            "btnConfirm": "Xác nhận",
+            "btnCancel": "Hủy",
+            "priceBooking": "Miễn phí đặt lịch",
+            "price": "Gía khám: "
         }
     },
     "admin": {

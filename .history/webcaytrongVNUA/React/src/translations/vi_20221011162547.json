@@ -56,10 +56,6 @@
             "reason":"Lý do khám",
             "birthday": "Ngày sinh",
             "gender": "Giới tính",
-            "btnConfirm": "Xác nhận",
-            "btnCancel":"Hủy",
-            "priceBooking": "Miễn phí đặt lịch",
-            "price": "Gía khám: "
         }
     },
     "admin":{
