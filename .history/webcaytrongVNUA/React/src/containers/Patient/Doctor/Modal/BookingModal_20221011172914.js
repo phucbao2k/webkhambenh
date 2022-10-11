@@ -187,7 +187,7 @@ class BookingModal extends Component {
                         </button>
                         <button className="btn-booking-cancel"
                             onClick={closeBookingClose}>
-                            <FormattedMessage id="patient.booking-modal.btnCancel" />
+                            <FormattedMessage id="patient.booking-modal.reason" />
                         </button>
                     </div>
                 </div>
@@ -208,13 +208,11 @@ class BookingModal extends Component {
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-        genders: state.admin.genders
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        getGenders: () => dispatch(actions.fetchGenderStart()),
     };
 };
 

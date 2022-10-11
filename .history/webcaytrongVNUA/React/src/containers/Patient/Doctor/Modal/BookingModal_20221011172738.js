@@ -149,22 +149,19 @@ class BookingModal extends Component {
                             <div className="col-6 form-group">
                                 <label><FormattedMessage id="patient.booking-modal.phoneNumber" /></label>
                                 <input className="form-control" 
-                                    onChange={(event) => this.handleOnChangeInput(event, 'phoneNumber')}/>
+                                    onChange={(event) => this.handleOnChangeInput(event, 'phoneNum')}/>
                             </div>
                             <div className="col-6 form-group">
                                 <label><FormattedMessage id="patient.booking-modal.email" /></label>
-                                <input className="form-control" 
-                                    onChange={(event) => this.handleOnChangeInput(event, 'email')}/>
+                                <input className="form-control" />
                             </div>
                             <div className="col-6 form-group">
                                 <label><FormattedMessage id="patient.booking-modal.address" /></label>
-                                <input className="form-control" 
-                                    onChange={(event) => this.handleOnChangeInput(event, 'address')}/>
+                                <input className="form-control" />
                             </div>
                             <div className="col-12 form-group">
                                 <label><FormattedMessage id="patient.booking-modal.reason" /></label>
-                                <input className="form-control" 
-                                    onChange={(event) => this.handleOnChangeInput(event, 'reason')}/>
+                                <input className="form-control" />
                             </div>
                             <div className="col-6 form-group">
                                 <label>Hình ảnh cây trồng bị bệnh(Đang phát triển...)</label>
@@ -183,11 +180,11 @@ class BookingModal extends Component {
                     <div className="booking-modal-footer">
                         <button className="btn-booking-confirm"
                             onClick={closeBookingClose}>
-                            <FormattedMessage id="patient.booking-modal.btnConfirm" />
+                            Xác nhận
                         </button>
                         <button className="btn-booking-cancel"
                             onClick={closeBookingClose}>
-                            <FormattedMessage id="patient.booking-modal.btnCancel" />
+                            Hủy
                         </button>
                     </div>
                 </div>
@@ -208,13 +205,11 @@ class BookingModal extends Component {
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-        genders: state.admin.genders
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        getGenders: () => dispatch(actions.fetchGenderStart()),
     };
 };
 

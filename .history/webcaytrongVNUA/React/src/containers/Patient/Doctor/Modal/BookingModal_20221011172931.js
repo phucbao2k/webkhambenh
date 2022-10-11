@@ -208,13 +208,12 @@ class BookingModal extends Component {
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-        genders: state.admin.genders
+        
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-        getGenders: () => dispatch(actions.fetchGenderStart()),
     };
 };
 
