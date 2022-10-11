@@ -100,7 +100,7 @@ class BookingModal extends Component {
             let objectUrl = URL.createObjectURL(file);
             this.setState({
                 previewImgURL: objectUrl,
-                image: base64,
+                avatar: base64,
             })
         }
     }

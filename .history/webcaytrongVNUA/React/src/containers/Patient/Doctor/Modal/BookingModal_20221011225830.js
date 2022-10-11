@@ -31,7 +31,7 @@ class BookingModal extends Component {
             genders: '',
             timeType: '',
             previewImgURL: '',
-            image: '',
+            avatar: '',
             isOpen: false,
             // date: ''
         }
@@ -100,7 +100,7 @@ class BookingModal extends Component {
             let objectUrl = URL.createObjectURL(file);
             this.setState({
                 previewImgURL: objectUrl,
-                image: base64,
+                avatar: base64,
             })
         }
     }
@@ -130,7 +130,9 @@ class BookingModal extends Component {
             // selectedGender: this.state.selectedGender.value,
             doctorId: this.state.doctorId,
             timeType: this.state.timeType,
-            image: this.state.image
+            avatar: this.state.avatar,
+            previewImgURL: imageBase64,
+            avatar: '',
         })
         if (res && res.errCode === 0) {
             toast.success("Booking a new appointment succeed!")
