@@ -25,8 +25,7 @@ if( !data.email || !data.doctorId || !data.timeType || !data.date){
                 patientId: user[0].id,
                 date: data.date,
                 timeType: data.timeType,
-                image: data.image
-
+                
         })
     }
     resolve({

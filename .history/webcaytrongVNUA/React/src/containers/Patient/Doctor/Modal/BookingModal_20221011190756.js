@@ -140,7 +140,7 @@ class BookingModal extends Component {
         return (
             <>
           
-                <Modal
+                <ModalGateway
                         isOpen={isOpenModal}
                         className={'booking-modal-container'}
                         size="lg"
@@ -234,7 +234,7 @@ class BookingModal extends Component {
 
 
 
-                    </Modal>
+                    </ModalGateway>
                 {this.state.isOpen === true &&
                     <Lightbox
                         mainSrc={this.state.previewImgURL}

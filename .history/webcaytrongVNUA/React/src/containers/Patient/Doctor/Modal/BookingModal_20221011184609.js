@@ -11,7 +11,6 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import Select from "react-select";
 import { toast } from "react-toastify";
-
 import { postPatientBookAppointment } from "../../../../services/userService";
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 import { isBuffer } from 'lodash';
@@ -140,7 +139,7 @@ class BookingModal extends Component {
         return (
             <>
           
-                <Modal
+                    <Modal
                         isOpen={isOpenModal}
                         className={'booking-modal-container'}
                         size="lg"

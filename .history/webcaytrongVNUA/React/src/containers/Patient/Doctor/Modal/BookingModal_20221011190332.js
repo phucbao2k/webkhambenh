@@ -140,7 +140,7 @@ class BookingModal extends Component {
         return (
             <>
           
-                <Modal
+                    <Modal
                         isOpen={isOpenModal}
                         className={'booking-modal-container'}
                         size="lg"
