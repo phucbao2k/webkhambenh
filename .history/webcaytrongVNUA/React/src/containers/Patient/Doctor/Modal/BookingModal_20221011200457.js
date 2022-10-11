@@ -14,6 +14,7 @@ import { toast } from "react-toastify";
 
 import { postPatientBookAppointment } from "../../../../services/userService";
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
+import { isBuffer } from 'lodash';
 class BookingModal extends Component {
 
     constructor(props) {
@@ -203,7 +204,7 @@ class BookingModal extends Component {
 
                                     </div>
                                     <div className="col-6 form-group">
-                                    <label><FormattedMessage id="patient.booking-modal.gender" /></label>
+                                    <label><FormattedMessage id="patient.booking-modal.title" /></label>
                                         <Select
                                         value={this.state.selectedGender}
                                         onChange={this.handleChangeSelect}

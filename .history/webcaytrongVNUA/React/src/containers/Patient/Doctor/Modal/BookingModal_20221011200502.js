@@ -14,6 +14,7 @@ import { toast } from "react-toastify";
 
 import { postPatientBookAppointment } from "../../../../services/userService";
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
+import { isBuffer } from 'lodash';
 class BookingModal extends Component {
 
     constructor(props) {
