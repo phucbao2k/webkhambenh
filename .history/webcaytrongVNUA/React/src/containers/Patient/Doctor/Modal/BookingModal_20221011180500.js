@@ -31,8 +31,7 @@ class BookingModal extends Component {
             genders: '',
             timeType: '',
             previewImgURL: '',
-            avatar: '',
-            isOpen: false,
+            avatar: ''
         }
 
     }
@@ -96,12 +95,6 @@ class BookingModal extends Component {
                 avatar: base64,
             })
         }
-    }
-    openPreviewImage = () => {
-        if (!this.state.previewImgURL) return;
-        this.setState({
-            isOpen: true
-        })
     }
     handleChangeSelect = (selectedOption) => {
         this.setState({
@@ -188,17 +181,7 @@ class BookingModal extends Component {
                             </div>
                             <div className="col-6 form-group">
                                 <label>Hình ảnh cây trồng bị bệnh(Đang phát triển...)</label>
-                                <div className="preview-img-container">
-                                    <input className="form-control" id="previewImg" type="file" hidden
-                                        onChange={(event) => this.handleOnChangeImage(event)}
-                                    />
-                                    <label className="label-upload" htmlFor="previewImg">Upload<i className="fa-solid fa-upload"></i></label>
-                                    <div className="preview-image" style={{ backgroundImage: `url(${this.state.previewImgURL})` }}
-                                        onClick={() => this.openPreviewImage()}
-                                    >
-                                        </div>
-                                </div>
-                                
+                                <input className="form-control" />
                             </div>
                             <div className="col-6 form-group">
                                 <label><FormattedMessage id="patient.booking-modal.plantName" /></label>

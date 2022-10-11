@@ -192,11 +192,6 @@ class BookingModal extends Component {
                                     <input className="form-control" id="previewImg" type="file" hidden
                                         onChange={(event) => this.handleOnChangeImage(event)}
                                     />
-                                    <label className="label-upload" htmlFor="previewImg">Upload<i className="fa-solid fa-upload"></i></label>
-                                    <div className="preview-image" style={{ backgroundImage: `url(${this.state.previewImgURL})` }}
-                                        onClick={() => this.openPreviewImage()}
-                                    >
-                                        </div>
                                 </div>
                                 
                             </div>
