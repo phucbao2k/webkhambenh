@@ -27,16 +27,15 @@ birthday: '',
 selectedGender: '',
 doctorId: '',
 genders: '',
-timeType: ''
+timeType
         }
 
     }
 
 
     async componentDidMount() {
-this.props.getGenders();
+
     }
-    
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
 

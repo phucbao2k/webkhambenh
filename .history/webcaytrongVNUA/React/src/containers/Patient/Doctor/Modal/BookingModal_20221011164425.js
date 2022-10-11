@@ -10,7 +10,7 @@ import { LANGUAGES } from '../../../utils';
 import * as actions from "../../store/actions";
 import Select from "react-select";
 import {toast} from "react-toastify";
-import {postPatientBookAppointment} from "../../../../services/userService";
+import {postPatientBookAppointment} from "../../../../services/userService"
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 
 class BookingModal extends Component {
@@ -18,25 +18,15 @@ class BookingModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
-fullName: '',
-phoneNumber: '',
-email: '',
-address: '',
-reason: '',
-birthday: '',
-selectedGender: '',
-doctorId: '',
-genders: '',
-timeType: ''
+
         }
 
     }
 
 
     async componentDidMount() {
-this.props.getGenders();
+
     }
-    
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
 

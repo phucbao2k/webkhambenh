@@ -34,9 +34,8 @@ timeType: ''
 
 
     async componentDidMount() {
-this.props.getGenders();
+this
     }
-    
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
 

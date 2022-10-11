@@ -25,18 +25,15 @@ address: '',
 reason: '',
 birthday: '',
 selectedGender: '',
-doctorId: '',
-genders: '',
-timeType: ''
+doctorId: 
         }
 
     }
 
 
     async componentDidMount() {
-this.props.getGenders();
+
     }
-    
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
 
