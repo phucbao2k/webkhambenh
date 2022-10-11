@@ -54,7 +54,7 @@ renderTimeBooking = (dataTime) => {
             return(
                 <>
                 <div>{time} -{date}</div>
-                <div><FormattedMessage id="patient.booking-modal.priceBooking"/></div>
+                <div><For></div>
                 </>
             )
     }
@@ -96,7 +96,7 @@ renderTimeBooking = (dataTime) => {
                     </div>
                 </div>
                 <div className="price">
-                    <FormattedMessage id="patient.booking-modal.price" />
+                    <FormattedMessage id="patient.extra-infor-doctor.price" />
                     {dataProfile && dataProfile.Doctor_Infor && language === LANGUAGES.VI
                         &&
                         <NumberFormat

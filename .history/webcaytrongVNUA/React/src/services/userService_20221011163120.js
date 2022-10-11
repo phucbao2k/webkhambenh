@@ -64,8 +64,7 @@ export {
     saveBulkScheduleDoctor,
     getScheduleDoctorByDate,
     getExtraInforDoctorById,
-    getProfileDoctorById,
-    postProfileBookAppointment
+    getProfileDoctorById
 
 }//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export

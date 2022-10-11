@@ -6,7 +6,6 @@ import { Modal } from 'reactstrap';
 import ProfileDoctor from '../ProfileDoctor';
 import _ from 'lodash';
 import DatePicker from '../../../../components/Input/DatePicker';
-
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 
 class BookingModal extends Component {
