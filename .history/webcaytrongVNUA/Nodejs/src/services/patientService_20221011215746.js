@@ -25,7 +25,7 @@ try{
                 doctorId: data.doctorId,
                 patientId: user[0].id,
                 specialtyName: data.specialtyName,
-                plantName: data.plantName,
+                ,
                 timeType: data.timeType,
                 image: data.image
 

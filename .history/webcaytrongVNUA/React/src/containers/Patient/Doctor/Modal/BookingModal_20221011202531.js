@@ -11,7 +11,7 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import Select from "react-select";
 import { toast } from "react-toastify";
-// import DatePicker from '../../../../components/Input/DatePicker';
+
 import { postPatientBookAppointment } from "../../../../services/userService";
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 class BookingModal extends Component {
@@ -24,16 +24,15 @@ class BookingModal extends Component {
             email: '',
             address: '',
             reason: '',
-            plantName: '',
-            specialtyName: '',
+            // plantName: '',
+            // specialtyName: '',
             selectedGender: '',
             doctorId: '',
             genders: '',
             timeType: '',
-            previewImgURL: '',
-            avatar: '',
-            isOpen: false,
-            // date: ''
+            // previewImgURL: '',
+            // avatar: '',
+            // isOpen: false
         }
 
     }
@@ -72,11 +71,9 @@ class BookingModal extends Component {
                 let timeType = this.props.dataTime.timeType;
                 this.setState({
                     doctorId: doctorId,
-                    timeType: timeType,
-                   
+                    timeType: timeType
                 })
             }
-
         }
     }
     handleOnChangeInput = (event, id) => {
@@ -87,56 +84,49 @@ class BookingModal extends Component {
             ...stateCopy
         })
     }
-    // handleOnChangeDatePicker = (date) =>{
+    // handleOnChangeImage = async (event) => {
+    //     let data = event.target.files;
+    //     let file = data[0];
+    //     if (file) {
+    //         let base64 = await CommonUtils.getBase64(file);
+    //         let objectUrl = URL.createObjectURL(file);
+    //         this.setState({
+    //             previewImgURL: objectUrl,
+    //             avatar: base64,
+    //         })
+    //     }
+    // }
+    // openPreviewImage = () => {
+    //     if (!this.state.previewImgURL) return;
     //     this.setState({
-    //         date: date[0]
+    //         isOpen: true
     //     })
     // }
-    handleOnChangeImage = async (event) => {
-        let data = event.target.files;
-        let file = data[0];
-        if (file) {
-            let base64 = await CommonUtils.getBase64(file);
-            let objectUrl = URL.createObjectURL(file);
-            this.setState({
-                previewImgURL: objectUrl,
-                avatar: base64,
-            })
-        }
-    }
-    openPreviewImage = () => {
-        if (!this.state.previewImgURL) return;
-        this.setState({
-            isOpen: true
-        })
-    }
     handleChangeSelect = (selectedOption) => {
         this.setState({
             selectedGender: selectedOption
         });
     }
     handleConfirmBooking = async () => {
-        //  let date = new Date(this.state.date).getTime();
+        // let date = new Date(this.state.birthday).getTime();
         let res = await postPatientBookAppointment({
             fullName: this.state.fullName,
             phoneNumber: this.state.phoneNumber,
             email: this.state.email,
             address: this.state.address,
             reason: this.state.reason,
-            // date: date,
             plantName: this.state.plantName,
             specialtyName: this.state.specialtyName,
             selectedGender: this.state.selectedGender.value,
             doctorId: this.state.doctorId,
             timeType: this.state.timeType,
-            avatar: this.state.avatar
+            // avatar: this.state.avatar
         })
         if (res && res.errCode === 0) {
             toast.success("Booking a new appointment succeed!")
             this.props.closeBookingClose();
         } else {
             toast.error("Booking a new appointment failed!")
-            console.log('check res', res);
         }
     }
     render() {
@@ -197,7 +187,7 @@ class BookingModal extends Component {
                                         <input className="form-control"
                                             onChange={(event) => this.handleOnChangeInput(event, 'reason')} />
                                     </div>
-                                    <div className="col-6 form-group">
+                                    {/* <div className="col-6 form-group">
                                         <label><FormattedMessage id="patient.booking-modal.avatar" /></label>
                                         <div className="preview-img-container">
                                             <input className="form-control" id="previewImg" type="file" hidden
@@ -209,14 +199,7 @@ class BookingModal extends Component {
                                             >
                                             </div>
                                         </div>
-                                    </div>
-                                    {/* <div className="col-12 form-group">
-                                        <label>Ngày chọn khám</label>
-                                        <DatePicker
-                                        onChange = {this.handleOnChangeDatePicker}
-                                        className="form-control"
-                                        value={this.state.date}
-                                        />
+
                                     </div> */}
                                     <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.gender" /></label>
@@ -239,7 +222,7 @@ class BookingModal extends Component {
                             </div>
                             <div className="booking-modal-footer">
                                 <button className="btn-booking-confirm"
-                                    onClick={()=> this.handleConfirmBooking()}>
+                                    onClick={closeBookingClose}>
                                     <FormattedMessage id="patient.booking-modal.btnConfirm" />
                                 </button>
                                 <button className="btn-booking-cancel"

@@ -7,7 +7,7 @@ module.exports = {
                 type: Sequelize.BLOB('long'),
                 allowNull: true,
             }),
-            QueryInterface.changeColumn('bookings', 'image', {
+             QueryInterface.changeColumn('Booking', 'image', {
                  type: Sequelize.BLOB('long'),
                  allowNull: true,
              })
@@ -20,7 +20,7 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: true,
             }),
-            QueryInterface.changeColumn('bookings', 'image', {
+            QueryInterface.changeColumn('Users', 'image', {
                 type: Sequelize.STRING,
                 allowNull: true,
             })

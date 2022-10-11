@@ -17,10 +17,7 @@ module.exports = {
       patientId: {
         type: Sequelize.INTEGER
       },
-      plantName: {
-        type: Sequelize.STRING
-      },
-      specialtyName:{
+      : {
         type: Sequelize.STRING
       },
       timeType: {

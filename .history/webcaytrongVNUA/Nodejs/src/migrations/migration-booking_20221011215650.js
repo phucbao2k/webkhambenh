@@ -21,7 +21,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       specialtyName:{
-        type: Sequelize.STRING
+        y
       },
       timeType: {
         type: Sequelize.STRING

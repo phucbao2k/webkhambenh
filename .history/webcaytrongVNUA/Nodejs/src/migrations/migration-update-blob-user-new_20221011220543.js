@@ -20,7 +20,7 @@ module.exports = {
                 type: Sequelize.STRING,
                 allowNull: true,
             }),
-            QueryInterface.changeColumn('bookings', 'image', {
+            QueryInterface.changeColumn('Booking', 'image', {
                 type: Sequelize.STRING,
                 allowNull: true,
             })

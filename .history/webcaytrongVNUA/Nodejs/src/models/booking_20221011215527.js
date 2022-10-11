@@ -16,8 +16,7 @@ export default (sequelize, DataTypes) => {
     statusId: DataTypes.STRING,
     doctorId: DataTypes.INTEGER,
     patientId: DataTypes.INTEGER,
-    plantName: DataTypes.STRING,
-    specialtyName: DataTypes.STRING,
+    plant: DataTypes.STRING,
     timeType: DataTypes.STRING
   }, {
     sequelize,

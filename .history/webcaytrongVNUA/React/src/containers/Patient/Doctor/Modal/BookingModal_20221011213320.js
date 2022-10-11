@@ -11,7 +11,7 @@ import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import Select from "react-select";
 import { toast } from "react-toastify";
-// import DatePicker from '../../../../components/Input/DatePicker';
+import DatePicker from '../../../../components/Input/DatePicker';
 import { postPatientBookAppointment } from "../../../../services/userService";
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 class BookingModal extends Component {
@@ -32,8 +32,7 @@ class BookingModal extends Component {
             timeType: '',
             previewImgURL: '',
             avatar: '',
-            isOpen: false,
-            // date: ''
+            isOpen: false
         }
 
     }
@@ -87,11 +86,7 @@ class BookingModal extends Component {
             ...stateCopy
         })
     }
-    // handleOnChangeDatePicker = (date) =>{
-    //     this.setState({
-    //         date: date[0]
-    //     })
-    // }
+    handleOnChangeDatePicker
     handleOnChangeImage = async (event) => {
         let data = event.target.files;
         let file = data[0];
@@ -116,14 +111,14 @@ class BookingModal extends Component {
         });
     }
     handleConfirmBooking = async () => {
-        //  let date = new Date(this.state.date).getTime();
+        // let date = new Date(this.state.birthday).getTime();
         let res = await postPatientBookAppointment({
             fullName: this.state.fullName,
             phoneNumber: this.state.phoneNumber,
             email: this.state.email,
             address: this.state.address,
             reason: this.state.reason,
-            // date: date,
+            date: date,
             plantName: this.state.plantName,
             specialtyName: this.state.specialtyName,
             selectedGender: this.state.selectedGender.value,
@@ -209,15 +204,8 @@ class BookingModal extends Component {
                                             >
                                             </div>
                                         </div>
+
                                     </div>
-                                    {/* <div className="col-12 form-group">
-                                        <label>Ngày chọn khám</label>
-                                        <DatePicker
-                                        onChange = {this.handleOnChangeDatePicker}
-                                        className="form-control"
-                                        value={this.state.date}
-                                        />
-                                    </div> */}
                                     <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.gender" /></label>
                                         <Select

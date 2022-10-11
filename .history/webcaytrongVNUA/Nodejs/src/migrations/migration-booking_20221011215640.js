@@ -20,9 +20,7 @@ module.exports = {
       plantName: {
         type: Sequelize.STRING
       },
-      specialtyName:{
-        type: Sequelize.STRING
-      },
+      specia,
       timeType: {
         type: Sequelize.STRING
       },

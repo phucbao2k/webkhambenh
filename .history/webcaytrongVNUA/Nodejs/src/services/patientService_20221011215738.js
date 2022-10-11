@@ -24,8 +24,7 @@ try{
                 statusId: 'S1',
                 doctorId: data.doctorId,
                 patientId: user[0].id,
-                specialtyName: data.specialtyName,
-                plantName: data.plantName,
+                specialtyName: data.date,
                 timeType: data.timeType,
                 image: data.image
 

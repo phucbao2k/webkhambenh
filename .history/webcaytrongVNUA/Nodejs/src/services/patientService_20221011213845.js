@@ -3,7 +3,7 @@ require('dotenv').config();
 let postBookAppointment = (data) => {
     return new Promise(async(resolve, reject) =>{
 try{
-    if (!data.email || !data.doctorId || !data.timeType || !data.specialtyName
+    if (!data.email || !data.doctorId || !data.timeType || !data.date
     ){
     resolve({
         errCode: 1,
@@ -24,8 +24,7 @@ try{
                 statusId: 'S1',
                 doctorId: data.doctorId,
                 patientId: user[0].id,
-                specialtyName: data.specialtyName,
-                plantName: data.plantName,
+                date: data.date,
                 timeType: data.timeType,
                 image: data.image
 
