@@ -6,7 +6,7 @@ import { Modal } from 'reactstrap';
 import ProfileDoctor from '../ProfileDoctor';
 import _ from 'lodash';
 import { LANGUAGES } from '../../../../utils';
-import * as actions from "../../../../store/actions";
+import * as actions from "../../store/actions";
 import Select from "react-select";
 import { toast } from "react-toastify";
 import { postPatientBookAppointment } from "../../../../services/userService";
