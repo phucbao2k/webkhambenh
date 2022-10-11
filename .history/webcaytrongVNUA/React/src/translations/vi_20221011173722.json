@@ -54,13 +54,12 @@
             "email": "Địa chỉ email",
             "address": "Địa chỉ liên lạc",
             "reason":"Lý do khám",
-            "plantName": "Tên loài cây",
+            "plantName": "Ngày sinh",
             "gender": "Giới tính",
             "btnConfirm": "Xác nhận",
             "btnCancel":"Hủy",
             "priceBooking": "Miễn phí đặt lịch",
-            "price": "Gía khám: ",
-            "specialityName":"Tên chuyên ngành cây trồng"
+            "price": "Gía khám: "
         }
     },
     "admin":{

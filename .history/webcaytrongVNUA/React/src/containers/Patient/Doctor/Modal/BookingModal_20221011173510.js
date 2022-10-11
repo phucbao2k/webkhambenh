@@ -24,7 +24,6 @@ class BookingModal extends Component {
             address: '',
             reason: '',
             plantName: '',
-            specialtyName: '',
             selectedGender: '',
             doctorId: '',
             genders: '',
@@ -99,8 +98,7 @@ class BookingModal extends Component {
             email: this.state.email,
             address: this.state.address,
             reason: this.state.reason,
-            plantName: this.state.plantName,
-            specialtyName: this.state.specialtyName,
+           plantName: plantName,
             selectedGender: this.state.selectedGender.value,
             doctorId: this.state.doctorId,
             timeType: this.state.timeType,
@@ -126,7 +124,7 @@ class BookingModal extends Component {
                 centered>
                 <div className="booking-modal-content">
                     <div className="booking-modal-header">
-                        <span className="left"><FormattedMessage id="patient.booking-modal.title" /></span>
+                        <span className="left"><FormattedMessage id="patient.booking-modal.title"/></span>
                         <span className="right"
                             onClick={closeBookingClose}>
                             <i className="fa-solid fa-xmark"></i>
@@ -145,42 +143,40 @@ class BookingModal extends Component {
                         <div className="row">
                             <div className="col-6 form-group">
                                 <label><FormattedMessage id="patient.booking-modal.fullName" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeInput(event, 'fullName')} />
+                                <input className="form-control" 
+                                onChange ={(event) => this.handleOnChangeInput(event,'fullName')}/>
                             </div>
                             <div className="col-6 form-group">
                                 <label><FormattedMessage id="patient.booking-modal.phoneNumber" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeInput(event, 'phoneNumber')} />
+                                <input className="form-control" 
+                                    onChange={(event) => this.handleOnChangeInput(event, 'phoneNumber')}/>
                             </div>
                             <div className="col-6 form-group">
                                 <label><FormattedMessage id="patient.booking-modal.email" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeInput(event, 'email')} />
+                                <input className="form-control" 
+                                    onChange={(event) => this.handleOnChangeInput(event, 'email')}/>
                             </div>
                             <div className="col-6 form-group">
                                 <label><FormattedMessage id="patient.booking-modal.address" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeInput(event, 'address')} />
+                                <input className="form-control" 
+                                    onChange={(event) => this.handleOnChangeInput(event, 'address')}/>
                             </div>
                             <div className="col-12 form-group">
                                 <label><FormattedMessage id="patient.booking-modal.reason" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeInput(event, 'reason')} />
+                                <input className="form-control" 
+                                    onChange={(event) => this.handleOnChangeInput(event, 'reason')}/>
                             </div>
                             <div className="col-6 form-group">
                                 <label>Hình ảnh cây trồng bị bệnh(Đang phát triển...)</label>
                                 <input className="form-control" />
                             </div>
                             <div className="col-6 form-group">
-                                <label><FormattedMessage id="patient.booking-modal.plantName" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeInput(event, 'plantName')} />
+                                <label>Tên loài cây</label>
+                                <input className="form-control" />
                             </div>
                             <div className="col-6 form-group">
-                                <label><FormattedMessage id="patient.booking-modal.specialtyName" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeInput(event, 'specialtyName')} />
+                                <label>Ngành cây(cây cảnh/nông nghiệp/công nghiệp)</label>
+                                <input className="form-control" />
                             </div>
                         </div>
                     </div>

@@ -54,13 +54,12 @@
             "email": "Email address",
             "address": "Contact address",
             "reason": "Reason for examination",
-            "plantName": "Plant name",
+            "plantName": "Date of birth",
             "gender": "Gender",
             "btnConfirm": "Confirm",
             "btnCancel": "Cancel",
             "priceBooking": "Free booking",
-            "price": "Price: ",
-            "specialityName": "Name of plant specialty"
+            "price": "Price: "
         }
     },
     "admin": {

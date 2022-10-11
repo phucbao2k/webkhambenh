@@ -59,8 +59,7 @@
             "btnConfirm": "Confirm",
             "btnCancel": "Cancel",
             "priceBooking": "Free booking",
-            "price": "Price: ",
-            "specialityName": "Name of plant specialty"
+            "price": "Price: "
         }
     },
     "admin": {
