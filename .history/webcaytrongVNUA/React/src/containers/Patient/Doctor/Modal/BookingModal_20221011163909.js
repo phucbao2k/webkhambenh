@@ -8,7 +8,7 @@ import _ from 'lodash';
 import DatePicker from '../../../../components/Input/DatePicker';
 import { LANGUAGES } from '../../../utils';
 import * as actions from "../../store/actions";
-import Select from "react-select";
+import Select from "'react-select'";
 import {toast} from "react-toastify";
 
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn

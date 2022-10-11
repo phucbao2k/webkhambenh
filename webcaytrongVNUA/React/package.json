@@ -32,7 +32,6 @@
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
-    "react-select": "^4.3.1",
     "react-slick": "^0.29.0",
     "react-toastify": "^5.5.0",
     "reactstrap": "^8.10.1",
@@ -65,5 +64,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "react-select": "^4.3.1"
   }
 }
