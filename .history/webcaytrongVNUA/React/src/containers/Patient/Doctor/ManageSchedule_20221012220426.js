@@ -165,7 +165,7 @@ let today = new Date(new Date().setDate(new Date().getDate()));
                                 value={this.state.currentDate}
                                 className="form-control"
                                 onChange={this.handleOnChangeDatePicker}
-                                minDate={today}
+                                minDate={yesterday}
                                 //minDate là để lấy ngày hiện tại
                             />
 

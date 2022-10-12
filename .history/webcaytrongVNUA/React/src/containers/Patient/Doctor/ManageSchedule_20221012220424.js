@@ -137,7 +137,7 @@ class ManageSchedule extends Component {
     render() {
         let { rangeTime } = this.state;
         let { language } = this.props;
-let today = new Date(new Date().setDate(new Date().getDate()));
+let day = new Date(new Date().setDate(new Date().getDate()));
         //khi muốn render ra 1 thứ gì đó trong react, chúng ta phải có hàm return, và trong đó bắt buộc là 1 khối
 
 
@@ -165,7 +165,7 @@ let today = new Date(new Date().setDate(new Date().getDate()));
                                 value={this.state.currentDate}
                                 className="form-control"
                                 onChange={this.handleOnChangeDatePicker}
-                                minDate={today}
+                                minDate={yesterday}
                                 //minDate là để lấy ngày hiện tại
                             />
 
