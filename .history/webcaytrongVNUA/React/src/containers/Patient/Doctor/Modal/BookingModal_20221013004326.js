@@ -145,12 +145,11 @@ class BookingModal extends Component {
         }
     }
     render() {
-        let { isOpenModal, closeBookingClose, dataTime } = this.props;
+        let { isOpenModal, closeBookingClose, dataTime, show } = this.props;
         let doctorId = '';
         if (dataTime && !_.isEmpty(dataTime)) {
             doctorId = dataTime.doctorId;
         }
-        
         return (
             <>
           

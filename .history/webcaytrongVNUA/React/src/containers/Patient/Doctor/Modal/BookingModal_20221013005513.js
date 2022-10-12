@@ -150,7 +150,7 @@ class BookingModal extends Component {
         if (dataTime && !_.isEmpty(dataTime)) {
             doctorId = dataTime.doctorId;
         }
-        
+         const { canClick} = this.state
         return (
             <>
           

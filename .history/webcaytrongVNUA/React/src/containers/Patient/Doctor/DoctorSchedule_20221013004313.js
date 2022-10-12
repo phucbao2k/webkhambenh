@@ -15,7 +15,7 @@ class DoctorSchedule extends Component {
             allDays: [],
             allAvailableTime: [],
             isOpenModalBooking: false,
-            dataScheduleTimeModal: {},
+            dataScheduleTimeModal: {}
         }
     }
     async componentDidMount() {
@@ -101,7 +101,11 @@ class DoctorSchedule extends Component {
             isOpenModalBooking:false
         })
     }
-   
+    showImage = ()=> {
+        this.setState({
+            isOpenModalBooking: false
+        })
+    }
     render() {
         let { allDays, allAvailableTime, isOpenModalBooking, dataScheduleTimeModal } = this.state;
         let { language } = this.props;
@@ -166,7 +170,7 @@ class DoctorSchedule extends Component {
                 isOpenModal={isOpenModalBooking}
                 closeBookingClose= {this.closeBookingClose}
                 dataTime={dataScheduleTimeModal}
-               />
+                showImage = {this.sho}/>
            
             </React.Fragment>
                     );

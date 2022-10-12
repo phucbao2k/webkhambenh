@@ -211,7 +211,7 @@ class BookingModal extends Component {
                                             />
                                             <label className="label-upload" htmlFor="previewImg">Upload<i className="fa-solid fa-upload"></i></label>
                                         <div className="preview-image" style={{ backgroundImage: `url(${this.state.previewImgURL})`}}
-                                                onClick={() => this.openPreviewImage()}
+                                                onClick={true ? this.openPreviewImage() :is}
                                             >
 
                                             </div>
