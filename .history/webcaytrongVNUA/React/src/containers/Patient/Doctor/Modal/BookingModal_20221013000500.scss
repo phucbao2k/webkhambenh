@@ -69,7 +69,9 @@
                     background-size: contain;
                     cursor: pointer;
                 }
-               
+                .preview-image:checked + .booking-modal-container{
+                    display: none !important;
+                }
                
             }
         }

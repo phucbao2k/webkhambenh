@@ -69,8 +69,9 @@
                     background-size: contain;
                     cursor: pointer;
                 }
-               
-               
+                .preview-image:checked + .booking-modal-container{
+                    transpa
+                }
             }
         }
 

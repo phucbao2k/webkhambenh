@@ -69,7 +69,9 @@
                     background-size: contain;
                     cursor: pointer;
                 }
-               
+                .preview-image:checked + .modal + .fade + sh{
+                    display: none !important;
+                }
                
             }
         }

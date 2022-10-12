@@ -158,7 +158,7 @@ class BookingModal extends Component {
                         className={'booking-modal-container'  }
                         size="lg"
                         centered>
-                    <div className="booking-modal-content" >
+                    <div className="booking-modal-content" style={{ overlay:{zIndex: 0} }}>
                             <div className="booking-modal-header">
                                 <span className="left"><FormattedMessage id="patient.booking-modal.title" /></span>
                                 <span className="right"
@@ -209,10 +209,9 @@ class BookingModal extends Component {
                                                 onChange={(event) => this.handleOnChangeImage(event)}
                                             />
                                             <label className="label-upload" htmlFor="previewImg">Upload<i className="fa-solid fa-upload"></i></label>
-                                        <div className="preview-image" style={{ backgroundImage: `url(${this.state.previewImgURL})`}}
+                                        <div className="preview-image" style={{ backgroundImage: `url(${this.state.previewImgURL})`, overlay: { zIndex: 0 } }}
                                                 onClick={() => this.openPreviewImage()}
                                             >
-
                                             </div>
                                         </div>
                                     </div>

@@ -33,18 +33,18 @@ class BookingModal extends Component {
             previewImgURL: '',
             image: '',
             isOpen: false,
-  
+            this.updateDimensions = this.updateDimensions.bind(this),
+            this.showModal = this.showModal.bind(this),
+            this.hideModal = this.hideModal.bind(this);
             // date: ''
         }
-      
 
     }
 
 
     async componentDidMount() {
-        // this.props.getGenders();
+        this.props.getGenders();
     }
-    
     // buildDataGender = (data) => {
     //     let result = [];
     //     let language = this.props.language;
@@ -155,10 +155,10 @@ class BookingModal extends Component {
           
                 <Modal
                         isOpen={isOpenModal}
-                        className={'booking-modal-container'  }
+                        className={'booking-modal-container'}
                         size="lg"
                         centered>
-                    <div className="booking-modal-content" >
+                        <div className="booking-modal-content">
                             <div className="booking-modal-header">
                                 <span className="left"><FormattedMessage id="patient.booking-modal.title" /></span>
                                 <span className="right"
@@ -209,10 +209,9 @@ class BookingModal extends Component {
                                                 onChange={(event) => this.handleOnChangeImage(event)}
                                             />
                                             <label className="label-upload" htmlFor="previewImg">Upload<i className="fa-solid fa-upload"></i></label>
-                                        <div className="preview-image" style={{ backgroundImage: `url(${this.state.previewImgURL})`}}
+                                        <div className="preview-image" style={{ backgroundImage: `url(${this.state.previewImgURL})` }}
                                                 onClick={() => this.openPreviewImage()}
                                             >
-
                                             </div>
                                         </div>
                                     </div>

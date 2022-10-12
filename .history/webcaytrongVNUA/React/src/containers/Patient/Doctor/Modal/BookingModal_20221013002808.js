@@ -265,6 +265,7 @@ class BookingModal extends Component {
                     </Modal>
                 {this.state.isOpen === true &&
                     <Lightbox
+                    className="preview-image"
                         mainSrc={this.state.previewImgURL}
                         onCloseRequest={() => this.setState({ isOpen: false })} />}
             </>

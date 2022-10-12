@@ -212,7 +212,6 @@ class BookingModal extends Component {
                                         <div className="preview-image" style={{ backgroundImage: `url(${this.state.previewImgURL})`}}
                                                 onClick={() => this.openPreviewImage()}
                                             >
-
                                             </div>
                                         </div>
                                     </div>

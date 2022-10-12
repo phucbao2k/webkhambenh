@@ -155,10 +155,10 @@ class BookingModal extends Component {
           
                 <Modal
                         isOpen={isOpenModal}
-                        className={'booking-modal-container'  }
+                        className={'booking-modal-container'}
                         size="lg"
                         centered>
-                    <div className="booking-modal-content" >
+                        <div className="booking-modal-content">
                             <div className="booking-modal-header">
                                 <span className="left"><FormattedMessage id="patient.booking-modal.title" /></span>
                                 <span className="right"
@@ -212,7 +212,6 @@ class BookingModal extends Component {
                                         <div className="preview-image" style={{ backgroundImage: `url(${this.state.previewImgURL})`}}
                                                 onClick={() => this.openPreviewImage()}
                                             >
-
                                             </div>
                                         </div>
                                     </div>
