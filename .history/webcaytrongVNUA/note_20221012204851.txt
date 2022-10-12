@@ -207,4 +207,4 @@ Vì js là ngôn ngữ đơn luồng, mọi thứ sẽ được thực hiện tu
 
 khi includes nhiều giá trị trong 1 db, thì ta phải dùng raw =false, nest =true
 
-raw=false để dữ liệu trả về là 1 object javascript, nest là để lồng các attributes đó lại vs nhau thành 1 mảng
+
