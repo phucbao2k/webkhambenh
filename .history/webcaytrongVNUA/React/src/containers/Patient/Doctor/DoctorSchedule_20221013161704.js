@@ -8,6 +8,7 @@ import { LANGUAGES } from '../../../utils';
 import { getScheduleDoctorByDate } from '../../../services/userService';
 import { FormattedMessage } from 'react-intl';
 import BookingModal from './Modal/BookingModal';
+import { withRouter } from 'react-router';
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);
@@ -91,11 +92,14 @@ class DoctorSchedule extends Component {
         }
     }
     handleClickScheduleTime =(time)=> {
-        this.setState({
-            isOpenModalBooking:true,
-            dataScheduleTimeModal:time, 
-        })
-      
+        // this.setState({
+        //     // isOpenModalBooking:true,
+        //     dataScheduleTimeModal:time, 
+        // })
+        if (this.props.history) {
+           
+            this.props.history.push(`/detail-doctor/`, data);
+        }
     }
     closeBookingClose = ()=>{
         this.setState({

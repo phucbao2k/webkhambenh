@@ -91,11 +91,14 @@ class DoctorSchedule extends Component {
         }
     }
     handleClickScheduleTime =(time)=> {
-        this.setState({
-            isOpenModalBooking:true,
-            dataScheduleTimeModal:time, 
-        })
-      
+        // this.setState({
+        //     // isOpenModalBooking:true,
+        //     dataScheduleTimeModal:time, 
+        // })
+        if (this.props.history) {
+            console.log('baophuc2k check doctor', doctor);
+            this.props.history.push(`/detail-doctor/${doctor.id}`);
+        }
     }
     closeBookingClose = ()=>{
         this.setState({
