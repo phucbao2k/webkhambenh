@@ -12,6 +12,7 @@ import 'react-image-lightbox/style.css';
 import Select from "react-select";
 import { toast } from "react-toastify";
 // import DatePicker from '../../../../components/Input/DatePicker';
+import { Link } from "react-router-dom";
 import { postPatientBookAppointment } from "../../../../services/userService";
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 class BookingModal extends Component {
