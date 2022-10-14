@@ -5,7 +5,7 @@ let postBookAppointment = (data) => {
     return new Promise(async(resolve, reject) =>{
 try{
     if (!data.email || !data.doctorId || !data.timeType || !data.specialtyName  || !data.fullName
-        || !data.date
+        || !data.fullName
     ){
     resolve({
         errCode: 1,
@@ -38,9 +38,7 @@ try{
                 specialtyName: data.specialtyName,
                 plantName: data.plantName,
                 timeType: data.timeType,
-                image: data.image,
-                date: data.date,
-                token: data.token,
+                image: data.image
 
         })
     }

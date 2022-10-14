@@ -40,7 +40,7 @@ try{
                 timeType: data.timeType,
                 image: data.image,
                 date: data.date,
-                token: data.token,
+                token: data.token
 
         })
     }

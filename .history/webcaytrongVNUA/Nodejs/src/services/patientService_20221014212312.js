@@ -39,8 +39,7 @@ try{
                 plantName: data.plantName,
                 timeType: data.timeType,
                 image: data.image,
-                date: data.date,
-                token: data.token,
+                dat
 
         })
     }

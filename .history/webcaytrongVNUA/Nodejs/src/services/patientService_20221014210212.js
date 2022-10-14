@@ -38,9 +38,7 @@ try{
                 specialtyName: data.specialtyName,
                 plantName: data.plantName,
                 timeType: data.timeType,
-                image: data.image,
-                date: data.date,
-                token: data.token,
+                image: data.image
 
         })
     }
