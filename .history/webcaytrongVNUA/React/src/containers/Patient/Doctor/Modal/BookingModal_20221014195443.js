@@ -90,7 +90,7 @@ class BookingModal extends Component {
             ...stateCopy
         })
     }
-    handleOnChangeDatePicker = (date) => {
+    handleOnChangeDatePicker = (date) =>{
         this.setState({
             date: date[0]
         })
@@ -134,7 +134,7 @@ class BookingModal extends Component {
                 `${dataTime.doctorData.firstName} ${dataTime.doctorData.lastName}`
                 :
                 `${dataTime.doctorData.lastName} ${dataTime.doctorData.firstName}`
-            return name;
+                return name;
         }
         return ''
     }
@@ -252,13 +252,13 @@ class BookingModal extends Component {
                                     </div>
                                 </div>
                                 <div className="col-6 form-group">
-                                    <label>Ngày tháng mua cây(Không bắt buộc)</label>
-                                    <DatePicker
-                                        onChange={this.handleOnChangeDatePicker}
+                                        <label>Ngày tháng mua cây(Không bắt buộc)</label>
+                                        <DatePicker
+                                        onChange = {this.handleOnChangeDatePicker}
                                         className="form-control"
                                         value={this.state.date}
-                                    />
-                                </div>
+                                        />
+                                    </div>
                                 {/* <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.gender" /></label>
                                         <Select
