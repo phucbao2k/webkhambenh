@@ -65,11 +65,10 @@ let getBodyHTMLEmail = (dataSend) => {
         <div>
         <a href=${dataSend.redirectLink} target="_blank">Click here</a>
         </div>
-         <div>Thank you</div>
+         <div>Xin chân thành cảm ơn</div>
          `
 
     }
-    return result;
 }
 module.exports = {
     sendSimpleEmail: sendSimpleEmail

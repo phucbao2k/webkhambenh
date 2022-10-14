@@ -13,11 +13,10 @@ try{
 }else{
     await emailService.sendSimpleEmail({
         receiverEmail: data.email,
-        patientName: data.fullName,
-        time: data.timeString,
-        doctorName:data.doctorName,
-        diagnosis:data.diagnosis,
-        language: data.language,
+        patientName: data,
+        time: '9:00 - 10:00 vào dd/mm/2022',
+        doctorName:"Phúc",
+        diagnosis: "Cây lúa - Bệnh đạo ôn",
         redirectLink: 'https://www.facebook.com/ta.phucbao'
     })
     let user = await db.User.findOrCreate({

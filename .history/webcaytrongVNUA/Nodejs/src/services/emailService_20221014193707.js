@@ -69,7 +69,6 @@ let getBodyHTMLEmail = (dataSend) => {
          `
 
     }
-    return result;
 }
 module.exports = {
     sendSimpleEmail: sendSimpleEmail

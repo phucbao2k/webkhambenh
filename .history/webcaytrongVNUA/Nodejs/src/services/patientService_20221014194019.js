@@ -16,7 +16,7 @@ try{
         patientName: data.fullName,
         time: data.timeString,
         doctorName:data.doctorName,
-        diagnosis:data.diagnosis,
+        diagnosis:da,
         language: data.language,
         redirectLink: 'https://www.facebook.com/ta.phucbao'
     })

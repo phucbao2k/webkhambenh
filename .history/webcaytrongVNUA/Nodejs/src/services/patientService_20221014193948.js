@@ -15,9 +15,8 @@ try{
         receiverEmail: data.email,
         patientName: data.fullName,
         time: data.timeString,
-        doctorName:data.doctorName,
-        diagnosis:data.diagnosis,
-        language: data.language,
+        doctorName:data.do,
+        diagnosis: "Cây lúa - Bệnh đạo ôn",
         redirectLink: 'https://www.facebook.com/ta.phucbao'
     })
     let user = await db.User.findOrCreate({

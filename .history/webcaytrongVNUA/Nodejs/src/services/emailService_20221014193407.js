@@ -49,27 +49,9 @@ let getBodyHTMLEmail = (dataSend) => {
         <a href=${dataSend.redirectLink} target="_blank">Click here</a>
         </div>
          <div>Xin chân thành cảm ơn</div>
-         `
+         `,
         
     }
-    if (dataSend.language === 'en') {
-        result =
-            `
-        <h3> Hello ${dataSend.patientName} !</h3 >
-        <p>You received this message because you booked an online medical appointment on web khamchuabenhchocayvnua</p>
-     <p>Information to book a medical appointment:</p>
-        <div><b>Time: ${dataSend.time}</b></div>
-        <div><b>Doctor: ${dataSend.doctorName}</b></div>
-        <div><b>Preliminary diagnosis of disease: ${dataSend.diagnosis}</b></div>
-        <p>If the above information is correct, please click on the link below to confirm and complete the medical appointment booking procedure.</p>
-        <div>
-        <a href=${dataSend.redirectLink} target="_blank">Click here</a>
-        </div>
-         <div>Thank you</div>
-         `
-
-    }
-    return result;
 }
 module.exports = {
     sendSimpleEmail: sendSimpleEmail

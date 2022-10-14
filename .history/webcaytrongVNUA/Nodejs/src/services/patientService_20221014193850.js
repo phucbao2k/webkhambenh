@@ -4,7 +4,7 @@ import emailService from './emailService';
 let postBookAppointment = (data) => {
     return new Promise(async(resolve, reject) =>{
 try{
-    if (!data.email || !data.doctorId || !data.timeType || !data.specialtyName  || !data.fullName
+    if (!data.email || !data.doctorId || !data.timeType || !data.specialtyName  || !data.full
     ){
     resolve({
         errCode: 1,
@@ -13,11 +13,10 @@ try{
 }else{
     await emailService.sendSimpleEmail({
         receiverEmail: data.email,
-        patientName: data.fullName,
-        time: data.timeString,
-        doctorName:data.doctorName,
-        diagnosis:data.diagnosis,
-        language: data.language,
+        patientName: 'Tên bệnh nhân...',
+        time: '9:00 - 10:00 vào dd/mm/2022',
+        doctorName:"Phúc",
+        diagnosis: "Cây lúa - Bệnh đạo ôn",
         redirectLink: 'https://www.facebook.com/ta.phucbao'
     })
     let user = await db.User.findOrCreate({

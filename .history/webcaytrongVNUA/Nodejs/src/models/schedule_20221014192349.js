@@ -12,7 +12,7 @@ export default (sequelize, DataTypes) => {
       Schedule.belongsTo(models.Allcode,
         {foreignKey: 'timeType', targetKey: 'keyMap', as: 'timeTypeData'})
       Schedule.belongsTo(models.User,
-        { foreignKey: 'doctorId', targetKey: 'id', as: 'doctorData' })
+        { foreignKey: 'timeType', targetKey: 'keyMap', as: 'timeTypeData' })
     }
   };
   Schedule.init({

@@ -61,15 +61,15 @@ let getBodyHTMLEmail = (dataSend) => {
         <div><b>Time: ${dataSend.time}</b></div>
         <div><b>Doctor: ${dataSend.doctorName}</b></div>
         <div><b>Preliminary diagnosis of disease: ${dataSend.diagnosis}</b></div>
-        <p>If the above information is correct, please click on the link below to confirm and complete the medical appointment booking procedure.</p>
+        <p>Nếu các thông tin trên là đúng sư thật, vui lòng click vào đường link bên dưới
+        để xác nhận và hoàn tất thủ tục đặt lịch khám bệnh.</p>
         <div>
         <a href=${dataSend.redirectLink} target="_blank">Click here</a>
         </div>
-         <div>Thank you</div>
+         <div>Xin chân thành cảm ơn</div>
          `
 
     }
-    return result;
 }
 module.exports = {
     sendSimpleEmail: sendSimpleEmail

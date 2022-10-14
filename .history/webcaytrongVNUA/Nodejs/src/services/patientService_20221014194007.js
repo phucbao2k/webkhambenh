@@ -16,8 +16,8 @@ try{
         patientName: data.fullName,
         time: data.timeString,
         doctorName:data.doctorName,
-        diagnosis:data.diagnosis,
-        language: data.language,
+        diagnosis: "Cây lúa - Bệnh đạo ôn",
+        language
         redirectLink: 'https://www.facebook.com/ta.phucbao'
     })
     let user = await db.User.findOrCreate({
