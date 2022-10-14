@@ -256,7 +256,7 @@ class BookingModal extends Component {
                                     <DatePicker
                                         onChange={this.handleOnChangeDatePicker}
                                         className="form-control"
-                                        value={this.state.birthday}
+                                        value={this.state.date}
                                     />
                                 </div>
                                 {/* <div className="col-6 form-group">

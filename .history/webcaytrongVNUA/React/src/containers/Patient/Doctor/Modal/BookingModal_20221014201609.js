@@ -148,7 +148,7 @@ class BookingModal extends Component {
     // }
     // }
     handleConfirmBooking = async () => {
-        let date = new Date(this.state.birthday).getTime();
+        let date = new Date(this.state.date).getTime();
         let timeString = this.buildTimeBooking(this.props.dataTime);
         let doctorName = this.buildDoctorName(this.props.dataTime);
 
@@ -256,7 +256,7 @@ class BookingModal extends Component {
                                     <DatePicker
                                         onChange={this.handleOnChangeDatePicker}
                                         className="form-control"
-                                        value={this.state.birthday}
+                                        value={this.state.date}
                                     />
                                 </div>
                                 {/* <div className="col-6 form-group">
