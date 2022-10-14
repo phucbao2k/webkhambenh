@@ -257,7 +257,7 @@ class BookingModal extends Component {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="col-6 form-group">
+                                <div className="col- form-group">
                                         <label>Ngày tháng mua cây(Không bắt buộc)</label>
                                         <DatePicker
                                         onChange = {this.handleOnChangeDatePicker}
