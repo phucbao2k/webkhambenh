@@ -211,4 +211,4 @@ raw=false để dữ liệu trả về là 1 object javascript, nest là để l
 
 
 video 82: Customize modal reactjs
-https://www.youtube.com/watch?v=iO5IjzFUCNk&list=PLncHg6Kn2JT6E38Z3kit9Hnif1xC_9VqI&index=99
+

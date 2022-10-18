@@ -210,5 +210,5 @@ khi include nhiều giá trị trong 1 db, thì ta phải dùng raw =false, nest
 raw=false để dữ liệu trả về là 1 object javascript, nest là để lồng các attributes đó lại vs nhau thành 1 mảng
 
 
-video 82: Customize modal reactjs
-https://www.youtube.com/watch?v=iO5IjzFUCNk&list=PLncHg6Kn2JT6E38Z3kit9Hnif1xC_9VqI&index=99
+vide
+
