@@ -7,8 +7,8 @@
 
         .content-left {
             background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
+                background-repeat: no-repeat;
+                background-size: cover;
             width: 120px;
             height: 120px;
             border-radius: 50%;
@@ -32,18 +32,16 @@
             }
         }
     }
-
-    .schedule-doctor {
+    .schedule-doctor{
         margin: 0 auto;
         display: flex;
         min-height: 200px;
         padding: 10px 0;
-
-        .content-left {
+        
+        .content-left{
             width: 50%;
         }
-
-        .content-right {
+        .content-right{
             width: 50%;
         }
     }

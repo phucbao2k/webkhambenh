@@ -51,7 +51,7 @@ class DetailDoctor extends Component {
                     isShowBanner={false} />
                 <div className="container doctor-detail-container">
                     <div className="intro-doctor">
-                        <div className="bg-image content-left"
+                        <div className="bg-image section-outstanding-doctor content-left"
                             style={{ backgroundImage: `url(${detailDoctor && detailDoctor.image ? detailDoctor.image : ''})` }}>
 
                         </div>
