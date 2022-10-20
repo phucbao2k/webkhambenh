@@ -5,7 +5,7 @@ export const path = {
     SYSTEM: '/system',
     HOMEPAGE: '/home',
     DETAIL_DOCTOR: '/detail-doctor/:id',
-    VERIFY_EMAIL_BOOKING: '/verify-booking'
+    VERIF
 };
 
 export const LANGUAGES = {

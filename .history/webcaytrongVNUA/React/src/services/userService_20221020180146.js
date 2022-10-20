@@ -55,9 +55,7 @@ const getProfileDoctorById = (doctorId) => {
 const postPatientBookAppointment = (data) => {
     return axios.post('api/patient-book-appointment', data)
 }
-const postVerifyBookAppointment = (data) => {
-    return axios.post('/api/verify-book-appointment', data)
-}
+const postVer
 export {
     handleLoginApi, getAllUsers,
     createNewUserService, deleteUserService,
@@ -68,8 +66,7 @@ export {
     getScheduleDoctorByDate,
     getExtraInforDoctorById,
     getProfileDoctorById,
-    postPatientBookAppointment,
-    postVerifyBookAppointment
+    postPatientBookAppointment
 
 }//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export
