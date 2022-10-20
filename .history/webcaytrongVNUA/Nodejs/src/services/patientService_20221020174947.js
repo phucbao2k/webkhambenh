@@ -63,12 +63,12 @@ let postBookAppointment = (data) => {
 let postVerifyBookAppointment = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
-            if (!data.token || !data.doctorId) {
+            if(!data.token || !data.doctorId){
                 resolve({
                     errCode: 1,
                     errMessage: 'Missing parameter'
                 })
-            } else {
+            }else{
                 let appointment = await db.Booking.findOne({
                     where: {
                         doctorId: data.doctorId,
@@ -77,28 +77,27 @@ let postVerifyBookAppointment = (data) => {
                     },
                     raw: false
                 })
-                if (appointment) {
+                if(appointment){
                     appointment.statusId = 'S2';
                     await appointment.save();
                     resolve({
                         errCode: 0,
                         errMessage: 'Appointment was saved successfully!'
                     })
-                } else {
+                }else{
                     resolve({
                         errCode: 2,
-                        errMessage: 'Appointment has been activated or does not exist'
+                        errMessage
                     })
                 }
             }
 
         }
         catch (e) {
-            reject(e);
+
         }
     })
 }
 module.exports = {
-    postBookAppointment: postBookAppointment,
-    postVerifyBookAppointment: postVerifyBookAppointment
+    postBookAppointment: postBookAppointment
 }
