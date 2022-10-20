@@ -29,7 +29,6 @@ if(this.props.location && this.props.location.search){
         token: token,
         doctorId: doctorId
     })
-    
 }
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {

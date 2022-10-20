@@ -13,24 +13,14 @@ class VerifyEmail extends Component {
     constructor(props) {
         super(props);
         this.state = {
-statusVerify: false,
-errCode: 0
+suc
         }
 
     }
 
 
     async componentDidMount() {
-if(this.props.location && this.props.location.search){
-    let urlParams = new URLSearchParams(this.props.location.search);
-    let token = urlParams.get('token');
-    let doctorId = urlParams.get('doctorId');
-    let res = await postVerifyBookAppointment({
-        token: token,
-        doctorId: doctorId
-    })
-    
-}
+
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {

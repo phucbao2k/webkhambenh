@@ -26,10 +26,8 @@ if(this.props.location && this.props.location.search){
     let token = urlParams.get('token');
     let doctorId = urlParams.get('doctorId');
     let res = await postVerifyBookAppointment({
-        token: token,
-        doctorId: doctorId
+        token: token
     })
-    
 }
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {
