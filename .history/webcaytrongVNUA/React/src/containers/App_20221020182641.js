@@ -17,7 +17,6 @@ import Login from '../containers/auth/Login';
 import System from '../routes/System';
 
 import { CustomToastCloseButton } from '../components/CustomToast';
-import VerifyEmail from './Patient/VerifyEmail';
 
 
 class App extends Component {

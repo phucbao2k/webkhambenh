@@ -17,7 +17,6 @@ import Login from '../containers/auth/Login';
 import System from '../routes/System';
 
 import { CustomToastCloseButton } from '../components/CustomToast';
-import VerifyEmail from './Patient/VerifyEmail';
 
 
 class App extends Component {
@@ -58,7 +57,7 @@ class App extends Component {
                                     <Route path={'/doctor/'} component={userIsAuthenticated(Doctor)} />
                                     <Route path={path.HOMEPAGE} component={HomePage} />
                                     <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
-                                    <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />
+                                    <Route path={path.VERIFY_EMAIL_BOOKING} component={DetailDoctor} />
                                 </Switch>
                             </CustomScrollbars>
 

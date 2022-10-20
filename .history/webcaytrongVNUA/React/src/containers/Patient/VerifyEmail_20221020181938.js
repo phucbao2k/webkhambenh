@@ -51,7 +51,6 @@ class VerifyEmail extends Component {
 
     render() {
         let { statusVerify, errCode } = this.state;
-       
         return (
             <>
                 <HomeHeader />
@@ -62,8 +61,7 @@ class VerifyEmail extends Component {
                         </div> :
                         <div>
                             {+errCode === 0 ?
-                                <div className="infor-booking"><FormattedMessage id="patient.email-confirm.confirm" /></div>
-                                : <div className="infor-booking"><FormattedMessage id="patient.email-confirm.dont-exist" /></div>}
+                            <div className="infor-booking">Xác nhận lịch hẹn </div>}
                         </div>}
                 </div>
             </>

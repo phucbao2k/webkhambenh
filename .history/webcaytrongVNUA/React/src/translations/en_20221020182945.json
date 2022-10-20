@@ -63,10 +63,7 @@
             "specialtyName": "Name of plant specialty",
             "avatar": "Pictures of sick plants"
         },
-        "email-confirm":{
-            "confirm": "Appointment confirmed successfully",
-            "dont-exist": "Appointment does not yet exist or has been confirmed!"
-        }
+        "email-confirm"
     },
     "admin": {
         "manage-doctor": {

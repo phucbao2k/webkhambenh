@@ -62,8 +62,8 @@ class VerifyEmail extends Component {
                         </div> :
                         <div>
                             {+errCode === 0 ?
-                                <div className="infor-booking"><FormattedMessage id="patient.email-confirm.confirm" /></div>
-                                : <div className="infor-booking"><FormattedMessage id="patient.email-confirm.dont-exist" /></div>}
+                                <div className="infor-booking"><FormattedMessage id="patient.booking-modal.title" /></div>
+                                : <div className="infor-booking">Lịch hẹn chưa tồn tại hoặc đã được xác nhận!</div>}
                         </div>}
                 </div>
             </>

@@ -64,7 +64,7 @@
             "avatar": "Hình ảnh cây trồng bị bệnh"
         },
         "email-confirm": {
-            "confirm": "Xác nhận lịch hẹn thành công",
+            "confirm": "Appointment confirmed successfully",
             "dont-exist": "Lịch hẹn chưa tồn tại hoặc đã được xác nhận!"
         }
     },

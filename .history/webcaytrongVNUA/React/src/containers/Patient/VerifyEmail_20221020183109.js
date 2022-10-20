@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { postVerifyBookAppointment } from "../../services/userService";
 import HomeHeader from '../HomePage/HomeHeader';
 import './VerifyEmail.scss';
-
+import { LANGUAGES } from '../../utils';
 
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 
@@ -62,8 +62,8 @@ class VerifyEmail extends Component {
                         </div> :
                         <div>
                             {+errCode === 0 ?
-                                <div className="infor-booking"><FormattedMessage id="patient.email-confirm.confirm" /></div>
-                                : <div className="infor-booking"><FormattedMessage id="patient.email-confirm.dont-exist" /></div>}
+                            <div className="infor-booking">Xác nhận lịch hẹn thành công</div>
+                                : <div className="infor-booking">Lịch hẹn chưa tồn tại hoặc đã được xác nhận!</div>}
                         </div>}
                 </div>
             </>

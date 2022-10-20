@@ -65,7 +65,7 @@
         },
         "email-confirm":{
             "confirm": "Appointment confirmed successfully",
-            "dont-exist": "Appointment does not yet exist or has been confirmed!"
+            "dont-exist": ""
         }
     },
     "admin": {
