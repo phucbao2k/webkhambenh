@@ -96,10 +96,6 @@ class Login extends Component {
     return (
      
         <div className="login-background">
-        <Register
-          isOpen={this.state.isOpenModalUser}
-          toggleFromParent={this.toggleUserModal}
-          createNewUser={this.createNewUser} />
           <div className="login-container">
             <div className="login-content row">
 

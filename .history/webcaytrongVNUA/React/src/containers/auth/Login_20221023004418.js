@@ -96,7 +96,7 @@ class Login extends Component {
     return (
      
         <div className="login-background">
-        <Register
+        <ModalUser
           isOpen={this.state.isOpenModalUser}
           toggleFromParent={this.toggleUserModal}
           createNewUser={this.createNewUser} />

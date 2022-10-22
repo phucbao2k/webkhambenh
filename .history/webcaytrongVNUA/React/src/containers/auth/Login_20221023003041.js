@@ -96,10 +96,6 @@ class Login extends Component {
     return (
      
         <div className="login-background">
-        <Register
-          isOpen={this.state.isOpenModalUser}
-          toggleFromParent={this.toggleUserModal}
-          createNewUser={this.createNewUser} />
           <div className="login-container">
             <div className="login-content row">
 
@@ -137,7 +133,7 @@ class Login extends Component {
                 <span className="sign-up">Or</span>
               </div>
               <div className="col-12 login-input">
-              <button className="btn-login" onClick={() => {this.handleAddNewUser()}}>Register</button>
+              <button className="btn-login" onClick={() => {this.handleAddNewUser()}>Register</button>
               </div>
               <div className="col-12">
                 <span className="forgot-pass">Forgot your password?</span>

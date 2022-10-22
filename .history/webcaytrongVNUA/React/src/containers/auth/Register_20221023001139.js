@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import './Register.scss';
+import './UserManage.scss';
 import { emitter } from '../../utils/emitter';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 class Register extends Component {

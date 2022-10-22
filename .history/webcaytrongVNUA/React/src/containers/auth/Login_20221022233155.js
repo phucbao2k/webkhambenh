@@ -4,10 +4,9 @@ import { push } from "connected-react-router";
 import * as actions from "../../store/actions";
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
-import Register from './Register';
 // import {userService} from '../../services'
-import { emitter } from '../../utils/emitter';
-import { handleLoginApi, createNewUserService } from '../../services/userService';
+
+import { handleLoginApi } from '../../services/userService';
 import { reject } from 'lodash';
 class Login extends Component {
   constructor(props) {
@@ -15,7 +14,6 @@ class Login extends Component {
     this.state = {
       username: '',
       password: '',
-       isOpenModalUser: false,
       isShowPassword: false,
       errMessage: ''
     }
@@ -65,41 +63,12 @@ class Login extends Component {
       this.handleLogin();
     }
   }
-  handleAddNewUser = () => {
-    this.setState({
-      isOpenModalUser: true,
-    })
-  }
-  toggleUserModal = () => {
-    this.setState({
-      isOpenModalUser: !this.state.isOpenModalUser,
-    })
-  }
-  createNewUser = async (data) => {
-    try {
-      let response = await createNewUserService(data);
-      if (response && response.errCode !== 0) {
-        alert(response.errMessage);
-      } else {
-        this.setState({
-          isOpenModalUser: false,
-        })
-        emitter.emit('EVENT_CLEAR_MODAL_DATA')
-      }
-    } catch (e) {
-      console.log(e);
-    }
-  }
   render() {
     //JSX
 
     return (
      
         <div className="login-background">
-        <Register
-          isOpen={this.state.isOpenModalUser}
-          toggleFromParent={this.toggleUserModal}
-          createNewUser={this.createNewUser} />
           <div className="login-container">
             <div className="login-content row">
 
@@ -137,7 +106,7 @@ class Login extends Component {
                 <span className="sign-up">Or</span>
               </div>
               <div className="col-12 login-input">
-              <button className="btn-login" onClick={() => {this.handleAddNewUser()}}>Register</button>
+                <button className="btn-login" onClick={() => { this.handleLogin() }}>Register</button>
               </div>
               <div className="col-12">
                 <span className="forgot-pass">Forgot your password?</span>

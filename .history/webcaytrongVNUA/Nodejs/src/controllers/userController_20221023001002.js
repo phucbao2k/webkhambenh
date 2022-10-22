@@ -71,5 +71,6 @@ module.exports = {
     handleCreateNewUser: handleCreateNewUser,
     handleDeleteUser: handleDeleteUser,
     handleEditUser: handleEditUser,
-    getAllCode: getAllCode
+    getAllCode: getAllCode,
+    handleRegister: handleRegister
 }
