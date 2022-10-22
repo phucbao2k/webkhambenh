@@ -67,7 +67,7 @@ class Login extends Component {
     //JSX
 
     return (
-     
+      <form>
         <div className="login-background">
           <div className="login-container">
             <div className="login-content row">
@@ -102,12 +102,12 @@ class Login extends Component {
               <div className="col-12 login-input">
                 <button className="btn-login" onClick={() => { this.handleLogin() }}>Login</button>
               </div>
-              {/* <div className="col-12">
+              <div className="col-12">
                 <span className="sign-up">Or</span>
               </div>
               <div className="col-12 login-input">
                 <button className="btn-login" onClick={() => { this.handleLogin() }}>Register</button>
-              </div> */}
+              </div>
               <div className="col-12">
                 <span className="forgot-pass">Forgot your password?</span>
               </div>
@@ -123,7 +123,7 @@ class Login extends Component {
             </div>
           </div>
         </div>
-    
+      </form>
      
     )
   }

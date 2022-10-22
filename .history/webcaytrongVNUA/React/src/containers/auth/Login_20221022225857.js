@@ -102,12 +102,12 @@ class Login extends Component {
               <div className="col-12 login-input">
                 <button className="btn-login" onClick={() => { this.handleLogin() }}>Login</button>
               </div>
-              {/* <div className="col-12">
+              <div className="col-12">
                 <span className="sign-up">Or</span>
               </div>
               <div className="col-12 login-input">
                 <button className="btn-login" onClick={() => { this.handleLogin() }}>Register</button>
-              </div> */}
+              </div>
               <div className="col-12">
                 <span className="forgot-pass">Forgot your password?</span>
               </div>
