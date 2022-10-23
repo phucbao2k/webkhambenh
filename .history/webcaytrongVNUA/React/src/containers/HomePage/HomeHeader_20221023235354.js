@@ -53,12 +53,12 @@ class HomeHeader extends Component {
                         </div>
                         <div className="right-content">
                             <div className="support" onClick={() => this.goToLogin()}><i className="fa-solid fa-circle-question"
-                            >
-
-                            </i>
+                               >
+                                    
+                                </i>
                                 <div><b><FormattedMessage id="homeheader.support" /></b></div>
                                 <div className="sub-title"><FormattedMessage id="homeheader.click" /></div>
-                            </div>
+                                </div>
                             <div className="language">
                                 <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}>
                                     <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span>

@@ -16,7 +16,7 @@ class HomeHeader extends Component {
     }
     goToLogin = () => {
         if (this.props.history) {
-            this.props.history.push(`/login`)
+            this.props.history.push(`/home`)
         }
     }
     render() {
@@ -52,13 +52,7 @@ class HomeHeader extends Component {
 
                         </div>
                         <div className="right-content">
-                            <div className="support" onClick={() => this.goToLogin()}><i className="fa-solid fa-circle-question"
-                            >
-
-                            </i>
-                                <div><b><FormattedMessage id="homeheader.support" /></b></div>
-                                <div className="sub-title"><FormattedMessage id="homeheader.click" /></div>
-                            </div>
+                            <div className="support"><i className="fa-solid fa-circle-question"></i><FormattedMessage id="homeheader.support" /></div>
                             <div className="language">
                                 <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}>
                                     <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span>
