@@ -1,4 +1,4 @@
-import db from "../models/index";
+const db = require("../models");
 let createSpecialty = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -12,7 +12,7 @@ let createSpecialty = (data) => {
                 })
 
             } else {
-                await db.Speciality.create({
+                await db.Specialty.save({
                     name: data.name,
                     image: data.imageBase64,
                     descriptionHTML: data.descriptionHTML,

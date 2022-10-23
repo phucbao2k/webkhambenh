@@ -1,4 +1,4 @@
-import db from "../models/index";
+import db from '../models/index';
 let createSpecialty = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -12,7 +12,7 @@ let createSpecialty = (data) => {
                 })
 
             } else {
-                await db.Speciality.create({
+                await db.Specialty.create({
                     name: data.name,
                     image: data.imageBase64,
                     descriptionHTML: data.descriptionHTML,
@@ -28,6 +28,4 @@ let createSpecialty = (data) => {
         }
     })
 }
-module.exports = {
-    createSpecialty: createSpecialty
-}
+module.exports
