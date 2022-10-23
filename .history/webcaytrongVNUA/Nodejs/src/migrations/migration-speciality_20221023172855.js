@@ -17,7 +17,7 @@ module.exports = {
       descriptionHTML: {
         type: Sequelize.TEXT
       },
-      descriptionMarkdown: {
+      descriptionMar: {
         type: Sequelize.TEXT
       },
       createdAt: {

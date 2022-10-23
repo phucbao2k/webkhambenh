@@ -30,7 +30,7 @@ export function initWebRoutes(app) {
     router.get('/api/get-profile-doctor-by-id', doctorController.getProfileDoctorById);
     router.post('/api/patient-book-appointment', patientController.postBookAppointment);
     router.post('/api/verify-book-appointment', patientController.postVerifyBookAppointment);
-    router.post('/api/create-new-specialty', specialtyController.createSpecialty);
+    router.post('/api/create-new-special')
     router.get('/', (req, res) => {
         return res.send('HELU WORLD');
     });

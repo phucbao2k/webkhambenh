@@ -3,7 +3,7 @@ import homeController from "../controllers/homeController.js";
 import userController from "../controllers/userController.js";
 import doctorController from "../controllers/doctorController.js";
 import patientController from "../controllers/patientController.js";
-import specialtyController from "../controllers/specialtyController.js";
+import spe
 let router = express.Router();
 export function initWebRoutes(app) {
     router.get('/', homeController.getHomePage);
@@ -30,7 +30,6 @@ export function initWebRoutes(app) {
     router.get('/api/get-profile-doctor-by-id', doctorController.getProfileDoctorById);
     router.post('/api/patient-book-appointment', patientController.postBookAppointment);
     router.post('/api/verify-book-appointment', patientController.postVerifyBookAppointment);
-    router.post('/api/create-new-specialty', specialtyController.createSpecialty);
     router.get('/', (req, res) => {
         return res.send('HELU WORLD');
     });
