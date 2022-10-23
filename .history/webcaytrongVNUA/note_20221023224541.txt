@@ -214,4 +214,3 @@ video 82: Customize modal reactjs
 https://www.youtube.com/watch?v=iO5IjzFUCNk&list=PLncHg6Kn2JT6E38Z3kit9Hnif1xC_9VqI&index=99
 
 
-let { language } = this.props; dùng để lấy props ngôn ngữ của redux

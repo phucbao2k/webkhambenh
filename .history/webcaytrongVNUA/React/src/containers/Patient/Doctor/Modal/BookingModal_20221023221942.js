@@ -39,7 +39,7 @@ class BookingModal extends Component {
 
 
     }
-    //doctorId, timeType được lấy từ dataTime
+    //doctorId được lấy từ dataTime
 
 
     async componentDidMount() {
@@ -208,7 +208,9 @@ class BookingModal extends Component {
                                     isShowDescriptionDoctor={false}
                                     dataTime={dataTime} />
                             </div>
-                           
+                            <div className="price">
+                                Gía khám 350.000 VND
+                            </div>
                             <div className="row">
                                 <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.fullName" /></label>
