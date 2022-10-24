@@ -44,7 +44,6 @@ let postBookAppointment = (data) => {
                     await db.Booking.findOrCreate({
                         where: {
                             timeType: data.timeType,
-                            date: data.date
                         },
                         defaults:{
                             statusId: 'S1',

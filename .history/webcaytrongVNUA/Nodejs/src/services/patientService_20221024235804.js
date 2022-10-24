@@ -42,23 +42,16 @@ let postBookAppointment = (data) => {
                 //user[0] để lấy phần tử đầu tiên trong array, tức là object
                 if (user && user[0]) {
                     await db.Booking.findOrCreate({
-                        where: {
-                            timeType: data.timeType,
-                            date: data.date
-                        },
-                        defaults:{
-                            statusId: 'S1',
-                            doctorId: data.doctorId,
-                            patientId: user[0].id,
-                            specialtyName: data.specialtyName,
-                            plantName: data.plantName,
-                            timeType: data.timeType,
-                            image: data.image,
-                            date: data.date,
-                            token: token,
-                        }
-
-                       
+                        where
+                        statusId: 'S1',
+                        doctorId: data.doctorId,
+                        patientId: user[0].id,
+                        specialtyName: data.specialtyName,
+                        plantName: data.plantName,
+                        timeType: data.timeType,
+                        image: data.image,
+                        date: data.date,
+                        token: token,
 
                     })
                 }
