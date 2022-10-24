@@ -54,9 +54,9 @@ class HomeHeader extends Component {
                                 <div><b><FormattedMessage id="homeheader.fee" /></b></div>
                                 <div className="sub-title"><FormattedMessage id="homeheader.check-health" /></div>
                             </div>
-                            <div className=" child-content" onClick={() => this.goToLogin()}>
+                            <div className=" child-content">
                                 <div><b><FormattedMessage id="homeheader.manage-account" /></b></div>
-                                <div className="support">
+                                <div className="support" onClick={() => this.goToLogin()}>
                                     <FormattedMessage id="homeheader.welcome"></FormattedMessage>,
                                     {userInfo && userInfo.firstName && userInfo.lastName ? ' ' + userInfo.firstName + ' ' + userInfo.lastName : ' '} !
                                     {/* Khi có thông tin của userInfo với 2 biến đầy đủ như kia thì ta in ra, không thì trả về giá trị rỗng */}
@@ -67,15 +67,7 @@ class HomeHeader extends Component {
                             </div>
                         </div>
                         <div className="right-content">
-                            <div className="language">
-                                <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}>
-                                    <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span>
-                                </div>
-                                <div className={language === LANGUAGES.EN ? 'language-en active' : 'language-en'}>
-                                    <span onClick={() => this.changeLanguage(LANGUAGES.EN)}>EN
-                                    </span>
-                                </div>
-                            </div>
+
                         </div>
                        
                        

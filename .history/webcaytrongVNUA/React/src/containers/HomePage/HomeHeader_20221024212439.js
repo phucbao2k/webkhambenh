@@ -54,19 +54,16 @@ class HomeHeader extends Component {
                                 <div><b><FormattedMessage id="homeheader.fee" /></b></div>
                                 <div className="sub-title"><FormattedMessage id="homeheader.check-health" /></div>
                             </div>
-                            <div className=" child-content" onClick={() => this.goToLogin()}>
-                                <div><b><FormattedMessage id="homeheader.manage-account" /></b></div>
-                                <div className="support">
-                                    <FormattedMessage id="homeheader.welcome"></FormattedMessage>,
-                                    {userInfo && userInfo.firstName && userInfo.lastName ? ' ' + userInfo.firstName + ' ' + userInfo.lastName : ' '} !
-                                    {/* Khi có thông tin của userInfo với 2 biến đầy đủ như kia thì ta in ra, không thì trả về giá trị rỗng */}
-                                </div>
 
-
-
-                            </div>
                         </div>
                         <div className="right-content">
+                            <div><b><FormattedMessage id="homeheader.manage-account" /></b></div>
+                            <div className="support" onClick={() => this.goToLogin()}>
+                                <FormattedMessage id="homeheader.welcome"></FormattedMessage>,
+                                {userInfo && userInfo.firstName && userInfo.lastName ? ' ' + userInfo.firstName + ' ' + userInfo.lastName : ' '} !
+                                {/* Khi có thông tin của userInfo với 2 biến đầy đủ như kia thì ta in ra, không thì trả về giá trị rỗng */}
+                            </div>
+                            
                             <div className="language">
                                 <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}>
                                     <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span>
@@ -76,9 +73,8 @@ class HomeHeader extends Component {
                                     </span>
                                 </div>
                             </div>
+
                         </div>
-                       
-                       
                     </div>
 
                 </div>

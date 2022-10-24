@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './HomeHeader.scss';
 import { LANGUAGES } from '../../utils';
+import { changeLanguageApp } from "../../store/actions"
 import * as actions from "../../store/actions";
 import { FormattedMessage } from 'react-intl';
 import { withRouter } from 'react-router';
@@ -26,7 +27,7 @@ class HomeHeader extends Component {
     render() {
         let language = this.props.language;
         console.log("check language: ", language);
-        const {  userInfo } = this.props;
+        const { processLogout, userInfo } = this.props;
         return (
             <React.Fragment>
 
@@ -54,19 +55,21 @@ class HomeHeader extends Component {
                                 <div><b><FormattedMessage id="homeheader.fee" /></b></div>
                                 <div className="sub-title"><FormattedMessage id="homeheader.check-health" /></div>
                             </div>
-                            <div className=" child-content" onClick={() => this.goToLogin()}>
-                                <div><b><FormattedMessage id="homeheader.manage-account" /></b></div>
-                                <div className="support">
-                                    <FormattedMessage id="homeheader.welcome"></FormattedMessage>,
-                                    {userInfo && userInfo.firstName && userInfo.lastName ? ' ' + userInfo.firstName + ' ' + userInfo.lastName : ' '} !
-                                    {/* Khi có thông tin của userInfo với 2 biến đầy đủ như kia thì ta in ra, không thì trả về giá trị rỗng */}
-                                </div>
 
-
-
-                            </div>
                         </div>
                         <div className="right-content">
+                            <span className="welcome" >
+                                <FormattedMessage id="homeheader.welcome"></FormattedMessage>,
+                                {userInfo && userInfo.firstName && userInfo.lastName ? ' ' + userInfo.firstName + ' ' + userInfo.lastName : ' '} !
+                                {/* Khi có thông tin của userInfo với 2 biến đầy đủ như kia thì ta in ra, không thì trả về giá trị rỗng */}
+                            </span>
+                            <div className="support" ><i className="fa-solid fa-circle-question"
+                            >
+
+                            </i>
+                                <div><b><FormattedMessage id="homeheader.support" /></b></div>
+                                <div className="sub-title"><FormattedMessage id="homeheader.click" /></div>
+                            </div>
                             <div className="language">
                                 <div className={language === LANGUAGES.VI ? 'language-vi active' : 'language-vi'}>
                                     <span onClick={() => this.changeLanguage(LANGUAGES.VI)}>VN</span>
@@ -76,9 +79,8 @@ class HomeHeader extends Component {
                                     </span>
                                 </div>
                             </div>
+
                         </div>
-                       
-                       
                     </div>
 
                 </div>

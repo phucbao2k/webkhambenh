@@ -41,7 +41,6 @@
             align-items: center;
 
             .child-content {
-                cursor: pointer;
                 .sub-title {
                     font-weight: 400;
                     font-size: 12px;
@@ -67,51 +66,9 @@
 cursor: pointer;
                 }
             }
-                        .language {
-                            display: flex;
-                            flex-direction: row;
-            
-                            .language-vi {
-                                margin: 0 10px;
-                                opacity: 0.2;
-                                cursor: pointer;
-            
-                                &.active {
-                                    opacity: 1;
-            
-                                    span {
-                                        color: orange;
-                                    }
-                                }
-            
-                                &:hover {
-                                    opacity: 0.8;
-                                }
-                            }
-            
-                            .language-en {
-                                margin: 0 10px;
-                                opacity: 0.2;
-                                cursor: pointer;
-            
-                                &.active {
-                                    opacity: 1;
-            
-                                    span {
-                                        color: blue;
-                                    }
-                                }
-            
-                                &:hover {
-                                    opacity: 0.8;
-                                }
-            
-                            }
-                        }
 
            
         }
-                 
     }
 }
 

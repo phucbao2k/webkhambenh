@@ -54,7 +54,7 @@ class HomeHeader extends Component {
                                 <div><b><FormattedMessage id="homeheader.fee" /></b></div>
                                 <div className="sub-title"><FormattedMessage id="homeheader.check-health" /></div>
                             </div>
-                            <div className=" child-content" onClick={() => this.goToLogin()}>
+                            <div className=" child-content" >
                                 <div><b><FormattedMessage id="homeheader.manage-account" /></b></div>
                                 <div className="support">
                                     <FormattedMessage id="homeheader.welcome"></FormattedMessage>,
