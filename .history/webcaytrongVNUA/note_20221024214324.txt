@@ -216,5 +216,3 @@ https://www.youtube.com/watch?v=iO5IjzFUCNk&list=PLncHg6Kn2JT6E38Z3kit9Hnif1xC_9
 
 let { language } = this.props; dùng để lấy props ngôn ngữ của redux
 
-nếu chúng ta xác định một component nào đó của react sẽ được sử dụng ở nhiều nơi, chúng ta hãy viết riêng component đó ra thành 1 class
-riêng rồi import vào các component cần, điều này tránh được việc phải viết nhiều logic js
