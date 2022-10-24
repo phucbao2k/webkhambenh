@@ -46,11 +46,7 @@ export const adminMenu = [
         ]
 
     },
-    {// về trang chủ
-        name: 'menu.admin.home', link: '/home'
-      
-
-    }
+    
 ];
 export const doctorMenu = [
     {
@@ -60,8 +56,5 @@ export const doctorMenu = [
                 name: 'menu.doctor.manage-schedule', link: '/doctor/manage-schedule'
             },
         ]
-    },
-     {// về trang chủ
-         name: 'menu.admin.home', link: '/home'
     }
 ];

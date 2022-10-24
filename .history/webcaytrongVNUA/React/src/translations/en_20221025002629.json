@@ -84,7 +84,8 @@
             "addressClinic": "Clinic's address",
             "note": "Note",
             "specialty": "Specialization (plant type)",
-            "select-clinic": "Select clinic"
+            "select-clinic": "Select clinic",
+            "home": 
         }
     },
     "system": {
@@ -119,8 +120,7 @@
             "specialty": "Specialties",
             "manage-specialty": "Manage Specialties",
             "handbook": "Handbook",
-            "manage-handbook": "Manage handbooks",
-            "home": "Home"
+            "manage-handbook": "Manage handbooks"
         },
         "doctor": {
             "manage-schedule": "Manage Doctor's schedule"

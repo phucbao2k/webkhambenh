@@ -119,8 +119,7 @@
             "specialty": "Specialties",
             "manage-specialty": "Manage Specialties",
             "handbook": "Handbook",
-            "manage-handbook": "Manage handbooks",
-            "home": "Home"
+            "manage-handbook": "Manage handbooks"
         },
         "doctor": {
             "manage-schedule": "Manage Doctor's schedule"

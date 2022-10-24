@@ -63,5 +63,7 @@ export const doctorMenu = [
     },
      {// về trang chủ
          name: 'menu.admin.home', link: '/home'
+        
+
     }
 ];

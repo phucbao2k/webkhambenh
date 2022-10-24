@@ -38,17 +38,17 @@ export const adminMenu = [
         ]
     },
     {// quản lý cẩm nang, tin tức
-        name: 'menu.admin.handbook',
-        menus: [
-            {
-                name: 'menu.admin.manage-handbook', link: '/system/manage-handbook'
-            },
-        ]
+        name: 'menu.admin.handbook', link: '/system/manage-handbook'
+       
 
     },
     {// về trang chủ
-        name: 'menu.admin.home', link: '/home'
-      
+        name: 'menu.admin.home',
+        menus: [
+            {
+                name: 'menu.admin.home', link: '/home'
+            },
+        ]
 
     }
 ];
@@ -62,6 +62,12 @@ export const doctorMenu = [
         ]
     },
      {// về trang chủ
-         name: 'menu.admin.home', link: '/home'
+        name: 'menu.admin.home',
+        menus: [
+            {
+                name: 'menu.admin.home', link: '/home'
+            },
+        ]
+
     }
 ];
