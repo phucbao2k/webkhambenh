@@ -51,8 +51,7 @@ class Specialty extends Component {
                             dataSpecialty.map((item, index)=> {
                                 return (
                                     <div className="section-customize specialty-child" key={index}
-                                    onClick={() => this.handleViewDetailSpecialty(item)}
-                                    >
+                                    onClick>
                                         <div className="bg-image section-specialty"
                                         style={{backgroundImage: `url(${item.image})`}}
                                         />
@@ -85,4 +84,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Specialty));
+export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
