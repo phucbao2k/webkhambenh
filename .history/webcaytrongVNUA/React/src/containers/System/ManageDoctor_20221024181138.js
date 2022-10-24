@@ -342,7 +342,7 @@ class ManageDoctor extends Component {
                                 />
                             </div>
                            
-                            <div className="col-8 form-group">
+                            <div className="col-4 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.note" /></label>
                                 <input className="form-control"
                                     onChange={(event) => this.handleOnChangeText(event, 'note')}

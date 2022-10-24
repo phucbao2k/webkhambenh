@@ -318,16 +318,6 @@ class ManageDoctor extends Component {
                                     value={this.state.addressClinic}
                                 />
                             </div>
-                            <div className="col-4 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.select-clinic" /></label>
-                                <Select
-                                    value={this.state.selectedClinic}
-                                    onChange={this.handleChangeSelectDoctorInfor}
-                                    options={this.state.listClinic}
-                                    placeholder={<FormattedMessage id="admin.manage-doctor.select-clinic" />}
-                                    name="selectedClinic"
-                                />
-                            </div>
                             
                         </div>
                         <div className="row">
@@ -342,7 +332,7 @@ class ManageDoctor extends Component {
                                 />
                             </div>
                            
-                            <div className="col-8 form-group">
+                            <div className="col-4 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.note" /></label>
                                 <input className="form-control"
                                     onChange={(event) => this.handleOnChangeText(event, 'note')}

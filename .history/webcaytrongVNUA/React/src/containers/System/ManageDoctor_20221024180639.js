@@ -319,16 +319,12 @@ class ManageDoctor extends Component {
                                 />
                             </div>
                             <div className="col-4 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.select-clinic" /></label>
-                                <Select
-                                    value={this.state.selectedClinic}
-                                    onChange={this.handleChangeSelectDoctorInfor}
-                                    options={this.state.listClinic}
-                                    placeholder={<FormattedMessage id="admin.manage-doctor.select-clinic" />}
-                                    name="selectedClinic"
+                                <label><FormattedMessage id="admin.manage-doctor.note" /></label>
+                                <input className="form-control"
+                                    onChange={(event) => this.handleOnChangeText(event, 'note')}
+                                    value={this.state.note}
                                 />
                             </div>
-                            
                         </div>
                         <div className="row">
                             <div className="col-4 form-group">
@@ -341,18 +337,10 @@ class ManageDoctor extends Component {
                                     name="selectedSpecialty"
                                 />
                             </div>
-                           
-                            <div className="col-8 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.note" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeText(event, 'note')}
-                                    value={this.state.note}
-                                />
-                            </div>
                         </div>
                     </div>
                     <div className="container-fluid manage-doctor-editor">
-                        <MdEditor style={{ height: '300px' }} renderHTML={text => mdParser.render(text)}
+                        <MdEditor style={{ height: '500px' }} renderHTML={text => mdParser.render(text)}
                             onChange={this.handleEditorChange}
                             value={this.state.contentMarkdown} />
                     </div>

@@ -4,7 +4,7 @@ import './Specialty.scss';
 import { FormattedMessage } from 'react-intl';
 import Slider from "react-slick";
 import {getAllSpecialty} from '../../../services/userService';
-import {withRouter} from 'react-router';
+import {withRouter}
 class Specialty extends Component {
     constructor(props) {
         super(props);
@@ -18,11 +18,6 @@ class Specialty extends Component {
             this.setState({
                 dataSpecialty: res.data ? res.data : []
             })
-        }
-    }
-    handleViewDetailSpecialty = (item) => {
-        if(this.props.history){
-            this.props.history.push(`/detail-specialty/${item.id}`)
         }
     }
 
