@@ -47,10 +47,10 @@ export const adminMenu = [
 
     },
     {// về trang chủ
-        name: 'menu.admin.home',
+        name: 'menu.admin.home', link: '/home'
         menus: [
             {
-                name: 'menu.admin.home', link: '/home'
+                name: 'menu.admin.home', 
             },
         ]
 
