@@ -45,7 +45,7 @@ class Specialty extends Component {
                             dataSpecialty.map((item, index)=> {
                                 return (
                                     <div className="section-customize specialty-child" key={index}>
-                                        <div className="bg-image section-specialty"
+                                        <div className="bg-image section-outstanding-doctor"
                                         style={{backgroundImage: `url(${item.image})`}}
                                         />
                                         <div className="specialty-name">{item.name}</div>

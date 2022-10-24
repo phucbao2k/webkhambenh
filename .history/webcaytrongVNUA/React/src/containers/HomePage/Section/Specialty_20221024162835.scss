@@ -1,12 +1,11 @@
 .section-specialty {
-
-   
+   pa
     height: 150px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-  margin: 8px;
-   
+    background-color: #eee;
+    // border: 1px solid red;
 }
 
 
@@ -44,13 +43,11 @@
     }
 
     .specialty-body {
-        
         .specialty-child {
             cursor: pointer;
 
-            .specialty-name {
+            .special-name {
                 padding: 10px 0;
-                margin: 8px;
             }
 
             &:hover {

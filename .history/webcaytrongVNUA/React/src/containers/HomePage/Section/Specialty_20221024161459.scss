@@ -1,12 +1,7 @@
 .section-specialty {
-
-   
-    height: 150px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  margin: 8px;
-   
+    height: 330px;
+    background: #f5f5f5;
+    // border: 1px solid red;
 }
 
 
@@ -44,21 +39,28 @@
     }
 
     .specialty-body {
-        
+        .specialty-customize {
+            .bg-image {
+                width: 314px;
+                height: 150px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: #eee;
+            }
+        }
+
         .specialty-child {
             cursor: pointer;
 
-            .specialty-name {
+            .special-name {
                 padding: 10px 0;
-                margin: 8px;
             }
 
             &:hover {
                 color: #45c3d2;
             }
         }
-
-
 
 
 

@@ -5,8 +5,8 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-  margin: 8px;
-   
+  margin: ;
+    // border: 1px solid red;
 }
 
 
@@ -48,9 +48,8 @@
         .specialty-child {
             cursor: pointer;
 
-            .specialty-name {
+            .special-name {
                 padding: 10px 0;
-                margin: 8px;
             }
 
             &:hover {
