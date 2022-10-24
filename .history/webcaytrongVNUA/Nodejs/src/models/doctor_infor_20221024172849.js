@@ -17,7 +17,7 @@ export default (sequelize, DataTypes) => {
     Doctor_Infor.init({
         doctorId: DataTypes.INTEGER,
         specialtyId: DataTypes.INTEGER,
-        clinicID: DataTypes.INTEGER,
+        clinic
         priceId: DataTypes.STRING,
         provinceId: DataTypes.STRING,
         paymentId: DataTypes.STRING,

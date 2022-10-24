@@ -48,32 +48,16 @@ let getAllDoctors = () => {
         }
     })
 }
-let checkRequiredFields = (inputData) => {
-    let arrFields = ['doctorId', 'contentHTML', 'contentMarkdown', 'action',
-        'selectedPrice', 'selectedPayment', ' selectProvince',
-        'nameClinic', 'addressClinic', 'note', 'specilatyId'];
-    let isValid = true;
-    let element = '';
-    for (let i = 0; i < arrFields.length; i++) {
-        if (!inputData[arrFields[i]]) {
-            isValid = false;
-            element = arrFields[i]
-            break;
-        }
-    }
-    return {
-        isValid: isValid,
-        element: element
-    }
-}
 let saveDetailInforDoctor = (inputData) => {
     return new Promise(async (resolve, reject) => {
         try {
-            let checkObj = checkRequiredFields(inputData);
-            if (checkObj.isValid === false) {
+            if (!inputData.doctorId || !inputData.contentHTML || !inputData.contentMarkdown
+                || !inputData.action
+                || !inputData.selectedPrice || !inputData.selectedPayment || !inputData.selectProvince
+                || !inputData.nameClinic || !inputData.addressClinic || !inputData.note) {
                 resolve({
                     errCode: 1,
-                    errMessage: `Missing parameters: ${checkObj.element}`
+                    errMessage: 'Missing parameters'
                 })
             } else {
                 //upsert to Markdown
@@ -112,8 +96,6 @@ let saveDetailInforDoctor = (inputData) => {
                     doctorInfor.nameClinic = inputData.nameClinic;
                     doctorInfor.addressClinic = inputData.addressClinic;
                     doctorInfor.note = inputData.note;
-                    doctorInfor.specialtyId = inputData.specialtyId;
-                    doctorInfor.clinicId = inputData.clinicId;
                     await doctorInfor.save();
                 } else {
                     await db.Doctor_Infor.create({
@@ -124,8 +106,6 @@ let saveDetailInforDoctor = (inputData) => {
                         nameClinic: inputData.nameClinic,
                         addressClinic: inputData.addressClinic,
                         note: inputData.note,
-                        specialtyId: inputData.specialtyId,
-                        clinicId: inputData.clinicId,
                     })
                 }
                 resolve({
@@ -352,7 +332,11 @@ if(!inputId){
         }
     })
 }
-
+let checkRequiredFields = (inputData) => {
+    let arrFields = ['doctorId', 'contentHTML', 'contentMarkdown', 'action',
+        'selectedPrice', 'selectedPayment', ' selectProvince',
+    'nameClinic', 'addressClinic', 'note'];
+}
 module.exports = {
     getTopDoctorHome: getTopDoctorHome,
     getAllDoctors: getAllDoctors,

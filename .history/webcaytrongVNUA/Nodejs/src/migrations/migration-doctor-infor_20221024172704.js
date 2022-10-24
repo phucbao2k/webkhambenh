@@ -12,12 +12,7 @@ module.exports = {
                 type: Sequelize.INTEGER,
                 allowNull: false,
             },
-            specialtyId: {
-                type: Sequelize.INTEGER,
-            },
-            clinicId: {
-                type: Sequelize.INTEGER,
-            },
+            
             priceId: {
                 type: Sequelize.STRING,
                 allowNull: false,
@@ -40,7 +35,7 @@ module.exports = {
             },
             note: {
                 type: Sequelize.STRING,
-
+               
             },
             count: {
                 type: Sequelize.INTEGER,
