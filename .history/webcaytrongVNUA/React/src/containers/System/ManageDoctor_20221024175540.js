@@ -98,7 +98,7 @@ class ManageDoctor extends Component {
             if (type === 'SPECIALTY') {
                 inputData.map((item, index) => {
                     let object = {};
-                    object.label = item.name;
+                    object.label = item;
                     object.value = item.id;
                     result.push(object);
                 })

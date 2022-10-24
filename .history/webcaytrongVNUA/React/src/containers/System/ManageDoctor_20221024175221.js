@@ -36,18 +36,13 @@ class ManageDoctor extends Component {
             listPrice: [],
             listPayment: [],
             listProvince: [],
-            listClinic: [],
-            listSpecialty: [],
+            listClinic
             selectedPrice: '',
             selectedPayment: '',
             selectProvince: '',
-            selectedClinic: '', 
-            selectedSpecialty: '',
             nameClinic: '',
             addressClinic: '',
-            note: '',
-            clinicId: '',
-            specialtyId: ''
+            note: ''
 
         }
     }
@@ -92,14 +87,6 @@ class ManageDoctor extends Component {
                     let labelVi = ` ${item.valueVi }`;
                     object.label = language === LANGUAGES.VI ? labelVi : labelEn;
                     object.value = item.keyMap;
-                    result.push(object);
-                })
-            }
-            if (type === 'SPECIALTY') {
-                inputData.map((item, index) => {
-                    let object = {};
-                    object.label = item.name;
-                    object.value = item.id;
                     result.push(object);
                 })
             }

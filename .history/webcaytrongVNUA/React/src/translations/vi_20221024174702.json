@@ -83,7 +83,7 @@
     "addressClinic": "Địa chỉ phòng khám",
     "note": "Ghi chú",
     "speciality":"Chuyên khoa(loại cây trồng)",
-    "select-clinic": "Chọn phòng khám"
+    "special"
 }
     },
     "system": {

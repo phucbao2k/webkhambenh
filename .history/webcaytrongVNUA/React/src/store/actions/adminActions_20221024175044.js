@@ -300,7 +300,7 @@ let data ={
     resPrice: resPrice.data,
     resPayment: resPayment.data,
     resProvince: resProvince.data,
-    resSpecialty: resSpecialty.data
+    
 }
 dispatch(fetchRequiredDoctorInforSuccess(data))
             }else{

@@ -82,8 +82,8 @@
             "nameClinic":"Clinic's name",
             "addressClinic": "Clinic's address",
             "note": "Note",
-            "speciality": "Specialization (plant type)",
-            "select-clinic": "Select clinic"
+            "speciality": "S",
+            "select-clinic": "Chọkhámeng khám"
         }
     },
     "system": {

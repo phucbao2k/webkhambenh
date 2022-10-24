@@ -83,7 +83,7 @@
             "addressClinic": "Clinic's address",
             "note": "Note",
             "speciality": "Specialization (plant type)",
-            "select-clinic": "Select clinic"
+            "select-clinic": "S"
         }
     },
     "system": {
