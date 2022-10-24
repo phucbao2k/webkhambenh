@@ -49,7 +49,7 @@ renderTimeBooking = (dataTime) => {
         let time = language === LANGUAGES.VI ?
         dataTime.timeTypeData.valueVi : dataTime.timeTypeData.valueEn;
         let date = language === LANGUAGES.VI ?
-        //ta phải chia cho 1000 vì biến chứa giá trị đơn vị thời gian của js(dataTime.date) ở trên, được tính theo milisecond
+        //ta phải chia cho 1000 vì đơn vị thời gian của js(dataTime.date) ở trên, được tính theo milisecond
         //còn unix lại tính theo second
         moment.unix(+dataTime.date / 1000).format('dddd -DD/MM/YYYY') :
             moment.unix(+dataTime.date / 1000).locale('en').format('ddd -MM/DD/YYYY')

@@ -221,6 +221,5 @@ riêng rồi import vào các component cần, điều này tránh được vi�
 
 
 Muốn đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
- và ta phải chia cho 1000 vì biến chứa giá trị đơn vị thời gian của js(dataTime.date), được tính theo milisecond,
+ và ta phải chia ch vì biến chứa giá trị đơn vị thời gian của js(dataTime.date) ở trên, được tính theo milisecond,
  còn unix lại tính theo second
- VD:  moment.unix(+dataTime.date / 1000).format('dddd -DD/MM/YYYY')

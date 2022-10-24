@@ -11,7 +11,7 @@ class About extends Component {
         return (
             <div className="section-share section-about">
                 <div className="section-about-header">
-                    HUHU
+                    
                 </div>
                 <div className="section-about-content">
                     <div className="content-left">

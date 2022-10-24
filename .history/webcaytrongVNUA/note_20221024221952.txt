@@ -220,7 +220,4 @@ nếu chúng ta xác định một component nào đó của react sẽ được
 riêng rồi import vào các component cần, điều này tránh được việc phải viết nhiều logic js
 
 
-Muốn đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
- và ta phải chia cho 1000 vì biến chứa giá trị đơn vị thời gian của js(dataTime.date), được tính theo milisecond,
- còn unix lại tính theo second
- VD:  moment.unix(+dataTime.date / 1000).format('dddd -DD/MM/YYYY')
+Muốn đổi 
