@@ -227,4 +227,4 @@ Muốn đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
 
 
  Với express js, các controller xử lý service(các service xử lý api) sẽ đi kèm với res, req.
- Chúng ta phải thêm từ khóa req, req vào arrow function thì hàm controller mới xử lý được.
+ Chúng ta phải thêm từ khóa req, req vào arrow function thì hàm controller mới xử lý được
