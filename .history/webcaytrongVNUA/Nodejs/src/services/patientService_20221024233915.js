@@ -39,7 +39,7 @@ let postBookAppointment = (data) => {
                 //với giá trị user[object, result]
 
                 console.log('check customer: ', user[0])
-                //user[0] để lấy phần tử đầu tiên trong array, tức là object
+                //user
                 if (user && user[0]) {
                     await db.Booking.create({
                         statusId: 'S1',

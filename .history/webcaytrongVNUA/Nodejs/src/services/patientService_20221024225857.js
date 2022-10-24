@@ -28,18 +28,15 @@ let postBookAppointment = (data) => {
                     redirectLink: buildUrlEmail(data.doctorId, token)
                 })
                 let user = await db.User.findOrCreate({
-                    //nếu tìm thấy email thì không làm gì cả, nếu tìm thấy email thì chạy vào hàm defaults
+                    //nếu tìm thấy email thì không làm gì cả, nếu tìm thấy email thì chạy vào hàm 
                     where: { email: data.email },
                     defaults: {
                         email: data.email,
                         roleId: 'R3'
                     },
                 });
-                //user ở trên sau khi được gán await db.User.findOrCreate đã trở thành 1 array của sequelize
-                //với giá trị user[object, result]
 
                 console.log('check customer: ', user[0])
-                //user[0] để lấy phần tử đầu tiên trong array, tức là object
                 if (user && user[0]) {
                     await db.Booking.create({
                         statusId: 'S1',

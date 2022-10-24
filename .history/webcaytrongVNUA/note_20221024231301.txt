@@ -189,7 +189,7 @@ Kiểu dữ liệu TIMESTAMP trong moment có thể để ở cả dạng số v
 *MẸO:
 a = '5'; b = +a;
 => b= 5. 
-ĐÂY là cách convert từ string sang số
+Đây là cách convert từ string sang số
 
 this.props.match && this.props.match.params && this.props.match.params.id: 
 ---nếu props này match với database ở trong api, và match vs db có tham số, và match vs tham số tồn tại ở db đó(id)
@@ -200,12 +200,12 @@ bên đó biến đấy có bị undefined hay không, nếu có check syntax v�
 
 
 //CÁCH DEBUG:
-VÌ js là ngôn ngữ đơn luồng, mọi thứ sẽ được thực hiện tuần tự, nên khi debug chúng ta sẽ phải đặt bug
+Vì js là ngôn ngữ đơn luồng, mọi thứ sẽ được thực hiện tuần tự, nên khi debug chúng ta sẽ phải đặt bug
 ở đầu mỗi hàm(lần lượt từ trên xuống dưới, muốn kiểm tra đang ở file nào thì vào source để inspect rồi vào App.js để lấy Route path)
 
 //attributes trong nodejs để lấy hoặc loại bỏ giá trị các trường trong db
 
-Khi include nhiều giá trị trong 1 db, thì ta phải dùng raw =false, nest =true
+khi include nhiều giá trị trong 1 db, thì ta phải dùng raw =false, nest =true
 
 raw=false để dữ liệu trả về là 1 object javascript, nest là để lồng các attributes đó lại vs nhau thành 1 mảng
 
@@ -216,19 +216,19 @@ https://www.youtube.com/watch?v=iO5IjzFUCNk&list=PLncHg6Kn2JT6E38Z3kit9Hnif1xC_9
 
 let { language } = this.props; dùng để lấy props ngôn ngữ của redux
 
-NẾU chúng ta xác định một component nào đó của react sẽ được sử dụng ở nhiều nơi, chúng ta hãy viết riêng component đó ra thành 1 class
+Nếu chúng ta xác định một component nào đó của react sẽ được sử dụng ở nhiều nơi, chúng ta hãy viết riêng component đó ra thành 1 class
 riêng rồi import vào các component cần, điều này tránh được việc phải viết nhiều logic js
 
 
-MUỐN đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
+Muốn đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
  và ta phải chia cho 1000 vì biến chứa giá trị đơn vị thời gian của js(dataTime.date), được tính theo milisecond,
  còn unix lại tính theo second
  VD:  moment.unix(+dataTime.date / 1000).format('dddd -DD/MM/YYYY')
 
 
- VỚI express js, các controller xử lý service(các service xử lý api) sẽ đi kèm với res, req.
+ Với express js, các controller xử lý service(các service xử lý api) sẽ đi kèm với res, req.
  Chúng ta phải thêm từ khóa req, req vào arrow function thì hàm controller mới xử lý được.
 
 
- CÁC biến(data, idInput, inputId) có trong file service(doctorService, patientService...) của nodejs
+ Các biến(data, idInput, inputId) có trong file service(doctorService, patientService...) của nodejs
   được gán giá trị từ phía người dùng(reactjs) và kết nối qua axios.
