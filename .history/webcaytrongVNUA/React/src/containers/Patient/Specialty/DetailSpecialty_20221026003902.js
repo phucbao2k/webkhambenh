@@ -16,7 +16,7 @@ class DetailSpecialty extends Component {
         super(props);
         this.state = {
             arrDoctorId: [],
-            dataDetailSpecialty: {},
+            dataDetailSpecialtyId: {},
             listProvince: []
 
         }

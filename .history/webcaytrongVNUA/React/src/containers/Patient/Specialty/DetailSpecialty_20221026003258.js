@@ -16,7 +16,7 @@ class DetailSpecialty extends Component {
         super(props);
         this.state = {
             arrDoctorId: [],
-            dataDetailSpecialty: {},
+            dataDetailSpecialtyId: {},
             listProvince: []
 
         }
@@ -44,7 +44,7 @@ class DetailSpecialty extends Component {
                     }
                 }
                 this.setState({
-                    dataDetailSpecialty: res.data,
+                    dataDetailSpecialtyId: res.data,
                     arrDoctorId: arrDoctorId,
                     listProvince: resProvince.data
                 })
