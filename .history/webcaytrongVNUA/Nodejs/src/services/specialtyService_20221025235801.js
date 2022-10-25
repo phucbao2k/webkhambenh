@@ -89,24 +89,17 @@ let getDetailSpecialtyById = (inputId, location) => {
                     }
                     data.doctorSpecialty = doctorSpecialty;
                 }
-                else data = {}    
-                resolve({
-                    errMessage: 'ok',
-                    errCode: 0,
-                    data
-                })  
+                else data = {}      
             } 
           
             
 
         }catch(e){
-            reject(e);
 
         }
     })
 }
 module.exports = {
     createSpecialty: createSpecialty,
-    getAllSpecialty: getAllSpecialty,
-    getDetailSpecialtyById: getDetailSpecialtyById
+    getAllSpecialty: getAllSpecialty
 }

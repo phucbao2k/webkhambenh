@@ -71,42 +71,24 @@ let getDetailSpecialtyById = (inputId, location) => {
 
                 })
                 if(data){
-                    let doctorSpecialty = [];
-                    if(location === 'ALL'){
-                        doctorSpecialty = await db.Doctor_Infor.findAll({
-                            where:{specialtyId: inputId},
-                            attributes: ['doctorId', 'provinceId'],
-                        })
-                    }
-                     else {
-                         doctorSpecialty = await db.Doctor_Infor.findAll({
-                            where: {
-                                specialtyId: inputId,
-                                provinceId: location
-                            },
-                            attributes: ['doctorId', 'provinceId'],
-                        })
-                    }
-                    data.doctorSpecialty = doctorSpecialty;
+                    let doctorSpecialty = await db.Doctor_Infor.findAll({
+                        where: {
+                            specialtyId: inputId,
+                            provinceId: location
+                        },
+                        attributes: ['doctorId', 'provinceId'],
+                    })
                 }
-                else data = {}    
-                resolve({
-                    errMessage: 'ok',
-                    errCode: 0,
-                    data
-                })  
-            } 
-          
+                data.doctorSpecialty = doctorSpecialty;
+            } else data ={}
             
 
         }catch(e){
-            reject(e);
 
         }
     })
 }
 module.exports = {
     createSpecialty: createSpecialty,
-    getAllSpecialty: getAllSpecialty,
-    getDetailSpecialtyById: getDetailSpecialtyById
+    getAllSpecialty: getAllSpecialty
 }

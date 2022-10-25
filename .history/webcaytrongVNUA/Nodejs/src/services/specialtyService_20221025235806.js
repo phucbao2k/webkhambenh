@@ -100,13 +100,11 @@ let getDetailSpecialtyById = (inputId, location) => {
             
 
         }catch(e){
-            reject(e);
 
         }
     })
 }
 module.exports = {
     createSpecialty: createSpecialty,
-    getAllSpecialty: getAllSpecialty,
-    getDetailSpecialtyById: getDetailSpecialtyById
+    getAllSpecialty: getAllSpecialty
 }

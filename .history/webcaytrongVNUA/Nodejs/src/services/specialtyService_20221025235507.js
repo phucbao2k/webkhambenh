@@ -78,35 +78,25 @@ let getDetailSpecialtyById = (inputId, location) => {
                             attributes: ['doctorId', 'provinceId'],
                         })
                     }
-                     else {
-                         doctorSpecialty = await db.Doctor_Infor.findAll({
-                            where: {
-                                specialtyId: inputId,
-                                provinceId: location
-                            },
-                            attributes: ['doctorId', 'provinceId'],
-                        })
-                    }
-                    data.doctorSpecialty = doctorSpecialty;
                 }
-                else data = {}    
-                resolve({
-                    errMessage: 'ok',
-                    errCode: 0,
-                    data
-                })  
+                
+               
+                data.doctorSpecialty = doctorSpecialty;
+                
             } 
-          
+            resolve({
+                errMessage: 'ok',
+                errCode: 0,
+                data
+            })
             
 
         }catch(e){
-            reject(e);
 
         }
     })
 }
 module.exports = {
     createSpecialty: createSpecialty,
-    getAllSpecialty: getAllSpecialty,
-    getDetailSpecialtyById: getDetailSpecialtyById
+    getAllSpecialty: getAllSpecialty
 }
