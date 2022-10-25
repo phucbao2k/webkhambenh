@@ -51,7 +51,7 @@ let getAllDoctors = () => {
 let checkRequiredFields = (inputData) => {
     let arrFields = ['doctorId', 'contentHTML', 'contentMarkdown', 'action',
         'selectedPrice', 'selectedPayment', ' selectProvince',
-        'nameClinic', 'addressClinic', 'note', 'specialtyId'];
+        'nameClinic', 'addressClinic', 'note', 'specilatyId'];
     let isValid = true;
     let element = '';
     for (let i = 0; i < arrFields.length; i++) {
@@ -113,7 +113,7 @@ let saveDetailInforDoctor = (inputData) => {
                     doctorInfor.addressClinic = inputData.addressClinic;
                     doctorInfor.note = inputData.note;
                     doctorInfor.specialtyId = inputData.specialtyId;
-                    // doctorInfor.clinicId = inputData.clinicId;
+                   ?
                     await doctorInfor.save();
                 } else {
                     await db.Doctor_Infor.create({
@@ -125,7 +125,7 @@ let saveDetailInforDoctor = (inputData) => {
                         addressClinic: inputData.addressClinic,
                         note: inputData.note,
                         specialtyId: inputData.specialtyId,
-                        // clinicId: inputData.clinicId,
+                        clinicId: inputData.clinicId,
                     })
                 }
                 resolve({
