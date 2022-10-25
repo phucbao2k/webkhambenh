@@ -243,6 +243,3 @@ MUỐN đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
   là thực hiện hàm được lấy từ lớp cha
 
   KHI debug nhớ open file với /static/
-
-
-  CTRL+P để tìm nhanh file

@@ -72,7 +72,7 @@ class BookingModal extends Component {
         // }
 
 
-        //dataTime đã lấy ra được tất cả những thông tin cần thiết qua api nodejs
+        //dataTime lấy ra được tất cả những thông tin cần thiết qua 
         if (this.props.dataTime !== prevProps.dataTime) {
             if (this.props.dataTime && !_.isEmpty(this.props.dataTime)) {
                 let doctorId = this.props.dataTime.doctorId;

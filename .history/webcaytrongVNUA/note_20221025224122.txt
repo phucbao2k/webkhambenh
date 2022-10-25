@@ -245,4 +245,4 @@ MUỐN đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
   KHI debug nhớ open file với /static/
 
 
-  CTRL+P để tìm nhanh file
+  CTRL+P 

@@ -239,10 +239,4 @@ MUỐN đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
   bất kỳ thứ gì chèn vào đầu vào đều có thể được truy cập thông qua event.target.value
 
 
-  VỚI hàm onclick, onClick={() => this.abcxyz()} sẽ là thực hiện hàm bên trong class đó, còn onClick={abcxyz} 
-  là thực hiện hàm được lấy từ lớp cha
-
-  KHI debug nhớ open file với /static/
-
-
-  CTRL+P để tìm nhanh file
+  VỚI hàm onclick, () => sẽ là thực hiện hàm bên trong class đó
