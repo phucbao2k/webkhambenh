@@ -13,7 +13,7 @@ class DetailSpecialty extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            arrDoctorId: [2, 3]
+            arrDoctorId: [2,3]
 
         }
 
