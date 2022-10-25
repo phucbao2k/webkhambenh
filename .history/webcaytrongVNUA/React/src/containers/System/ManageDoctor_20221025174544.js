@@ -12,6 +12,9 @@ import Select from 'react-select';
 import { getDetailInforDoctor } from '../../services/userService';
 const mdParser = new MarkdownIt();
 
+const options = [
+
+];
 // nếu muốn import 1 function thì ta dùng dấu ngoặc nhọn
 class ManageDoctor extends Component {
     // PROPS stands for properties and is being used for passing data from one component to another.
@@ -131,13 +134,11 @@ class ManageDoctor extends Component {
             let dataSelectPrice = this.buildDataInputSelect(resPrice, 'PRICE');
             let dataSelectPayment = this.buildDataInputSelect(resPayment, 'PAYMENT');
             let dataSelectProvince = this.buildDataInputSelect(resProvince, 'PROVINCE');
-            let dataSelectSpecialty = this.buildDataInputSelect(resSpecialty, 'SPECIALTY');
             this.setState({
                 listDoctors: dataSelect,
                 listProvince: dataSelectProvince,
                 listPrice: dataSelectPrice,
                 listPayment: dataSelectPayment,
-                listSpecialty: dataSelectSpecialty
             })
 
         }
@@ -195,9 +196,6 @@ class ManageDoctor extends Component {
                 selectProvince = listProvince.find(item => {
                     return item && item.value === provinceId
                 })
-                selectedSpecialty = listSpecialty.find(item => {
-                    return item && item.value === specialtyId
-                })
             }
             this.setState({
                 contentHTML: markdown.contentHTML,
@@ -209,8 +207,7 @@ class ManageDoctor extends Component {
                 note: note,
                 selectedPayment: selectedPayment,
                 selectedPrice: selectedPrice,
-                selectProvince: selectProvince,
-                selectedSpecialty
+                selectProvince: selectProvince
             })
             //để lấy thông tin từ bảng markdown rồi in ra màn hình, ta có thể gọi api như trên, rồi dùng hàm setState
         } else {

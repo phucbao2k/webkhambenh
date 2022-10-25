@@ -163,7 +163,7 @@ class ManageDoctor extends Component {
             nameClinic: this.state.nameClinic,
             addressClinic: this.state.addressClinic,
             note: this.state.note,
-            clinicId: this.state.selectedClinic && this.state.selectedClinic.value ? this.state.selectedClinic.value : '',
+            // clinicId: this.state.selectedClinic && this.state.selectedClinic.value ? this.state.selectedClinic.value : '',
             specialtyId: this.state.selectedSpecialty.value
 
             //doctorId: this.state.selectedDoctor.value dùng để gán giá trị item.id cho doctorId rồi lưu vào db
@@ -195,9 +195,6 @@ class ManageDoctor extends Component {
                 selectProvince = listProvince.find(item => {
                     return item && item.value === provinceId
                 })
-                selectedSpecialty = listSpecialty.find(item => {
-                    return item && item.value === specialtyId
-                })
             }
             this.setState({
                 contentHTML: markdown.contentHTML,
@@ -209,8 +206,7 @@ class ManageDoctor extends Component {
                 note: note,
                 selectedPayment: selectedPayment,
                 selectedPrice: selectedPrice,
-                selectProvince: selectProvince,
-                selectedSpecialty
+                selectProvince: selectProvince
             })
             //để lấy thông tin từ bảng markdown rồi in ra màn hình, ta có thể gọi api như trên, rồi dùng hàm setState
         } else {

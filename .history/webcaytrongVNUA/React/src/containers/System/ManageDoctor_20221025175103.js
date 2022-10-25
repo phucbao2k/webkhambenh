@@ -196,7 +196,7 @@ class ManageDoctor extends Component {
                     return item && item.value === provinceId
                 })
                 selectedSpecialty = listSpecialty.find(item => {
-                    return item && item.value === specialtyId
+                    return item && item.value === provinceId
                 })
             }
             this.setState({
@@ -209,8 +209,7 @@ class ManageDoctor extends Component {
                 note: note,
                 selectedPayment: selectedPayment,
                 selectedPrice: selectedPrice,
-                selectProvince: selectProvince,
-                selectedSpecialty
+                selectProvince: selectProvince
             })
             //để lấy thông tin từ bảng markdown rồi in ra màn hình, ta có thể gọi api như trên, rồi dùng hàm setState
         } else {
