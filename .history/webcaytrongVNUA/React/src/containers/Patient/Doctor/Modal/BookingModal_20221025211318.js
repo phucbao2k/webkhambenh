@@ -84,7 +84,7 @@ class BookingModal extends Component {
         }
     }
     // VỚI event.target.value, nó truy xuất giá trị của tất cả những đầu vào được gọi,
- // bất kỳ thứ gì chèn vào đầu vào đều có thể được truy cập thông qua event.target.value
+  bất kỳ thứ gì chèn vào đầu vào đều có thể được truy cập thông qua event.target.value
     handleOnChangeInput = (event, id) => {
         let valueInput = event.target.value;
         let stateCopy = { ...this.state };
