@@ -79,7 +79,6 @@ let getDetailClinicById = (inputId) => {
                         attributes: ['doctorId', 'provinceId'],
                     })
                     data.doctorClinic = doctorClinic;
-                    
                 }else data = {}
                 resolve({
                     errMessage: 'ok',
@@ -89,7 +88,7 @@ let getDetailClinicById = (inputId) => {
             }
 
         }catch(e){
-            console.log('data.doctorClinic', e)
+            
             reject(e);
 
         }

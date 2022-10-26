@@ -89,7 +89,7 @@ let getDetailClinicById = (inputId) => {
             }
 
         }catch(e){
-            console.log('data.doctorClinic', e)
+            
             reject(e);
 
         }
