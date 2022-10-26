@@ -21,9 +21,7 @@ class MedicalFacility extends Component {
         }
     }
     handleViewDetailClinic = (clinic) => {
-        if(this.props.history){
-            this.props.history.push(`/detail-clinic/${clinic.id}`)
-        }
+        if(this.props)
     }
 
     render() {
@@ -36,7 +34,6 @@ class MedicalFacility extends Component {
         // };
         // trên đây là setting cho Slider
         // 
-        let {dataClinics} = this.state;
         return (
             <div className="section-share section-medical-facility">
                 <div className="section-container">
@@ -47,18 +44,30 @@ class MedicalFacility extends Component {
                     <div className="section-body">
                         {/* Dưới đây là cách bọc các ảnh, chữ thành 1 slide lớn, nằm ngang */}
                         <Slider {...this.props.settings}>
-                          {dataClinics && dataClinics.length>0
-                          && dataClinics.map((item, index)=> {
-                            return(
-                                <div className="section-customize clinic-child" key={index}
-                                onClick={()=> this.handleViewDetailClinic(item)}>
-                                    <div className="bg-image section-medical-facility"
-                                    style={{backgroundImage: `url(${item.image})`}}
-                                    />
-                                    <div className="clinic-name">{item.name}</div>
-                                </div>
-                            )
-                          })}
+                            <div className="section-customize">
+                                <div className="bg-image section-medical-facility"></div>
+                                <div>Cơ sở chăm sóc cây trồng nổi bật 1</div>
+                            </div>
+                            <div className="section-customize">
+                                <div className="bg-image section-medical-facility"></div>
+                                <div>Cơ sở chăm sóc cây trồng nổi bật 2</div>
+                            </div>
+                            <div className="section-customize">
+                                <div className="bg-image section-medical-facility"></div>
+                                <div>Cơ sở chăm sóc cây trồng nổi bật 3</div>
+                            </div>
+                            <div className="section-customize">
+                                <div className="bg-image section-medical-facility"></div>
+                                <div>Cơ sở chăm sóc cây trồng nổi bật 4</div>
+                            </div>
+                            <div className="section-customize">
+                                <div className="bg-image section-medical-facility"></div>
+                                <div>Cơ sở chăm sóc cây trồng nổi bật 5</div>
+                            </div>
+                            <div className="section-customize">
+                                <div className="bg-image section-medical-facility"></div>
+                                <div>Cơ sở chăm sóc cây trồng nổi bật 6</div>
+                            </div>
                         </Slider>
                     </div>
 
@@ -80,4 +89,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MedicalFacility));
+export default connect(mapStateToProps, mapDispatchToProps)(MedicalFacility);

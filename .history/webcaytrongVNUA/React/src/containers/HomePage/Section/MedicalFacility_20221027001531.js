@@ -55,7 +55,6 @@ class MedicalFacility extends Component {
                                     <div className="bg-image section-medical-facility"
                                     style={{backgroundImage: `url(${item.image})`}}
                                     />
-                                    <div className="clinic-name">{item.name}</div>
                                 </div>
                             )
                           })}
@@ -80,4 +79,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MedicalFacility));
+export default connect(mapStateToProps, mapDispatchToProps)(MedicalFacility);

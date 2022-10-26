@@ -50,13 +50,7 @@ class MedicalFacility extends Component {
                           {dataClinics && dataClinics.length>0
                           && dataClinics.map((item, index)=> {
                             return(
-                                <div className="section-customize clinic-child" key={index}
-                                onClick={()=> this.handleViewDetailClinic(item)}>
-                                    <div className="bg-image section-medical-facility"
-                                    style={{backgroundImage: `url(${item.image})`}}
-                                    />
-                                    <div className="clinic-name">{item.name}</div>
-                                </div>
+                                <div className="section-customize"></div>
                             )
                           })}
                         </Slider>
@@ -80,4 +74,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MedicalFacility));
+export default connect(mapStateToProps, mapDispatchToProps)(MedicalFacility);
