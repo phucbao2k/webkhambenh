@@ -297,13 +297,12 @@ export const getRequiredDoctorInfor = () => {
                 && resPayment && resPayment.errCode === 0
                 && resProvince && resProvince.errCode === 0
                 && resSpecialty && resSpecialty.errCode === 0
-                && resClinic && resClinic.errCode === 0){
+                && resSpecialty && resSpecialty.errCode === 0){
 let data ={
     resPrice: resPrice.data,
     resPayment: resPayment.data,
     resProvince: resProvince.data,
-    resSpecialty: resSpecialty.data,
-    resClinic: resClinic.data
+    resSpecialty: resSpecialty.data
 }
 dispatch(fetchRequiredDoctorInforSuccess(data))
             }else{

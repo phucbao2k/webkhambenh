@@ -216,8 +216,8 @@ class ManageDoctor extends Component {
                 selectedSpecialty = listSpecialty.find(item => {
                     return item && item.value === specialtyId
                 })
-                selectedClinic = listClinic.find(item => {
-                    return item && item.value === clinicId
+                selectedClinic = listSpecialty.find(item => {
+                    return item && item.value === specialtyId
                 })
             }
             this.setState({
@@ -231,8 +231,7 @@ class ManageDoctor extends Component {
                 selectedPayment: selectedPayment,
                 selectedPrice: selectedPrice,
                 selectProvince: selectProvince,
-                selectedSpecialty: selectedSpecialty,
-                selectedClinic: selectedClinic
+                selectedSpecialty: selectedSpecialty
             })
             //để lấy thông tin từ bảng markdown rồi in ra màn hình, ta có thể gọi api như trên, rồi dùng hàm setState
         } else {
@@ -247,8 +246,7 @@ class ManageDoctor extends Component {
                 selectedPayment: '',
                 selectedPrice: '',
                 selectProvince: '',
-                selectedSpecialty: '',
-                selectedClinic: ''
+                selectedSpecialty: ''
             })
         }
 
@@ -349,14 +347,17 @@ class ManageDoctor extends Component {
                             </div>
                             <div className="col-4 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.select-clinic" /></label>
-                                <Select
+                                <input className="form-control"
+                                    onChange={(event) => this.handleOnChangeText(event, 'selectedClinic')}
+                                    value={this.state.selectedClinic}
+                                />
+                                {/* <Select
                                     value={this.state.selectedClinic}
                                     onChange={this.handleChangeSelectDoctorInfor}
                                     options={this.state.listClinic}
                                     placeholder={<FormattedMessage id="admin.manage-doctor.select-clinic" />}
                                     name="selectedClinic"
-                                />
-                               
+                                /> */}
                             </div>
 
                             

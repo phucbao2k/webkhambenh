@@ -70,11 +70,8 @@ const getAllDetailSpecialtyById =(data) => {
 const createNewClinic =(data)=> {
     return axios.post('/api/create-new-clinic', data)
 }
-const getAllClinic = ()=> {
+const C = ()=> {
     return axios.get('/api/get-clinic')
-}
-const getAllDetailClinicById = (data)=> {
-    return axios.get(`/api/get-detail-clinic-by-id?id=${data.id}`)
 }
 export {
     handleLoginApi, getAllUsers,
@@ -91,9 +88,7 @@ export {
     createNewSpecialty,
     getAllSpecialty,
     getAllDetailSpecialtyById,
-    createNewClinic,
-    getAllClinic,
-    getAllDetailClinicById
+    createNewClinic
 
 }//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export

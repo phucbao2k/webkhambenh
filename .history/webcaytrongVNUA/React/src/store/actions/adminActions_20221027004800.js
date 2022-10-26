@@ -303,7 +303,7 @@ let data ={
     resPayment: resPayment.data,
     resProvince: resProvince.data,
     resSpecialty: resSpecialty.data,
-    resClinic: resClinic.data
+    resCl
 }
 dispatch(fetchRequiredDoctorInforSuccess(data))
             }else{
