@@ -79,22 +79,14 @@ let getDetailClinicById = (inputId) => {
                         attributes: ['doctorId', 'provinceId'],
                     })
                     data.doctorClinic = doctorClinic;
-                }else data = {}
-                resolve({
-                    errMessage: 'ok',
-                    errCode: 0,
-                    data
-                })
+                }else data 
             }
 
         }catch(e){
-            reject(e);
 
         }
     })
 }
 module.exports = {
-    createClinic: createClinic,
-    getAllClinic: getAllClinic,
-    getDetailClinicById: getDetailClinicById
+    createClinic: createClinic
 }

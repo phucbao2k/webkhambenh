@@ -36,7 +36,7 @@ export function initWebRoutes(app) {
     router.get('/api/get-detail-specialty-by-id', specialtyController.getDetailSpecialtyById);
     router.post('/api/create-new-clinic', clinicController.createClinic);
     router.get('/api/get-clinic', clinicController.getAllClinic);
-    router.get('/api/get-detail-clinic-by-id', clinicController.getDetailClinicById);
+    router.get('/api/get-detail-clinic-by-id', clinicController.getDetailSpecialtyById);
     router.get('/', (req, res) => {
         return res.send('HELU WORLD');
     });

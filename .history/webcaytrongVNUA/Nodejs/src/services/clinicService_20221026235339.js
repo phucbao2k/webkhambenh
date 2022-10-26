@@ -88,13 +88,10 @@ let getDetailClinicById = (inputId) => {
             }
 
         }catch(e){
-            reject(e);
 
         }
     })
 }
 module.exports = {
-    createClinic: createClinic,
-    getAllClinic: getAllClinic,
-    getDetailClinicById: getDetailClinicById
+    createClinic: createClinic
 }

@@ -74,27 +74,15 @@ let getDetailClinicById = (inputId) => {
                 })
                 if(data){
                     let doctorClinic = [];
-                    doctorClinic = await db.Doctor_Infor.findAll({
-                        where: {clinicId: inputId},
-                        attributes: ['doctorId', 'provinceId'],
-                    })
-                    data.doctorClinic = doctorClinic;
-                }else data = {}
-                resolve({
-                    errMessage: 'ok',
-                    errCode: 0,
-                    data
-                })
+                    doctorClinic = await db.Doctor_Infor.findAll({})
+                }
             }
 
         }catch(e){
-            reject(e);
 
         }
     })
 }
 module.exports = {
-    createClinic: createClinic,
-    getAllClinic: getAllClinic,
-    getDetailClinicById: getDetailClinicById
+    createClinic: createClinic
 }

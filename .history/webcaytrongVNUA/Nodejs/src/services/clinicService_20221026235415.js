@@ -95,6 +95,5 @@ let getDetailClinicById = (inputId) => {
 }
 module.exports = {
     createClinic: createClinic,
-    getAllClinic: getAllClinic,
-    getDetailClinicById: getDetailClinicById
+    getAllClinic
 }
