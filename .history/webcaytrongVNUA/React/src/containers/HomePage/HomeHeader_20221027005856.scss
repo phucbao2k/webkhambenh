@@ -5,7 +5,7 @@
     position: sticky;
     top: 0;
     background-color: white;
-    z-index: 9999;
+    z-index: 100;
 
     .home-header-content {
         width: 100%;
@@ -18,7 +18,7 @@
             align-items: center;
 
             .header-logo {
-                background: url('../../assets/vsh.png') center center no-repeat;
+                background: url('../../assets/viensinh.png') center center no-repeat;
                 height: 100%;
                 width: 100%;
                 cursor: pointer;
@@ -41,6 +41,7 @@
             align-items: center;
 
             .child-content {
+                cursor: pointer;
                 .sub-title {
                     font-weight: 400;
                     font-size: 12px;
@@ -63,52 +64,54 @@
                 i {
                     font-size: 15px;
                     margin-right: 5px;
-
+cursor: pointer;
                 }
             }
-
-            .language {
-                display: flex;
-                flex-direction: row;
-
-                .language-vi {
-                    margin: 0 10px;
-                    opacity: 0.2;
-                    cursor: pointer;
-
-                    &.active {
-                        opacity: 1;
-
-                        span {
-                            color: orange;
+                        .language {
+                            display: flex;
+                            flex-direction: row;
+            
+                            .language-vi {
+                                margin: 0 10px;
+                                opacity: 0.2;
+                                cursor: pointer;
+            
+                                &.active {
+                                    opacity: 1;
+            
+                                    span {
+                                        color: orange;
+                                    }
+                                }
+            
+                                &:hover {
+                                    opacity: 0.8;
+                                }
+                            }
+            
+                            .language-en {
+                                margin: 0 10px;
+                                opacity: 0.2;
+                                cursor: pointer;
+            
+                                &.active {
+                                    opacity: 1;
+            
+                                    span {
+                                        color: blue;
+                                    }
+                                }
+            
+                                &:hover {
+                                    opacity: 0.8;
+                                }
+            
+                            }
                         }
-                    }
 
-                    &:hover {
-                        opacity: 0.8;
-                    }
-                }
-
-                .language-en {
-                    margin: 0 10px;
-                    opacity: 0.2;
-                    cursor: pointer;
-
-                    &.active {
-                        opacity: 1;
-
-                        span {
-                            color: blue;
-                        }
-                    }
-
-                    &:hover {
-                        opacity: 0.8;
-                    }
-
-                }
-            }
+           
         }
+                 
     }
 }
 
