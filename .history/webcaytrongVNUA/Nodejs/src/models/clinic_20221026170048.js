@@ -18,8 +18,8 @@ export default (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     address: DataTypes.STRING,
     descriptionHTML: DataTypes.TEXT,
-    descriptionMarkdown: DataTypes.TEXT,
-    image: DataTypes.TEXT
+    descriptionHTML: DataTypes.TEXT,
+    image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Clinic',

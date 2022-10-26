@@ -1,0 +1,1 @@
+import clinicService from '../services/clinicService0'

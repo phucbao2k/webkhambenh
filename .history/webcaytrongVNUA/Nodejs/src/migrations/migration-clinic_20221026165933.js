@@ -17,11 +17,11 @@ module.exports = {
       descriptionHTML: {
         type: Sequelize.TEXT
       },
-       descriptionMarkdown: {
+       descriptionMar: {
         type: Sequelize.TEXT
       },
       image: {
-        type: Sequelize.BLOB('long')
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,

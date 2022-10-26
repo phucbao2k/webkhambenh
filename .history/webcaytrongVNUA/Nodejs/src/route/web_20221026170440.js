@@ -4,7 +4,7 @@ import userController from "../controllers/userController.js";
 import doctorController from "../controllers/doctorController.js";
 import patientController from "../controllers/patientController.js";
 import specialtyController from "../controllers/specialtyController.js";
-import clinicController from "../controllers/clinicController.js";
+import clinicsController from "../controllers/clinicController.js";
 let router = express.Router();
 export function initWebRoutes(app) {
     router.get('/', homeController.getHomePage);
@@ -34,7 +34,7 @@ export function initWebRoutes(app) {
     router.post('/api/create-new-specialty', specialtyController.createSpecialty);
     router.get('/api/get-specialty', specialtyController.getAllSpecialty);
     router.get('/api/get-detail-specialty-by-id', specialtyController.getDetailSpecialtyById);
-    router.post('/api/create-new-clinic', clinicController.createClinic);
+    router.post('/api/create-new-clinic',)
     router.get('/', (req, res) => {
         return res.send('HELU WORLD');
     });
