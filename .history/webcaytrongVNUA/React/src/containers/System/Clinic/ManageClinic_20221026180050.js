@@ -5,7 +5,7 @@ import './ManageClinic.scss';
 import MarkdownIt from 'markdown-it';
 import MdEditor from 'react-markdown-editor-lite';
 import { CommonUtils } from '../../../utils';
-import { createNewClinic } from '../../../services/userService';
+import { createNewSpecialty } from '../../../services/userService';
 import { toast } from "react-toastify";
 
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
