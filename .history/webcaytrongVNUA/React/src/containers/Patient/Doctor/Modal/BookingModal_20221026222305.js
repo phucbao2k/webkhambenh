@@ -154,7 +154,7 @@ class BookingModal extends Component {
     // }
     handleConfirmBooking = async () => {
         //date là truyền timestamp lên db 
-        //timeString truyền human date lên nodemailer
+        //time string truyền human date 
         let date = new Date(this.state.birthday).getTime();
         let timeString = this.buildTimeBooking(this.props.dataTime);
         let doctorName = this.buildDoctorName(this.props.dataTime);

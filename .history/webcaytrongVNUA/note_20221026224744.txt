@@ -247,4 +247,4 @@ MUỐN đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
 
   CTRL+P để tìm nhanh file
 
-  HỌC THÊM VỀ SEQUELIZE----------------------------------------------------------------
+  HỌC THÊM VỀ SEQUE
