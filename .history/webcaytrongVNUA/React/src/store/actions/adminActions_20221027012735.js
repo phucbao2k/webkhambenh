@@ -291,7 +291,7 @@ export const getRequiredDoctorInfor = () => {
             let resPrice = await getAllCodeService("PRICE");
             let resPayment = await getAllCodeService("PAYMENT");
             let resProvince = await getAllCodeService("PROVINCE");
-            let resSpecialty = await getAllSpecialty("SPECIALTY");
+            let resSpecialty = await getAllSpecialty();
             let resClinic = await getAllClinic("CLINIC");
             if( resPrice && resPrice.errCode === 0
                 && resPayment && resPayment.errCode === 0
