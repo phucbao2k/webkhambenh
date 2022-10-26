@@ -68,17 +68,23 @@ class DetailClinic extends Component {
                 <HomeHeader />
                 <div className="detail-clinic-body">
                     <div className="description-clinic">
-                        {dataDetailClinic && !_.isEmpty(dataDetailClinic)
-                       
-                            &&
-                             <>
-                             <div>{dataDetailClinic.name}</div>
-                            <div dangerouslySetInnerHTML={{ __html: dataDetailClinic.descriptionHTML }}>
+                        {dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty)
+                            && <div dangerouslySetInnerHTML={{ __html: dataDetailSpecialty.descriptionHTML }}>
                             </div>
-                            </> 
                         }
                     </div>
-                 
+                    <div className="search-sp-doctor">
+                        <select onChange={(event) => this.handleOnChangeSelect(event)}>
+                            {listProvince && listProvince.length > 0 &&
+                                listProvince.map((item, index) => {
+                                    return (
+                                        <option key={index} value={item.keyMap}>
+                                            {language === LANGUAGES.VI ? item.valueVi : item.valueEn}
+                                        </option>
+                                    )
+                                })}
+                        </select>
+                    </div>
                     {arrDoctorId && arrDoctorId.length > 0 &&
                         arrDoctorId.map((item, index) => {
                             return (
