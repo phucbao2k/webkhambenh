@@ -94,7 +94,7 @@ class ManageClinic extends Component {
                     </div>
                     <div className="col-6 form-group">
                         <label>Địa chỉ phòng khám</label>
-                        <input className="form-control" type="text" value={this.state.address}
+                        <input className="form-control" type="text" value={this.state.address}}
                             onChange={(event) => this.handleOnChangeInput(event, 'address')} />
                     </div>
                     <div className="col-12">
