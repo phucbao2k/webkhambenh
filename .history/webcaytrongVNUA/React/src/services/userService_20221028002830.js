@@ -59,24 +59,24 @@ const postVerifyBookAppointment = (data) => {
     return axios.post('/api/verify-book-appointment', data)
 }
 const createNewSpecialty = (data) => {
-    return axios.post('/api/create-new-specialty', data)
+    return axios.post('/api/create-new-specialty',data)
 }
 const getAllSpecialty = () => {
     return axios.get(`/api/get-specialty`)
 }
-const getAllDetailSpecialtyById = (data) => {
+const getAllDetailSpecialtyById =(data) => {
     return axios.get(`/api/get-detail-specialty-by-id?id=${data.id}&location=${data.location}`)
 }
-const createNewClinic = (data) => {
+const createNewClinic =(data)=> {
     return axios.post('/api/create-new-clinic', data)
 }
-const getAllClinic = () => {
+const getAllClinic = ()=> {
     return axios.get('/api/get-clinic')
 }
-const getAllDetailClinicById = (data) => {
+const getAllDetailClinicById = (data)=> {
     return axios.get(`/api/get-detail-clinic-by-id?id=${data.id}`)
 }
-const getAllPatientForDoctor = (data) => {
+const getAllPatientForDoctor = (data)=> {
     return axios.get(`/api/get-list-patient-for-doctor?doctor=${data.doctorId}&date=${data.date}`)
 }
 export {
@@ -97,6 +97,6 @@ export {
     createNewClinic,
     getAllClinic,
     getAllDetailClinicById,
-    getAllPatientForDoctor
+getAllPatientForDoctor
 }//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export
