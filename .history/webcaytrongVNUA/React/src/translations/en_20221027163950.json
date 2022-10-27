@@ -8,8 +8,10 @@
         "select-doctor": "Choose a good engineer",
         "fee": "Checkup fee",
         "check-health": "Comprehensive plant examination",
-        "support": "Support",
-        "welcome": "Welcome"
+        "support": "Want to cooperate with us?",
+        "welcome": "Welcome",
+        "click": "Click here!",
+        "manage-account": "Manage account"
     },
     "banner": {
         "title1": "MEDICAL PLATFORM",
@@ -32,6 +34,58 @@
         "choose-doctor": "Choose doctor",
         "choose-date": "Choose date",
         "save": "Save infor"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Schedule",
+            "no-schedule": "The doctor does not have an appointment during this time, please choose another date",
+            "choose": "Choose ",
+            "book-free": " and book (free)! "
+        },
+        "extra-infor-doctor": {
+            "text-address": "Address of examination",
+            "price": "Examination price: ",
+            "detail": "See details",
+            "payment": "The customer can pay the cost in the form of: ",
+            "hide-price": "Hide price list"
+        },
+        "booking-modal": {
+            "title": "Information to book a medical appointment",
+            "fullName": "First and last name",
+            "phoneNumber": "Phone number",
+            "email": "Email address",
+            "address": "Contact address",
+            "reason": "Reason for examination",
+            "plantName": "Plant name",
+            "gender": "Gender",
+            "btnConfirm": "Confirm",
+            "btnCancel": "Cancel",
+            "priceBooking": "Free booking",
+            "price": "Price: ",
+            "specialtyName": "Name of plant specialty",
+            "avatar": "Pictures of sick plants"
+        },
+        "email-confirm":{
+            "confirm": "Appointment confirmed successfully",
+            "dont-exist": "Appointment does not yet exist or has been confirmed!"
+        }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Create more doctor information",
+            "select-doctor": "Select Doctor",
+            "intro": "Introduction information",
+            "add": "Create information",
+            "save": "Save information",
+            "price": "Price",
+            "payment": "Payment",
+            "province": "Province",
+            "nameClinic":"Clinic's name",
+            "addressClinic": "Clinic's address",
+            "note": "Note",
+            "specialty": "Specialization (plant type)",
+            "select-clinic": "Select clinic"
+        }
     },
     "system": {
         "change-success": "Updated info success! Please logout and re-login "
@@ -65,10 +119,12 @@
             "specialty": "Specialties",
             "manage-specialty": "Manage Specialties",
             "handbook": "Handbook",
-            "manage-handbook": "Manage handbooks"
+            "manage-handbook": "Manage handbooks",
+            "home": "Home"
         },
         "doctor": {
-            "manage-schedule": "Manage Doctor's schedule"
+            "manage-schedule": "Manage Doctor's schedule",
+            "manage-patient": "Quản lý bệnh nhân"
         }
     },
     "manage-user": {
