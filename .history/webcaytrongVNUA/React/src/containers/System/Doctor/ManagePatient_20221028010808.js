@@ -64,7 +64,6 @@ class ManagePatient extends Component {
     }
 
     render() {
-        console.log('check data',this.state)
         let { dataPatient } = this.state;
         return (
             <div className="manage-patient-container">
@@ -96,12 +95,11 @@ class ManagePatient extends Component {
                                                 <td>{item.timeTypeDataPatient.valueVi}</td>
                                                 <td>{item.patientData.firstName}</td>
                                                 <td>{item.patientData.address}</td>
-                                                <td>
-                                                    <button className="mp-btn-confirm"
-                                                        onClick={() => this.handleBtnConfirm()}>Xác nhận</button>
+                                                <td><button className="mp-btn-confirm"
+                                                    onClick={() => this.handleBtnConfirm()}>Xác nhận</button>
                                                     <button className="mp-btn-remedy"
-                                                        onClick={() => this.handleBtnRemedy()}>Gửi hóa đơn</button>
-                                                </td>
+                                                        onClick={() => this.handleBtnRemedy()}>Gửi hóa đơn
+                                                    </button></td>
                                             </tr>
                                         )
                                     })

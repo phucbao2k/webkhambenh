@@ -64,7 +64,7 @@ class ManagePatient extends Component {
     }
 
     render() {
-        console.log('check data',this.state)
+        console.log('check data',s)
         let { dataPatient } = this.state;
         return (
             <div className="manage-patient-container">

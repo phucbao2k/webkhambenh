@@ -392,7 +392,7 @@ let getListPatientForDoctor = (doctorId, date) => {
             }
 
         }catch(e){
-reject(e);
+reject(e)
         }
     })
 }
