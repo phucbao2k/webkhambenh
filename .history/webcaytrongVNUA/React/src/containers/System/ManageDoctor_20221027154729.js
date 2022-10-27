@@ -177,7 +177,7 @@ class ManageDoctor extends Component {
             nameClinic: this.state.nameClinic,
             addressClinic: this.state.addressClinic,
             note: this.state.note,
-            clinicId:  this.state.selectedClinic.value,
+            clinicId:  this.state.selectedClinic.value : '',
             specialtyId: this.state.selectedSpecialty.value
 
             //doctorId: this.state.selectedDoctor.value dùng để gán giá trị item.id cho doctorId rồi lưu vào db
