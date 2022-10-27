@@ -208,7 +208,31 @@ export const fetchTopDoctor = () => {
         }
     }
 }
+// export const fetchTopDoctorSpecialty = () => {
+//     return async (dispatch, getState) => {
+//         try {
+//             let res = await getTopDoctorSpecialtyService('');
 
+//             if (res && res.errCode === 0) {
+//                 dispatch({
+//                     type: actionTypes.FETCH_TOP_DOCTORS_SPECIALTY_SUCCESS,
+//                     dataDoctors: res.data
+//                 })
+
+//                 //trong hàm dispatch kia thì object trên chính là action trong redux
+//             } else {
+//                 dispatch({
+//                     type: actionTypes.FETCH_TOP_DOCTORS_SPECIALTY_FAILED
+//                 })
+//             }
+//         } catch (e) {
+//             console.log('FETCH_TOP_DOCTORS_SPECIALTY_FAILED', e)
+//             dispatch({
+//                 type: actionTypes.FETCH_TOP_DOCTORS_SPECIALTY_FAILED
+//             })
+//         }
+//     }
+// }
 export const fetchAllDoctors = () => {
     return async (dispatch, getState) => {
         try {

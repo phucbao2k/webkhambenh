@@ -24,7 +24,7 @@ class OutStandingDoctor extends Component {
     }
    async componentDidMount() {
         this.props.loadTopDoctors();
-      
+        // this.props.loadTopDoctorsSpecialty();
     }
     handleViewDetailDoctor = (doctor) => {
         if (this.props.history) {
