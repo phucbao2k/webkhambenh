@@ -251,6 +251,4 @@ MUỐN đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
   HỌC THÊM VỀ SEQUELIZE----------------------------------------------------------------
 
 
-  VỚI SEQUELIZE , muốn thực thi 1 hàm save()... thì phải đặt save() ở sau cùng. VD:
-    appointment.statusId = 'S3';
-                    await appointment.save()
+  VỚI SEQUELIZE , muốn thực thi 1 hàm save()... thì phải đặt save() ở sau cùng
