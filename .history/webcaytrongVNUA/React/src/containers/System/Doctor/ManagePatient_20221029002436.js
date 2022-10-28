@@ -61,7 +61,7 @@ class ManagePatient extends Component {
         },
           async  () => {
                 
-              await  this.getDataPatient()
+              await  this.getDataPatient(user, formatedDate)
             })
     }
     handleBtnConfirm = (item) => {
