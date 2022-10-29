@@ -93,7 +93,7 @@ class ManagePatient extends Component {
         })
         let res = await postSendRemedy({
             email: dataChild.email,
-            imgBase64: dataChild.imgBase64,
+            imgBase64: dataChild.imageBase64,
             doctorId: dataModal.doctorId,
             patientId: dataModal.patientId,
             timeType: dataModal.timeType,
