@@ -9,7 +9,7 @@ import {LANGUAGES} from '../../../utils';
 import RemedyModal from './RemedyModal';
 import {toast} from 'react-toastify';
 import LoadingOverLay from "react-loading-overlay";
-import _ from 'lodash';
+import { _ } from 'lodash';
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 
 
@@ -69,7 +69,7 @@ class ManagePatient extends Component {
                 doctorId: item.doctorId,
                 patientId: item.patientId,
                 email: item.patientData.email,
-                timeType: item.timeType,
+                timetype: item.timeType,
                 patientName: item.patientData.firstName
            
         }

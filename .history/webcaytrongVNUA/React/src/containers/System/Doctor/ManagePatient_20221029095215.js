@@ -69,7 +69,7 @@ class ManagePatient extends Component {
                 doctorId: item.doctorId,
                 patientId: item.patientId,
                 email: item.patientData.email,
-                timeType: item.timeType,
+                timetype: item.timeType,
                 patientName: item.patientData.firstName
            
         }
