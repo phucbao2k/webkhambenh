@@ -82,17 +82,13 @@ class RemedyModal extends Component {
                         </div>
                         <div className="col-6 form-group">
                             <label>Chọn file đơn thuốc</label>
-                            <input className="form-control-file" type="file" 
-                                onChange={(event) => this.handleOnChangeImage(event)}
+                            <input className="form-control-file" type="email" value={this.state.email}
+                                onChange={(event) => this.handleOnChangeEmail(event)}
                             />
                         </div>
 
                     </div>
             </ModalBody>
-            <ModalFooter>
-                <Button color="primary" onClick={() => this.handleSendRemedy()}>Send</Button>
-                <Button color="secondary" onClick={closeRemedyModal}>Cancel</Button>
-            </ModalFooter>
            
 
            </Modal>

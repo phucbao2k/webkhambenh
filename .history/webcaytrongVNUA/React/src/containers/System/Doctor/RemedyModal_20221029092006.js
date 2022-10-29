@@ -68,32 +68,8 @@ class RemedyModal extends Component {
            centered>
             <div className="modal-header">
                 <h5 className="modal-title">Gửi hóa đơn khám bệnh thành công</h5>
-                <button type="button" className="close" aria-label="Close" onClick={closeRemedyModal}>
-                    <span aria-hidden="true">x</span>
-                </button>
+                <button type="button" className="close"></button>
             </div>
-            <ModalBody>
-                    <div className="row">
-                        <div className="col-6 form-group">
-                            <label>Email bệnh nhân</label>
-                            <input className="form-control" type="email" value={this.state.email}
-                            onChange={(event) => this.handleOnChangeEmail(event)}
-                            />
-                        </div>
-                        <div className="col-6 form-group">
-                            <label>Chọn file đơn thuốc</label>
-                            <input className="form-control-file" type="file" 
-                                onChange={(event) => this.handleOnChangeImage(event)}
-                            />
-                        </div>
-
-                    </div>
-            </ModalBody>
-            <ModalFooter>
-                <Button color="primary" onClick={() => this.handleSendRemedy()}>Send</Button>
-                <Button color="secondary" onClick={closeRemedyModal}>Cancel</Button>
-            </ModalFooter>
-           
 
            </Modal>
         )
