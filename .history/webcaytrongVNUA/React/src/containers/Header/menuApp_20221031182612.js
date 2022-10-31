@@ -84,7 +84,7 @@ export const patientMenu = [
         menus: [
            
             {
-                name: 'menu.doctor.manage-patient', link: '/patient/manage-patient'
+                name: 'menu.doctor.manage-patient', link: '/doctor/manage-patient'
             }
         ]
     },
