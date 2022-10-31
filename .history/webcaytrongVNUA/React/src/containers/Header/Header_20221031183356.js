@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { LANGUAGES, USER_ROLE } from '../../utils';
 import * as actions from "../../store/actions";
 import Navigator from '../../components/Navigator';
-import { adminMenu, doctorMenu, patientMenu } from './menuApp';
+import { adminMenu, doctorMenu } from './menuApp';
 import './Header.scss';
 import { FormattedMessage } from 'react-intl';
 import _ from 'lodash';
@@ -29,7 +29,7 @@ class Header extends Component {
                 menu = doctorMenu;
             }
             if (role === USER_ROLE.PATIENT) {
-                menu = patientMenu;
+                menu = doctorMenu;
             }
 
         }

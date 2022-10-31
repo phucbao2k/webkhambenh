@@ -4,16 +4,16 @@ import { connect } from 'react-redux';
 import './ManagePatient.scss';
 import DatePicker from '../../../components/Input/DatePicker';
 import moment from 'moment';
-import { getAllPatientForDoctor } from '../../../services/userService';
+import { getAllBookingForAdmin, postSendRemedy } from '../../../services/userService';
 import {LANGUAGES} from '../../../utils';
-import RemedyModal from '../Doctor/RemedyModal';
+import RemedyModal from './RemedyModal';
 import {toast} from 'react-toastify';
 import LoadingOverLay from "react-loading-overlay";
 import _ from 'lodash';
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 
 
-class ManagePatient extends Component {
+class ManagePatientForAdmin extends Component {
 
     constructor(props) {
         super(props);
@@ -38,7 +38,7 @@ class ManagePatient extends Component {
         let { user } = this.props;
         let { currentDate } = this.state;
         let formatedDate = new Date(currentDate).getTime();
-        let res = await getAllPatientForDoctor({
+        let res = await getAllBookingForAdmin({
             doctorId: user.id,
             date: formatedDate
         })
@@ -86,35 +86,35 @@ class ManagePatient extends Component {
         })
 
     }
-    // sendRemedy = async (dataChild) => {
-    //     let {dataModal} = this.state;
-    //     this.setState({
-    //         isShowLoading: true
-    //     })
-    //     let res = await postSendRemedy({
-    //         email: dataChild.email,
-    //         imgBase64: dataChild.imgBase64,
-    //         doctorId: dataModal.doctorId,
-    //         patientId: dataModal.patientId,
-    //         timeType: dataModal.timeType,
-    //         language: this.props.language,
-    //         patientName: dataModal.patientName,
-    //     })
-    //     if(res && res.errCode === 0) {
-    //         this.setState({
-    //             isShowLoading: false
-    //         })
-    //         toast.success('Send Remedy succeeds');
-    //         this.closeRemedyModal();
-    //         await this.getDataPatient();
-    //     }else{
-    //         this.setState({
-    //             isShowLoading: false
-    //         })
-    //         toast.error('Something went wrong...');
-    //         console.log('error remdey is:', res)
-    //     }
-    // }
+    sendRemedy = async (dataChild) => {
+        let {dataModal} = this.state;
+        this.setState({
+            isShowLoading: true
+        })
+        let res = await postSendRemedy({
+            email: dataChild.email,
+            imgBase64: dataChild.imgBase64,
+            doctorId: dataModal.doctorId,
+            patientId: dataModal.patientId,
+            timeType: dataModal.timeType,
+            language: this.props.language,
+            patientName: dataModal.patientName,
+        })
+        if(res && res.errCode === 0) {
+            this.setState({
+                isShowLoading: false
+            })
+            toast.success('Send Remedy succeeds');
+            this.closeRemedyModal();
+            await this.getDataPatient();
+        }else{
+            this.setState({
+                isShowLoading: false
+            })
+            toast.error('Something went wrong...');
+            console.log('error remdey is:', res)
+        }
+    }
 
     render() {
        let {language} = this.props;
@@ -125,7 +125,7 @@ class ManagePatient extends Component {
             spinner
             text='Loading...'>
                     <div className="manage-patient-container">
-                        <div className="m-p-title">Quản lý lịch khám bệnh</div>
+                        <div className="m-p-title">Quản lý bệnh nhân khám bệnh</div>
                         <div className="manage-patient-body row">
                             <div className="col-4 form-group">
                                 <label>Chọn ngày khám</label>
@@ -157,7 +157,7 @@ class ManagePatient extends Component {
                                                         <td>{item.patientData.address}</td>
                                                         <td>
                                                             <button className="mp-btn-confirm"
-                                                                onClick={() => this.handleBtnConfirm(item)}>Kiểm tra</button>
+                                                                onClick={() => this.handleBtnConfirm(item)}>Xác nhận</button>
                                                             
                                                         </td>
                                                     </tr>
@@ -181,7 +181,7 @@ no data
                     isOpenModal={isOpenRemedyModal}
                     dataModal ={dataModal}
                     closeRemedyModal= {this.closeRemedyModal}
-                    />
+                    sendRemedy={this.sendRemedy}/>
 
             </LoadingOverLay>
                 
@@ -205,7 +205,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ManagePatient);
+export default connect(mapStateToProps, mapDispatchToProps)(ManagePatientForAdmin);
 
 
 

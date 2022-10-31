@@ -20,7 +20,7 @@ class System extends Component {
                         <Switch>
                             <Route path="/system/user-manage" component={UserManage} />
                             <Route path="/system/doctor/manage-patient" component={ManagePatient} />
-                            <Route path="/system/doctor/manage-patient" component={Manage_Patient} />
+                            <Route path="/system/doctor/manage-patient" component={ManagePatient} />
                             <Route path="/system/user-redux" component={UserRedux} />
                             <Route path="/system/manage-doctor" component={ManageDoctor} />
                             <Route path="/system/manage-specialty" component={ManageSpecialty} />

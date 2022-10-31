@@ -56,11 +56,11 @@ class Login extends Component {
                 navigate(`${redirectPath}`)
             }
             if (role === USER_ROLE.DOCTOR) {
-                let redirectPath = '/system/doctor/manage-patient'
+                let redirectPath = '/system/doctor'
                 navigate(`${redirectPath}`)
             }
             if (role === USER_ROLE.PATIENT) {
-                let redirectPath = '/system/patient/manage-patient'
+                let redirectPath = ''
                 navigate(`${redirectPath}`)
             }
 

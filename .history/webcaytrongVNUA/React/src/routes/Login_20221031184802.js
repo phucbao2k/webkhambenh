@@ -49,6 +49,7 @@ class Login extends Component {
     // }
     redirectToSystemPage = () => {
         let { navigate } = this.props;
+        
         if (userInfo && !_.isEmpty(userInfo)) {
             let role = userInfo.roleId;
             if (role === USER_ROLE.ADMIN) {
@@ -56,12 +57,10 @@ class Login extends Component {
                 navigate(`${redirectPath}`)
             }
             if (role === USER_ROLE.DOCTOR) {
-                let redirectPath = '/system/doctor/manage-patient'
-                navigate(`${redirectPath}`)
+                menu = doctorMenu;
             }
             if (role === USER_ROLE.PATIENT) {
-                let redirectPath = '/system/patient/manage-patient'
-                navigate(`${redirectPath}`)
+                menu = patientMenu;
             }
 
         }

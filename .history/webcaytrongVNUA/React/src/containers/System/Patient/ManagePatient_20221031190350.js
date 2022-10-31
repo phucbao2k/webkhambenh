@@ -13,7 +13,7 @@ import _ from 'lodash';
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 
 
-class ManagePatient extends Component {
+class ManageBookingForPatient extends Component {
 
     constructor(props) {
         super(props);

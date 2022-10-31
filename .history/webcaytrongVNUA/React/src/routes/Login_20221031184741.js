@@ -49,19 +49,17 @@ class Login extends Component {
     // }
     redirectToSystemPage = () => {
         let { navigate } = this.props;
+        let redirectPath = '';
         if (userInfo && !_.isEmpty(userInfo)) {
             let role = userInfo.roleId;
             if (role === USER_ROLE.ADMIN) {
-                let redirectPath = '/system/user-manage'
-                navigate(`${redirectPath}`)
+                const redirectPath = '/system/user-manage'
             }
             if (role === USER_ROLE.DOCTOR) {
-                let redirectPath = '/system/doctor/manage-patient'
-                navigate(`${redirectPath}`)
+                menu = doctorMenu;
             }
             if (role === USER_ROLE.PATIENT) {
-                let redirectPath = '/system/patient/manage-patient'
-                navigate(`${redirectPath}`)
+                menu = patientMenu;
             }
 
         }

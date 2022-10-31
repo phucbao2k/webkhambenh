@@ -47,25 +47,6 @@ class Login extends Component {
     //     const redirectPath = '/system/user-manage';
     //     navigate(`${redirectPath}`);
     // }
-    redirectToSystemPage = () => {
-        let { navigate } = this.props;
-        if (userInfo && !_.isEmpty(userInfo)) {
-            let role = userInfo.roleId;
-            if (role === USER_ROLE.ADMIN) {
-                let redirectPath = '/system/user-manage'
-                navigate(`${redirectPath}`)
-            }
-            if (role === USER_ROLE.DOCTOR) {
-                let redirectPath = '/system/doctor/manage-patient'
-                navigate(`${redirectPath}`)
-            }
-            if (role === USER_ROLE.PATIENT) {
-                let redirectPath = '/system/patient/manage-patient'
-                navigate(`${redirectPath}`)
-            }
-
-        }
-    }
 
     processLogin = () => {
         const { username, password } = this.state;
@@ -177,8 +158,7 @@ class Login extends Component {
 
 const mapStateToProps = state => {
     return {
-        lang: state.app.language,
-        userInfo: state.user.userInfo
+        lang: state.app.language
     };
 };
 

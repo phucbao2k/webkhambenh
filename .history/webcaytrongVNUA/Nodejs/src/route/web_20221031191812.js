@@ -25,7 +25,7 @@ export function initWebRoutes(app) {
     router.get('/api/top-doctor-home', doctorController.getTopDoctorHome);
     router.get('/api/get-list-patient-for-doctor', doctorController.getListPatientForDoctor);
     router.get('/api/get-all-booking-for-patient', patientController.getListBookingForPatient);
-    router.get('/api/get-all-booking-for-admin', adminController.getAllBookingForAdmin);
+    router.get('/api/get-all-booking-for-admin', adminController.getListBookingForPatient);
     router.post('/api/send-remedy', doctorController.sendRemedy);
     router.get('/api/get-all-doctors', doctorController.getAllDoctors);
     router.post('/api/save-infor-doctors', doctorController.postInforDoctor);
