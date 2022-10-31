@@ -10,7 +10,6 @@ import { userIsAuthenticated, userIsNotAuthenticated } from '../hoc/authenticati
 import DetailDoctor from './Patient/Doctor/DetailDoctor';
 import { path } from '../utils'
 import Doctor from '../routes/Doctor';
-import Patient from '../routes/Patient';
 import Home from '../routes/Home';
 import Login from '../containers/auth/Login';
 import System from '../routes/System';
@@ -53,7 +52,7 @@ class App extends Component {
                                     <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
                                     <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
                                     <Route path={'/doctor/'} component={userIsAuthenticated(Doctor)} />
-                                    <Route path={'/patient/'} component={userIsAuthenticated(Patient)} />
+                                    <Route path={'/patient/'} component={userIsAuthenticated(Pả)} />
                                     <Route path={path.HOMEPAGE} component={HomePage} />
                                     <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
                                     <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />

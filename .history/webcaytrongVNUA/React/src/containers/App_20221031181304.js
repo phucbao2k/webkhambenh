@@ -10,7 +10,7 @@ import { userIsAuthenticated, userIsNotAuthenticated } from '../hoc/authenticati
 import DetailDoctor from './Patient/Doctor/DetailDoctor';
 import { path } from '../utils'
 import Doctor from '../routes/Doctor';
-import Patient from '../routes/Patient';
+import Patient from 
 import Home from '../routes/Home';
 import Login from '../containers/auth/Login';
 import System from '../routes/System';

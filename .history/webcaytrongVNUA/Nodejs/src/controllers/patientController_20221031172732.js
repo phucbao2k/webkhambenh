@@ -30,7 +30,7 @@ let postVerifyBookAppointment = async (req, res) => {
 }
 let getListBookingForPatient = async (req, res) => {
     try {
-        let infor = await patientService.getListBookingForPatient(req.query.patientId, req.query.date);
+        let infor = await doctorService.getListPatientForDoctor(req.query.doctorId, req.query.date);
         return res.status(200).json(infor);
     } catch (e) {
         console.log(e);
@@ -42,6 +42,5 @@ let getListBookingForPatient = async (req, res) => {
 }
 module.exports = {
     postBookAppointment: postBookAppointment,
-    postVerifyBookAppointment: postVerifyBookAppointment,
-    getListBookingForPatient: getListBookingForPatient
+    postVerifyBookAppointment: postVerifyBookAppointment
 }

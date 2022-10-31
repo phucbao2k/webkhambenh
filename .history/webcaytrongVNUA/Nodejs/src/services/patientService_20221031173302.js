@@ -114,10 +114,10 @@ let postVerifyBookAppointment = (data) => {
         }
     })
 }
-let getListBookingForPatient = (patientId, date) => {
+let getListBookingForPatient = (doctorId, date) => {
     return new Promise(async (resolve, reject) => {
         try {
-            if (!patientId || !date) {
+            if (!doctorId || !date) {
                 resolve({
                     errCode: 1,
                     errMessage: 'Missing required parameter'
@@ -126,7 +126,7 @@ let getListBookingForPatient = (patientId, date) => {
                 let data = await db.Booking.findAll({
                     where: {
                         statusId: 'S2',
-                        patientId: patientId,
+                        doctorId: doctorId,
                         date: date
                     },
                     include: [

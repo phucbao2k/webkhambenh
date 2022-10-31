@@ -83,12 +83,8 @@ const postSendRemedy = (data) => {
     return axios.post('/api/send-remedy', data)
 }
 const getAllBookingForAdmin =(data) => {
-    return axios.get(`/api/get-all-booking-for-admin?date=${data.date}`)
+    return axios.get(`/api/get-all?doctorId=${data.doctorId}&date=${data.date}`)
 }
-const getAllBookingForPatient =(data) => {
-    return axios.get(`/api/get-all-booking-for-patient?patientId=${data.patientId}&date=${data.date}`)
-}
-
 export {
     handleLoginApi, getAllUsers,
     createNewUserService, deleteUserService,
@@ -108,8 +104,6 @@ export {
     getAllClinic,
     getAllDetailClinicById,
     getAllPatientForDoctor,
-    postSendRemedy,
-    getAllBookingForAdmin,
-    getAllBookingForPatient
+    postSendRemedy
 }//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export

@@ -109,7 +109,6 @@ export {
     getAllDetailClinicById,
     getAllPatientForDoctor,
     postSendRemedy,
-    getAllBookingForAdmin,
-    getAllBookingForPatient
+    getAllBookingForAdmin
 }//đối với ReactJs, khi export function để nơi khác truy cập, 
 //ta không cần export default hay module.export

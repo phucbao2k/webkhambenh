@@ -131,7 +131,7 @@ let getListBookingForPatient = (patientId, date) => {
                     },
                     include: [
                         {
-                            model: db.User, as: 'patientData',
+                            model: db.User, as: 'doctorData',
                             attributes: ['email', 'firstName', 'address'],
                             // include: [
                             //     {
