@@ -13,7 +13,7 @@ import _ from 'lodash';
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 
 
-class ManagePatient extends Component {
+class Manage_Patient extends Component {
 
     constructor(props) {
         super(props);
@@ -205,7 +205,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ManagePatient);
+export default connect(mapStateToProps, mapDispatchToProps)(Manage_Patient);
 
 
 

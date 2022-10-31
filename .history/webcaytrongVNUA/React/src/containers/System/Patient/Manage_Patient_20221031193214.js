@@ -4,16 +4,16 @@ import { connect } from 'react-redux';
 import './ManagePatient.scss';
 import DatePicker from '../../../components/Input/DatePicker';
 import moment from 'moment';
-import { getAllBookingForAdmin, postSendRemedy } from '../../../services/userService';
-import { LANGUAGES } from '../../../utils';
-import RemedyModal from './RemedyModal';
-import { toast } from 'react-toastify';
+import { getAllPatientForDoctor } from '../../../services/userService';
+import {LANGUAGES} from '../../../utils';
+import RemedyModal from '../Doctor/RemedyModal';
+import {toast} from 'react-toastify';
 import LoadingOverLay from "react-loading-overlay";
 import _ from 'lodash';
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 
 
-class ManagePatient extends Component {
+class Manage_Patient extends Component {
 
     constructor(props) {
         super(props);
@@ -30,15 +30,16 @@ class ManagePatient extends Component {
 
 
     async componentDidMount() {
-
+       
         this.getDataPatient()
 
     }
     getDataPatient = async () => {
+        let { user } = this.props;
         let { currentDate } = this.state;
         let formatedDate = new Date(currentDate).getTime();
-        let res = await getAllBookingForAdmin({
-
+        let res = await getAllPatientForDoctor({
+            doctorId: user.id,
             date: formatedDate
         })
         if (res && res.errCode === 0) {
@@ -58,19 +59,19 @@ class ManagePatient extends Component {
         this.setState({
             currentDate: date[0]
         },
-            async () => {
-
-                await this.getDataPatient()
+          async  () => {
+                
+              await  this.getDataPatient()
             })
     }
     handleBtnConfirm = (item) => {
-        let data = {
-            doctorId: item.doctorId,
-            patientId: item.patientId,
-            email: item.patientData.email,
-            timeType: item.timeType,
-            patientName: item.patientData.firstName
-
+        let data ={          
+                doctorId: item.doctorId,
+                patientId: item.patientId,
+                email: item.patientData.email,
+                timeType: item.timeType,
+                patientName: item.patientData.firstName
+           
         }
         this.setState({
             isOpenRemedyModal: true,
@@ -80,51 +81,51 @@ class ManagePatient extends Component {
     }
     closeRemedyModal = () => {
         this.setState({
-            isOpenRemedyModal: false,
+            isOpenRemedyModal:false,
             dataModal: {}
         })
 
     }
-    sendRemedy = async (dataChild) => {
-        let { dataModal } = this.state;
-        this.setState({
-            isShowLoading: true
-        })
-        let res = await postSendRemedy({
-            email: dataChild.email,
-            imgBase64: dataChild.imgBase64,
-            doctorId: dataModal.doctorId,
-            patientId: dataModal.patientId,
-            timeType: dataModal.timeType,
-            language: this.props.language,
-            patientName: dataModal.patientName,
-        })
-        if (res && res.errCode === 0) {
-            this.setState({
-                isShowLoading: false
-            })
-            toast.success('Send Remedy succeeds');
-            this.closeRemedyModal();
-            await this.getDataPatient();
-        } else {
-            this.setState({
-                isShowLoading: false
-            })
-            toast.error('Something went wrong...');
-            console.log('error remdey is:', res)
-        }
-    }
+    // sendRemedy = async (dataChild) => {
+    //     let {dataModal} = this.state;
+    //     this.setState({
+    //         isShowLoading: true
+    //     })
+    //     let res = await postSendRemedy({
+    //         email: dataChild.email,
+    //         imgBase64: dataChild.imgBase64,
+    //         doctorId: dataModal.doctorId,
+    //         patientId: dataModal.patientId,
+    //         timeType: dataModal.timeType,
+    //         language: this.props.language,
+    //         patientName: dataModal.patientName,
+    //     })
+    //     if(res && res.errCode === 0) {
+    //         this.setState({
+    //             isShowLoading: false
+    //         })
+    //         toast.success('Send Remedy succeeds');
+    //         this.closeRemedyModal();
+    //         await this.getDataPatient();
+    //     }else{
+    //         this.setState({
+    //             isShowLoading: false
+    //         })
+    //         toast.error('Something went wrong...');
+    //         console.log('error remdey is:', res)
+    //     }
+    // }
 
     render() {
-        let { language } = this.props;
+       let {language} = this.props;
         let { dataPatient, isOpenRemedyModal, dataModal } = this.state;
         return (
             <>
-                <LoadingOverLay active={this.state.isShowLoading}
-                    spinner
-                    text='Loading...'>
+            <LoadingOverLay active= {this.state.isShowLoading}
+            spinner
+            text='Loading...'>
                     <div className="manage-patient-container">
-                        <div className="m-p-title">Quản lý bệnh nhân khám bệnh</div>
+                        <div className="m-p-title">Quản lý lịch khám bệnh</div>
                         <div className="manage-patient-body row">
                             <div className="col-4 form-group">
                                 <label>Chọn ngày khám</label>
@@ -147,7 +148,7 @@ class ManagePatient extends Component {
                                         {dataPatient && dataPatient.length > 0 ?
                                             dataPatient.map((item, index) => {
                                                 let time = language === LANGUAGES.VI ?
-                                                    item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn;
+                                                item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn;
                                                 return (
                                                     <tr key={index}>
                                                         <td>{index + 1}</td>
@@ -156,17 +157,17 @@ class ManagePatient extends Component {
                                                         <td>{item.patientData.address}</td>
                                                         <td>
                                                             <button className="mp-btn-confirm"
-                                                                onClick={() => this.handleBtnConfirm(item)}>Xác nhận</button>
-
+                                                                onClick={() => this.handleBtnConfirm(item)}>Kiểm tra</button>
+                                                            
                                                         </td>
                                                     </tr>
                                                 )
                                             })
                                             : <tr>
-                                                <td colSpan="6" style={{ textAlign: "center" }}>
-                                                    no data
-                                                </td>
-                                            </tr>}
+                                                <td colSpan="6" style={{textAlign: "center"}}>
+no data
+                                            </td>
+                                                </tr>}
                                     </tbody>
 
 
@@ -177,16 +178,16 @@ class ManagePatient extends Component {
                         </div>
                     </div>
                     <RemedyModal
-                        isOpenModal={isOpenRemedyModal}
-                        dataModal={dataModal}
-                        closeRemedyModal={this.closeRemedyModal}
+                    isOpenModal={isOpenRemedyModal}
+                    dataModal ={dataModal}
+                    closeRemedyModal= {this.closeRemedyModal}
                     />
 
-                </LoadingOverLay>
-
+            </LoadingOverLay>
+                
 
             </>
-
+            
         )
     }
 
@@ -204,7 +205,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ManagePatient);
+export default connect(mapStateToProps, mapDispatchToProps)(Manage_Patient);
 
 
 
