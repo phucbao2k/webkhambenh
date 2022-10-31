@@ -6,8 +6,8 @@ import { getDetailInforDoctor } from '../../../services/userService';
 import { LANGUAGES } from '../../../utils';
 import DoctorSchedule from './DoctorSchedule';
 import DoctorExtraInfor from './DoctorExtraInfor';
-// import LikeAndShare from '../SocialPlugin/LikeAndShare';
-// import Comment from '../SocialPlugin/Comment';
+import LikeAndShare from '../SocialPlugin/LikeAndShare';
+import C
 class DetailDoctor extends Component {
     constructor(props) {
         super(props);
@@ -47,8 +47,7 @@ class DetailDoctor extends Component {
             nameVi = `${detailDoctor.positionData.valueVi}, ${detailDoctor.firstName} ${detailDoctor.lastName}`;
             nameEn = `${detailDoctor.positionData.valueEn}, ${detailDoctor.lastName} ${detailDoctor.firstName}`
         }
-// let currentURL = process.env.REACT_APP_IS_LOCALHOST == true
-// ? "https://eric-restaurant-bot-tv.herokuapp.com/" :window.location.href;
+
         return (
             <>
                 <HomeHeader
@@ -76,12 +75,12 @@ class DetailDoctor extends Component {
                         <div className="content-left">
                             <DoctorSchedule
                                 doctorIdFromParent={this.state.currentDoctorId}
-                            />
+                                />
                         </div>
-                        <div className="content-right">
-                            <DoctorExtraInfor doctorIdFromParent={this.state.currentDoctorId} />
-                        </div>
-
+                            <div className="content-right">
+<DoctorExtraInfor doctorIdFromParent={this.state.currentDoctorId}/>
+                            </div>
+                        
                     </div>
                     <div className="container detail-infor-doctor">
                         {detailDoctor && detailDoctor.Markdown && detailDoctor.Markdown.contentHTML
