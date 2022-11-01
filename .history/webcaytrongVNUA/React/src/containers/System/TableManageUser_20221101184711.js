@@ -76,7 +76,7 @@ class TableManageUser extends Component {
                                             <td>{item.firstName}</td>
                                             <td>{item.lastName}</td>
                                             <td>{item.address}</td>
-                                            <td>{item.roleId}</td>
+                                            <td>{}</td>
                                             <td>
                                                 <button className="btn-edit"
                                                     onClick={() => this.handleEditUser(item)}><i className="fa-solid fa-pencil"></i></button>

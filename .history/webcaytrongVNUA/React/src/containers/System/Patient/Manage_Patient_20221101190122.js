@@ -177,7 +177,6 @@ no data
                             </div>
 
                         </div>
-                        <div className="contact">Muốn trở thành đối tác của chúng tôi? Hãy liên hệ 0981xxxxxx ngay! </div>
                     </div>
                     <RemedyPatientModal
                     isOpenModal={isOpenRemedyModal}
@@ -186,7 +185,7 @@ no data
                     />
 
             </LoadingOverLay>
-                
+                <div className=" contact">Muốn trở thành đối tác của chúng tôi? Hãy liên hệ 0981xxxxxx ngay! </div>
 
             </>
             

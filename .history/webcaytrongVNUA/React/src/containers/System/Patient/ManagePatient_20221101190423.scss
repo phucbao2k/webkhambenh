@@ -12,7 +12,7 @@ div._loading_overlay_wrapper{
         text-transform: uppercase;
     }
     .manage-patient-body{
-       padding: 0 !important;
+        padding: 0 20px;
         .table-manage-patient{
             table,
             th,
@@ -43,11 +43,12 @@ div._loading_overlay_wrapper{
             }
         }
     }
-                .contact {
         
-                    text-transform: uppercase;
-                    font-weight: bold;
-                    font-size: 1rem;
-                    color: #0071ba;
-                }
+}
+.contact {
+    margin: 10px 0
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #0071ba;
 }
