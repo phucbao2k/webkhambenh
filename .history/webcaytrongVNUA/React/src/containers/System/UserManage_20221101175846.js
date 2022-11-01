@@ -5,7 +5,7 @@ import './UserManage.scss';
 // import ModalUser from './ModalUser';
 // import { emitter } from '../../utils/emitter';
 // import ModalEditUser from './ModalEditUser';
-// import Header from '../Header/Header';
+// // import Header from '../Header/Header';
 // import { getAllSpecialty, createNewUserService, deleteUserService, editUserService } from '../../services/userService';
 // nếu muố import 1 function thì ta dùng dấu ngoặc nhọn
 class UserManage extends Component {

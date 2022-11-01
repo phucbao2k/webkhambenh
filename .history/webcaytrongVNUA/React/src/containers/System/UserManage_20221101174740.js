@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss';
-// import ModalUser from './ModalUser';
-// import { emitter } from '../../utils/emitter';
-// import ModalEditUser from './ModalEditUser';
+import ModalUser from './ModalUser';
+import { emitter } from '../../utils/emitter';
+import ModalEditUser from './ModalEditUser';
 // import Header from '../Header/Header';
-// import { getAllSpecialty, createNewUserService, deleteUserService, editUserService } from '../../services/userService';
+import { getAllSpecialty, createNewUserService, deleteUserService, editUserService } from '../../services/userService';
 // nếu muố import 1 function thì ta dùng dấu ngoặc nhọn
 class UserManage extends Component {
     // stands for properties and is being used for passing data from one component to another.
@@ -14,18 +14,18 @@ class UserManage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // arrUsers: [],
-            // isOpenModalUser: false,
-            // isOpenModalEditUser: false,
-            // userEdit: {},
-            // dataSpecialty: []
+            arrUsers: [],
+            isOpenModalUser: false,
+            isOpenModalEditUser: false,
+            userEdit: {},
+            dataSpecialty: []
         }
     }
     //để lưu giá trị của 1 biến components, ta dùng state
     //Component là một block code độc lập để phân chia các UI (giao diện người dùng) thành các phân nhỏ riêng lẻ để dễ dàng quản lý và tái sử dụng.
     async componentDidMount() {
         // await this.getAllUsersFromReact();
-       
+        
     }
     // getAllUsersFromReact = async () => {
     //     let response = await getAllUsers('ALL');
@@ -35,85 +35,85 @@ class UserManage extends Component {
     //         })
     //     }
     // }
-    // handleAddNewUser = () => {
-    //     this.setState({
-    //         isOpenModalUser: true,
-    //     })
-    // }
-    // toggleUserModal = () => {
-    //     this.setState({
-    //         isOpenModalUser: !this.state.isOpenModalUser,
-    //     })
-    // }
-    // toggleUserEditModal = () => {
-    //     this.setState({
-    //         isOpenModalEditUser: !this.state.isOpenModalEditUser,
-    //     })
-    // }
-    // createNewUser = async (data) => {
-    //     try {
-    //         let response = await createNewUserService(data);
-    //         if (response && response.errCode !== 0) {
-    //             alert(response.errMessage);
-    //         } else {
-    //             await this.getAllUsersFromReact(); //
-    //             this.setState({
-    //                 isOpenModalUser: false,
-    //             })
-    //             emitter.emit('EVENT_CLEAR_MODAL_DATA')
-    //         }
-    //     } catch (e) {
-    //         console.log(e);
-    //     }
-    // }
-    // handleDeleteUser = async (user) => {
-    //     try {
-    //         let res = await deleteUserService(user.id);
-    //         if (res && res.errCode === 0) {
-    //             await this.getAllUsersFromReact();
-    //         }
-    //         else {
-    //             alert(res.errMessage);
-    //         }
-    //     } catch (e) {
+    handleAddNewUser = () => {
+        this.setState({
+            isOpenModalUser: true,
+        })
+    }
+    toggleUserModal = () => {
+        this.setState({
+            isOpenModalUser: !this.state.isOpenModalUser,
+        })
+    }
+    toggleUserEditModal = () => {
+        this.setState({
+            isOpenModalEditUser: !this.state.isOpenModalEditUser,
+        })
+    }
+    createNewUser = async (data) => {
+        try {
+            let response = await createNewUserService(data);
+            if (response && response.errCode !== 0) {
+                alert(response.errMessage);
+            } else {
+                await this.getAllUsersFromReact(); //
+                this.setState({
+                    isOpenModalUser: false,
+                })
+                emitter.emit('EVENT_CLEAR_MODAL_DATA')
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    }
+    handleDeleteUser = async (user) => {
+        try {
+            let res = await deleteUserService(user.id);
+            if (res && res.errCode === 0) {
+                await this.getAllUsersFromReact();
+            }
+            else {
+                alert(res.errMessage);
+            }
+        } catch (e) {
 
-    //     }
-    // }
-    // handleEditUser = (user) => {
-    //     this.setState({
-    //         isOpenModalEditUser: true,
-    //         userEdit: user
-    //     })
-    // }
-    // doEditUser = async (user) => {
-    //     try {
-    //         let res = await editUserService(user);
-    //         if (res && res.errCode === 0) {
-    //             this.setState({
-    //                 isOpenModalEditUser: false
-    //             })
-    //             await this.getAllUsersFromReact()
+        }
+    }
+    handleEditUser = (user) => {
+        this.setState({
+            isOpenModalEditUser: true,
+            userEdit: user
+        })
+    }
+    doEditUser = async (user) => {
+        try {
+            let res = await editUserService(user);
+            if (res && res.errCode === 0) {
+                this.setState({
+                    isOpenModalEditUser: false
+                })
+                await this.getAllUsersFromReact()
 
-    //         } else {
-    //             alert(res.errCode)
-    //         }
-    //     } catch (e) {
+            } else {
+                alert(res.errCode)
+            }
+        } catch (e) {
 
-    //     }
+        }
 
 
-    // }
+    }
     //toggle nghĩa là click ra bên ngoài, tác dụng là đóng hoặc mở modal
     render() {
-        // let { dataSpecialty } = this.state;
+
         // console.log('check render', this.state)
         //khi muốn render ra 1 thứ gì đó trong react, chúng ta phải có hàm return, và trong đó bắt buộc là 1 khối
-        // let arrUsers = this.state.arrUsers;
+        let arrUsers = this.state.arrUsers;
 
         return (
             <div className="users-container">
-              
-                {/* <ModalUser
+
+                <ModalUser
                     isOpen={this.state.isOpenModalUser}
                     toggleFromParent={this.toggleUserModal}
                     createNewUser={this.createNewUser} />
@@ -124,7 +124,7 @@ class UserManage extends Component {
                         currentUser={this.state.userEdit}
                         editUser={this.doEditUser}
                     />
-                } */}
+                }
 
                 <div className="title text-center">Welcome!</div>
                 {/* <div className="mx-1">

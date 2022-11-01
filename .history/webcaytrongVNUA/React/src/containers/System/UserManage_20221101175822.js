@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss';
-// import ModalUser from './ModalUser';
-// import { emitter } from '../../utils/emitter';
-// import ModalEditUser from './ModalEditUser';
+import ModalUser from './ModalUser';
+import { emitter } from '../../utils/emitter';
+import ModalEditUser from './ModalEditUser';
 // import Header from '../Header/Header';
-// import { getAllSpecialty, createNewUserService, deleteUserService, editUserService } from '../../services/userService';
+import { getAllSpecialty, createNewUserService, deleteUserService, editUserService } from '../../services/userService';
 // nếu muố import 1 function thì ta dùng dấu ngoặc nhọn
 class UserManage extends Component {
     // stands for properties and is being used for passing data from one component to another.
