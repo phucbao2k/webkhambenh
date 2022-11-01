@@ -67,7 +67,7 @@ class RemedyModal extends Component {
                 size="md"
                 centered>
                 <div className="modal-header">
-                    <h5 className="modal-title">Thông tin đặt lịch khám bệnh</h5>
+                    <h5 className="modal-title">Thông tin đặt lịch khám bệnh cho câ</h5>
                     <button type="button" className="close" aria-label="Close" onClick={closeRemedyModal}>
                         <span aria-hidden="true">x</span>
                     </button>

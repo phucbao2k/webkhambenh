@@ -67,7 +67,7 @@ class RemedyModal extends Component {
                 size="md"
                 centered>
                 <div className="modal-header">
-                    <h5 className="modal-title">Thông tin đặt lịch khám bệnh</h5>
+                    <h5 className="modal-title">T</h5>
                     <button type="button" className="close" aria-label="Close" onClick={closeRemedyModal}>
                         <span aria-hidden="true">x</span>
                     </button>
@@ -80,12 +80,12 @@ class RemedyModal extends Component {
                                 onChange={(event) => this.handleOnChangeEmail(event)}
                             />
                         </div>
-                        
+                       
 
                     </div>
                 </ModalBody>
                 <ModalFooter>
-                    
+                    <Button color="primary" >Xóa...Đang phát triển...</Button>
                     <Button color="secondary" onClick={closeRemedyModal}>Cancel</Button>
                 </ModalFooter>
 

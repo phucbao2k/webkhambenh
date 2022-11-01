@@ -112,7 +112,7 @@
             "manage-user": "Hệ thống người dùng",
             "manage-doctor": "Quản lý bác sĩ",
             "manage-admin": "Quản lý quản trị viên",
-            "crud": "Xin Chào!",
+            "crud": "Xin Chào",
             "crud-redux": "CRUD sử dụng Redux",
             "clinic": "Phòng khám",
             "manage-clinic": "Quản lí phòng khám",
