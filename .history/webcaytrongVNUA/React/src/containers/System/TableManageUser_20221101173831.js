@@ -56,7 +56,7 @@ class TableManageUser extends Component {
 
 
                     <div className="users-table mt-3 mx-1">
-                        <div className="title text-center">Manage Users with TaBaoPhuc</div>
+                        <div className="title text-center">Manage Users</div>
                         <table id="TableManageUser">
                             <tbody>
                                 <tr>
