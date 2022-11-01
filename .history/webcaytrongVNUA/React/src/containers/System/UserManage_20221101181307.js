@@ -111,7 +111,7 @@ class UserManage extends Component {
         // let arrUsers = this.state.arrUsers;
 
         return (
-            <div className="users-container" >
+            <div className="users-container" style={{ backgroundImage: `url(../../assets/Crop.jpg)`}}>
               
                 {/* <ModalUser
                     isOpen={this.state.isOpenModalUser}
@@ -126,7 +126,7 @@ class UserManage extends Component {
                     />
                 } */}
 
-                <div className="users-container title text-center">Welcome!</div>
+                <div className="title text-center">Welcome!</div>
                 {/* <div className="mx-1">
                     <button className="btn btn-primary px-3"
                         onClick={() => this.handleAddNewUser()}><i className="fa-solid fa-plus"></i>Add new user</button>
