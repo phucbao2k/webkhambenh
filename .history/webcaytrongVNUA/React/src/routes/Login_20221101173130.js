@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from "connected-react-router";
-
+import { USER_ROLE } from '../utils';
 import * as actions from "../store/actions";
 import { KeyCodeUtils, LanguageUtils } from "../utils";
 
@@ -46,11 +46,11 @@ class Login extends Component {
         this.setState({ password: e.target.value })
     }
 
-    redirectToSystemPage = () => {
-        const { navigate } = this.props;
-        const redirectPath = '/system/user-manage';
-        navigate(`${redirectPath}`);
-    }
+    // redirectToSystemPage = () => {
+    //     const { navigate } = this.props;
+    //     const redirectPath = '/system/user-manage';
+    //     navigate(`${redirectPath}`);
+    // }
    
 
     processLogin = () => {
