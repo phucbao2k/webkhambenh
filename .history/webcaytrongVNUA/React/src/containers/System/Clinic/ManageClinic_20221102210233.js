@@ -107,7 +107,7 @@ class ManageClinic extends Component {
     }
     checkValidateInput = () => {
         let isValid = true;
-        let arrCheck = ['name', 'address', 'descriptionHTML', 'descriptionMarkdown']
+        let arrCheck = ['name', 'address', 'descriptionHTML']
         for (let i = 0; i < arrCheck.length; i++) {
             if (!this.state[arrCheck[i]]) {
                 isValid = false;

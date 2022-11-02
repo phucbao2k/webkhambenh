@@ -6,11 +6,8 @@ import './ManageClinic.scss';
 import TableManageClinic from '../TableManageClinic';
 import * as actions from '../../../store/actions';
 import Lightbox from 'react-image-lightbox';
-import MarkdownIt from 'markdown-it';
-import MdEditor from 'react-markdown-editor-lite';
-import 'react-markdown-editor-lite/lib/index.css';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
-const mdParser = new MarkdownIt();
+
 class ManageClinic extends Component {
 
     constructor(props) {
@@ -107,7 +104,7 @@ class ManageClinic extends Component {
     }
     checkValidateInput = () => {
         let isValid = true;
-        let arrCheck = ['name', 'address', 'descriptionHTML', 'descriptionMarkdown']
+        let arrCheck = ['name', 'address']
         for (let i = 0; i < arrCheck.length; i++) {
             if (!this.state[arrCheck[i]]) {
                 isValid = false;
@@ -143,12 +140,7 @@ class ManageClinic extends Component {
             descriptionMarkdown: clinic.descriptionMarkdown
         })
     }
-    handleEditorChange = ({ html, text }) => {
-        this.setState({
-            descriptionMarkdown: text,
-            descriptionHTML: html,
-        })
-    }
+
     render() {
        
        
@@ -178,7 +170,16 @@ class ManageClinic extends Component {
 
                                 </div>
                             </div>
-                           
+                            <div className="col-md-6 mb-3">
+                                <label htmlFor="validationServerUsername">Clinic's HTML</label>
+                                <div className="input-group">
+                                    <input type="text" className="form-control" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required
+                                        value={descriptionHTML}
+                                        onChange={(event) => { this.onChangeInput(event, 'descriptionHTML') }}
+                                        disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false} />
+
+                                </div>
+                            </div>
                            
                            
                            
@@ -223,11 +224,6 @@ class ManageClinic extends Component {
                                     <FormattedMessage id="create-user.confirm" />
                                 </div>
                             </div>
-                        </div>
-                        <div className="container-fluid manage-doctor-editor">
-                            <MdEditor style={{ height: '300px' }} renderHTML={text => mdParser.render(text)}
-                                onChange={this.handleEditorChange}
-                                value={this.state.descriptionMarkdown} />
                         </div>
                         <div className="col-12 my-3">
                             <button className={this.state.action === CRUD_ACTIONS.EDIT ? "btn btn-warning" : "btn btn-primary"} type="submit"

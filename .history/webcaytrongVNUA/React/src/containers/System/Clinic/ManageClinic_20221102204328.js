@@ -6,18 +6,15 @@ import './ManageClinic.scss';
 import TableManageClinic from '../TableManageClinic';
 import * as actions from '../../../store/actions';
 import Lightbox from 'react-image-lightbox';
-import MarkdownIt from 'markdown-it';
-import MdEditor from 'react-markdown-editor-lite';
-import 'react-markdown-editor-lite/lib/index.css';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
-const mdParser = new MarkdownIt();
+
 class ManageClinic extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            descriptionMarkdown: '',
-            descriptionHTML: '',
+            contentMarkdown: '',
+            contentHTML: '',
            
             clinicArr: [],
            
@@ -56,8 +53,8 @@ class ManageClinic extends Component {
                 avatar: '',
                 action: CRUD_ACTIONS.CREATE,
                 previewImgURL: '',
-                descriptionMarkdown: '',
-                descriptionHTML: ''
+                contentMarkdown: '',
+                contentHTML: ''
             })
         }
     }
@@ -87,8 +84,8 @@ class ManageClinic extends Component {
             this.props.createNewClinic({
                 name: this.state.name,
                 avatar: this.state.avatar,
-                descriptionHTML: this.state.descriptionHTML,
-                descriptionMarkdown: this.state.descriptionMarkdown,
+                contentHTML: this.state.contentHTML,
+                contentMarkdown: this.state.contentMarkdown,
                 address: this.state.address
             })
         }
@@ -98,8 +95,8 @@ class ManageClinic extends Component {
                 name: this.state.name,
                 address: this.state.address,
                 avatar: this.state.avatar,
-                descriptionHTML: this.state.descriptionHTML,
-                descriptionMarkdown: this.state.descriptionMarkdown
+                contentHTML: this.state.contentHTML,
+                contentMarkdown: this.state.contentMarkdown
             })
         }
 
@@ -107,7 +104,7 @@ class ManageClinic extends Component {
     }
     checkValidateInput = () => {
         let isValid = true;
-        let arrCheck = ['name', 'address', 'descriptionHTML', 'descriptionMarkdown']
+        let arrCheck = ['name', 'address']
         for (let i = 0; i < arrCheck.length; i++) {
             if (!this.state[arrCheck[i]]) {
                 isValid = false;
@@ -143,18 +140,13 @@ class ManageClinic extends Component {
             descriptionMarkdown: clinic.descriptionMarkdown
         })
     }
-    handleEditorChange = ({ html, text }) => {
-        this.setState({
-            descriptionMarkdown: text,
-            descriptionHTML: html,
-        })
-    }
+
     render() {
        
        
         let language = this.props.language;
         let { name, address
-            , avatar, descriptionHTML, descriptionMarkdown } = this.state;
+            , avatar, contentHTML, contentMarkdown } = this.state;
         //đây là cách viết của ES7
         return (
 
@@ -178,7 +170,6 @@ class ManageClinic extends Component {
 
                                 </div>
                             </div>
-                           
                            
                            
                            
@@ -223,11 +214,6 @@ class ManageClinic extends Component {
                                     <FormattedMessage id="create-user.confirm" />
                                 </div>
                             </div>
-                        </div>
-                        <div className="container-fluid manage-doctor-editor">
-                            <MdEditor style={{ height: '300px' }} renderHTML={text => mdParser.render(text)}
-                                onChange={this.handleEditorChange}
-                                value={this.state.descriptionMarkdown} />
                         </div>
                         <div className="col-12 my-3">
                             <button className={this.state.action === CRUD_ACTIONS.EDIT ? "btn btn-warning" : "btn btn-primary"} type="submit"

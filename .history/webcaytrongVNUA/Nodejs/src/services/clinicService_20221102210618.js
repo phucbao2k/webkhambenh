@@ -106,13 +106,7 @@ let showAllClinics = (clinicId) => {
             }
             if (clinicId && clinicId !== 'ALL') {
                 clinics = await db.Clinic.findOne({
-                    where: { id: clinicId },
-                    include: [
-                        {
-                            model: db.Clinic,
-                            attributes: ['descriptionMarkdown', 'descriptionHTML']
-                        },
-                    ],
+                    where: { id: clinicId }
                 })
             }
             resolve(clinics)
@@ -158,8 +152,8 @@ let updateClinicData = (data) => {
             if (clinic) {
                 clinic.name = data.name;
                 clinic.address = data.address;
-                clinic.descriptionMarkdown = data.descriptionMarkdown;
-                clinic.descriptionHTML = data.descriptionHTML;
+                clinic.descriptionMarkdown = data.contentMarkdown;
+                clinic.descriptionHTML = data.contentHTML;
                 if (data.avatar) {
                     clinic.image = data.avatar;
                 }

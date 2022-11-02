@@ -158,8 +158,8 @@ let updateClinicData = (data) => {
             if (clinic) {
                 clinic.name = data.name;
                 clinic.address = data.address;
-                clinic.descriptionMarkdown = data.descriptionMarkdown;
-                clinic.descriptionHTML = data.descriptionHTML;
+                clinic.descriptionMarkdown = data.contentMarkdown;
+                clinic.descriptionHTML = data.contentHTML;
                 if (data.avatar) {
                     clinic.image = data.avatar;
                 }

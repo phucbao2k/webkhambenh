@@ -4,8 +4,8 @@ let createClinic = (data) => {
         try{
             if(!data.name || !data.address
                 || !data.avatar
-                || !data.descriptionHTML
-                || !data.descriptionMarkdown){
+                || !data.contentHTML
+                || !data.contentMarkdown){
                     resolve({
                         errCode: 1,
                         errMessage: ' Missing parameter '
@@ -15,8 +15,8 @@ let createClinic = (data) => {
                         name: data.name,
                         address: data.address,
                         image: data.avatar,
-                        descriptionMarkdown: data.descriptionMarkdown,
-                        descriptionHTML: data.descriptionHTML
+                        contentMarkdown: data.descriptionMarkdown,
+                        contentHTML: data.descriptionHTML
                     })
                     resolve({
                         errCode: 0,
@@ -109,8 +109,20 @@ let showAllClinics = (clinicId) => {
                     where: { id: clinicId },
                     include: [
                         {
-                            model: db.Clinic,
-                            attributes: ['descriptionMarkdown', 'descriptionHTML']
+                            model: db.Markdown,
+                            attributes: ['description', 'contentMarkdown', 'contentHTML']
+                        },
+                        
+                        {
+                            model: db.Doctor_Infor,
+                            attributes: {
+                                exclude: ['id', 'doctorId']
+                            },
+                            include: [
+                                { model: db.Allcode, as: 'priceTypeData', attributes: ['valueEn', 'valueVi'] },
+                                { model: db.Allcode, as: 'provinceTypeData', attributes: ['valueEn', 'valueVi'] },
+                                { model: db.Allcode, as: 'paymentTypeData', attributes: ['valueEn', 'valueVi'] },
+                            ]
                         },
                     ],
                 })
@@ -158,8 +170,8 @@ let updateClinicData = (data) => {
             if (clinic) {
                 clinic.name = data.name;
                 clinic.address = data.address;
-                clinic.descriptionMarkdown = data.descriptionMarkdown;
-                clinic.descriptionHTML = data.descriptionHTML;
+                clinic.descriptionMarkdown = data.contentMarkdown;
+                clinic.descriptionHTML = data.contentHTML;
                 if (data.avatar) {
                     clinic.image = data.avatar;
                 }

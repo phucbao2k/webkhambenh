@@ -107,7 +107,7 @@ class ManageClinic extends Component {
     }
     checkValidateInput = () => {
         let isValid = true;
-        let arrCheck = ['name', 'address', 'descriptionHTML', 'descriptionMarkdown']
+        let arrCheck = ['name', 'address']
         for (let i = 0; i < arrCheck.length; i++) {
             if (!this.state[arrCheck[i]]) {
                 isValid = false;
@@ -227,7 +227,7 @@ class ManageClinic extends Component {
                         <div className="container-fluid manage-doctor-editor">
                             <MdEditor style={{ height: '300px' }} renderHTML={text => mdParser.render(text)}
                                 onChange={this.handleEditorChange}
-                                value={this.state.descriptionMarkdown} />
+                                value={this.state.contentMarkdown} />
                         </div>
                         <div className="col-12 my-3">
                             <button className={this.state.action === CRUD_ACTIONS.EDIT ? "btn btn-warning" : "btn btn-primary"} type="submit"
