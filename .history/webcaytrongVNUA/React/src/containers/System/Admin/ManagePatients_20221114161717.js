@@ -192,8 +192,7 @@ statusId: item.statusId
                     spinner
                     text='Loading...'>
                     <div className="manage-patient-container">
-                        <div className="title text-center">MANAGE BOOKING</div>
-                        
+                        <div className="m-p-title">Quản lý bệnh nhân khám bệnh</div>
                         <div className="manage-patient-body row">
                             <div className="col-4 form-group">
                                 <label>Chọn ngày khám</label>
@@ -207,14 +206,14 @@ statusId: item.statusId
                                 <table style={{ width: '100%' }}>
                                     <tbody>
                                         <tr>
-                                            <th><FormattedMessage id="patient.booking-modal.numerical-order" /></th>
-                                            <th><FormattedMessage id="patient.booking-modal.time" /></th>
-                                            <th><FormattedMessage id="patient.booking-modal.fullName" /></th>
+                                            <th>STT</th>
+                                            <th>Thời gian</th>
+                                            <th>Họ và tên</th>
                                             
-                                            <th><FormattedMessage id="patient.booking-modal.address" /></th>
-                                            <th><FormattedMessage id="patient.booking-modal.plantName" /></th>
-                                            <th><FormattedMessage id="patient.booking-modal.reason" /></th>
-                                            <th><FormattedMessage id="patient.booking-modal.avatar" /></th>
+                                            <th>Địa chỉ</th>
+                                            <th>Tên loài cây</th>
+                                            <th>Lý do từ khách hàng</th>
+                                            <th>Ảnh từ khách hàng</th>
                                             <th>Actions</th>
                                             
                                            
@@ -244,8 +243,8 @@ statusId: item.statusId
                                                         </td>
                                                         <td>
                                                             <button className="mp-btn-confirm"
-                                                                onClick={() => this.handleBtnConfirm(item)}><FormattedMessage id="patient.booking-modal.btnConfirm" /></button>
-                                                            <button className="mp-btn-confirm" onClick={() => this.handleEditUserFromParent(item)}><FormattedMessage id="patient.booking-modal.view-image" /></button>
+                                                                onClick={() => this.handleBtnConfirm(item)}>Xem chi tiết</button>
+                                                            <button className="mp-btn-confirm" onClick={() => this.handleEditUserFromParent(item)}>Xem a</button>
                                                         </td>
                                                        
                                                     </tr>

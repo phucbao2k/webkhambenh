@@ -14,12 +14,9 @@ class Register extends Component {
             firstName: '',
             lastName: ' ',
             address: '',
-            confirm_password: '',
-            input: {},
-            errors: {}
-        };
+            re_password: '',
+        }
         this.listenToEmitter();
-        this.handleOnChangeInput = this.handleOnChangeInput.bind(this);
     }
     listenToEmitter() {
         emitter.on('EVENT_CLEAR_MODAL_DATA', () => {
@@ -39,37 +36,24 @@ class Register extends Component {
         this.props.toggleFromParent();
     }
     handleOnChangeInput = (event, id) => {
-        let input = { ...this.state };
-        input[id] = event.target.value;
+        let copyState = { ...this.state };
+        copyState[id] = event.target.value;
         this.setState({
-            ...input
+            ...copyState
         });
     }
     checkValidateInput = () => {
         let isValid = true;
-        let arrInput = ['email', 'password', 'firstName', 'lastName', 'address', 'confirm_password'];
+        let arrInput = ['email', 'password', 'firstName', 'lastName', 'address', 're_password'];
         for (let i = 0; i < arrInput.length; i++) {
             if (!this.state[arrInput[i]]) {
                 isValid = false;
                 alert('Missing parameter: ' + arrInput[i]);
                 break;
             }
-            // if (typeof input["password"] !== "undefined" && typeof input["confirm_password"] !== "undefined") {
-
-            //     if (input["password"] != input["confirm_password"]) {
-            //         isValid = false;
-            //         errors["password"] = "Passwords don't match.";
-            //     }
-            // }
-
-            // this.setState({
-            //     errors: errors
-            // });
-
         }
         return isValid;
     }
-  
     handleAddNewUser = () => {
         let isValid = this.checkValidateInput();
         if (isValid === true) {
@@ -102,7 +86,7 @@ class Register extends Component {
                             ></input>
                         </div>
                         <div className="input-container ">
-                            <label>Re-enter the password</label>
+                            <label>Re-enter the Password</label>
                             <input type="password"
                                 onChange={(event) => { this.handleOnChangeInput(event, "password") }}
                                 value={this.state.password}
@@ -120,7 +104,7 @@ class Register extends Component {
                                 onChange={(event) => { this.handleOnChangeInput(event, "lastName") }}
                                 value={this.state.lastName}></input>
                         </div>
-                        <div className="input-container ">
+                        <div className="input-container max-width-input">
                             <label>Address</label>
                             <input type="text"
                                 onChange={(event) => { this.handleOnChangeInput(event, "address") }}

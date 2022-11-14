@@ -71,8 +71,7 @@
             "upload": "Upload",
             "birthday": "Plant purchase date (Optional)",
             "time": "Time",
-            "numerical-order": "Numerical order",
-            "view-image": "See attached photo"
+            "numerical-order": "STT"
         },
         "email-confirm":{
             "confirm": "Appointment confirmed successfully",

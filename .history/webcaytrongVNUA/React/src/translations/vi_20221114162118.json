@@ -61,7 +61,7 @@
             "reason":"Lý do khám",
             "plantName": "Tên loài cây",
             "gender": "Giới tính",
-            "btnConfirm": "Xem chi tiết",
+            "btnConfirm": "Xác nhận",
             "btnCancel":"Hủy",
             "priceBooking": "Miễn phí đặt lịch",
             "price": "Gía khám: ",
@@ -71,8 +71,7 @@
             "upload": "Tải lên",
             "birthday": "Ngày tháng mua cây trồng(Không bắt buộc)",
             "time": "Thời gian",
-            "numerical-order": "STT",
-            "view-image": "Xem ảnh đính kèm"
+            ""
         },
         "email-confirm": {
             "confirm": "Xác nhận lịch hẹn thành công",

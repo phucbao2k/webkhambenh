@@ -14,12 +14,9 @@ class Register extends Component {
             firstName: '',
             lastName: ' ',
             address: '',
-            confirm_password: '',
-            input: {},
-            errors: {}
-        };
+            re_password: '',
+        }
         this.listenToEmitter();
-        this.handleOnChangeInput = this.handleOnChangeInput.bind(this);
     }
     listenToEmitter() {
         emitter.on('EVENT_CLEAR_MODAL_DATA', () => {
@@ -39,37 +36,61 @@ class Register extends Component {
         this.props.toggleFromParent();
     }
     handleOnChangeInput = (event, id) => {
-        let input = { ...this.state };
-        input[id] = event.target.value;
+        let copyState = { ...this.state };
+        copyState[id] = event.target.value;
         this.setState({
-            ...input
+            ...copyState
         });
     }
     checkValidateInput = () => {
         let isValid = true;
-        let arrInput = ['email', 'password', 'firstName', 'lastName', 'address', 'confirm_password'];
+        let arrInput = ['email', 'password', 'firstName', 'lastName', 'address', 're_password'];
         for (let i = 0; i < arrInput.length; i++) {
             if (!this.state[arrInput[i]]) {
                 isValid = false;
                 alert('Missing parameter: ' + arrInput[i]);
                 break;
             }
-            // if (typeof input["password"] !== "undefined" && typeof input["confirm_password"] !== "undefined") {
-
-            //     if (input["password"] != input["confirm_password"]) {
-            //         isValid = false;
-            //         errors["password"] = "Passwords don't match.";
-            //     }
-            // }
-
-            // this.setState({
-            //     errors: errors
-            // });
-
         }
         return isValid;
     }
-  
+    validatePassword = e => {
+        let { name, value } = e.target;
+        setError(prev => {
+            const stateObj = { ...prev, [name]: "" };
+
+            switch (name) {
+                case "email":
+                    if (!value) {
+                        stateObj[name] = "Please enter Username.";
+                    }
+                    break;
+
+                case "password":
+                    if (!value) {
+                        stateObj[name] = "Please enter Password.";
+                    } else if (input.confirmPassword && value !== input.confirmPassword) {
+                        stateObj["confirmPassword"] = "Password and Confirm Password does not match.";
+                    } else {
+                        stateObj["confirmPassword"] = input.confirmPassword ? "" : error.confirmPassword;
+                    }
+                    break;
+
+                case "confirmPassword":
+                    if (!value) {
+                        stateObj[name] = "Please enter Confirm Password.";
+                    } else if (input.password && value !== input.password) {
+                        stateObj[name] = "Password and Confirm Password does not match.";
+                    }
+                    break;
+
+                default:
+                    break;
+            }
+
+            return stateObj;
+        });
+    }
     handleAddNewUser = () => {
         let isValid = this.checkValidateInput();
         if (isValid === true) {

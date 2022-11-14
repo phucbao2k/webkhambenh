@@ -28,7 +28,10 @@ class Register extends Component {
                 password: '',
                 firstName: '',
                 lastName: ' ',
-                address: ''
+                address: '',
+                confirm_password: '',
+                input: {},
+                errors: {}
             })
         })
     }
@@ -54,17 +57,17 @@ class Register extends Component {
                 alert('Missing parameter: ' + arrInput[i]);
                 break;
             }
-            // if (typeof input["password"] !== "undefined" && typeof input["confirm_password"] !== "undefined") {
+            if (typeof input["password"] !== "undefined" && typeof input["confirm_password"] !== "undefined") {
 
-            //     if (input["password"] != input["confirm_password"]) {
-            //         isValid = false;
-            //         errors["password"] = "Passwords don't match.";
-            //     }
-            // }
+                if (input["password"] != input["confirm_password"]) {
+                    isValid = false;
+                    errors["password"] = "Passwords don't match.";
+                }
+            }
 
-            // this.setState({
-            //     errors: errors
-            // });
+            this.setState({
+                errors: errors
+            });
 
         }
         return isValid;

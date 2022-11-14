@@ -70,9 +70,8 @@
             "note": "Note: If you do not have an account, the email you enter will be your new account by default",
             "upload": "Upload",
             "birthday": "Plant purchase date (Optional)",
-            "time": "Time",
-            "numerical-order": "Numerical order",
-            "view-image": "See attached photo"
+            "time": "TIME",
+            "numerical-order": "STT"
         },
         "email-confirm":{
             "confirm": "Appointment confirmed successfully",

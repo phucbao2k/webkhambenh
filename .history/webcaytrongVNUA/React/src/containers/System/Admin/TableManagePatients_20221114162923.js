@@ -73,13 +73,13 @@ class TableManagePatients extends Component {
                         <table id="TableManagePatients">
                             <tbody>
                                 <tr>
-                                    <th><FormattedMessage id="patient.booking-modal.numerical-order" /></th>
-                                    <th><FormattedMessage id="patient.booking-modal.time" /></th>
-                                    <th><FormattedMessage id="patient.booking-modal.fullName" /></th>
-                                    <th><FormattedMessage id="patient.booking-modal.email" /></th>
-                                    <th><FormattedMessage id="patient.booking-modal.address" /></th>
-                                    <th><FormattedMessage id="patient.booking-modal.plantName" /></th>
-                                    <th><FormattedMessage id="patient.booking-modal.reason" /></th>
+                                    <th>STT</th>
+                                    <th>Thời gian</th>
+                                    <th>Họ và tên</th>
+                                    <th>Email</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Tên loài cây</th>
+                                    <th>Lý do từ khách hàng</th>
                                     <th>Actions</th>
                                 </tr>
                                 {arrBookings && arrBookings.length > 0 && arrBookings.map((item, index) => {

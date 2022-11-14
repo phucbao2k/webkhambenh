@@ -192,8 +192,7 @@ statusId: item.statusId
                     spinner
                     text='Loading...'>
                     <div className="manage-patient-container">
-                        <div className="title text-center">MANAGE BOOKING</div>
-                        
+                        <div className="m-p-title">Quản lý bệnh nhân khám bệnh</div>
                         <div className="manage-patient-body row">
                             <div className="col-4 form-group">
                                 <label>Chọn ngày khám</label>
