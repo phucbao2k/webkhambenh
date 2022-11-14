@@ -71,7 +71,7 @@
         "email-confirm":{
             "confirm": "Appointment confirmed successfully",
             "dont-exist": "Appointment does not yet exist or has been confirmed!",
-            "note": "You can cancel your appointment in the account management section"
+            "note": "Bạn có thể hủy lịch hẹn ở mục quản lý tài khoản"
         }
     },
     "admin": {

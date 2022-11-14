@@ -63,7 +63,7 @@ class VerifyEmail extends Component {
                         <div>
                             {+errCode === 0 ?
                                 <div className="infor-booking"><FormattedMessage id="patient.email-confirm.confirm" /></div>
-                                && <div className="infor-booking"><FormattedMessage id="patient.email-confirm.note" /></div>
+                                <div></div>
                                 : <div className="infor-booking"><FormattedMessage id="patient.email-confirm.dont-exist" /></div>}
                         </div>}
                 </div>

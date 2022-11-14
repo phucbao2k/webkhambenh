@@ -71,7 +71,7 @@
         "email-confirm": {
             "confirm": "Xác nhận lịch hẹn thành công",
             "dont-exist": "Lịch hẹn chưa tồn tại hoặc đã được xác nhận!",
-            "note": "Bạn có thể hủy lịch hẹn ở mục quản lý tài khoản"
+            "note": ""
         }
     },
     "admin":{

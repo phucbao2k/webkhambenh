@@ -134,7 +134,8 @@ class HomeHeader extends Component {
                         <div className="content-up">
                             <div className="title1"><FormattedMessage id="banner.title1" /></div>
                             <div className="title2"><FormattedMessage id="banner.title2" /></div>
-                           
+                            {/* <div className="search"><i className="fa-solid fa-magnifying-glass"></i>
+                                <input type="text" placeholder='Search...'></input></div> */}
                         </div>
                         <div className="content-down">
                             <div className="options row py-4 mt-5">

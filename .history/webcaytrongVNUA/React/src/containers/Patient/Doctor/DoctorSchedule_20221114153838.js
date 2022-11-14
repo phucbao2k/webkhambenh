@@ -8,7 +8,7 @@ import { LANGUAGES } from '../../../utils';
 import { getScheduleDoctorByDate } from '../../../services/userService';
 import { FormattedMessage } from 'react-intl';
 import BookingModal from './Modal/BookingModal';
-import WarningModal from './Modal/WarningModal';
+import WarningModal from './Modal/BookingModal';
 class DoctorSchedule extends Component {
     constructor(props) {
         super(props);
