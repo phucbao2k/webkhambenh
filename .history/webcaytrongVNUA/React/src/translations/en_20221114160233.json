@@ -69,7 +69,7 @@
             "avatar": "Pictures of sick plants",
             "note": "Note: If you do not have an account, the email you enter will be your new account by default",
             "upload": "Upload",
-            "birthday": "Plant purchase date (Optional)"
+            "birthday"
         },
         "email-confirm":{
             "confirm": "Appointment confirmed successfully",

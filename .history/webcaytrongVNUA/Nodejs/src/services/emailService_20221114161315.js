@@ -42,7 +42,7 @@ let getBodyHTMLEmail = (dataSend) => {
      <p>Thông tin đặt lịch khám bệnh:</p>
         <div><b>Thời gian: ${dataSend.time}</b></div>
         <div><b>Bác sĩ: ${dataSend.doctorName}</b></div>
-        <div><b>Lý do của khách hàng đưa ra: ${dataSend.reasons}</b></div>
+        <div><b>Lý do của bệnh nhân đưa ra: ${dataSend.reasons}</b></div>
         <p>Nếu các thông tin trên là đúng sư thật, vui lòng click vào đường link bên dưới
         để xác nhận và hoàn tất thủ tục đặt lịch khám bệnh.</p>
         <div>
@@ -60,7 +60,7 @@ let getBodyHTMLEmail = (dataSend) => {
      <p>Information to book a medical appointment:</p>
         <div><b>Time: ${dataSend.time}</b></div>
         <div><b>Doctor: ${dataSend.doctorName}</b></div>
-        <div><b>Reasons from customer: ${dataSend.reasons}</b></div>
+        <div><b>Preliminary diagnosis of disease: ${dataSend.reasons}</b></div>
         <p>If the above information is correct, please click on the link below to confirm and complete the medical appointment booking procedure.</p>
         <div>
         <a href=${dataSend.redirectLink} target="_blank">Click here</a>

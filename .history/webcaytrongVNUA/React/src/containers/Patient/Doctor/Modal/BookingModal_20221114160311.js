@@ -263,7 +263,7 @@ class BookingModal extends Component {
                                         <input className="form-control" id="previewImg" type="file" hidden
                                             onChange={(event) => this.handleOnChangeImage(event)}
                                         />
-                                        <label className="label-upload" htmlFor="previewImg"><FormattedMessage id="patient.booking-modal.upload" /><i className="fa-solid fa-upload"></i></label>
+                                        <label className="label-upload" htmlFor="previewImg"><FormattedMessage id="patient.booking-modal.plantName" /><i className="fa-solid fa-upload"></i></label>
 
                                         <div className="preview-image" style={{ backgroundImage: `url(${this.state.previewImgURL})` }}
                                             onClick={() => this.openPreviewImage()}
@@ -273,7 +273,7 @@ class BookingModal extends Component {
                                     </div>
                                 </div>
                                 <div className="col-6 form-group">
-                                    <label><FormattedMessage id="patient.booking-modal.birthday" /></label>
+                                    <label>Ngày tháng mua cây(Không bắt buộc)</label>
                                     <DatePicker
                                         onChange={this.handleOnChangeDatePickers}
                                         className="form-control"

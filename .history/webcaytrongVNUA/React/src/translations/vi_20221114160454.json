@@ -69,7 +69,7 @@
             "avatar": "Hình ảnh cây trồng bị bệnh",
             "note": "Lưu ý: Nếu chưa có tài khoản, email bạn nhập vào mặc định sẽ là tài khoản mới của bạn",
             "upload": "Tải lên",
-            "birthday": "Ngày tháng mua cây trồng(Không bắt buộc)"
+            "birthday": "Plant purchase date (Optional)"
         },
         "email-confirm": {
             "confirm": "Xác nhận lịch hẹn thành công",

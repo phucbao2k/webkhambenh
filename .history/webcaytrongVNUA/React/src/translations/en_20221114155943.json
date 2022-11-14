@@ -67,9 +67,7 @@
             "price": "Price: ",
             "specialtyName": "Name of plant specialty",
             "avatar": "Pictures of sick plants",
-            "note": "Note: If you do not have an account, the email you enter will be your new account by default",
-            "upload": "Upload",
-            "birthday": "Plant purchase date (Optional)"
+            "note": "Lưu ý: Nếu chưa có tài khoản, email bạn nhập vào mặc định sẽ là tài khoản mới của bạn"
         },
         "email-confirm":{
             "confirm": "Appointment confirmed successfully",

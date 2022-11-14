@@ -273,7 +273,7 @@ class BookingModal extends Component {
                                     </div>
                                 </div>
                                 <div className="col-6 form-group">
-                                    <label><FormattedMessage id="patient.booking-modal.birthday" /></label>
+                                    <label><FormattedMessage id="patient.booking-modal.upload" /></label>
                                     <DatePicker
                                         onChange={this.handleOnChangeDatePickers}
                                         className="form-control"

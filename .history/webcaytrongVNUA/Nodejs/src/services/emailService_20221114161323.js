@@ -60,7 +60,7 @@ let getBodyHTMLEmail = (dataSend) => {
      <p>Information to book a medical appointment:</p>
         <div><b>Time: ${dataSend.time}</b></div>
         <div><b>Doctor: ${dataSend.doctorName}</b></div>
-        <div><b>Reasons from customer: ${dataSend.reasons}</b></div>
+        <div><b>Preliminary diagnosis of disease: ${dataSend.reasons}</b></div>
         <p>If the above information is correct, please click on the link below to confirm and complete the medical appointment booking procedure.</p>
         <div>
         <a href=${dataSend.redirectLink} target="_blank">Click here</a>
