@@ -70,14 +70,14 @@ class TableManagePatients extends Component {
 
 
 
-                    <div className="col-12 users-table mt-3 mx-1">
+                    <div className=" users-table mt-3 mx-1">
                         <div className="title">List Bookings</div>
                         <div className="col-2 form-group">
                             <label>Tổng cộng:  {arrBookings && arrBookings.length > 0 ? '' + arrBookings.length : ''}</label>
                            
                         </div>
-                       
-                        <table id="TableManagePatients" style={{ width: '100%' }}>
+                        <div className="col-12 table-manage-patient">
+                            <table id="TableManagePatients">
                                 <tbody>
                                     <tr>
                                         <th><FormattedMessage id="patient.booking-modal.numerical-order" /></th>
@@ -116,7 +116,7 @@ class TableManagePatients extends Component {
                             </table>
                         </div>
                         
-                    
+                    </div>
                 </div>
                
 

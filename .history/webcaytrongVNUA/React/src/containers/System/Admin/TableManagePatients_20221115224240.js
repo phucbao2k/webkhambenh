@@ -70,53 +70,15 @@ class TableManagePatients extends Component {
 
 
 
-                    <div className="col-12 users-table mt-3 mx-1">
+                    <div className=" users-table mt-3 mx-1">
                         <div className="title">List Bookings</div>
                         <div className="col-2 form-group">
                             <label>Tổng cộng:  {arrBookings && arrBookings.length > 0 ? '' + arrBookings.length : ''}</label>
                            
                         </div>
-                       
-                        <table id="TableManagePatients" style={{ width: '100%' }}>
-                                <tbody>
-                                    <tr>
-                                        <th><FormattedMessage id="patient.booking-modal.numerical-order" /></th>
-                                        <th><FormattedMessage id="patient.booking-modal.time" /></th>
-                                        <th><FormattedMessage id="patient.booking-modal.fullName" /></th>
-                                        <th><FormattedMessage id="patient.booking-modal.email" /></th>
-                                        <th><FormattedMessage id="patient.booking-modal.address" /></th>
-                                        <th><FormattedMessage id="patient.booking-modal.plantName" /></th>
-                                        <th><FormattedMessage id="patient.booking-modal.reason" /></th>
-                                        <th>Actions</th>
-                                    </tr>
-                                    {arrBookings && arrBookings.length > 0 && arrBookings.map((item, index) => {
-                                        // để duyệt 1 vòng lặp, ta có thể dùng function map(), bắt buộc phải return ra 1 thứ gì đó
-                                        let date = moment.unix(+item.date / 1000).locale('en').format('ddd -MM/DD/YYYY')
-                                        // thì function map() mới hoạt động được
-                                        return (
-                                            <tr key={index}>
-                                                <td>{index + 1}</td>
-                                                <td>{date}</td>
-                                                <td>{item.patientData.firstName}</td>
-                                                <td>{item.patientData.email}</td>
-                                                <td>{item.patientData.address}</td>
-                                                <td>{item.plantName}</td>
-                                                <td>{item.reasons}</td>
-                                                <td>
-                                                    {/* <button className="mp-btn-confirm"
-                                                    onClick={() => this.handleBtnConfirm(item)}>Xác nhận</button> */}
-                                                    <button className="btn-delete" onClick={() => this.handleDeleteBooking(item)}><i className="fa-solid fa-trash"></i></button>
-                                                    {/* item là 1 object lưu trữ tất cả thông tin của người dùng */}
-                                                </td>
-                                            </tr>
-                                        )
-                                    })}
-                                </tbody>
-
-                            </table>
-                        </div>
+                        <div className="col-12 table-manage-patient"></div>
                         
-                    
+                    </div>
                 </div>
                
 

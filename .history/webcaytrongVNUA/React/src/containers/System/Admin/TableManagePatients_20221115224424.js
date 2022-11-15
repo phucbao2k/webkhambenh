@@ -77,7 +77,7 @@ class TableManagePatients extends Component {
                            
                         </div>
                        
-                        <table id="TableManagePatients" style={{ width: '100%' }}>
+                            <table id="TableManagePatients">
                                 <tbody>
                                     <tr>
                                         <th><FormattedMessage id="patient.booking-modal.numerical-order" /></th>
@@ -116,7 +116,7 @@ class TableManagePatients extends Component {
                             </table>
                         </div>
                         
-                    
+                    </div>
                 </div>
                
 
