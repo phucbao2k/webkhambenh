@@ -59,7 +59,7 @@ export function initWebRoutes(app) {
     router.get('/api/get-all-booking-for-admin', adminController.getAllBookingForAdmin);
     router.get('/api/get-all-bookings', adminController.handleGetAllBookings);
     router.delete('/api/delete-booking', adminController.handleDeleteBooking);
-    router.get('/api/count-all-bookings', adminController.handleCountAllBookings);
+    router.get('/api/get-count-bookings', adminController.handleGetAllBookings);
   //handbook
     router.post('/api/create-new-handbook', handbookController.createHandbook);
     router.get('/api/get-handbook', handbookController.getAllHandbook);

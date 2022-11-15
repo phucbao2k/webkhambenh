@@ -38,9 +38,25 @@ let getAllBookingForAdmin = async (req, res) => {
         })
     }
 }
-
+let handleCountAllBookings = async (req, res) => {
+    let id = req.query.id;
+    if (!id) {
+        return res.status(200).json({
+            errCode: 1,
+            errMessage: 'Can not find',
+            bookings: []
+        })
+    }
+    let bookings = await adminService.getAllBookings(id);
+    return res.status(200).json({
+        errCode: 0,
+        errMessage: 'OK',
+        bookings
+    })
+}
 module.exports = {
     getAllBookingForAdmin: getAllBookingForAdmin,
     handleDeleteBooking: handleDeleteBooking,
-    handleGetAllBookings: handleGetAllBookings
+    handleGetAllBookings: handleGetAllBookings,
+    handleCountAllBookings: handleCountAllBookings
 }

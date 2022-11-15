@@ -109,7 +109,47 @@ let getAllBookings = (bookingId) => {
         }
     })
 }
+let getCountBookings = (bookingId) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let bookings = '';
+            if (bookingId === 'ALL') {
+                bookings = await db.Booking.findAll({
 
+                    attributes: {
+                        exclude: ['token']
+                    },
+                    include: [
+                        {
+                            model: db.User, as: 'patientData',
+                            attributes: ['email', 'firstName', 'address'],
+                            // include: [
+                            //     {
+                            //         model: db.Allcode, as: 'genderData', attributes:['valueEn', 'valueVi']
+                            //     }
+                            // ]
+                        },
+                        {
+                            model: db.Allcode, as: 'timeTypeDataPatient', attributes: ['valueEn', 'valueVi']
+
+                        }
+                    ],
+                    raw: false,
+                    nest: true
+                })
+            }
+            if (bookingId && bookingId !== 'ALL') {
+                bookings = await db.Booking.findOne({
+                    where: { id: bookingId }
+                })
+            }
+            resolve(bookings)
+            //resolve để thoát ra khỏi Promise 
+        } catch (e) {
+            reject(e);
+        }
+    })
+}
 module.exports = {
     getAllBookingForAdmin: getAllBookingForAdmin,
     deleteBooking: deleteBooking,

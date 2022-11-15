@@ -113,5 +113,6 @@ let getAllBookings = (bookingId) => {
 module.exports = {
     getAllBookingForAdmin: getAllBookingForAdmin,
     deleteBooking: deleteBooking,
-    getAllBookings: getAllBookings
+    getAllBookings: getAllBookings,
+    getCountBookings: getCountBookings
 }

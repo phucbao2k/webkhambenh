@@ -158,7 +158,11 @@ const getAllBookings = (inputId) => {
     // $ dùng để access hoặc truy cập vào 1 biến, và hiển thị ra
     return axios.get(`/api/get-all-bookings?id=${inputId}`)
 }
-
+const countAllBookings = (inputId) => {
+    //Đây là Template string
+    // $ dùng để access hoặc truy cập vào 1 biến, và hiển thị ra
+    return axios.get(`/api/count-all-bookings?id=${inputId}`)
+}
 const getAllBookingForPatient =(data) => {
     return axios.get(`/api/get-all-booking-for-patient?patientId=${data.patientId}&date=${data.date}`)
 }

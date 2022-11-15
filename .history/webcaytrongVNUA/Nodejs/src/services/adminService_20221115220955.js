@@ -109,9 +109,21 @@ let getAllBookings = (bookingId) => {
         }
     })
 }
-
+let getCountBookings = (bookingId) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let bookings = '';
+          
+            resolve(bookings)
+            //resolve để thoát ra khỏi Promise 
+        } catch (e) {
+            reject(e);
+        }
+    })
+}
 module.exports = {
     getAllBookingForAdmin: getAllBookingForAdmin,
     deleteBooking: deleteBooking,
-    getAllBookings: getAllBookings
+    getAllBookings: getAllBookings,
+    getCountBookings: getCountBookings
 }

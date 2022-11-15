@@ -42,5 +42,6 @@ let getAllBookingForAdmin = async (req, res) => {
 module.exports = {
     getAllBookingForAdmin: getAllBookingForAdmin,
     handleDeleteBooking: handleDeleteBooking,
-    handleGetAllBookings: handleGetAllBookings
+    handleGetAllBookings: handleGetAllBookings,
+    handleCountAllBookings: handleCountAllBookings
 }

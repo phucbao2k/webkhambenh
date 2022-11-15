@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './TableManagePatients.scss';
 import * as actions from "../../../store/actions";
-import { getAllBookings } from '../../../services/userService';
+import { getAllBookings, countAllBookings } from '../../../services/userService';
 import moment from 'moment';
 import _ from 'lodash';
 // nếu muốn import 1 function thì ta dùng dấu ngoặc nhọn

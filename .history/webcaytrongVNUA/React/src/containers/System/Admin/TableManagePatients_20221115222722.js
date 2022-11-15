@@ -14,7 +14,8 @@ class TableManagePatients extends Component {
         super(props);
         this.state = {
             bookingsAdminRedux: [],
-            dataPatient: []
+            dataPatient: [],
+            dataCount: ''
             
         }
     }
@@ -23,7 +24,7 @@ class TableManagePatients extends Component {
     async componentDidMount() {
         this.props.fetchBookingAdminRedux();
         this.getDataPatient();
-       
+        this.getCount();
     }
     getDataPatient = async () => {
         
@@ -62,7 +63,6 @@ class TableManagePatients extends Component {
         //khi muốn render ra 1 thứ gì đó trong react, chúng ta phải có hàm return, và trong đó bắt buộc là 1 khối
         let arrBookings = this.state.bookingsAdminRedux;
       console.log('check bookings',arrBookings)
-     
         return (
             <React.Fragment>
                 <div className="users-container">
@@ -73,8 +73,10 @@ class TableManagePatients extends Component {
                     <div className="users-table mt-3 mx-1">
                         <div className="title">List Bookings</div>
                         <div className="col-2 form-group">
-                            <label>Tổng cộng:  {arrBookings && arrBookings.length > 0 ? '' + arrBookings.length : ''}</label>
-                           
+                            <label>Tổng cộng:</label>
+                            <input 
+                                disabled
+                            />
                         </div>
                         <table id="TableManagePatients">
                             <tbody>

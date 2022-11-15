@@ -43,4 +43,5 @@ module.exports = {
     getAllBookingForAdmin: getAllBookingForAdmin,
     handleDeleteBooking: handleDeleteBooking,
     handleGetAllBookings: handleGetAllBookings
+   
 }

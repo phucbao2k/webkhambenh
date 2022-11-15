@@ -23,7 +23,6 @@ class TableManagePatients extends Component {
     async componentDidMount() {
         this.props.fetchBookingAdminRedux();
         this.getDataPatient();
-       
     }
     getDataPatient = async () => {
         
@@ -37,7 +36,6 @@ class TableManagePatients extends Component {
             })
         }
     }
-   
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.listBookings !== this.props.listBookings) {
             this.setState({
@@ -62,7 +60,7 @@ class TableManagePatients extends Component {
         //khi muốn render ra 1 thứ gì đó trong react, chúng ta phải có hàm return, và trong đó bắt buộc là 1 khối
         let arrBookings = this.state.bookingsAdminRedux;
       console.log('check bookings',arrBookings)
-     
+        let { dataPatient} = this.state;
         return (
             <React.Fragment>
                 <div className="users-container">
@@ -72,9 +70,12 @@ class TableManagePatients extends Component {
 
                     <div className="users-table mt-3 mx-1">
                         <div className="title">List Bookings</div>
-                        <div className="col-2 form-group">
-                            <label>Tổng cộng:  {arrBookings && arrBookings.length > 0 ? '' + arrBookings.length : ''}</label>
-                           
+                        <div className="col-8 form-group">
+                            <label>Email bệnh nhân</label>
+                            <input className="form-control" type="email" value={this.state.email}
+                                onChange={(event) => this.handleOnChangeEmail(event)}
+                                disabled
+                            />
                         </div>
                         <table id="TableManagePatients">
                             <tbody>
