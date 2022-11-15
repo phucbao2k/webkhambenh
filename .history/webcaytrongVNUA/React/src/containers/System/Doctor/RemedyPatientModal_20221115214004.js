@@ -10,7 +10,7 @@ class RemedyModal extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = {         
             email: '',
             imgBase64: '',
             statusId: ''
@@ -22,8 +22,8 @@ class RemedyModal extends Component {
     async componentDidMount() {
         if (this.props.dataModal) {
             this.setState({
-                email: this.props.dataModal.email,
-                statusId: this.props.dataModal.statusId
+                email: this.props.dataModal.email
+                 statusId: this.props.dataModal.statusId
             })
         }
 
@@ -31,8 +31,7 @@ class RemedyModal extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.dataModal !== this.props.dataModal) {
             this.setState({
-                email: this.props.dataModal.email,
-                statusId: this.props.dataModal.statusId
+                email: this.props.dataModal.email
             })
         }
 
@@ -99,7 +98,7 @@ class RemedyModal extends Component {
                     </div>
                 </ModalBody>
                 <ModalFooter>
-<div>S1: Đang chờ,S2: Đã xác nhận, S3: Đã hoàn thành</div>
+                    
                     <Button color="secondary" onClick={closeRemedyModal}>Xóa lịch hẹn</Button>
                 </ModalFooter>
 

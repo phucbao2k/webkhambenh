@@ -99,7 +99,7 @@ class RemedyModal extends Component {
                     </div>
                 </ModalBody>
                 <ModalFooter>
-<div>S1: Đang chờ,S2: Đã xác nhận, S3: Đã hoàn thành</div>
+<div>S1: Đang chờ,S2: Đã xác nhận</div>
                     <Button color="secondary" onClick={closeRemedyModal}>Xóa lịch hẹn</Button>
                 </ModalFooter>
 

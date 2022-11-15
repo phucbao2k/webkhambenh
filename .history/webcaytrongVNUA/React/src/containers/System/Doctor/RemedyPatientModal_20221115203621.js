@@ -10,10 +10,9 @@ class RemedyModal extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
+        this.state = {         
             email: '',
-            imgBase64: '',
-            statusId: ''
+            imgBase64: ''
         }
 
     }
@@ -22,8 +21,7 @@ class RemedyModal extends Component {
     async componentDidMount() {
         if (this.props.dataModal) {
             this.setState({
-                email: this.props.dataModal.email,
-                statusId: this.props.dataModal.statusId
+                email: this.props.dataModal.email
             })
         }
 
@@ -31,8 +29,7 @@ class RemedyModal extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.dataModal !== this.props.dataModal) {
             this.setState({
-                email: this.props.dataModal.email,
-                statusId: this.props.dataModal.statusId
+                email: this.props.dataModal.email
             })
         }
 
@@ -58,11 +55,7 @@ class RemedyModal extends Component {
         this.props.sendRemedy(this.state)
     }
 
-    handleOnChangeStatus = (event) => {
-        this.setState({
-            statusId: event.target.value
-        })
-    }
+
     render() {
         let { isOpenModal, closeRemedyModal, dataModal, sendRemedy } = this.props
         console.log('check dataModal', dataModal)
@@ -87,19 +80,10 @@ class RemedyModal extends Component {
                                 disabled
                             />
                         </div>
-                        <div className="col-4 form-group">
-                            <label>Trạng thái</label>
-                            <input className="form-control" type="text" value={this.state.statusId}
-                                onChange={(event) => this.handleOnChangeStatus(event)}
-                                disabled
-                            />
-                        </div>
-
-
                     </div>
                 </ModalBody>
                 <ModalFooter>
-<div>S1: Đang chờ,S2: Đã xác nhận, S3: Đã hoàn thành</div>
+                    
                     <Button color="secondary" onClick={closeRemedyModal}>Xóa lịch hẹn</Button>
                 </ModalFooter>
 
