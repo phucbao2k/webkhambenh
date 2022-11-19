@@ -230,6 +230,6 @@ module.exports = {
     postBookAppointment: postBookAppointment,
     postVerifyBookAppointment: postVerifyBookAppointment,
     getListBookingForPatient: getListBookingForPatient,
-    // deletePatientBooking: deletePatientBooking,
+    deletePatientBooking: deletePatientBooking,
     cancelPatientRemedy: cancelPatientRemedy
 }
