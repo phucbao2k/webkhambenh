@@ -69,6 +69,6 @@ module.exports = {
     postBookAppointment: postBookAppointment,
     postVerifyBookAppointment: postVerifyBookAppointment,
     getListBookingForPatient: getListBookingForPatient,
-    // handleDeletePatientBooking: handleDeletePatientBooking,
+    handleDeletePatientBooking: handleDeletePatientBooking,
     cancelPatientRemedy: cancelPatientRemedy
 }
