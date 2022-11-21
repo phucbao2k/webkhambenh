@@ -8,8 +8,13 @@
         "select-doctor": "Choose a good engineer",
         "fee": "Checkup fee",
         "check-health": "Comprehensive plant examination",
-        "support": "Support",
-        "welcome": "Welcome"
+        "support": "Want to cooperate with us?",
+        "welcome": "Welcome",
+        "click": "Click here!",
+        "manage-account": "Manage account",
+        "handbook": "Handbook",
+        "solution": "Common plant diseases",
+        "select-speciality": "Select Specialty"
     },
     "banner": {
         "title1": "MEDICAL PLATFORM",
@@ -24,8 +29,8 @@
     "carousel": {
         "carousel-1": "Popular specialties",
         "carousel-2": "More",
-        "handbook": "Handbook",
-        "gooddoctor": "Last week's featured doctor"
+        "handbook": "Common plant diseases",
+        "gooddoctor": "Our doctor"
     },
     "manage-schedule": {
         "title": "Manage doctor's examination plan",
@@ -61,11 +66,19 @@
             "priceBooking": "Free booking",
             "price": "Price: ",
             "specialtyName": "Name of plant specialty",
-            "avatar": "Pictures of sick plants"
+            "avatar": "Pictures of sick plants",
+            "note": "Note: If you do not have an account, the email you enter will be your new account by default",
+            "upload": "Upload",
+            "birthday": "Plant purchase date (Optional)",
+            "time": "Time",
+            "numerical-order": "Numerical order",
+            "view-image": "See attached photo",
+            "booking": "Book an appointment"
         },
         "email-confirm":{
-            "confirm": "",
-            "dont-exist": ""
+            "confirm": "Appointment confirmed successfully",
+            "dont-exist": "Appointment does not yet exist or has been confirmed!",
+            "note": "You can cancel your appointment in the account management section"
         }
     },
     "admin": {
@@ -80,7 +93,9 @@
             "province": "Province",
             "nameClinic":"Clinic's name",
             "addressClinic": "Clinic's address",
-            "note": "Note"
+            "note": "Note",
+            "specialty": "Specialization (plant type)",
+            "select-clinic": "Select clinic"
         }
     },
     "system": {
@@ -108,17 +123,19 @@
             "manage-user": "User System",
             "manage-doctor": "Manage doctors",
             "manage-admin": "Manage admins",
-            "crud": "CRUD user",
+            "crud": "Welcome!",
             "crud-redux": "CRUD Redux",
             "clinic": "Clinics",
             "manage-clinic": "Manage clinics",
             "specialty": "Specialties",
             "manage-specialty": "Manage Specialties",
             "handbook": "Handbook",
-            "manage-handbook": "Manage handbooks"
+            "manage-handbook": "Manage handbooks",
+            "home": "Home"
         },
         "doctor": {
-            "manage-schedule": "Manage Doctor's schedule"
+            "manage-schedule": "Manage Doctor's schedule",
+            "manage-patient": "Manage Doctor's patient"
         }
     },
     "manage-user": {
