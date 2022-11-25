@@ -23,7 +23,7 @@ class HomeFooter extends Component {
                                 <FormattedMessage id="home-footer.address" />
                             </div>
                             <div className='pb-2'>
-                                <FormattedMessage id="home-footer.bussiness" />
+                                <FormattedMessage id="home-footer.bussin" />
                             </div>
                         </div>
                         {/* <div className='text-left ft_2'>

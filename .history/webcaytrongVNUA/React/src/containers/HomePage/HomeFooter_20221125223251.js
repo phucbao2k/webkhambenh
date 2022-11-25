@@ -17,13 +17,13 @@ class HomeFooter extends Component {
                                 <img className="header-logo" src={logo} onClick={() => this.returnToHome()}></img>
                             </div>
                             <div className='py-2'>
-                                <b><FormattedMessage id="home-footer.iab" /></b>
+                                <b>Viện Sinh Học Nông Nghiệp</b>
                             </div>
                             <div className='pb-2'>
-                                <FormattedMessage id="home-footer.address" />
+                                Trâu Quỳ - Gia Lâm - TP Hà Nội
                             </div>
                             <div className='pb-2'>
-                                <FormattedMessage id="home-footer.bussiness" />
+                                ĐKKD số: 0106790291. Sở KHĐT Hà Nội cấp ngày 16/03/2015
                             </div>
                         </div>
                         {/* <div className='text-left ft_2'>
@@ -37,16 +37,16 @@ class HomeFooter extends Component {
                         </div> */}
                         <div className='ft_3'>
                             <div className='text-left'>
-                                <p className='mb-1'><b><FormattedMessage id="home-footer.co-operation" /></b></p>
-                                <p><FormattedMessage id="home-footer.work-together" /></p>
+                                <p className='mb-1'><b><FormattedMessage id="home-footer.co-ope" /></b></p>
+                                <p>Cùng nhau hợp tác để vươn đến tầm cao mới</p>
                             </div>
                             <div className='text-left'>
-                                <p className='mb-1'><b><FormattedMessage id="home-footer.catch-trend" /></b></p>
-                                <p><FormattedMessage id="home-footer.treatment-trend" /></p>
+                                <p className='mb-1'><b>Đón đầu xu hướng</b></p>
+                                <p>Luôn đi đầu trong xu hướng khám chữa bệnh</p>
                             </div>
                             <div className='text-left'>
-                                <p className='mb-1'><b><FormattedMessage id="home-footer.customer" /></b></p>
-                                <p><FormattedMessage id="home-footer.priority" /></p>
+                                <p className='mb-1'><b>Khách hàng là tương lai</b></p>
+                                <p>Luôn đặt khách hàng lên hàng đầu, ưu tiên số 1, yêu dân tộc Việt Nam máu đỏ da vàng</p>
                             </div>
                         </div>
                     </div>

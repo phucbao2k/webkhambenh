@@ -20,10 +20,10 @@ class HomeFooter extends Component {
                                 <b><FormattedMessage id="home-footer.iab" /></b>
                             </div>
                             <div className='pb-2'>
-                                <FormattedMessage id="home-footer.address" />
+                                
                             </div>
                             <div className='pb-2'>
-                                <FormattedMessage id="home-footer.bussiness" />
+                               
                             </div>
                         </div>
                         {/* <div className='text-left ft_2'>

@@ -17,13 +17,13 @@ class HomeFooter extends Component {
                                 <img className="header-logo" src={logo} onClick={() => this.returnToHome()}></img>
                             </div>
                             <div className='py-2'>
-                                <b><FormattedMessage id="home-footer.iab" /></b>
+                                <b>Viện Sinh Học Nông Nghiệp</b>
                             </div>
                             <div className='pb-2'>
-                                <FormattedMessage id="home-footer.address" />
+                                Trâu Quỳ - Gia Lâm - TP Hà Nội
                             </div>
                             <div className='pb-2'>
-                                <FormattedMessage id="home-footer.bussiness" />
+                                ĐKKD số: 0106790291. Sở KHĐT Hà Nội cấp ngày 16/03/2015
                             </div>
                         </div>
                         {/* <div className='text-left ft_2'>
@@ -46,7 +46,7 @@ class HomeFooter extends Component {
                             </div>
                             <div className='text-left'>
                                 <p className='mb-1'><b><FormattedMessage id="home-footer.customer" /></b></p>
-                                <p><FormattedMessage id="home-footer.priority" /></p>
+                                <p><FormattedMessage id="home-footer.prior" /></p>
                             </div>
                         </div>
                     </div>
