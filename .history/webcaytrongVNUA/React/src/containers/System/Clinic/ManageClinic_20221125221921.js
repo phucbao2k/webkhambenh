@@ -169,7 +169,7 @@ class ManageClinic extends Component {
                                 {''}
                             </div>
                             <div className="col-md-3 mb-3">
-                                <label htmlFor="validationServerUsername"> <FormattedMessage id="menu.admin.clinic-name" /></label>
+                                <label htmlFor="validationServerUsername"> <FormattedMessage id="menu.admin.manage-clinic" /></label>
                                 <div className="input-group">
                                     <input type="text" className="form-control" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required
                                         value={name}

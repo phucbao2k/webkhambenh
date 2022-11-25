@@ -132,9 +132,7 @@
             "handbook": "Cẩm nang-tin tức",
             "manage-handbook": "Quản lý cẩm nang-tin tức",
             "home": "Trang chủ",
-            "common-diseases": "Tiêu đề của cẩm nang",
-            "specialty-name":"Tên chuyên ngành cây trồng",
-            "clinic-name": "Tên phòng khám"
+            "common-diseases": "Tiêu đề cẩm nang"
         },
         "doctor": {
             "manage-schedule": "Quản lý lịch khám bệnh",
