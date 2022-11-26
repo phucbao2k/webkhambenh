@@ -16,7 +16,6 @@ class Register extends Component {
             lastName: ' ',
             address: '',
             phoneNumber: '',
-           
         };
         this.listenToEmitter();
     
@@ -29,8 +28,7 @@ class Register extends Component {
                 firstName: '',
                 lastName: ' ',
                 address: '',
-                phoneNumber: '',
-              
+                phoneNumber: ''
             })
         })
     }
@@ -77,10 +75,9 @@ class Register extends Component {
         if (isValid === true) {
             //gọi api để tạo modal
             this.props.createNewUser(this.state, 'DONE!');
-            toast.success("Create new user success!")
         }
         else{
-            toast.error("Error! Please check the entered fields")
+            toast.error("Error! Login information is incorrect")
         }
     }
     render() {

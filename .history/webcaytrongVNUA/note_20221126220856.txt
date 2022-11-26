@@ -256,5 +256,5 @@ MUỐN đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
                     await appointment.save()
 
 
-this.props.  có thể là redux hoặc có thể định nghĩa sẵn từ props cha 
+this.props
 HỌC THÊM VỀ PACKAGE QUERY-STRING

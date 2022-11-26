@@ -8,6 +8,7 @@ import Register from './Register';
 // import {userService} from '../../services'
 import { emitter } from '../../utils/emitter';
 import { handleLoginApi, createNewUserService } from '../../services/userService';
+import { toast } from "react-toastify";
 class Login extends Component {
   constructor(props) {
     super(props);

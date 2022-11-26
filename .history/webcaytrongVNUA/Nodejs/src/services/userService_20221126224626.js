@@ -1,6 +1,6 @@
 import db from "../models/index";
 import bcrypt from 'bcryptjs';
-//bcrypt is an npm module that simplifies tạo và băm mật khẩu
+//bcrypt is an npm module that simplifies tạo 
 const salt = bcrypt.genSaltSync(10);
 let hashUserPassword = (password) => {
     return new Promise(async (resolve, reject) => {
@@ -17,7 +17,7 @@ let handleUserLogin = (email, password) => {
         try {
             let userData = {};
             let isExist = await checkUserEmail(email);
-//các câu lệnh if else lồng nhau để kiểm tra tài khoản, mật khẩu
+
             if (isExist) {
                 let user = await db.User.findOne({
                     attributes: ['id', 'email', 'roleId', 'password', 'firstName', 'lastName'],
@@ -27,7 +27,6 @@ let handleUserLogin = (email, password) => {
                 });
                 if (user) {
                     let check = await bcrypt.compareSync(password, user.password);
-                   //so sánh password vừa nhập vào và user.password đã băm trong database 
                     if (check) {
                         //nếu check có và đúng
                         userData.errCode = 0;
@@ -128,12 +127,12 @@ let createNewUser = (data) => {
                 })
                 
             }   if (check === true && phoneNumber === false) {
-                //trong TH đây là tài khoản trắng(mới set roleId và một sô thông tin cơ bản qua booking modal)
                 let hashPasswordFromBcrypt = await hashUserPassword(data.password);
                 let user = await db.User.findOne({
                     attributes: ['id', 'email', 'roleId', 'password', 'firstName', 'lastName', 'phoneNumber'],
                     where: { email: data.email },
                     raw: false,
+
                 });
                 if (user) {
                     user.email = data.email;
@@ -141,8 +140,7 @@ let createNewUser = (data) => {
                     user.firstName = data.firstName;
                     user.lastName = data.lastName;
                     user.address = data.address;
-                    user.phoneNumber = data.phoneNumber;
-                    
+                    user.phoneNumber = data.phoneNumber
                 }
                 await user.save();
             }
@@ -156,7 +154,7 @@ let createNewUser = (data) => {
                     address: data.address,
                     phoneNumber: data.phoneNumber,
                     gender: data.gender,
-                    roleId: 'R3',
+                    roleId: data.roleId,
                     positionId: data.positionId,
                     image: data.avatar
                 })

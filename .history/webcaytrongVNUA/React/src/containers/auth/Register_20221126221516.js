@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './Register.scss';
-import { toast } from "react-toastify";
 import { emitter } from '../../utils/emitter';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 class Register extends Component {
@@ -16,7 +15,6 @@ class Register extends Component {
             lastName: ' ',
             address: '',
             phoneNumber: '',
-           
         };
         this.listenToEmitter();
     
@@ -29,8 +27,7 @@ class Register extends Component {
                 firstName: '',
                 lastName: ' ',
                 address: '',
-                phoneNumber: '',
-              
+                phoneNumber: ''
             })
         })
     }
@@ -77,11 +74,8 @@ class Register extends Component {
         if (isValid === true) {
             //gọi api để tạo modal
             this.props.createNewUser(this.state, 'DONE!');
-            toast.success("Create new user success!")
         }
-        else{
-            toast.error("Error! Please check the entered fields")
-        }
+        else
     }
     render() {
         return (

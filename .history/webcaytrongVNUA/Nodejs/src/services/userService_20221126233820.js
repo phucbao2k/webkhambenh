@@ -128,7 +128,7 @@ let createNewUser = (data) => {
                 })
                 
             }   if (check === true && phoneNumber === false) {
-                //trong TH đây là tài khoản trắng(mới set roleId và một sô thông tin cơ bản qua booking modal)
+                //trong TH đây là tài khoản trắng(mới set roleid)
                 let hashPasswordFromBcrypt = await hashUserPassword(data.password);
                 let user = await db.User.findOne({
                     attributes: ['id', 'email', 'roleId', 'password', 'firstName', 'lastName', 'phoneNumber'],
@@ -156,7 +156,7 @@ let createNewUser = (data) => {
                     address: data.address,
                     phoneNumber: data.phoneNumber,
                     gender: data.gender,
-                    roleId: 'R3',
+                    roleId: data.roleId,
                     positionId: data.positionId,
                     image: data.avatar
                 })

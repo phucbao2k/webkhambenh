@@ -16,7 +16,7 @@ class Register extends Component {
             lastName: ' ',
             address: '',
             phoneNumber: '',
-           
+            role
         };
         this.listenToEmitter();
     
@@ -29,8 +29,7 @@ class Register extends Component {
                 firstName: '',
                 lastName: ' ',
                 address: '',
-                phoneNumber: '',
-              
+                phoneNumber: ''
             })
         })
     }

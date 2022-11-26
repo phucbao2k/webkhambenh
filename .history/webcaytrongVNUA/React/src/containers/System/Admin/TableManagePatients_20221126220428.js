@@ -73,7 +73,7 @@ class TableManagePatients extends Component {
                     <div className="col-12 users-table mt-3 mx-1">
                         <div className="title">List Bookings</div>
                         <div className="col-2 form-group">
-                            <label><FormattedMessage id="patient.booking-modal.total" /> : {arrBookings && arrBookings.length > 0 ? '' + arrBookings.length : ''}</label>
+                            <label><FormattedMessage id="patient.booking-modal.time" />  {arrBookings && arrBookings.length > 0 ? '' + arrBookings.length : ''}</label>
                            
                         </div>
                        
