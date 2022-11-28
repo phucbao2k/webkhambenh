@@ -65,7 +65,7 @@ class Specialty extends Component {
         // trên đây là setting cho Slider
         // 
         return (
-            <div className="section-share section-specialty  mb-5" id="#specialty">
+            <div className="section-share section-specialty  mb-5" id="#spe">
                 <div className="specialty-container">
                     <div className="specialty-header">
                         <span className="title-section"><FormattedMessage id="carousel.carousel-1" /></span>

@@ -7,7 +7,6 @@ import { FormattedMessage } from 'react-intl';
 import { withRouter } from 'react-router';
 import logo from '../../assets/logovsh.png';
 import './reponsive-header.scss';
-import Specialty from './Section/Specialty';
 class HomeHeader extends Component {
     constructor(props) {
         super(props);
@@ -47,11 +46,10 @@ class HomeHeader extends Component {
                 <div className={this.state.activeMenu == false ? 'left_menu' : 'left_menu active_menu'}>
                     <div className='overlay' onClick={this.changeActiveMenu}></div>
                     <div className='main-content'>
-                     
-                        <a className='menu__item' href='#specialty'>
+                        <div className='menu__item'>
                             <div className='pointer'><b><FormattedMessage id="homeheader.speciality"/></b></div>
                             <div className="sub-title"> <FormattedMessage id="homeheader.select-speciality" /></div>
-                        </a>
+                        </div>
                         <div className='menu__item'>
                             <div className='pointer'><b><FormattedMessage id="homeheader.health-facility" /></b></div>
                             <div className="sub-title"> <FormattedMessage id="homeheader.select-room" /></div>
