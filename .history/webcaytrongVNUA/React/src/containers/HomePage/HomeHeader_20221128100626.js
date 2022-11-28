@@ -48,7 +48,7 @@ class HomeHeader extends Component {
                     <div className='overlay' onClick={this.changeActiveMenu}></div>
                     <div className='main-content'>
                      
-                        <div className='menu__item' >
+                        <div className='menu__item' href='#specialty'>
                             <div className='pointer'><b><FormattedMessage id="homeheader.speciality"/></b></div>
                             <div className="sub-title"> <FormattedMessage id="homeheader.select-speciality" /></div>
                         </div>
