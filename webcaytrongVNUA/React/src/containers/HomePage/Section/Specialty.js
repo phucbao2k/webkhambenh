@@ -29,7 +29,7 @@ class Specialty extends Component {
     render() {
         let {dataSpecialty} = this.state;
         let settings = {
-            dots: true,
+            dots: false,
             infinite: false,
             speed: 500,
             slidesToShow: 4,

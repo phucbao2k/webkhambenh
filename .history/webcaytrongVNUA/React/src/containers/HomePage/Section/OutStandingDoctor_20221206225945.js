@@ -36,19 +36,52 @@ class OutStandingDoctor extends Component {
     render() {
         let arrDoctors = this.state.arrDoctors;
         let { language } = this.props;
-
+        let settings = {
+            dots: false,
+            infinite: false,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            initialSlide: 0,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        initialSlide: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        };
 
         return (
-            <div className="section-share section-outstanding-doctor">
+            <div className="section-share section-outstanding-doctor  mb-5" id="top-doctor">
                 <div className="section-container">
                     <div className="section-header">
                         <span className="title-section"><FormattedMessage id="carousel.gooddoctor" /></span>
-                        <button className="btn-section"><FormattedMessage id="carousel.carousel-2" /></button>
+                        {/* <button className="btn-section"><FormattedMessage id="carousel.carousel-2" /></button> */}
                     </div>
                     <div className="section-body">
 
                         {/* Dưới đây là cách bọc các ảnh, chữ thành 1 slide lớn, nằm ngang */}
-                        <Slider {...this.props.settings}>
+                        <Slider {...settings}>
                             {arrDoctors && arrDoctors.length > 0 &&
                                 arrDoctors.map((item, index) => {
                                     let imageBase64 = '';

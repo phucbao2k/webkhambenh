@@ -18,8 +18,7 @@ class HomePage extends Component {
             infinite: false,
             speed: 500,
             slidesToShow: 4,
-            slidesToScroll: 4,
-            initialSlide: 0,
+            slidesToScroll: 1,
         };
 
         return (
@@ -33,7 +32,7 @@ class HomePage extends Component {
                 <OutStandingDoctor
                     settings={settings} />
                 <HandBook settings={settings}></HandBook>
-
+               
                 <HomeFooter ></HomeFooter>
             </div>
         );

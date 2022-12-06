@@ -14,7 +14,7 @@ class HomePage extends Component {
 
     render() {
         let settings = {
-            dots: false,
+            dots: true,
             infinite: false,
             speed: 500,
             slidesToShow: 4,
@@ -33,7 +33,7 @@ class HomePage extends Component {
                 <OutStandingDoctor
                     settings={settings} />
                 <HandBook settings={settings}></HandBook>
-
+               
                 <HomeFooter ></HomeFooter>
             </div>
         );
