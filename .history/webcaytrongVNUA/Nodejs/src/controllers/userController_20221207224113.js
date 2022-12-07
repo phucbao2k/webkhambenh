@@ -55,7 +55,7 @@ let handleEditUser = async (req, res) => {
     let message = await userService.updateUserData(data);
     return res.status(200).json(message);
 }
-//getAllCode dùng để lấy các kiểu dữ liệu cứng từ bảng Allcode, như TIMETYPE, GENDER, PAYMENT, POSITION, PRICE... áp dụng bên redux.
+//getAllCode dùng để lấy các kiểu dữ liệu cứng từ bảng Allcode, như TIMETYPE, 
 let getAllCode = async (req, res) => {
     try {
         let data = await userService.getAllCodeService(req.query.type);

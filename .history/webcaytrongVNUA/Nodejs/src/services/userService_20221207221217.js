@@ -1,5 +1,6 @@
 import db from "../models/index";
 import bcrypt from 'bcryptjs';
+//bcrypt is an npm module that simplifies tạo và băm mật khẩu
 const salt = bcrypt.genSaltSync(10);
 let hashUserPassword = (password) => {
     return new Promise(async (resolve, reject) => {
@@ -16,17 +17,19 @@ let handleUserLogin = (email, password) => {
         try {
             let userData = {};
             let isExist = await checkUserEmail(email);
-
+//các câu lệnh if else lồng nhau để kiểm tra tài khoản, mật khẩu
             if (isExist) {
                 let user = await db.User.findOne({
-                    attributes: ['','email', 'roleId', 'password', 'firstName', 'lastName'],
+                    attributes: ['id', 'email', 'roleId', 'password', 'firstName', 'lastName'],
                     where: { email: email },
                     raw: true,
 
                 });
                 if (user) {
                     let check = await bcrypt.compareSync(password, user.password);
+                   //so sánh password vừa nhập vào và user.password đã băm trong database 
                     if (check) {
+                        //nếu check có và đúng
                         userData.errCode = 0;
                         userData.errMessage = 'ok';
 
@@ -68,6 +71,23 @@ let checkUserEmail = (userEmail) => {
         }
     })
 }
+let checkUserPhoneNumber = (userPhoneNumber) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let user = await db.User.findOne({
+                where: { phoneNumber: userPhoneNumber }
+            })
+            if (user) {
+                resolve(true);
+            } else {
+                resolve(false);
+            }
+        } catch (e) {
+            reject(e);
+        }
+    })
+}
+
 let getAllUsers = (userId) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -98,13 +118,36 @@ let createNewUser = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
             //kiểm tra user đã tồn tại hay chưa
-            let check = await checkUserEmail(data.email);
-            if (check === true) {
+            let check = await checkUserEmail(data.email)
+            let phoneNumber = await checkUserPhoneNumber(data.phoneNumber)
+            
+            if (check === true && phoneNumber ===true) {
                 resolve({
                     errCode: 1,
-                    errMessage: 'Your email is already in used, Pls try again!'
+                    errMessage: 'Your info is already in used, Pls try again!'
                 })
-            } else {
+                
+            }   if (check === true && phoneNumber === false) {
+                //trong TH đây là tài khoản trắng(mới set roleId và một sô thông tin cơ bản qua booking modal)
+                let hashPasswordFromBcrypt = await hashUserPassword(data.password);
+                let user = await db.User.findOne({
+                    attributes: ['id', 'email', 'roleId', 'password', 'firstName', 'lastName', 'phoneNumber'],
+                    where: { email: data.email },
+                    raw: false,
+                    //raw: false để đưa js object về sequelize object
+                });
+                if (user) {
+                    user.email = data.email;
+                    user.password = hashPasswordFromBcrypt;
+                    user.firstName = data.firstName;
+                    user.lastName = data.lastName;
+                    user.address = data.address;
+                    user.phoneNumber = data.phoneNumber;
+                    
+                }
+                await user.save();
+            }
+            else {
                 let hashPasswordFromBcrypt = await hashUserPassword(data.password);
                 await db.User.create({
                     email: data.email,
@@ -114,12 +157,12 @@ let createNewUser = (data) => {
                     address: data.address,
                     phoneNumber: data.phoneNumber,
                     gender: data.gender,
-                    roleId: data.roleId,
+                    roleId: 'R3',
                     positionId: data.positionId,
                     image: data.avatar
                 })
-            }
 
+            }
             resolve({
                 errCode: 0,
                 message: 'OK'
@@ -129,6 +172,7 @@ let createNewUser = (data) => {
         }
     })
 }
+
 let deleteUser = (userId) => {
     return new Promise(async (resolve, reject) => {
         let foundUser = await db.User.findOne({
@@ -220,5 +264,5 @@ module.exports = {
     createNewUser: createNewUser,
     deleteUser: deleteUser,
     updateUserData: updateUserData,
-    getAllCodeService: getAllCodeService,
+    getAllCodeService: getAllCodeService
 }

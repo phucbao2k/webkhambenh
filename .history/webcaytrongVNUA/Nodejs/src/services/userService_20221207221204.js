@@ -134,7 +134,7 @@ let createNewUser = (data) => {
                     attributes: ['id', 'email', 'roleId', 'password', 'firstName', 'lastName', 'phoneNumber'],
                     where: { email: data.email },
                     raw: false,
-                    //raw: false để đưa js object về sequelize object
+                    //raw: false để đưa js object về 
                 });
                 if (user) {
                     user.email = data.email;
