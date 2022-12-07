@@ -150,8 +150,9 @@ A match object contains information about how a <Route path> matched the URL.
  Còn ở phần tạo route, sẽ nằm trong file constant.js, App.js.
   Lưu ý: Route path ở file App.js và api ở userService.js có thể thay đổi linh hoạt tùy nơi 
 
-  raw= false tức là ta đang định danh về sequelize object hoặc object thuộc hệ csdl tương đương, còn raw =false sẽ định nghĩa về kiểu 
-  javascript object, mục đích đặt raw = false là để tránh hiện tượng .save() .... is not a function...
+  raw= false tức là ta đang định danh về sequelize object hoặc object thuộc hệ csdl tương đương, còn raw =true sẽ định nghĩa về kiểu 
+  javascript object, mục đích đặt raw = false là để tránh hiện tượng .save(), .create(), .... is not a function... 
+  (tức là sequelize không nhận ra function trên)
 
 
   khi tạo 1 hàm onChange, ta phải bắt buộc lưu state cho nó luôn, thì khi kết thúc, component đó mới nhận ra sự thay đổi của state trước
@@ -248,3 +249,12 @@ MUỐN đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
   CTRL+P để tìm nhanh file
 
   HỌC THÊM VỀ SEQUELIZE----------------------------------------------------------------
+
+
+  VỚI SEQUELIZE , muốn thực thi 1 hàm save()... thì phải đặt save() ở sau cùng. VD:
+    appointment.statusId = 'S3';
+                    await appointment.save()
+
+
+this.props.  có thể là redux hoặc có thể định nghĩa sẵn từ props cha 
+HỌC THÊM VỀ PACKAGE QUERY-STRING
