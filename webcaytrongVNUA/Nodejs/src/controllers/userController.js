@@ -15,6 +15,7 @@ let handleLogin = async (req, res) => {
         user: userData.user ? userData.user : {
 
         }
+        //nếu có userData.user thì gán userData.user vào biến user, ko thì trả về object rỗng
     })
 }
 

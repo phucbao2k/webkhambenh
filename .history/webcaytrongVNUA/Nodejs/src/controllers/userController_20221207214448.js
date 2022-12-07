@@ -15,9 +15,10 @@ let handleLogin = async (req, res) => {
         user: userData.user ? userData.user : {
 
         }
+        //nếu có userData.user
     })
 }
-let handleRegister 
+
 let handleGetAllUsers = async (req, res) => {
     let id = req.query.id;
     if (!id) {
@@ -35,7 +36,8 @@ let handleGetAllUsers = async (req, res) => {
     })
 }
 let handleCreateNewUser = async (req, res) => {
-    let message = await userService.createNewUser(req.body);
+    let data = req.body;
+    let message = await userService.createNewUser(data);
     return res.status(200).json(message);
 }
 let handleDeleteUser = async (req, res) => {
@@ -71,5 +73,5 @@ module.exports = {
     handleCreateNewUser: handleCreateNewUser,
     handleDeleteUser: handleDeleteUser,
     handleEditUser: handleEditUser,
-    getAllCode: getAllCode,
+    getAllCode: getAllCode
 }
