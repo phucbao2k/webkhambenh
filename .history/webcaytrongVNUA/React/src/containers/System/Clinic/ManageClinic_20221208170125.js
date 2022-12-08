@@ -40,7 +40,7 @@ class ManageClinic extends Component {
         
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
-        //hành động hiển thị dãy clinic(đc cập nhật liên tục sau khi đc tạo vs redux)
+        //hành động hiển thị dãy clinic(đc cập nhật liên tục)
         if (prevProps.clinicRedux !== this.props.clinicRedux) {
             let arrClinics = this.props.clinicRedux;
             this.setState({

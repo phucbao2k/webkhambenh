@@ -40,7 +40,7 @@ class ManageClinic extends Component {
         
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
-        //hành động hiển thị dãy clinic(đc cập nhật liên tục sau khi đc tạo vs redux)
+        //hành động hiển thị dãy clinic(đc cập nhật liên tục)
         if (prevProps.clinicRedux !== this.props.clinicRedux) {
             let arrClinics = this.props.clinicRedux;
             this.setState({
@@ -48,7 +48,6 @@ class ManageClinic extends Component {
                 clinic: arrClinics && arrClinics.length > 0 ? arrClinics[0].keyMap : '',
             })
         }
-        //hành động create clinic vs redux 
         if (prevProps.listClinics !== this.props.listClinics) {
             let arrClinics = this.props.clinicRedux;
             this.setState({
