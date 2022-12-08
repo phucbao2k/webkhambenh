@@ -247,7 +247,7 @@ class UserRedux extends Component {
               <div className="form-group col-md-3 mb-3">
                 <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.roleid" /></label>
                 <select id="inputState" className="form-control"
-//thêm dữ liệu vào option chọn roleId qua valueEn, valueVi đã lấy được từ redux...
+//thêm option chọn roleId qua valueEn, valueVi đã lấy được từ redux...
                   onChange={(event) => { this.onChangeInput(event, 'role') }}
                   value={role}>
                   {roleIds && roleIds.length > 0 && roleIds.map((item, index) => {

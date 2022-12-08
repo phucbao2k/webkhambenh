@@ -703,7 +703,7 @@ export const getRequiredDoctorInfor = () => {
     return async (dispatch, getState) => {
         try {
             dispatch({ type: actionTypes.FETCH_REQUIRED_DOCTOR_INFOR_START })
-            //gán giá trị các biến res mới bằng giá trị biến res trong nodeJS với điều kiện trả về cụ thể.
+            //gán giá trị các biến res mới 
             let resPrice = await getAllCodeService("PRICE");
             let resPayment = await getAllCodeService("PAYMENT");
             let resProvince = await getAllCodeService("PROVINCE");

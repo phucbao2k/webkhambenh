@@ -31,7 +31,7 @@ class DetailSpecialty extends Component {
                 id: id,
                 location: 'ALL'
             });
-            //doctorSpecialty, res.data... lấy từ nodeJS, resProvince đc lấy từ redux.
+            
             let resProvince = await getAllCodeService('PROVINCE');
             if(res && res.errCode === 0 && resProvince && resProvince.errCode === 0){
                 let data = res.data;
@@ -46,8 +46,6 @@ class DetailSpecialty extends Component {
                 }
                 let dataProvince = resProvince.data;
                 if(dataProvince && dataProvince.length > 0){
-                    //unshift() adds new items to the beginning of an array:
-                    //ở đây thêm 1 dãy giá trị mặc định khi chưa select ở class DetailSpecialty
                     dataProvince.unshift({
                         createdAt: null,
                         keyMap: "ALL",

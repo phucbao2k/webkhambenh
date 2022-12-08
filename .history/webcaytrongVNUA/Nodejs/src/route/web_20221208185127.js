@@ -80,5 +80,4 @@ export function initWebRoutes(app) {
     return app.use("/", router);
 }
 //resolve trong promise tương tự return trong hàm thông thường
-//các class trong mục models trong nodejs sẽ biến priceId, provinceId, paymentId, positionId, roleId, gender... thành
-// dữ liệu kiểu valueEn, valueVi qua các class doctorService... trong nodeJS
+//class allcode trong nodejs sẽ biến priceId, provinceId, paymentId, positionId, roleId, gender thành dữ liệu kiểu valueEn, valueVi

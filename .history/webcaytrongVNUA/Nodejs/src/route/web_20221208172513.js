@@ -27,17 +27,17 @@ export function initWebRoutes(app) {
     router.delete('/api/delete-user', userController.handleDeleteUser);
     router.get('/api/allcode', userController.getAllCode);
 //clinic
-    router.get('/api/get-clinic', clinicController.getAllClinic);
     router.get('/api/get-all-clinics', clinicController.handleGetAllClinics);
     router.put('/api/edit-clinic', clinicController.handleEditClinic);
     router.delete('/api/delete-clinic', clinicController.handleDeleteClinic);
     router.post('/api/create-new-clinic', clinicController.createClinic);
+    router.get('/api/get-clinic', clinicController.getAllClinic);
     router.get('/api/get-detail-clinic-by-id', clinicController.getDetailClinicById);
     //specialty
-    router.get('/api/get-specialty', specialtyController.getAllSpecialty);
     router.get('/api/get-all-specialties', specialtyController.handleGetAllSpecialties);
     router.put('/api/edit-specialty', specialtyController.handleEditSpecialty);
     router.delete('/api/delete-specialty', specialtyController.handleDeleteSpecialty);
+   
     router.post('/api/create-new-specialty', specialtyController.createSpecialty);
     router.get('/api/get-detail-specialty-by-id', specialtyController.getDetailSpecialtyById);
    //doctor
@@ -79,6 +79,3 @@ export function initWebRoutes(app) {
     });
     return app.use("/", router);
 }
-//resolve trong promise tương tự return trong hàm thông thường
-//các class trong mục models trong nodejs sẽ biến priceId, provinceId, paymentId, positionId, roleId, gender... thành
-// dữ liệu kiểu valueEn, valueVi qua các class doctorService... trong nodeJS

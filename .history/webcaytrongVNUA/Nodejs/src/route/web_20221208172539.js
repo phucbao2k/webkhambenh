@@ -32,6 +32,7 @@ export function initWebRoutes(app) {
     router.put('/api/edit-clinic', clinicController.handleEditClinic);
     router.delete('/api/delete-clinic', clinicController.handleDeleteClinic);
     router.post('/api/create-new-clinic', clinicController.createClinic);
+    
     router.get('/api/get-detail-clinic-by-id', clinicController.getDetailClinicById);
     //specialty
     router.get('/api/get-specialty', specialtyController.getAllSpecialty);
@@ -79,6 +80,3 @@ export function initWebRoutes(app) {
     });
     return app.use("/", router);
 }
-//resolve trong promise tương tự return trong hàm thông thường
-//các class trong mục models trong nodejs sẽ biến priceId, provinceId, paymentId, positionId, roleId, gender... thành
-// dữ liệu kiểu valueEn, valueVi qua các class doctorService... trong nodeJS

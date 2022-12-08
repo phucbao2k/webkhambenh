@@ -47,7 +47,6 @@ class DetailSpecialty extends Component {
                 let dataProvince = resProvince.data;
                 if(dataProvince && dataProvince.length > 0){
                     //unshift() adds new items to the beginning of an array:
-                    //ở đây thêm 1 dãy giá trị mặc định khi chưa select ở class DetailSpecialty
                     dataProvince.unshift({
                         createdAt: null,
                         keyMap: "ALL",

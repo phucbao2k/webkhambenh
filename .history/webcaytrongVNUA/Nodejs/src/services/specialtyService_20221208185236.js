@@ -105,7 +105,7 @@ let getDetailSpecialtyById = (inputId, location) => {
         }
     })
 }
-//các class trong mục models trong nodejs sẽ biến priceId, provinceId, paymentId, positionId, roleId, gender... thành
+//class allcode trong nodejs sẽ biến priceId, provinceId, paymentId, positionId, roleId, gender... thành
 // dữ liệu kiểu valueEn, valueVi qua các class doctorService... trong nodeJS
 let showAllSpecialties = (specialtyId) => {
     return new Promise(async (resolve, reject) => {
