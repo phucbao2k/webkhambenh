@@ -14,22 +14,22 @@ class MenuGroup extends Component {
 
         this.changeActiveMenu = this.changeActiveMenu.bind(this);
     }
-
+    
     changeActiveMenu = () => {
         this.setState({
             activeSubmenu: !this.state.activeSubmenu
         });
     }
 
-    componentDidMount() { }
+    componentDidMount() {}
 
     render() {
         const { name, children } = this.props;
-        if (this.props.mobile) {
+        if(this.props.mobile){
             return (
                 <li className="menu-group">
                     <div className="menu-group-name d-flex justify-content-between align-items-center" onClick={this.changeActiveMenu}>
-                        <div><FormattedMessage id={name} /></div>
+                        <div><FormattedMessage id={name} /></div> 
                         <i className={this.state.activeSubmenu == false ? "fa-solid fa-chevron-down" : "fa-solid fa-chevron-up"}></i>
                     </div>
                     <ul className={this.state.activeSubmenu == false ? "d-none" : "menu-list list-unstyled"}>
@@ -37,7 +37,7 @@ class MenuGroup extends Component {
                     </ul>
                 </li>
             );
-        } else {
+        }else{
             return (
                 <li className="menu-group">
                     <div className="menu-group-name">
@@ -49,7 +49,7 @@ class MenuGroup extends Component {
                 </li>
             );
         }
-
+        
     }
 }
 
@@ -79,10 +79,10 @@ class Menu extends Component {
                         </div>
                     </Fragment>
                 ) : (
-                    <Link to={link} className="menu-link" onClick={onLinkClick}>
-                        <FormattedMessage id={name} />
-                    </Link>
-                )}
+                        <Link to={link} className="menu-link" onClick={onLinkClick}>
+                            <FormattedMessage id={name} />
+                        </Link>
+                    )}
             </li>
         );
     }
@@ -217,7 +217,7 @@ class Navigator extends Component {
 
     render() {
         const { menus, location, onLinkClick, mobile } = this.props;
-
+        
         return (
             <Fragment>
                 <ul className="navigator-menu list-unstyled">

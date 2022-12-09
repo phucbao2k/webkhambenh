@@ -32,7 +32,7 @@ class MenuGroup extends Component {
                         <div><FormattedMessage id={name} /></div>
                         <i className={this.state.activeSubmenu == false ? "fa-solid fa-chevron-down" : "fa-solid fa-chevron-up"}></i>
                     </div>
-                    <ul className={this.state.activeSubmenu == false ? "d-none" : "menu-list list-unstyled"}>
+                    <ul className={this.state.activeSubmenu == false ? "d-nonee" : "menu-list list-unstyled"}>
                         {children}
                     </ul>
                 </li>

@@ -6,19 +6,50 @@ import { connect } from 'react-redux';
 import './Navigator.scss';
 
 class MenuGroup extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeSubmenu: false,
+        }
+
+        this.changeActiveMenu = this.changeActiveMenu.bind(this);
+    }
+
+    changeActiveMenu = () => {
+        this.setState({
+            activeSubmenu: !this.state.activeSubmenu
+        });
+    }
+
+    componentDidMount() { }
 
     render() {
         const { name, children } = this.props;
-        return (
-            <li className="menu-group">
-                <div className="menu-group-name">
-                    <FormattedMessage id={name} />
-                </div>
-                <ul className="menu-list list-unstyled">
-                    {children}
-                </ul>
-            </li>
-        );
+        if (this.props.mobile) {
+            return (
+                <li className="menu-group">
+                    <div className="menu-group-name d-flex justify-content-between align-items-center" onClick={this.changeActiveMenu}>
+                        <div><FormattedMessage id={name} /></div>
+                        <i className={this.state.activeSubmenu == false ? "fa-solid fa-chevron-down" : "fa-solid fa-chevron-up"}></i>
+                    </div>
+                    <ul className={this.state.activeSubmenu == false ? "d-none" : "menu-list list-unstyled"}>
+                        {children}
+                    </ul>
+                </li>
+            );
+        } else {
+            return (
+                <li className="menu-group">
+                    <div className="menu-group-name">
+                        <FormattedMessage id={name} />
+                    </div>
+                    <ul className="menu-list list-unstyled">
+                        {children}
+                    </ul>
+                </li>
+            );
+        }
+
     }
 }
 
@@ -38,7 +69,7 @@ class Menu extends Component {
                         >
                             <FormattedMessage id={name} />
                             <div className="icon-right">
-                                <i className={"far fa-angle-right"} />
+                                <i className={"fa-brands fa-windows"} />
                             </div>
                         </span>
                         <div>
@@ -48,10 +79,10 @@ class Menu extends Component {
                         </div>
                     </Fragment>
                 ) : (
-                        <Link to={link} className="menu-link" onClick={onLinkClick}>
-                            <FormattedMessage id={name} />
-                        </Link>
-                    )}
+                    <Link to={link} className="menu-link" onClick={onLinkClick}>
+                        <FormattedMessage id={name} />
+                    </Link>
+                )}
             </li>
         );
     }
@@ -185,7 +216,8 @@ class Navigator extends Component {
     };
 
     render() {
-        const { menus, location, onLinkClick } = this.props;
+        const { menus, location, onLinkClick, mobile } = this.props;
+
         return (
             <Fragment>
                 <ul className="navigator-menu list-unstyled">
@@ -193,7 +225,7 @@ class Navigator extends Component {
                         menus.map((group, groupIndex) => {
                             return (
                                 <Fragment key={groupIndex}>
-                                    <MenuGroupWithRouter name={group.name}>
+                                    <MenuGroupWithRouter name={group.name} mobile={mobile}>
                                         {group.menus ? (
                                             group.menus.map((menu, menuIndex) => {
                                                 const isMenuHasSubMenuActive = this.isMenuHasSubMenuActive(location, menu.subMenus, menu.link);

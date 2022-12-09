@@ -25,7 +25,7 @@ class MenuGroup extends Component {
 
     render() {
         const { name, children } = this.props;
-        if (this.props.mobile) {
+        if (!this.props.mobile) {
             return (
                 <li className="menu-group">
                     <div className="menu-group-name d-flex justify-content-between align-items-center" onClick={this.changeActiveMenu}>
