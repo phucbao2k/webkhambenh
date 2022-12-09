@@ -78,7 +78,7 @@ class ManagePatient extends Component {
               await  this.getDataPatient()
             })
     }
-    //nút bấm xác nhận mở ra modal gửi thông tin khám bệnh
+    //nút bấm xác nhận 
     handleBtnConfirm = (item) => {
         let data ={          
                 doctorId: item.doctorId,
