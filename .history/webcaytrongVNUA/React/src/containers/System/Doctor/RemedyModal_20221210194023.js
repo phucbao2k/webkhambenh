@@ -87,7 +87,6 @@ class RemedyModal extends Component {
                             onChange={(event) => this.handleOnChangeEmail(event)}
                                 disabled
                             />
-                            <label>Phone Number</label>
                             <input className="form-control" type="number" value={this.state.phoneNumber}
                                 onChange={(event) => this.handleOnChangePhoneNumber(event)}
                                 disabled

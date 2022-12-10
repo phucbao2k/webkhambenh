@@ -26,7 +26,7 @@ export default (sequelize, DataTypes) => {
         nameClinic: DataTypes.STRING,
         note: DataTypes.STRING,
         count: DataTypes.STRING,
-phoneNumber: DataTypes.TEXT
+phoneNumber: DataTypes.STRING
     }, {
         sequelize,
         modelName: 'Doctor_Infor',

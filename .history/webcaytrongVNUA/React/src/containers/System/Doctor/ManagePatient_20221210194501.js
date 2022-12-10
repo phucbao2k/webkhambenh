@@ -89,7 +89,7 @@ class ManagePatient extends Component {
             plantName: item.plantName,
             reasons: item.reasons,
             avatar: item.image,
-phoneNumber: item.patientData.phoneNumber
+phoneNumber: item
         }
         this.setState({
             isOpenRemedyModal: true,
@@ -108,7 +108,7 @@ phoneNumber: item.patientData.phoneNumber
             plantName: item.plantName,
             reasons: item.reasons,
             avatar: item.image,
-            phoneNumber: item.patientData.phoneNumber
+
         }
         this.setState({
             isOpenCancelModal: true,

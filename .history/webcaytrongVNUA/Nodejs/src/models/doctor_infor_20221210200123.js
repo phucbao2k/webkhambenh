@@ -12,7 +12,7 @@ export default (sequelize, DataTypes) => {
             Doctor_Infor.belongsTo(models.Allcode, { foreignKey: 'paymentId', targetKey: 'keyMap', as: 'paymentTypeData' });
             Doctor_Infor.belongsTo(models.Allcode, { foreignKey: 'provinceId', targetKey: 'keyMap', as: 'provinceTypeData' });
             Doctor_Infor.belongsTo(models.Allcode, { foreignKey: 'priceId', targetKey: 'keyMap', as: 'priceTypeData' });
-            Doctor_Infor.belongsTo(models.User, { foreignKey: 'phoneNumber' });
+            Doctor_Infor.belongsTo(models.User, { foreignKey: 'doctorId' });
         }
     };
     Doctor_Infor.init({
@@ -26,7 +26,7 @@ export default (sequelize, DataTypes) => {
         nameClinic: DataTypes.STRING,
         note: DataTypes.STRING,
         count: DataTypes.STRING,
-phoneNumber: DataTypes.TEXT
+phoneNumber: DataTypes.STRING
     }, {
         sequelize,
         modelName: 'Doctor_Infor',

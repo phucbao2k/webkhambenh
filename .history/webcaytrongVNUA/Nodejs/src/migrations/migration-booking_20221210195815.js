@@ -39,7 +39,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       phoneNumber: {
-        type: Sequelize.TEXT
+        type: Sequelize.STRING
       },
       reasons: {
         type: Sequelize.TEXT

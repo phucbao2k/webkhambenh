@@ -38,8 +38,8 @@ module.exports = {
       birthday: {
         type: Sequelize.STRING
       },
-      phoneNumber: {
-        type: Sequelize.TEXT
+       phoneNumber: {
+        type: Sequelize.STRING
       },
       reasons: {
         type: Sequelize.TEXT

@@ -29,7 +29,7 @@ export default (sequelize, DataTypes) => {
     date: DataTypes.STRING,
     birthday: DataTypes.STRING,
     reasons: DataTypes.TEXT,
-    phoneNumber: DataTypes.TEXT,
+    phoneNumber: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'Booking',

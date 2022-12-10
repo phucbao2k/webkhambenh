@@ -10,7 +10,6 @@ export default (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Booking.belongsTo(models.User,{foreignKey: 'patientId', targetKey: 'id', as: 'patientData'})
-      Booking.belongsTo(models.User, { foreignKey: 'phoneNumber', targetKey: 'phoneNumber', as: 'patientPhone' })
       Booking.belongsTo(models.Allcode, {
         foreignKey: 'timeType', targetKey: 'keyMap',
         as: 'timeTypeDataPatient'
@@ -29,7 +28,6 @@ export default (sequelize, DataTypes) => {
     date: DataTypes.STRING,
     birthday: DataTypes.STRING,
     reasons: DataTypes.TEXT,
-    phoneNumber: DataTypes.TEXT,
   }, {
     sequelize,
     modelName: 'Booking',

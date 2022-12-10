@@ -46,7 +46,7 @@ class RemedyModal extends Component {
     }
     handleOnChangePhoneNumber = (event) => {
         this.setState({
-            phoneNumber: event.target.value
+            email: event.target.value
         })
     }
     handleOnChangeImage = async (event) => {
@@ -85,11 +85,6 @@ class RemedyModal extends Component {
                             <label><FormattedMessage id="patient.booking-modal.email" /></label>
                             <input className="form-control" type="email" value={this.state.email}
                             onChange={(event) => this.handleOnChangeEmail(event)}
-                                disabled
-                            />
-                            <label>Phone Number</label>
-                            <input className="form-control" type="number" value={this.state.phoneNumber}
-                                onChange={(event) => this.handleOnChangePhoneNumber(event)}
                                 disabled
                             />
 

@@ -14,8 +14,7 @@ class RemedyModal extends Component {
         super(props);
         this.state = {
             email: '',
-            imgBase64: '',
-            phoneNumber: ''
+            imgBase64: ''
         }
 
     }
@@ -24,8 +23,7 @@ class RemedyModal extends Component {
     async componentDidMount() {
         if (this.props.dataModal) {
             this.setState({
-                email: this.props.dataModal.email,
-                 phoneNumber: this.props.dataModal.phoneNumber
+                email: this.props.dataModal.email
             })
         }
 
@@ -33,8 +31,7 @@ class RemedyModal extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.dataModal !== this.props.dataModal) {
             this.setState({
-                email: this.props.dataModal.email,
-                 phoneNumber: this.props.dataModal.phoneNumber
+                email: this.props.dataModal.email
             })
         }
 
@@ -42,11 +39,6 @@ class RemedyModal extends Component {
     handleOnChangeEmail = (event) => {
         this.setState({
             email: event.target.value
-        })
-    }
-    handleOnChangePhoneNumber = (event) => {
-        this.setState({
-            phoneNumber: event.target.value
         })
     }
     handleOnChangeImage = async (event) => {
@@ -87,12 +79,7 @@ class RemedyModal extends Component {
                             onChange={(event) => this.handleOnChangeEmail(event)}
                                 disabled
                             />
-                            <label>Phone Number</label>
-                            <input className="form-control" type="number" value={this.state.phoneNumber}
-                                onChange={(event) => this.handleOnChangePhoneNumber(event)}
-                                disabled
-                            />
-
+                            
                         </div>
                         <div className="col-8 form-group">
                             <label>Chọn file đơn thuốc</label>

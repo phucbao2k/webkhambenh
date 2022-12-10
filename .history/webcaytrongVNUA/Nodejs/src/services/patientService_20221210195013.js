@@ -10,7 +10,7 @@ let postBookAppointment = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
             if (!data.email || !data.doctorId || !data.timeType || !data.specialtyName || !data.fullName
-                || !data.date || !data.address || !data.image || !data.phoneNumber
+                || !data.date || !data.address || !data.image ||
             ) {
                 resolve({
                     errCode: 1,
@@ -36,7 +36,6 @@ let postBookAppointment = (data) => {
                         // gender: data.selectedGender
                         address: data.address,
                         firstName: data.fullName,
-                        phoneNumber: data.phoneNumber
                     },
                 });
                 //user ở trên sau khi được gán await db.User.findOrCreate đã trở thành 1 array của sequelize

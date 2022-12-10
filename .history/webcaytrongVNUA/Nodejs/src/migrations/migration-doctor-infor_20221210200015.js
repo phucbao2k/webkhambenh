@@ -13,7 +13,7 @@ module.exports = {
                 allowNull: false,
             },
              phoneNumber: {
-                type: Sequelize.TEXT,
+                type: Sequelize.S,
                 allowNull: false,
             },
             specialtyId: {

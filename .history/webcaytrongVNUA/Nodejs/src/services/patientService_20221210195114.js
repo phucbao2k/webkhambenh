@@ -36,7 +36,7 @@ let postBookAppointment = (data) => {
                         // gender: data.selectedGender
                         address: data.address,
                         firstName: data.fullName,
-                        phoneNumber: data.phoneNumber
+                        phoneNumber
                     },
                 });
                 //user ở trên sau khi được gán await db.User.findOrCreate đã trở thành 1 array của sequelize

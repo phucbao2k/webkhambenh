@@ -12,8 +12,8 @@ module.exports = {
                 type: Sequelize.INTEGER,
                 allowNull: false,
             },
-             phoneNumber: {
-                type: Sequelize.TEXT,
+             phoneNmber: {
+                type: Sequelize.INTEGER,
                 allowNull: false,
             },
             specialtyId: {

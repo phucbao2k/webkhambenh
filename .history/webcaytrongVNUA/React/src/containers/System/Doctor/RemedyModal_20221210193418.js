@@ -24,8 +24,7 @@ class RemedyModal extends Component {
     async componentDidMount() {
         if (this.props.dataModal) {
             this.setState({
-                email: this.props.dataModal.email,
-                 phoneNumber: this.props.dataModal.phoneNumber
+                email: this.props.dataModal.email
             })
         }
 
@@ -33,8 +32,7 @@ class RemedyModal extends Component {
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (prevProps.dataModal !== this.props.dataModal) {
             this.setState({
-                email: this.props.dataModal.email,
-                 phoneNumber: this.props.dataModal.phoneNumber
+                email: this.props.dataModal.email
             })
         }
 
@@ -42,11 +40,6 @@ class RemedyModal extends Component {
     handleOnChangeEmail = (event) => {
         this.setState({
             email: event.target.value
-        })
-    }
-    handleOnChangePhoneNumber = (event) => {
-        this.setState({
-            phoneNumber: event.target.value
         })
     }
     handleOnChangeImage = async (event) => {
@@ -85,11 +78,6 @@ class RemedyModal extends Component {
                             <label><FormattedMessage id="patient.booking-modal.email" /></label>
                             <input className="form-control" type="email" value={this.state.email}
                             onChange={(event) => this.handleOnChangeEmail(event)}
-                                disabled
-                            />
-                            <label>Phone Number</label>
-                            <input className="form-control" type="number" value={this.state.phoneNumber}
-                                onChange={(event) => this.handleOnChangePhoneNumber(event)}
                                 disabled
                             />
 
