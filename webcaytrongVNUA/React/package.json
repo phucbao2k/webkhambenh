@@ -10,6 +10,7 @@
     "bootstrap": "^5.2.0",
     "connected-react-router": "^6.9.1",
     "emitter": "0.0.5",
+    "file-saver": "^2.0.5",
     "lodash": "^4.17.21",
     "markdown-it": "^12.1.0",
     "moment": "^2.29.4",
@@ -36,6 +37,7 @@
     "react-scripts": "^4.0.3",
     "react-scroll": "^1.8.8",
     "react-slick": "^0.29.0",
+    "react-table": "^7.8.0",
     "react-toastify": "^5.5.0",
     "reactstrap": "^8.10.1",
     "redux": "^4.1.0",
@@ -44,9 +46,11 @@
     "redux-persist": "^5.10.0",
     "redux-state-sync": "^2.1.0",
     "redux-thunk": "^2.3.0",
+    "semantic-ui-react": "^2.1.4",
     "slick-carousel": "^1.8.1",
     "typescript": "^4.3.2",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
     "start": "react-scripts start",
