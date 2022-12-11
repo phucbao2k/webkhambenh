@@ -124,7 +124,7 @@ class RemedyPatientModal extends Component {
                 </ModalBody>
                 <ModalFooter>
                     <div><FormattedMessage id="patient.booking-modal.info-status" /></div>
-                    <Button color="primary" onClick={() => this.handleViewDetailDoctor(this.state.doctorId)}><FormattedMessage id="patient.booking-modal.viewdoctor" /></Button>
+                    <Button color="primary" onClick={() => this.handleViewDetailDoctor()}>Xem thông tin bác sĩ</Button>
                     <Button color="secondary" onClick={closeRemedyModal}>Cancel</Button>
                 </ModalFooter>
 

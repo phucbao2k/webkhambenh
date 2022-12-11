@@ -132,7 +132,7 @@ let getListBookingForPatient = (patientId, date) => {
                         statusId: 'S2',
                         patientId: patientId,
                         date: date,
-                       
+                        doctorId
                     },
                      attributes: {
                         exclude: ['id']
@@ -178,7 +178,7 @@ let getListBookingForPatient = (patientId, date) => {
 let getHistoryBookingForPatient = (patientId) => {
     return new Promise(async (resolve, reject) => {
         try {
-            if (!patientId ) {
+            if (!patientId) {
                 resolve({
                     errCode: 1,
                     errMessage: 'Missing required parameter'

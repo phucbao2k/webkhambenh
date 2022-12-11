@@ -175,10 +175,10 @@ let getListBookingForPatient = (patientId, date) => {
         }
     })
 }
-let getHistoryBookingForPatient = (patientId) => {
+let getHistoryBookingForPatient = (patientId, doctorId) => {
     return new Promise(async (resolve, reject) => {
         try {
-            if (!patientId ) {
+            if (!patientId || !doctorId) {
                 resolve({
                     errCode: 1,
                     errMessage: 'Missing required parameter'
@@ -187,7 +187,8 @@ let getHistoryBookingForPatient = (patientId) => {
                 let data = await db.Booking.findAll({
                     where: {
                       
-                        patientId: patientId
+                        patientId: patientId,
+                        doctorId: doctorId
                     },
                     attributes: {
                         exclude: ['id']

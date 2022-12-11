@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import './RemedyModal.scss';
 import { Modal, Button, ModalBody, ModalFooter } from 'reactstrap';
 import { CommonUtils } from "../../../utils";
-import { withRouter } from 'react-router';
 class RemedyPatientModal extends Component {
 
     constructor(props) {
@@ -24,7 +23,7 @@ class RemedyPatientModal extends Component {
             this.setState({
                 email: this.props.dataModal.email,
                 statusId: this.props.dataModal.statusId,
-                doctorId: this.props.dataModal.doctorId,
+                doctorId: this.props.dataModal.statusId,
               
             })
         }
@@ -35,15 +34,8 @@ class RemedyPatientModal extends Component {
             this.setState({
                 email: this.props.dataModal.email,
                 statusId: this.props.dataModal.statusId,
-                doctorId: this.props.dataModal.doctorId,
+              
             })
-        }
-
-    }
-    handleViewDetailDoctor = (doctorId) => {
-        if (this.props.history) {
-          
-            this.props.history.push(`/detail-doctor/${doctorId}`);
         }
 
     }
@@ -72,11 +64,6 @@ class RemedyPatientModal extends Component {
     handleOnChangeStatus = (event) => {
         this.setState({
             statusId: event.target.value
-        })
-    }
-    handleOnChangeDoctorId = (event) => {
-        this.setState({
-            doctorId: event.target.value
         })
     }
     render() {
@@ -111,20 +98,12 @@ class RemedyPatientModal extends Component {
                                 disabled
                             />
                         </div>
-                        {/* <div className="col-4 form-group">
-                            <label>DoctorId</label>
-                            <input className="form-control" type="text" value={this.state.doctorId}
-                                onChange={(event) => this.handleOnChangeDoctorId(event)}
-                                disabled
-                            />
-                        </div> */}
 
 
                     </div>
                 </ModalBody>
                 <ModalFooter>
                     <div><FormattedMessage id="patient.booking-modal.info-status" /></div>
-                    <Button color="primary" onClick={() => this.handleViewDetailDoctor(this.state.doctorId)}><FormattedMessage id="patient.booking-modal.viewdoctor" /></Button>
                     <Button color="secondary" onClick={closeRemedyModal}>Cancel</Button>
                 </ModalFooter>
 
@@ -146,7 +125,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RemedyPatientModal));
+export default connect(mapStateToProps, mapDispatchToProps)(RemedyPatientModal);
 
 
 

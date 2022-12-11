@@ -187,7 +187,8 @@ let getHistoryBookingForPatient = (patientId) => {
                 let data = await db.Booking.findAll({
                     where: {
                       
-                        patientId: patientId
+                        patientId: patientId,
+                        doctorId: doctorId
                     },
                     attributes: {
                         exclude: ['id']

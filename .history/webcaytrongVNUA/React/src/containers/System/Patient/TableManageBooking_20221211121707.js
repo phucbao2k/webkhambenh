@@ -16,7 +16,7 @@ class TableManageBooking extends Component {
             dataPatient: [],
             isOpenRemedyModal: false,
             dataModal: {},
-          doctorId: ''
+          docto
         }
     }
     //để lưu giá trị của 1 biến components, ta dùng state
@@ -30,7 +30,8 @@ class TableManageBooking extends Component {
         let { user } = this.props;
       
         let res = await getHistoryBookingForPatient({
-            patientId: user.id
+            patientId: user.id,
+            doctorId: this.props.dataModal.doctorId
         })
         if (res && res.errCode === 0) {
             this.setState({

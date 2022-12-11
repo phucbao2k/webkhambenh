@@ -85,7 +85,7 @@
             "confirm": "Confirm",
             "booking-done": "Send medical bills for plants",
             "info-status": "S1: Pending, S2: Confirmed, S3: Completed, S4: Canceled by the system",
-            "viewdoctor": "View Doctor's Detail"
+            "viewdoctor": "View Detail D"
         },
         "email-confirm":{
             "confirm": "Appointment confirmed successfully",

@@ -30,7 +30,8 @@ class TableManageBooking extends Component {
         let { user } = this.props;
       
         let res = await getHistoryBookingForPatient({
-            patientId: user.id
+            patientId: user.id,
+            doctorId: this.props.dataModal.doctorId
         })
         if (res && res.errCode === 0) {
             this.setState({
