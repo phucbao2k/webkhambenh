@@ -30,7 +30,9 @@ class Manage_Booking extends Component {
             isOpen: false,
             previewImgURL: '',
             avatar: '',
-          
+            dataPatients: null,
+            loading: false,
+            value: ""
         }
 
     }
@@ -284,9 +286,9 @@ class Manage_Booking extends Component {
                         handleEditUserFromParentKey={this.handleEditUserFromParent}
                         action={this.state.action} />
                 </div>
-                <div className="col-12 mb-5">
+                {/* <div className="col-12 mb-5">
                   <SearchBooking/>
-                </div>
+                </div> */}
                 
 
 

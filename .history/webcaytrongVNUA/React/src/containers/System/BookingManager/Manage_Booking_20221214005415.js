@@ -30,7 +30,9 @@ class Manage_Booking extends Component {
             isOpen: false,
             previewImgURL: '',
             avatar: '',
-          
+            dataPatients: null,
+            loading: false,
+            value: ""
         }
 
     }

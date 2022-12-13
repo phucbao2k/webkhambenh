@@ -15,7 +15,7 @@ import DataPatients from './DataPatients';
 
 
 
-class SearchBooking extends Component {
+class App extends Component {
 
     constructor(props) {
         super(props);
@@ -32,26 +32,25 @@ class SearchBooking extends Component {
         }
 
     }
-    
 
-   
+    async componentDidMount() {
 
+        this.search()
 
+    }
 
-
-   
     search = async (phoneNumber) => {
-        this.setState({ isShowLoading: true });
-        const res = await search(
-            `http://localhost:7070/api/get-search-booking-for-admin-booking?phoneNumber=${phoneNumber}&api_key=PMAK-6398c30c79624b7bac7a2b94-60e7822ccb037f6b876d3ef5eeb31e0c8e`
+        // this.setState({ isShowLoading: true });
+        let res = await search(
+            `http://localhost:7070/api/get-search-booking-for-admin-booking?phoneNumber=${phoneNumber}`
         );
-      const dataPatients = res;
+        if (res && res.errCode === 0) {
             this.setState({
-               dataPatients,
+                dataPatients: res.data,
                 isShowLoading: false
             })
 
-        
+        }
 
 
     };
@@ -166,7 +165,7 @@ class SearchBooking extends Component {
 
         let { language } = this.props;
         let { dataPatients, isOpenRemedyModal, dataModal } = this.state;
-console.log("data Patients", dataPatients);
+
 
         return (
             <LoadingOverLay active={this.state.isShowLoading}
@@ -175,7 +174,7 @@ console.log("data Patients", dataPatients);
                 <div className="manage-patient-container">
                     <div className="m-p-title">TÌM KIẾM LỊCH HẸN</div>
                     <input
-                        value={this.state.phoneNumber}
+                        value={this.state.value}
                         onChange={e => this.onChangeHandler(e)}
                         placeholder="Type something to search"
                     />
@@ -276,7 +275,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchBooking);
+export default connect(mapStateToProps, mapDispatchToProps)(Se);
 
 
 

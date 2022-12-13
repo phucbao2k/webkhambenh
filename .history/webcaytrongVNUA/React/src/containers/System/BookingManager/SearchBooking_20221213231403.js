@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './ManageBooking.scss';
 import { toast } from 'react-toastify';
-import { postSendSchedule } from '../../../services/userService';
+import {  postSendSchedule } from '../../../services/userService';
 import { LANGUAGES, CommonUtils } from '../../../utils';
 import LoadingOverLay from "react-loading-overlay";
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
@@ -15,8 +15,8 @@ import DataPatients from './DataPatients';
 
 
 
-class SearchBooking extends Component {
-
+class App extends Component {
+   
     constructor(props) {
         super(props);
         this.state = {
@@ -32,36 +32,40 @@ class SearchBooking extends Component {
         }
 
     }
-    
 
-   
+    async componentDidMount() {
 
+       
 
-
-
-   
+    }
+  
     search = async (phoneNumber) => {
-        this.setState({ isShowLoading: true });
-        const res = await search(
-            `http://localhost:7070/api/get-search-booking-for-admin-booking?phoneNumber=${phoneNumber}&api_key=PMAK-6398c30c79624b7bac7a2b94-60e7822ccb037f6b876d3ef5eeb31e0c8e`
+        // this.setState({ isShowLoading: true });
+        let res = await search(
+            `http://localhost:7070/api/get-search-booking-for-admin-booking?phoneNumber=${phoneNumber}`
         );
-      const dataPatients = res;
+        if (res && res.errCode === 0) {
             this.setState({
-               dataPatients,
+                dataPatients: res.data,
                 isShowLoading: false
             })
 
+        }
+        return dataPatients;
         
-
-
+      
     };
 
     onChangeHandler = async (e) => {
         this.search(e.target.value);
-        this.setState({ phoneNumber: e.target.value });
+        this.setState({ phoneNumber: e.target.value },
+            async () => {
+
+                await this.search(e.target.value);
+            });
     };
 
-
+   
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
 
@@ -145,7 +149,7 @@ class SearchBooking extends Component {
             })
             toast.success('Success');
             this.closeRemedyModal();
-
+           
         } else {
             this.setState({
                 isShowLoading: false
@@ -163,11 +167,11 @@ class SearchBooking extends Component {
         return dataPatients;
     }
     render() {
-
+        
         let { language } = this.props;
-        let { dataPatients, isOpenRemedyModal, dataModal } = this.state;
-console.log("data Patients", dataPatients);
-
+        let {  dataPatients,isOpenRemedyModal, dataModal } = this.state;
+     console.log("dataPatients", dataPatients);
+       
         return (
             <LoadingOverLay active={this.state.isShowLoading}
                 spinner
@@ -175,15 +179,15 @@ console.log("data Patients", dataPatients);
                 <div className="manage-patient-container">
                     <div className="m-p-title">TÌM KIẾM LỊCH HẸN</div>
                     <input
-                        value={this.state.phoneNumber}
+                        value={this.state.value}
                         onChange={e => this.onChangeHandler(e)}
                         placeholder="Type something to search"
                     />
                     {/* {this.renderBooking} */}
                     <div className="manage-patient-body row">
 
-
-
+                        
+                       
                         <div className="col-12 table-manage-patient">
                             <table style={{ width: '100%' }}>
                                 <tbody>
@@ -203,7 +207,7 @@ console.log("data Patients", dataPatients);
                                         dataPatients.map((item, index) => {
                                             let time = language === LANGUAGES.VI ?
                                                 item.timeTypeDataPatient.valueVi : item.timeTypeDataPatient.valueEn;
-
+                                           
                                             return (
                                                 <tr key={index}>
                                                     <td>{index + 1}</td>
@@ -276,7 +280,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchBooking);
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 
 

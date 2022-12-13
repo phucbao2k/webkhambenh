@@ -3,7 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './ManageBooking.scss';
 import { toast } from 'react-toastify';
-import { postSendSchedule } from '../../../services/userService';
+import { postSendSchedule, getAllBookingForAdminBooking } from '../../../services/userService';
 import { LANGUAGES, CommonUtils } from '../../../utils';
 import LoadingOverLay from "react-loading-overlay";
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
@@ -32,26 +32,45 @@ class SearchBooking extends Component {
         }
 
     }
-    
 
-   
+    async componentDidMount() {
+
+        this.getDataPatient()
+
+    }
 
 
 
 
-   
-    search = async (phoneNumber) => {
-        this.setState({ isShowLoading: true });
-        const res = await search(
-            `http://localhost:7070/api/get-search-booking-for-admin-booking?phoneNumber=${phoneNumber}&api_key=PMAK-6398c30c79624b7bac7a2b94-60e7822ccb037f6b876d3ef5eeb31e0c8e`
-        );
-      const dataPatients = res;
+    getDataPatient = async () => {
+        let status = 'S3'
+        let { currentDate } = this.state;
+
+        let formatedDate = new Date(currentDate).getTime();
+        let res = await getAllBookingForAdminBooking({
+            statusId: status,
+            date: formatedDate
+        })
+        if (res && res.errCode === 0) {
             this.setState({
-               dataPatients,
+
+                dataPatient: res.data,
+            })
+
+        }
+    }
+    search = async (phoneNumber) => {
+        // this.setState({ isShowLoading: true });
+        let res = await search(
+            `http://localhost:7070/api/get-search-booking-for-admin-booking?phoneNumber=${phoneNumber}`
+        );
+        if (res && res.errCode === 0) {
+            this.setState({
+                dataPatients: res.data,
                 isShowLoading: false
             })
 
-        
+        }
 
 
     };
@@ -166,7 +185,7 @@ class SearchBooking extends Component {
 
         let { language } = this.props;
         let { dataPatients, isOpenRemedyModal, dataModal } = this.state;
-console.log("data Patients", dataPatients);
+
 
         return (
             <LoadingOverLay active={this.state.isShowLoading}

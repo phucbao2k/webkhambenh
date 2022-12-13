@@ -43,7 +43,7 @@ class SearchBooking extends Component {
     search = async (phoneNumber) => {
         this.setState({ isShowLoading: true });
         const res = await search(
-            `http://localhost:7070/api/get-search-booking-for-admin-booking?phoneNumber=${phoneNumber}&api_key=PMAK-6398c30c79624b7bac7a2b94-60e7822ccb037f6b876d3ef5eeb31e0c8e`
+            `http://localhost:7070/api/get-search-booking-for-admin-booking?phoneNumber=${phoneNumber}&api_key`
         );
       const dataPatients = res;
             this.setState({
