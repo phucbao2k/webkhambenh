@@ -47,7 +47,7 @@ class RemedyModal extends Component {
             this.setState({
                 email: this.props.dataModal.email,
                 phoneNumber: this.props.dataModal.phoneNumber,
-                patientName: this.props.dataModal.patientName,
+                firstName: this.props.dataModal.firstName,
                 address: this.props.dataModal.address,
                 plantName: this.props.dataModal.plantName,
                 timeType: this.props.dataModal.timeType,
@@ -129,7 +129,7 @@ class RemedyModal extends Component {
                 </div>
             <ModalBody
             >
-                    <div className={'modal-custom' + this.state.view }>
+                    <div className={'modal-dialog' + this.state.view }>
                        
                         <div id="buttons">
 
@@ -183,8 +183,8 @@ class RemedyModal extends Component {
                                 onChange={(event) => this.handleOnChangeReason(event)}
                                 disabled
                             />
-                            <div class="left">BỆNH NHÂN KÍ</div>
-                    <div class="right">XÁC NHẬN CỦA BỆNH VIỆN</div>
+                            <div>BỆNH NHÂN KÍ</div>
+                    <div>BỆNH NHÂN KÍ</div>
                       
                     
             </ModalBody>

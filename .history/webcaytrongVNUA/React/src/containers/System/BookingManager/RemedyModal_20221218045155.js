@@ -47,7 +47,7 @@ class RemedyModal extends Component {
             this.setState({
                 email: this.props.dataModal.email,
                 phoneNumber: this.props.dataModal.phoneNumber,
-                patientName: this.props.dataModal.patientName,
+                firstName: this.props.dataModal.firstName,
                 address: this.props.dataModal.address,
                 plantName: this.props.dataModal.plantName,
                 timeType: this.props.dataModal.timeType,
@@ -129,7 +129,7 @@ class RemedyModal extends Component {
                 </div>
             <ModalBody
             >
-                    <div className={'modal-custom' + this.state.view }>
+                    <div className={'modal' + this.state.view }>
                        
                         <div id="buttons">
 
