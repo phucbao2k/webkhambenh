@@ -18,7 +18,7 @@ export default (sequelize, DataTypes) => {
         foreignKey: 'price', targetKey: 'keyMap',
         as: 'priceTypeDataPatient'
       })
-      Booking.belongsTo(models.User, { foreignKey: 'doctorId', targetKey: 'id', as: 'doctorNameData' })
+      Booking.belongsTo(models.User, { foreignKey: 'doctorId', targetKey: 'id', as: 'doctorData' })
     }
   };
   Booking.init({

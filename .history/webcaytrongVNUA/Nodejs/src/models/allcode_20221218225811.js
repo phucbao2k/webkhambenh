@@ -15,7 +15,7 @@ export default (sequelize, DataTypes) => {
       Allcode.hasMany(models.Doctor_Infor, { foreignKey: 'provinceId', as: 'provinceTypeData' })
       Allcode.hasMany(models.Doctor_Infor, { foreignKey: 'paymentId', as: 'paymentTypeData' })
       Allcode.hasMany(models.Booking, {foreignKey: 'timeType', as: 'timeTypeDataPatient' })
-      Allcode.hasMany(models.Booking, { foreignKey: 'price', as: 'priceTypeDataPatient' })
+      Allcode.hasMany(models.Booking, { foreignKey: 'pric', as: 'timeTypeDataPatient' })
     }
   };
   Allcode.init({

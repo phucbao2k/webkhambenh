@@ -211,7 +211,6 @@ class BookingModal extends Component {
                 <Modal
                     isOpen={isOpenModal}
                     className={'booking-modal-container'}
-                    size="lg"
                     style={{ maxWidth: '100vw', width: '100%' }}>
                     <div className="booking-modal-content" >
                         <div className="booking-modal-header">

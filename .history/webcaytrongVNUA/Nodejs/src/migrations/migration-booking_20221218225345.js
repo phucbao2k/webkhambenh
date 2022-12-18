@@ -44,11 +44,11 @@ module.exports = {
       reasons: {
         type: Sequelize.TEXT
       },
-      doctorName: {
-        type: Sequelize.STRING
+      phoneNumber: {
+        type: Sequelize.TEXT
       },
-      price: {
-        type: Sequelize.STRING
+      reasons: {
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,

@@ -45,7 +45,7 @@ module.exports = {
         type: Sequelize.TEXT
       },
       doctorName: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       price: {
         type: Sequelize.STRING
