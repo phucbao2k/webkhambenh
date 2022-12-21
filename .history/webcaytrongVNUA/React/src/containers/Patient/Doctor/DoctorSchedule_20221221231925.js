@@ -22,8 +22,8 @@ class DoctorSchedule extends Component {
     async componentDidMount() {
         let { language } = this.props;
         let allDays = this.getArrDays(language);
-        if(this.props.doctorIdFromParent ){
-            let res = await getScheduleDoctorByDate(this.props.doctorIdFromParent, allDays[0].value);
+        if(this.props.doctorIdFromParent && this.props.priceIdFromParent){
+            let res = await getScheduleDoctorByDate(this.props.doctorIdFromParent, allDays[0].value, pri);
             this.setState({
                 allAvailableTime: res.data ? res.data : []
             })
@@ -78,9 +78,9 @@ class DoctorSchedule extends Component {
                 allDays: allDays
             })
         }
-        if (this.props.doctorIdFromParent !== prevProps.doctorIdFromParent ) {
+        if (this.props.doctorIdFromParent !== prevProps.doctorIdFromParent && this.props.priceIdFromParent !== prevProps.priceIdFromParent ) {
             let allDays = this.getArrDays(this.props.language);
-            let res = await getScheduleDoctorByDate(this.props.doctorIdFromParent, allDays[0].value);
+            let res = await getScheduleDoctorByDate(this.props.doctorIdFromParent, allDays[0].value, this.props.priceIdFromParent);
             this.setState({
                 allAvailableTime: res.data ? res.data : []
             })
@@ -91,9 +91,9 @@ class DoctorSchedule extends Component {
         if (this.props.doctorIdFromParent && this.props.doctorIdFromParent !== -1
            ) {
             let doctorId = this.props.doctorIdFromParent;
-         
+           let priceId = this.props.priceIdFromParent
             let date = event.target.value
-            let res = await getScheduleDoctorByDate(doctorId, date);
+            let res = await getScheduleDoctorByDate(doctorId, date, priceId);
             if (res && res.errCode === 0) {
                 this.setState({
                     allAvailableTime: res.data ? res.data : []

@@ -130,7 +130,7 @@ priceId: priceId
         let { language } = this.props;
         if (dataTime && !_.isEmpty(dataTime)) {
             let time = language === LANGUAGES.VI ? dataTime.timeTypeData.valueVi : dataTime.timeTypeData.valueEn;
-            // let price = language === LANGUAGES.VI ? dataTime.priceTypeDataPatient.valueVi : dataTime.priceTypeDataPatient.valueEn;
+            let price = language === LANGUAGES.VI ? dataTime.priceTypeDataPatient.valueVi : dataTime.priceTypeDataPatient.valueEn;
             let date = language === LANGUAGES.VI ?
                 moment.unix(+dataTime.date / 1000).format('dddd -DD/MM/YYYY') :
                 moment.unix(+dataTime.date / 1000).locale('en').format('ddd- MM/DD/YYYY');
@@ -139,7 +139,7 @@ priceId: priceId
                 moment.unix(+dataTime.birthdays / 1000).locale('en').format('ddd- MM/DD/YYYY');
          
        
-            return `${time} - ${date} `;
+            return `${time} - ${date} - ${price}`;
 
         }
         return ''

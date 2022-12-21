@@ -48,7 +48,7 @@ renderTimeBooking = (dataTime) => {
     if( dataTime && !_.isEmpty(dataTime)){
         let time = language === LANGUAGES.VI ?
         dataTime.timeTypeData.valueVi : dataTime.timeTypeData.valueEn;
-        // let price = language === LANGUAGES.VI ? dataTime.priceTypeDataPatient.valueVi : dataTime.priceTypeDataPatient.valueEn;
+       
         let date = language === LANGUAGES.VI ?
         //ta phải chia cho 1000 vì biến chứa giá trị đơn vị thời gian của js(dataTime.date) ở trên, được tính theo milisecond
         //còn unix lại tính theo second
@@ -56,7 +56,7 @@ renderTimeBooking = (dataTime) => {
             moment.unix(+dataTime.date / 1000).locale('en').format('ddd -MM/DD/YYYY');
             return(
                 <>
-                <div>{time} - {date} </div>
+                <div>{time} - {date} - {price}</div>
                 <div><FormattedMessage id="patient.booking-modal.priceBooking"/></div>
                 </>
             )
