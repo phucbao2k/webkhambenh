@@ -1,6 +1,9 @@
 import { Sequelize } from 'sequelize';
+require('dotenv').config();
 // Option 3: Passing parameters separately (other dialects)
-const sequelize = new Sequelize('tabaophuc', 'root', null, {
+const sequelize = new Sequelize(
+  process.env.DB_DATABASE_NAME,
+  process.env.DB{
   host: 'localhost',
   dialect: 'mysql',
   logging: false
@@ -14,3 +17,4 @@ let connectDB = async () => {
   }
 }
 export default connectDB;
+//

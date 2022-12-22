@@ -1,4 +1,5 @@
 import { Sequelize } from 'sequelize';
+re
 // Option 3: Passing parameters separately (other dialects)
 const sequelize = new Sequelize('tabaophuc', 'root', null, {
   host: 'localhost',
@@ -14,3 +15,4 @@ let connectDB = async () => {
   }
 }
 export default connectDB;
+//
