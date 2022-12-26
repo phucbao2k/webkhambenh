@@ -294,7 +294,7 @@ class UserRedux extends Component {
               </div>
               <div className="col-md-3 mb-3">
                 <label htmlFor="validationServer04"> <FormattedMessage id="create-user.phonenumber" /></label>
-                <input type="number" maxLength="10" className="form-control " id="validationServer04" placeholder="..." required
+                <input type="number" max className="form-control " id="validationServer04" placeholder="..." required
                   value={phoneNumber}
                   onChange={(event) => { this.onChangeInput(event, 'phoneNumber') }} 
                   disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false}/>
