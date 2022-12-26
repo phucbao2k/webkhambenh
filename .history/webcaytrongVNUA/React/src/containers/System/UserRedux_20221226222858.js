@@ -60,15 +60,13 @@ class UserRedux extends Component {
       errors.push("lastName");
     }
     if (this.state.password === "") {
-      toast.error("Invalid password input");
+      toast.error("Invalid password");
       errors.push("password");
     }
     if (this.state.phoneNumber === "") {
-      toast.error("Invalid phone number input");
       errors.push("phoneNumber");
     }
     if (this.state.address === "") {
-      toast.error("Invalid address input");
       errors.push("address");
     }
 

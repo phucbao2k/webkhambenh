@@ -8,8 +8,11 @@ import * as actions from '../../store/actions';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
 import { toast } from 'react-toastify';
-
-
+const isValidEmail = email =>
+  // eslint-disable-next-line no-useless-escape
+  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    email
+  );
 class UserRedux extends Component {
 
   constructor(props) {
@@ -20,7 +23,7 @@ class UserRedux extends Component {
       roleIdArr: [],
       isOpen: false,
       previewImgURL: '',
-      errors: [],
+      errors: []
       email: '',
       password: '',
       firstName: '',
@@ -34,7 +37,6 @@ class UserRedux extends Component {
       action: '',
       userEditId: '',
     };
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   async componentDidMount() {
@@ -46,53 +48,15 @@ class UserRedux extends Component {
   // isValidEmail = (email) => {
   //   return /\S+@\S+\.\S+/.test(email);
   // }
-  handleSubmit() {
-   
-
-    //VALIDATE
-    var errors = [];
-    if (this.state.firstName === "") {
-      toast.error("Invalid first name input");
-      errors.push("firstName");
-    }
-    if (this.state.lastName === "") {
-      toast.error("Invalid last name input");
-      errors.push("lastName");
-    }
-    if (this.state.password === "") {
-      toast.error("Invalid password input");
-      errors.push("password");
-    }
-    if (this.state.phoneNumber === "") {
-      toast.error("Invalid phone number input");
-      errors.push("phoneNumber");
-    }
-    if (this.state.address === "") {
-      toast.error("Invalid address input");
-      errors.push("address");
+  handleChangeEmail = (event) => {
+    if (!isValidEmail(event.target.value)) {
+      toast.error('Email is invalid');
+    } else {
+      
     }
 
-    //email
-    const expression = /\S+@\S+\.\S+/;
-    var validEmail = expression.test(String(this.state.email).toLowerCase());
-
-    if (!validEmail) {
-      toast.error("Invalid email");
-      errors.push("email");
-    }
-
-    this.setState({
-      errors: errors
-    });
-
-     for (let i = 0; i < errors.length; i++) {
-      if (i>0) {
-        toast.error("Error! Please enter valid ")
-        break;
-      }
-    }
-    return errors.length;
-  }
+   return(event.target.value);
+  };
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevProps.genderRedux !== this.props.genderRedux
 
@@ -157,10 +121,8 @@ class UserRedux extends Component {
     })
   }
   handleSaveUser = () => {
-    let errors = [];
-    
-    errors.length = this.handleSubmit();
-    if (errors.length > 0) return;
+    let isValid = this.checkValidateInput();
+    if (isValid === false) return;
     let { action } = this.state;
     if (action === CRUD_ACTIONS.CREATE) {
       this.props.createNewUser({
@@ -194,18 +156,18 @@ class UserRedux extends Component {
 
 
   }
-  // checkValidateInput = () => {
-  //   let isValid = true;
-  //   let arrCheck = ['email', 'password', 'firstName', 'lastName', 'address', 'phoneNumber']
-  //   for (let i = 0; i < arrCheck.length; i++) {
-  //     if (!this.state[arrCheck[i]]) {
-  //       isValid = false;
-  //       alert('This input is required: ' + arrCheck[i]);
-  //       break;
-  //     }
-  //   }
-  //   return isValid;
-  // }
+  checkValidateInput = () => {
+    let isValid = true;
+    let arrCheck = ['email', 'password', 'firstName', 'lastName', 'address', 'phoneNumber']
+    for (let i = 0; i < arrCheck.length; i++) {
+      if (!this.state[arrCheck[i]]) {
+        isValid = false;
+        alert('This input is required: ' + arrCheck[i]);
+        break;
+      }
+    }
+    return isValid;
+  }
   onChangeInput = (event, id) => {
     let copyState = { ...this.state }
     copyState[id] = event.target.value;
@@ -266,7 +228,7 @@ class UserRedux extends Component {
                   </div>
                   <input type="email" className="form-control" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required
                     value={email}
-                    onChange={(event) => { this.onChangeInput(event, 'email') }}
+                    onChange={(event) => { this.handleChangeEmail(event, 'email') }}
                     disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false} />
 
                 </div>
@@ -303,7 +265,7 @@ class UserRedux extends Component {
               <div className="form-group col-md-3 mb-3">
                 <label htmlFor="validationServerUsername"> <FormattedMessage id="create-user.roleid" /></label>
                 <select id="inputState" className="form-control"
-                  //thêm dữ liệu vào option chọn roleId qua valueEn, valueVi đã lấy được từ redux...
+//thêm dữ liệu vào option chọn roleId qua valueEn, valueVi đã lấy được từ redux...
                   onChange={(event) => { this.onChangeInput(event, 'role') }}
                   value={role}>
                   {roleIds && roleIds.length > 0 && roleIds.map((item, index) => {
@@ -352,8 +314,8 @@ class UserRedux extends Component {
                 <label htmlFor="validationServer04"> <FormattedMessage id="create-user.phonenumber" /></label>
                 <input type="number" maxLength="10" className="form-control " id="validationServer04" placeholder="..." required
                   value={phoneNumber}
-                  onChange={(event) => { this.onChangeInput(event, 'phoneNumber') }}
-                  disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false} />
+                  onChange={(event) => { this.onChangeInput(event, 'phoneNumber') }} 
+                  disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false}/>
 
               </div>
 

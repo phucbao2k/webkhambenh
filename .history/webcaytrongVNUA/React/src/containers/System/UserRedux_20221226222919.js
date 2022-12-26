@@ -68,7 +68,7 @@ class UserRedux extends Component {
       errors.push("phoneNumber");
     }
     if (this.state.address === "") {
-      toast.error("Invalid address input");
+      toast.error("Invalid email");
       errors.push("address");
     }
 

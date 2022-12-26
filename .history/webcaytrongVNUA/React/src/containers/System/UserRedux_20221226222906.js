@@ -64,11 +64,10 @@ class UserRedux extends Component {
       errors.push("password");
     }
     if (this.state.phoneNumber === "") {
-      toast.error("Invalid phone number input");
+      toast.error("Invalid email");
       errors.push("phoneNumber");
     }
     if (this.state.address === "") {
-      toast.error("Invalid address input");
       errors.push("address");
     }
 

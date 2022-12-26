@@ -52,23 +52,18 @@ class UserRedux extends Component {
     //VALIDATE
     var errors = [];
     if (this.state.firstName === "") {
-      toast.error("Invalid first name input");
       errors.push("firstName");
     }
     if (this.state.lastName === "") {
-      toast.error("Invalid last name input");
       errors.push("lastName");
     }
     if (this.state.password === "") {
-      toast.error("Invalid password input");
       errors.push("password");
     }
     if (this.state.phoneNumber === "") {
-      toast.error("Invalid phone number input");
       errors.push("phoneNumber");
     }
     if (this.state.address === "") {
-      toast.error("Invalid address input");
       errors.push("address");
     }
 
@@ -77,7 +72,6 @@ class UserRedux extends Component {
     var validEmail = expression.test(String(this.state.email).toLowerCase());
 
     if (!validEmail) {
-      toast.error("Invalid email");
       errors.push("email");
     }
 
@@ -87,7 +81,7 @@ class UserRedux extends Component {
 
      for (let i = 0; i < errors.length; i++) {
       if (i>0) {
-        toast.error("Error! Please enter valid ")
+        toast.error("Error!")
         break;
       }
     }
