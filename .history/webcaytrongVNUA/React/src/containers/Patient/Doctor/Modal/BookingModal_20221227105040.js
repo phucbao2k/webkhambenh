@@ -201,7 +201,7 @@ priceId: priceId
             errors.push("reasons");
         }
     
-        if (this.state.phoneNumber === "" || this.state.phoneNumber.length > 11) {
+        if (this.state.phoneNumber === "") {
             toast.error("Invalid phone number input");
             errors.push("phoneNumber");
         }

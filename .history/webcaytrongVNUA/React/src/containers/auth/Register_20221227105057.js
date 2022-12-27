@@ -61,7 +61,7 @@ class Register extends Component {
             errors.push("lastName");
         }
 
-        if (this.state.phoneNumber === "" || this.state.phoneNumber.length > 11) {
+        if (this.state.phoneNumber === "") {
             toast.error("Invalid phone number input");
             errors.push("phoneNumber");
         }
@@ -102,12 +102,14 @@ class Register extends Component {
 
         errors.length = this.handleSubmit();
         if (errors.length > 0) return;
-        else {
+        if (errors.length = 0) {
             //gọi api để tạo modal
             this.props.createNewUser(this.state, 'DONE!');
             toast.success("Create new user success!")
         }
-        
+        else{
+            toast.error("Error! Please check the entered fields")
+        }
     }
     render() {
         return (

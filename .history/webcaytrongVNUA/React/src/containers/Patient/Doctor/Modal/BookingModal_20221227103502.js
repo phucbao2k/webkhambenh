@@ -20,6 +20,7 @@ class BookingModal extends Component {
             phoneNumber: '',
             email: '',
             address: '',
+            reason: '',
             plantName: '',
             specialtyName: '',
             // selectedGender: '',
@@ -31,8 +32,9 @@ class BookingModal extends Component {
             isOpen: false,
             birthday: '',
             reasons: '',
+            birthdays: '',
            priceId: '',
-           errors: []
+           er
         }
 
 
@@ -192,34 +194,25 @@ priceId: priceId
 
         //VALIDATE
         var errors = [];
-        if (this.state.fullName === "") {
-            toast.error("Invalid full name input");
-            errors.push("fullName");
+        if (this.state.firstName === "") {
+            toast.error("Invalid first name input");
+            errors.push("firstName");
         }
-        if (this.state.reasons === "") {
-            toast.error("Invalid reasons input");
-            errors.push("reasons");
+        if (this.state.lastName === "") {
+            toast.error("Invalid last name input");
+            errors.push("lastName");
         }
-    
-        if (this.state.phoneNumber === "" || this.state.phoneNumber.length > 11) {
+        if (this.state.password === "") {
+            toast.error("Invalid password input");
+            errors.push("password");
+        }
+        if (this.state.phoneNumber === "") {
             toast.error("Invalid phone number input");
             errors.push("phoneNumber");
         }
         if (this.state.address === "") {
             toast.error("Invalid address input");
             errors.push("address");
-        }
-        if (this.state.plantName === "") {
-            toast.error("Invalid plantName input");
-            errors.push("plantName");
-        }
-        if (this.state.specialtyName === "") {
-            toast.error("Invalid specialtyName input");
-            errors.push("specialtyName");
-        }
-        if (this.state.image === "") {
-            toast.error("Invalid image input");
-            errors.push("image");
         }
 
         //email
@@ -244,14 +237,10 @@ priceId: priceId
         return errors.length;
     }
     handleConfirmBooking = async () => {
-        let errors = [];
-
-        errors.length = this.handleSubmit();
-        if (errors.length > 0) return;
         //date là truyền timestamp lên db 
         //timeString truyền human date lên nodemailer
         let date = new Date(this.state.birthday).getTime();
-        // let birthdays = new Date(this.state.birthdays).getTime();
+        let birthdays = new Date(this.state.birthdays).getTime();
         let timeString = this.buildTimeBooking(this.props.dataTime);
    let doctorName = this.buildDoctorName(this.props.dataTime);
 
@@ -263,7 +252,7 @@ priceId: priceId
             reasons: this.state.reasons,
             date: this.props.dataTime.date,
             birthday: date,
-            // birthdays: birthdays,
+            birthdays: birthdays,
             plantName: this.state.plantName,
             specialtyName: this.state.specialtyName,
             // selectedGender: this.state.selectedGender.value,
@@ -333,7 +322,7 @@ priceId: priceId
                                 </div>
                                 <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.phoneNumber" /></label>
-                                    <input type="number" maxLength="11" className="form-control"
+                                    <input className="form-control"
                                         onChange={(event) => this.handleOnChangeInput(event, 'phoneNumber')} />
                                 </div>
                                 <div className="col-6 form-group">

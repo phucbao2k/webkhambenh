@@ -39,7 +39,7 @@ class ManageSpecialty extends Component {
 
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
-        //specialty trên form
+        //specilty trên form
         if (prevProps.specialtyRedux !== this.props.specialtyRedux) {
             let arrSpecialties = this.props.specialtyRedux;
             this.setState({
@@ -47,7 +47,7 @@ class ManageSpecialty extends Component {
                 specialty: arrSpecialties && arrSpecialties.length > 0 ? arrSpecialties[0].keyMap : '',
             })
         }
-        //list specialty bên dưới
+        //list specialty
         if (prevProps.listSpecialties !== this.props.listSpecialties) {
             let arrSpecialties = this.props.specialtyRedux;
             this.setState({
@@ -122,7 +122,7 @@ class ManageSpecialty extends Component {
             ...copyState,
         })
     }
-//sự kiện bấm icon sửa để upsert thông tin
+
     handleEditSpecialtyFromParent = (specialty) => {
         let imageBase64 = '';
         if (specialty.image) {

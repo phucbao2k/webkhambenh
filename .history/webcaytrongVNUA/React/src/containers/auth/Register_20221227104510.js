@@ -52,16 +52,16 @@ class Register extends Component {
 
         //VALIDATE
         var errors = [];
-        if (this.state.firstName === "") {
-            toast.error("Invalid first name input");
-            errors.push("firstName");
+        if (this.state.fullName === "") {
+            toast.error("Invalid full name input");
+            errors.push("fullName");
         }
-        if (this.state.lastName === "") {
-            toast.error("Invalid lastName input");
-            errors.push("lastName");
+        if (this.state.reasons === "") {
+            toast.error("Invalid reasons input");
+            errors.push("reasons");
         }
 
-        if (this.state.phoneNumber === "" || this.state.phoneNumber.length > 11) {
+        if (this.state.phoneNumber === "") {
             toast.error("Invalid phone number input");
             errors.push("phoneNumber");
         }
@@ -69,11 +69,18 @@ class Register extends Component {
             toast.error("Invalid address input");
             errors.push("address");
         }
-        if (this.state.password === "") {
-            toast.error("Invalid password input");
-            errors.push("password");
+        if (this.state.plantName === "") {
+            toast.error("Invalid plantName input");
+            errors.push("plantName");
         }
-       
+        if (this.state.specialtyName === "") {
+            toast.error("Invalid specialtyName input");
+            errors.push("specialtyName");
+        }
+        if (this.state.image === "") {
+            toast.error("Invalid image input");
+            errors.push("image");
+        }
 
         //email
         const expression = /\S+@\S+\.\S+/;
@@ -98,16 +105,15 @@ class Register extends Component {
     }
   
     handleAddNewUser = () => {
-        let errors = [];
-
-        errors.length = this.handleSubmit();
-        if (errors.length > 0) return;
-        else {
+        let isValid = this.checkValidateInput();
+        if (isValid === true) {
             //gọi api để tạo modal
             this.props.createNewUser(this.state, 'DONE!');
             toast.success("Create new user success!")
         }
-        
+        else{
+            toast.error("Error! Please check the entered fields")
+        }
     }
     render() {
         return (
@@ -136,7 +142,7 @@ class Register extends Component {
                         </div>
                         <div className="input-container ">
                             <label><FormattedMessage id="create-user.phonenumber" /></label>
-                            <input type="number" maxLength="11"
+                            <input type="text"
                                 onChange={(event) => { this.handleOnChangeInput(event, "phoneNumber") }}
                                 value={this.state.phoneNumber}></input>
                         </div>

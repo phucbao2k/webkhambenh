@@ -61,7 +61,7 @@ class Register extends Component {
             errors.push("lastName");
         }
 
-        if (this.state.phoneNumber === "" || this.state.phoneNumber.length > 11) {
+        if (this.state.phoneNumber === "") {
             toast.error("Invalid phone number input");
             errors.push("phoneNumber");
         }
@@ -73,7 +73,14 @@ class Register extends Component {
             toast.error("Invalid password input");
             errors.push("password");
         }
-       
+        if (this.state.specialtyName === "") {
+            toast.error("Invalid specialtyName input");
+            errors.push("specialtyName");
+        }
+        if (this.state.image === "") {
+            toast.error("Invalid image input");
+            errors.push("image");
+        }
 
         //email
         const expression = /\S+@\S+\.\S+/;
@@ -98,16 +105,15 @@ class Register extends Component {
     }
   
     handleAddNewUser = () => {
-        let errors = [];
-
-        errors.length = this.handleSubmit();
-        if (errors.length > 0) return;
-        else {
+        let isValid = this.checkValidateInput();
+        if (isValid === true) {
             //gọi api để tạo modal
             this.props.createNewUser(this.state, 'DONE!');
             toast.success("Create new user success!")
         }
-        
+        else{
+            toast.error("Error! Please check the entered fields")
+        }
     }
     render() {
         return (
@@ -136,7 +142,7 @@ class Register extends Component {
                         </div>
                         <div className="input-container ">
                             <label><FormattedMessage id="create-user.phonenumber" /></label>
-                            <input type="number" maxLength="11"
+                            <input type="text"
                                 onChange={(event) => { this.handleOnChangeInput(event, "phoneNumber") }}
                                 value={this.state.phoneNumber}></input>
                         </div>

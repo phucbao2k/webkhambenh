@@ -201,7 +201,7 @@ priceId: priceId
             errors.push("reasons");
         }
     
-        if (this.state.phoneNumber === "" || this.state.phoneNumber.length > 11) {
+        if (this.state.phoneNumber === "") {
             toast.error("Invalid phone number input");
             errors.push("phoneNumber");
         }
@@ -244,10 +244,6 @@ priceId: priceId
         return errors.length;
     }
     handleConfirmBooking = async () => {
-        let errors = [];
-
-        errors.length = this.handleSubmit();
-        if (errors.length > 0) return;
         //date là truyền timestamp lên db 
         //timeString truyền human date lên nodemailer
         let date = new Date(this.state.birthday).getTime();
@@ -333,7 +329,7 @@ priceId: priceId
                                 </div>
                                 <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.phoneNumber" /></label>
-                                    <input type="number" maxLength="11" className="form-control"
+                                    <input className="form-control"
                                         onChange={(event) => this.handleOnChangeInput(event, 'phoneNumber')} />
                                 </div>
                                 <div className="col-6 form-group">

@@ -110,53 +110,6 @@ class UserRedux extends Component {
       isOpen: true
     })
   }
-  handleSubmit() {
-
-
-    //VALIDATE
-    var errors = [];
-    if (this.state.firstName === "") {
-      toast.error("Invalid first name input");
-      errors.push("firstName");
-    }
-    if (this.state.lastName === "") {
-      toast.error("Invalid last name input");
-      errors.push("lastName");
-    }
-    if (this.state.password === "") {
-      toast.error("Invalid password input");
-      errors.push("password");
-    }
-    if (this.state.phoneNumber === "") {
-      toast.error("Invalid phone number input");
-      errors.push("phoneNumber");
-    }
-    if (this.state.address === "") {
-      toast.error("Invalid address input");
-      errors.push("address");
-    }
-
-    //email
-    const expression = /\S+@\S+\.\S+/;
-    var validEmail = expression.test(String(this.state.email).toLowerCase());
-
-    if (!validEmail) {
-      toast.error("Invalid email");
-      errors.push("email");
-    }
-
-    this.setState({
-      errors: errors
-    });
-
-    for (let i = 0; i < errors.length; i++) {
-      if (i > 0) {
-        toast.error("Error! Please enter valid ")
-        break;
-      }
-    }
-    return errors.length;
-  }
   handleSaveUser = () => {
     let errors = [];
     
@@ -351,7 +304,7 @@ class UserRedux extends Component {
               </div>
               <div className="col-md-3 mb-3">
                 <label htmlFor="validationServer04"> <FormattedMessage id="create-user.phonenumber" /></label>
-                <input type="number" maxLength="11" className="form-control " id="validationServer04" placeholder="..." required
+                <input type="number" maxLength="10" className="form-control " id="validationServer04" placeholder="..." required
                   value={phoneNumber}
                   onChange={(event) => { this.onChangeInput(event, 'phoneNumber') }}
                   disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false} />

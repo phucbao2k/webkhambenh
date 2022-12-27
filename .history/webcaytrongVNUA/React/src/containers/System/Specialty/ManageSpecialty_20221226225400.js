@@ -122,7 +122,7 @@ class ManageSpecialty extends Component {
             ...copyState,
         })
     }
-//sự kiện bấm icon sửa để upsert thông tin
+//sự kiện bấm icon
     handleEditSpecialtyFromParent = (specialty) => {
         let imageBase64 = '';
         if (specialty.image) {

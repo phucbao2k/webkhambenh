@@ -332,11 +332,7 @@ priceId: priceId
                                         onChange={(event) => this.handleOnChangeInput(event, 'fullName')} />
                                 </div>
                                 <div className="col-6 form-group">
-                                    <label><FormattedMessage id="patient.booking-modal.phoneNumber" /></label>
-                                    <input type="number" maxLength="11" className="form-control"
-                                        onChange={(event) => this.handleOnChangeInput(event, 'phoneNumber')} />
-                                </div>
-                                <div className="col-6 form-group">
+                                    <label><FormattedMessaa
                                     <label><FormattedMessage id="patient.booking-modal.email" /></label>
                                     <input className="form-control"
                                         onChange={(event) => this.handleOnChangeInput(event, 'email')} />

@@ -1,50 +1,62 @@
 import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
-import './Register.scss';
-import { toast } from "react-toastify";
+import './UserManage.scss';
 import { emitter } from '../../utils/emitter';
+import _ from 'lodash';
+
+//lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-class Register extends Component {
+class ModalEditUser extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
+            id: '',
             email: '',
             password: '',
             firstName: '',
             lastName: ' ',
-            address: '',
-            phoneNumber: '',
-           
-        };
-        this.listenToEmitter();
-    
+            address: ''
+        }
+
     }
     listenToEmitter() {
         emitter.on('EVENT_CLEAR_MODAL_DATA', () => {
             this.setState({
+                id: '',
                 email: '',
                 password: '',
                 firstName: '',
                 lastName: ' ',
-                address: '',
-                phoneNumber: '',
-              
+                address: ''
             })
         })
     }
 
     componentDidMount() {
+        let user = this.props.currentUser;
+        if (user && !_.isEmpty(user)) {
+            {
+                this.setState({
+                    id: user.id,
+                    email: user.email,
+                    password: 'hardcode',
+                    firstName: user.firstName,
+                    lastName: user.lastName,
+                    address: user.address
+                })
+            }
+        }
     }
     toggle = () => {
         this.props.toggleFromParent();
     }
     handleOnChangeInput = (event, id) => {
-        let input = { ...this.state };
-        input[id] = event.target.value;
+        let copyState = { ...this.state };
+        copyState[id] = event.target.value;
         this.setState({
-            ...input
+            ...copyState
         });
     }
     handleSubmit() {
@@ -57,11 +69,11 @@ class Register extends Component {
             errors.push("firstName");
         }
         if (this.state.lastName === "") {
-            toast.error("Invalid lastName input");
+            toast.error("Invalid last name input");
             errors.push("lastName");
         }
-
-        if (this.state.phoneNumber === "" || this.state.phoneNumber.length > 11) {
+    
+        if (this.state.phoneNumber === "") {
             toast.error("Invalid phone number input");
             errors.push("phoneNumber");
         }
@@ -69,11 +81,6 @@ class Register extends Component {
             toast.error("Invalid address input");
             errors.push("address");
         }
-        if (this.state.password === "") {
-            toast.error("Invalid password input");
-            errors.push("password");
-        }
-       
 
         //email
         const expression = /\S+@\S+\.\S+/;
@@ -96,18 +103,43 @@ class Register extends Component {
         }
         return errors.length;
     }
-  
-    handleAddNewUser = () => {
+    handleSaveUser = () => {
         let errors = [];
 
         errors.length = this.handleSubmit();
         if (errors.length > 0) return;
-        else {
-            //gọi api để tạo modal
-            this.props.createNewUser(this.state, 'DONE!');
-            toast.success("Create new user success!")
+        let { action } = this.state;
+        if (action === CRUD_ACTIONS.CREATE) {
+            this.props.createNewUser({
+                email: this.state.email,
+                password: this.state.password,
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                address: this.state.address,
+                phoneNumber: this.state.phoneNumber,
+                gender: this.state.gender,
+                roleId: this.state.role,
+                positionId: this.state.position,
+                avatar: this.state.avatar
+            })
         }
-        
+        if (action === CRUD_ACTIONS.EDIT) {
+            this.props.editUserRedux({
+                id: this.state.userEditId,
+                email: this.state.email,
+                password: this.state.password,
+                firstName: this.state.firstName,
+                lastName: this.state.lastName,
+                address: this.state.address,
+                phoneNumber: this.state.phoneNumber,
+                gender: this.state.gender,
+                roleId: this.state.role,
+                positionId: this.state.position,
+                avatar: this.state.avatar
+            })
+        }
+
+
     }
     render() {
         return (
@@ -115,9 +147,8 @@ class Register extends Component {
                 isOpen={this.props.isOpen}
                 toggle={() => { this.toggle() }}
                 className={'modal-user-container'}
-                size="lg"
-                style={{ maxWidth: '100vw', width: '100%' }}>
-                <ModalHeader toggle={() => { this.toggle() }}>REGISTER:</ModalHeader>
+                size="lg">
+                <ModalHeader toggle={() => { this.toggle() }}>EDIT USER:</ModalHeader>
                 <ModalBody>
 
                     <div className="modal-user-body">
@@ -125,35 +156,32 @@ class Register extends Component {
                             <label>Email</label>
                             <input type="text"
                                 onChange={(event) => { this.handleOnChangeInput(event, "email") }}
-                                value={this.state.email}></input>
+                                value={this.state.email}
+                                disabled>
+                            </input>
                         </div>
                         <div className="input-container ">
-                            <label><FormattedMessage id="create-user.password"/></label>
+                            <label>Password</label>
                             <input type="password"
                                 onChange={(event) => { this.handleOnChangeInput(event, "password") }}
                                 value={this.state.password}
+                                disabled
                             ></input>
                         </div>
                         <div className="input-container ">
-                            <label><FormattedMessage id="create-user.phonenumber" /></label>
-                            <input type="number" maxLength="11"
-                                onChange={(event) => { this.handleOnChangeInput(event, "phoneNumber") }}
-                                value={this.state.phoneNumber}></input>
-                        </div>
-                        <div className="input-container ">
-                            <label><FormattedMessage id="create-user.firstname" /></label>
+                            <label>First Name</label>
                             <input type="text"
                                 onChange={(event) => { this.handleOnChangeInput(event, "firstName") }}
                                 value={this.state.firstName}></input>
                         </div>
                         <div className="input-container ">
-                            <label><FormattedMessage id="create-user.lastname" /></label>
+                            <label>Last Name</label>
                             <input type="text"
                                 onChange={(event) => { this.handleOnChangeInput(event, "lastName") }}
                                 value={this.state.lastName}></input>
                         </div>
-                        <div className="input-container ">
-                            <label><FormattedMessage id="create-user.address" /></label>
+                        <div className="input-container max-width-input">
+                            <label>Address</label>
                             <input type="text"
                                 onChange={(event) => { this.handleOnChangeInput(event, "address") }}
                                 value={this.state.address}></input>
@@ -163,7 +191,7 @@ class Register extends Component {
 
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" className="px-3" onClick={() => { this.handleAddNewUser() }}><FormattedMessage id="create-user.title" /></Button>
+                    <Button color="primary" className="px-3" onClick={() => { this.handleSaveUser() }}>Save Changes</Button>
                     <Button color="secondary" className="px-3" onClick={() => { this.toggle() }}>Cancel</Button>
                 </ModalFooter>
             </Modal>
@@ -174,7 +202,6 @@ class Register extends Component {
 
 const mapStateToProps = state => {
     return {
-        language: state.app.language
     };
 };
 
@@ -183,7 +210,7 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Register);
+export default connect(mapStateToProps, mapDispatchToProps)(ModalEditUser);
 
 
 
