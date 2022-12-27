@@ -177,13 +177,8 @@ class UserRedux extends Component {
         avatar: this.state.avatar
       })
     }
-
-   
-   
+    
     if (action === CRUD_ACTIONS.EDIT) {
-      let errors = [];
-      errors.length = this.handleSubmit();
-      if (errors.length > 0) return;
       this.props.editUserRedux({
         id: this.state.userEditId,
         email: this.state.email,
