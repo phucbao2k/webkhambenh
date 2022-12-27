@@ -441,6 +441,9 @@ phoneNumber: this.state.phoneNumber
                                
                             </div>
 
+                            
+                        </div>
+                       
                             <div className="col-4 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.specialty" /></label>
                                 <Select
@@ -451,7 +454,7 @@ phoneNumber: this.state.phoneNumber
                                     name="selectedSpecialty"
                                 />
                             </div>
-
+                           
                             <div className="col-4 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.note" /></label>
                                 <input className="form-control"
@@ -459,9 +462,6 @@ phoneNumber: this.state.phoneNumber
                                     value={this.state.note}
                                 />
                             </div>
-                        </div>
-                       
-                     
                         </div>
                   
                     <div className="container-fluid manage-doctor-editor">

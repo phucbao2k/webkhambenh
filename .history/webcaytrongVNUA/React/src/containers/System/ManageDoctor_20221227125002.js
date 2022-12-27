@@ -180,7 +180,7 @@ class ManageDoctor extends Component {
             toast.error("Invalid description input");
             errors.push("description");
         }
-        if (this.state.phoneNumber === "" && this.state.phoneNumber.length>11) {
+        if (this.state.phoneNumber === "") {
             toast.error("Invalid phone number input");
             errors.push("phoneNumber");
         }
@@ -201,23 +201,29 @@ class ManageDoctor extends Component {
             errors.push("selectedPayment");
         }
         if (this.state.selectedPrice === "") {
-            toast.error("Invalid price input");
+            toast.error("Invalid doctor input");
             errors.push("selectedPrice");
         }
         if (this.state.selectedSpecialty === "") {
-            toast.error("Invalid specialty input");
+            toast.error("Invalid doctor input");
             errors.push("selectedSpecialty");
         }
         if (this.state.selectProvince === "") {
-            toast.error("Invalid province input");
+            toast.error("Invalid doctor input");
             errors.push("selectProvince");
         }
-        if (this.state.selectedClinic === "") {
-            toast.error("Invalid clinic input");
-            errors.push("selectedClinic");
+        if (this.state.selectProvince === "") {
+            toast.error("Invalid doctor input");
+            errors.push("selectProvince");
         }
         //email
-      
+        const expression = /\S+@\S+\.\S+/;
+        var validEmail = expression.test(String(this.state.email).toLowerCase());
+
+        if (!validEmail) {
+            toast.error("Invalid email");
+            errors.push("email");
+        }
 
         this.setState({
             errors: errors
@@ -232,10 +238,6 @@ class ManageDoctor extends Component {
         return errors.length;
     }
     handleSaveContentMarkdown = () => {
-        let errors = [];
-
-        errors.length = this.handleSubmit();
-        if (errors.length > 0) return;
         let { hasOldData } = this.state;
         this.props.saveDetailDoctor({
             contentHTML: this.state.contentHTML,
@@ -380,7 +382,7 @@ phoneNumber: this.state.phoneNumber
                         <div className=" more-infor-extra row">
                             <div className="col-4 form-group">
                                 <label>Phone Number</label>
-                                <input type="number" maxLength="11" className="form-control"
+                                <input className="form-control"
                                     onChange={(event) => this.handleOnChangeText(event, 'phoneNumber')}
                                     value={this.state.phoneNumber}
                                 />
@@ -441,6 +443,9 @@ phoneNumber: this.state.phoneNumber
                                
                             </div>
 
+                            
+                        </div>
+                        <div className="row">
                             <div className="col-4 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.specialty" /></label>
                                 <Select
@@ -451,8 +456,8 @@ phoneNumber: this.state.phoneNumber
                                     name="selectedSpecialty"
                                 />
                             </div>
-
-                            <div className="col-4 form-group">
+                           
+                            <div className="col-8 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.note" /></label>
                                 <input className="form-control"
                                     onChange={(event) => this.handleOnChangeText(event, 'note')}
@@ -460,10 +465,7 @@ phoneNumber: this.state.phoneNumber
                                 />
                             </div>
                         </div>
-                       
-                     
-                        </div>
-                  
+                    </div>
                     <div className="container-fluid manage-doctor-editor">
                         <MdEditor style={{ height: '300px' }} renderHTML={text => mdParser.render(text)}
                             onChange={this.handleEditorChange}

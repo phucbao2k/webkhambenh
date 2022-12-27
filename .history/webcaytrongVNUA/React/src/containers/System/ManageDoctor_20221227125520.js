@@ -180,7 +180,7 @@ class ManageDoctor extends Component {
             toast.error("Invalid description input");
             errors.push("description");
         }
-        if (this.state.phoneNumber === "" && this.state.phoneNumber.length>11) {
+        if (this.state.phoneNumber === "" && this.state.phoneNumber) {
             toast.error("Invalid phone number input");
             errors.push("phoneNumber");
         }
@@ -380,7 +380,7 @@ phoneNumber: this.state.phoneNumber
                         <div className=" more-infor-extra row">
                             <div className="col-4 form-group">
                                 <label>Phone Number</label>
-                                <input type="number" maxLength="11" className="form-control"
+                                <input className="form-control"
                                     onChange={(event) => this.handleOnChangeText(event, 'phoneNumber')}
                                     value={this.state.phoneNumber}
                                 />
@@ -441,6 +441,9 @@ phoneNumber: this.state.phoneNumber
                                
                             </div>
 
+                            
+                        </div>
+                        <div className="row">
                             <div className="col-4 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.specialty" /></label>
                                 <Select
@@ -451,8 +454,8 @@ phoneNumber: this.state.phoneNumber
                                     name="selectedSpecialty"
                                 />
                             </div>
-
-                            <div className="col-4 form-group">
+                           
+                            <div className="col-8 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.note" /></label>
                                 <input className="form-control"
                                     onChange={(event) => this.handleOnChangeText(event, 'note')}
@@ -460,10 +463,7 @@ phoneNumber: this.state.phoneNumber
                                 />
                             </div>
                         </div>
-                       
-                     
-                        </div>
-                  
+                    </div>
                     <div className="container-fluid manage-doctor-editor">
                         <MdEditor style={{ height: '300px' }} renderHTML={text => mdParser.render(text)}
                             onChange={this.handleEditorChange}

@@ -441,24 +441,7 @@ phoneNumber: this.state.phoneNumber
                                
                             </div>
 
-                            <div className="col-4 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.specialty" /></label>
-                                <Select
-                                    value={this.state.selectedSpecialty}
-                                    onChange={this.handleChangeSelectDoctorInfor}
-                                    options={this.state.listSpecialty}
-                                    placeholder={<FormattedMessage id="admin.manage-doctor.specialty" />}
-                                    name="selectedSpecialty"
-                                />
-                            </div>
-
-                            <div className="col-4 form-group">
-                                <label><FormattedMessage id="admin.manage-doctor.note" /></label>
-                                <input className="form-control"
-                                    onChange={(event) => this.handleOnChangeText(event, 'note')}
-                                    value={this.state.note}
-                                />
-                            </div>
+                            
                         </div>
                        
                      

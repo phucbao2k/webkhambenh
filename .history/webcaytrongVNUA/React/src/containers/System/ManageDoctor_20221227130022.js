@@ -441,6 +441,9 @@ phoneNumber: this.state.phoneNumber
                                
                             </div>
 
+                            
+                        </div>
+                       
                             <div className="col-4 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.specialty" /></label>
                                 <Select
@@ -451,17 +454,14 @@ phoneNumber: this.state.phoneNumber
                                     name="selectedSpecialty"
                                 />
                             </div>
-
-                            <div className="col-4 form-group">
+                           
+                            <div className="col-8 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.note" /></label>
                                 <input className="form-control"
                                     onChange={(event) => this.handleOnChangeText(event, 'note')}
                                     value={this.state.note}
                                 />
                             </div>
-                        </div>
-                       
-                     
                         </div>
                   
                     <div className="container-fluid manage-doctor-editor">

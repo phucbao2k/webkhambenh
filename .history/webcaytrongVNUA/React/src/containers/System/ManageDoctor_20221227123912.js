@@ -10,8 +10,8 @@ import MdEditor from 'react-markdown-editor-lite';
 import 'react-markdown-editor-lite/lib/index.css';
 import Select from 'react-select';
 import { getDetailInforDoctor } from '../../services/userService';
-import { toast } from 'react-toastify';
 const mdParser = new MarkdownIt();
+import toa
 // nếu muốn import 1 function thì ta dùng dấu ngoặc nhọn
 class ManageDoctor extends Component {
     // PROPS stands for properties and is being used for passing data from one component to another.
@@ -168,56 +168,35 @@ class ManageDoctor extends Component {
 
         //VALIDATE
         var errors = [];
-        if (this.state.contentHTML === "") {
-            toast.error("Invalid info content input");
-            errors.push("contentHTML");
+        if (this.state.firstName === "") {
+            toast.error("Invalid first name input");
+            errors.push("firstName");
         }
-        if (this.state.contentMarkdown === "") {
-            toast.error("Invalid info mardown input");
-            errors.push("contentMarkdown");
+        if (this.state.lastName === "") {
+            toast.error("Invalid last name input");
+            errors.push("lastName");
         }
-        if (this.state.description === "") {
-            toast.error("Invalid description input");
-            errors.push("description");
+        if (this.state.password === "") {
+            toast.error("Invalid password input");
+            errors.push("password");
         }
-        if (this.state.phoneNumber === "" && this.state.phoneNumber.length>11) {
+        if (this.state.phoneNumber === "") {
             toast.error("Invalid phone number input");
             errors.push("phoneNumber");
         }
-        if (this.state.addressClinic === "") {
-            toast.error("Invalid address clinic input");
-            errors.push("addressClinic");
+        if (this.state.address === "") {
+            toast.error("Invalid address input");
+            errors.push("address");
         }
-        if (this.state.nameClinic === "") {
-            toast.error("Invalid name clinic input");
-            errors.push("nameClinic");
-        }
-        if (this.state.selectedDoctor === "") {
-            toast.error("Invalid doctor input");
-            errors.push("selectedDoctor");
-        }
-        if (this.state.selectedPayment === "") {
-            toast.error("Invalid payment input");
-            errors.push("selectedPayment");
-        }
-        if (this.state.selectedPrice === "") {
-            toast.error("Invalid price input");
-            errors.push("selectedPrice");
-        }
-        if (this.state.selectedSpecialty === "") {
-            toast.error("Invalid specialty input");
-            errors.push("selectedSpecialty");
-        }
-        if (this.state.selectProvince === "") {
-            toast.error("Invalid province input");
-            errors.push("selectProvince");
-        }
-        if (this.state.selectedClinic === "") {
-            toast.error("Invalid clinic input");
-            errors.push("selectedClinic");
-        }
+
         //email
-      
+        const expression = /\S+@\S+\.\S+/;
+        var validEmail = expression.test(String(this.state.email).toLowerCase());
+
+        if (!validEmail) {
+            toast.error("Invalid email");
+            errors.push("email");
+        }
 
         this.setState({
             errors: errors
@@ -232,10 +211,6 @@ class ManageDoctor extends Component {
         return errors.length;
     }
     handleSaveContentMarkdown = () => {
-        let errors = [];
-
-        errors.length = this.handleSubmit();
-        if (errors.length > 0) return;
         let { hasOldData } = this.state;
         this.props.saveDetailDoctor({
             contentHTML: this.state.contentHTML,
@@ -380,7 +355,7 @@ phoneNumber: this.state.phoneNumber
                         <div className=" more-infor-extra row">
                             <div className="col-4 form-group">
                                 <label>Phone Number</label>
-                                <input type="number" maxLength="11" className="form-control"
+                                <input className="form-control"
                                     onChange={(event) => this.handleOnChangeText(event, 'phoneNumber')}
                                     value={this.state.phoneNumber}
                                 />
@@ -441,6 +416,9 @@ phoneNumber: this.state.phoneNumber
                                
                             </div>
 
+                            
+                        </div>
+                        <div className="row">
                             <div className="col-4 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.specialty" /></label>
                                 <Select
@@ -451,8 +429,8 @@ phoneNumber: this.state.phoneNumber
                                     name="selectedSpecialty"
                                 />
                             </div>
-
-                            <div className="col-4 form-group">
+                           
+                            <div className="col-8 form-group">
                                 <label><FormattedMessage id="admin.manage-doctor.note" /></label>
                                 <input className="form-control"
                                     onChange={(event) => this.handleOnChangeText(event, 'note')}
@@ -460,10 +438,7 @@ phoneNumber: this.state.phoneNumber
                                 />
                             </div>
                         </div>
-                       
-                     
-                        </div>
-                  
+                    </div>
                     <div className="container-fluid manage-doctor-editor">
                         <MdEditor style={{ height: '300px' }} renderHTML={text => mdParser.render(text)}
                             onChange={this.handleEditorChange}
