@@ -90,6 +90,8 @@ class ManageHandbook extends Component {
             })
         }
         if (action === CRUD_ACTIONS.EDIT) {
+            let isValid = this.checkValidateInput();
+            if (isValid === false) return;
             this.props.editHandbookRedux({
                 id: this.state.handbookEditId,
                 name: this.state.name,
@@ -169,8 +171,8 @@ class ManageHandbook extends Component {
                                     <input type="text" className="form-control" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required
                                         value={name}
                                         onChange={(event) => { this.onChangeInput(event, 'name') }}
-                                        // disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false} 
-                                        />
+                                    // disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false} 
+                                    />
 
                                 </div>
                             </div>

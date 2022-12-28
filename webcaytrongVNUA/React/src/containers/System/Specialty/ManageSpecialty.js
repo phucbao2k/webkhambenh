@@ -39,7 +39,6 @@ class ManageSpecialty extends Component {
 
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
-        //specialty trên bên dưới
         if (prevProps.specialtyRedux !== this.props.specialtyRedux) {
             let arrSpecialties = this.props.specialtyRedux;
             this.setState({
@@ -47,7 +46,6 @@ class ManageSpecialty extends Component {
                 specialty: arrSpecialties && arrSpecialties.length > 0 ? arrSpecialties[0].keyMap : '',
             })
         }
-        //specialty trên form
         if (prevProps.listSpecialties !== this.props.listSpecialties) {
             let arrSpecialties = this.props.specialtyRedux;
             this.setState({
@@ -92,6 +90,8 @@ class ManageSpecialty extends Component {
             })
         }
         if (action === CRUD_ACTIONS.EDIT) {
+            let isValid = this.checkValidateInput();
+            if (isValid === false) return;
             this.props.editSpecialtyRedux({
                 id: this.state.specialtyEditId,
                 name: this.state.name,
@@ -122,7 +122,7 @@ class ManageSpecialty extends Component {
             ...copyState,
         })
     }
-//sự kiện bấm icon sửa để upsert thông tin
+
     handleEditSpecialtyFromParent = (specialty) => {
         let imageBase64 = '';
         if (specialty.image) {
@@ -132,7 +132,7 @@ class ManageSpecialty extends Component {
         }
         this.setState({
             name: specialty.name,
-           
+
             avatar: '',
             previewImgURL: imageBase64,
             action: CRUD_ACTIONS.EDIT,
@@ -171,8 +171,8 @@ class ManageSpecialty extends Component {
                                     <input type="text" className="form-control" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required
                                         value={name}
                                         onChange={(event) => { this.onChangeInput(event, 'name') }}
-                                        // disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false} 
-                                        />
+                                    // disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false} 
+                                    />
 
                                 </div>
                             </div>

@@ -18,9 +18,9 @@ class ManageClinic extends Component {
         this.state = {
             descriptionMarkdown: '',
             descriptionHTML: '',
-           
+
             clinicArr: [],
-           
+
             isOpen: false,
             previewImgURL: '',
             name: '',
@@ -29,22 +29,22 @@ class ManageClinic extends Component {
             avatar: '',
             action: '',
             clinicEditId: '',
-          
+
         };
     }
 
     async componentDidMount() {
 
-        
+
         this.props.getClinicStart();
-        
+
     }
     componentDidUpdate(prevProps, prevState, snapshot) {
         //hành động hiển thị dãy clinic(đc cập nhật liên tục sau khi đc tạo vs redux)
         if (prevProps.clinicRedux !== this.props.clinicRedux) {
             let arrClinics = this.props.clinicRedux;
             this.setState({
-               clinicArr: arrClinics,
+                clinicArr: arrClinics,
                 clinic: arrClinics && arrClinics.length > 0 ? arrClinics[0].keyMap : '',
             })
         }
@@ -81,6 +81,7 @@ class ManageClinic extends Component {
             isOpen: true
         })
     }
+    //
     handleSaveClinic = () => {
         let isValid = this.checkValidateInput();
         if (isValid === false) return;
@@ -95,6 +96,8 @@ class ManageClinic extends Component {
             })
         }
         if (action === CRUD_ACTIONS.EDIT) {
+            let isValid = this.checkValidateInput();
+            if (isValid === false) return;
             this.props.editClinicRedux({
                 id: this.state.clinicEditId,
                 name: this.state.name,
@@ -126,7 +129,7 @@ class ManageClinic extends Component {
             ...copyState,
         })
     }
- 
+
     handleEditClinicFromParent = (clinic) => {
         let imageBase64 = '';
         if (clinic.image) {
@@ -152,8 +155,8 @@ class ManageClinic extends Component {
         })
     }
     render() {
-       console.log('check state', this.state)
-       
+        console.log('check state', this.state)
+
         let language = this.props.language;
         let { name, address
             , avatar, descriptionHTML, descriptionMarkdown } = this.state;
@@ -176,15 +179,15 @@ class ManageClinic extends Component {
                                     <input type="text" className="form-control" id="validationServerUsername" placeholder="..." aria-describedby="inputGroupPrepend3" required
                                         value={name}
                                         onChange={(event) => { this.onChangeInput(event, 'name') }}
-                                        // disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false}
-                                         />
+                                    // disabled={this.state.action === CRUD_ACTIONS.EDIT ? true : false}
+                                    />
 
                                 </div>
                             </div>
-                           
-                           
-                           
-                           
+
+
+
+
 
                         </div>
                         <div className="row">
@@ -195,7 +198,7 @@ class ManageClinic extends Component {
                                     onChange={(event) => { this.onChangeInput(event, 'address') }} />
 
                             </div>
-                           
+
                             <div className="col-md-3 mb-3">
                                 <label htmlFor="validationServer02"> <FormattedMessage id="create-user.image" /></label>
                                 <div className="preview-img-container">
@@ -213,7 +216,7 @@ class ManageClinic extends Component {
                             </div>
 
                         </div>
-                      
+
 
 
                         <div className="form-group">
