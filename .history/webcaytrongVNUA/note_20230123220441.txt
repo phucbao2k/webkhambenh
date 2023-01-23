@@ -261,3 +261,11 @@ MUỐN đổi từ TIMESTAMP sang human date, ta có thể dùng unix,
 
 this.props.  có thể là redux hoặc có thể định nghĩa sẵn từ props cha 
 HỌC THÊM VỀ PACKAGE QUERY-STRING
+
+this.setState() là hàm dùng để re-render state.
+
+*khi muốn lặp qua các phần tử trong 1 array[] trong 1 framework front-end, ta nên dùng map() chứ ko dùng for/for-each(),
+vì for/for-each() sẽ thay đôi dữ liệu phần tử trong array[] đó
+
+
+
