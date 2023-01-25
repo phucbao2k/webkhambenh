@@ -272,7 +272,4 @@ vì for/for-each() sẽ thay đôi dữ liệu phần tử trong array[] đó
 
 
 
-*  khi làm việc với api, ta chỉ cần đặt tên 1 biến
-  đại diện cho các giá trị trả về của api, (vd: res, result,...),
-  và muốn lấy cụ thể data ở phần nào chỉ 
-  cần thêm tiền tố . vào trước mục đó, vd: res.data, res.header, res.config...
+
