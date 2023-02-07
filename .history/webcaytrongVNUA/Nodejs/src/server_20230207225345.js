@@ -26,7 +26,7 @@ app.post('/api/customer-online-pay', (req, res) => {
         },
         "redirect_urls": {
             "return_url": "http://localhost:3000/api/customer-online-pay-success",
-            "cancel_url": "http://localhost:3000/api/customer-online-pay-cancel"
+            "cancel_url": "http://localhost:3000/-cancel"
         },
         "transactions": [{
             "item_list": {
@@ -61,7 +61,7 @@ app.post('/api/customer-online-pay', (req, res) => {
 
 });
 
-app.get('/api/customer-online-pay-success', (req, res) => {
+app.get('/customer-online-pay-success', (req, res) => {
 
     const payerId = req.query.PayerID;
     const paymentId = req.query.paymentId;
@@ -86,7 +86,7 @@ app.get('/api/customer-online-pay-success', (req, res) => {
     });
 });
 
-app.get('/api/customer-online-pay-cancel', (req, res) => res.send('Cancelled (Đơn hàng đã hủy)'));
+app.get('/customer-online-pay-cancel', (req, res) => res.send('Cancelled (Đơn hàng đã hủy)'));
 let port = process.env.PORT || 7070;
 //if port is undefined, default to current 7070
 app.listen(port, () => {

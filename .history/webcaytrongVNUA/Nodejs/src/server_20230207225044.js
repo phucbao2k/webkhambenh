@@ -18,31 +18,31 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 configViewEngine(app);
 initWebRoutes(app);
 connectDB();
-app.post('/api/customer-online-pay', (req, res) => {
+app.post('/customer-online-pay', (req, res) => {
     const create_payment_json = {
         "intent": "sale",
         "payer": {
             "payment_method": "paypal"
         },
         "redirect_urls": {
-            "return_url": "http://localhost:3000/api/customer-online-pay-success",
-            "cancel_url": "http://localhost:3000/api/customer-online-pay-cancel"
+            "return_url": "http://localhost:3000/success",
+            "cancel_url": "http://localhost:3000/cancel"
         },
         "transactions": [{
             "item_list": {
                 "items": [{
-                    "name": "Ticket",
+                    "name": "Iphone 4S",
                     "sku": "001",
-                    "price": "20.00",
+                    "price": "25.00",
                     "currency": "USD",
                     "quantity": 1
                 }]
             },
             "amount": {
                 "currency": "USD",
-                "total": "20.00"
+                "total": "25.00"
             },
-            "description": "Thanh toán bằng PAYPAL ngay!"
+            "description": "Thanh toán bằng PAYPAL ngay"
         }]
     };
 
@@ -61,7 +61,7 @@ app.post('/api/customer-online-pay', (req, res) => {
 
 });
 
-app.get('/api/customer-online-pay-success', (req, res) => {
+app.get('/customer-online-pay-success', (req, res) => {
 
     const payerId = req.query.PayerID;
     const paymentId = req.query.paymentId;
@@ -86,7 +86,7 @@ app.get('/api/customer-online-pay-success', (req, res) => {
     });
 });
 
-app.get('/api/customer-online-pay-cancel', (req, res) => res.send('Cancelled (Đơn hàng đã hủy)'));
+app.get('/customer-online-pay-cancel', (req, res) => res.send('Cancelled (Đơn hàng đã hủy)'));
 let port = process.env.PORT || 7070;
 //if port is undefined, default to current 7070
 app.listen(port, () => {
