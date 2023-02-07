@@ -5,7 +5,7 @@ import { initWebRoutes } from './route/web.js';
 import connectDB from "./config/connectDB.js";
 import _ from "lodash";
 import db from "./models/index.js";
-import emailService from "./services/emailService";
+import emailService from "../Se"
 const paypal = require('paypal-rest-sdk');
 paypal.configure({
     'mode': 'sandbox', //sandbox or live

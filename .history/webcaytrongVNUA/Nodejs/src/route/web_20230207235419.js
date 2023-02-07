@@ -15,7 +15,7 @@ export function initWebRoutes(app) {
     router.get('/about', homeController.getAboutPage);
     router.get('/crud', homeController.getCRUD);
     router.post('/post-crud', homeController.postCRUD);
-  
+router.post
     router.get('/get-crud', homeController.displayGetCRUD);
     router.get('/edit-crud', homeController.getEditCRUD);
     router.post('/put-crud', homeController.putCRUD);

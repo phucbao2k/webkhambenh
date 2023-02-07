@@ -3,9 +3,6 @@ import bodyParser from "body-parser";
 import { configViewEngine } from "./config/viewEngine.js";
 import { initWebRoutes } from './route/web.js';
 import connectDB from "./config/connectDB.js";
-import _ from "lodash";
-import db from "./models/index.js";
-import emailService from "./services/emailService";
 const paypal = require('paypal-rest-sdk');
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
@@ -85,6 +82,7 @@ app.get('/success', (req, res) => {
         } else {
             console.log(JSON.stringify(payment));
             res.send('Success (Mua hàng thành công)');
+            return;
         }
     });
 });

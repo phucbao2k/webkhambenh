@@ -3,9 +3,6 @@ import bodyParser from "body-parser";
 import { configViewEngine } from "./config/viewEngine.js";
 import { initWebRoutes } from './route/web.js';
 import connectDB from "./config/connectDB.js";
-import _ from "lodash";
-import db from "./models/index.js";
-import emailService from "./services/emailService";
 const paypal = require('paypal-rest-sdk');
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
@@ -28,8 +25,8 @@ app.post('/customer-online-pay', (req, res) => {
             "payment_method": "paypal"
         },
         "redirect_urls": {
-            "return_url": "http://localhost:7070/success",
-            "cancel_url": "http://localhost:7070/cancel"
+            "return_url": "http://localhost:3000/api/customer-online-pay-success",
+            "cancel_url": "http://localhost:3000/api/customer-online-pay-cancel"
         },
         "transactions": [{
             "item_list": {
@@ -64,7 +61,7 @@ app.post('/customer-online-pay', (req, res) => {
 
 });
 
-app.get('/success', (req, res) => {
+app.get('/api/customer-online-pay-success', (req, res) => {
 
     const payerId = req.query.PayerID;
     const paymentId = req.query.paymentId;
@@ -74,7 +71,7 @@ app.get('/success', (req, res) => {
         "transactions": [{
             "amount": {
                 "currency": "USD",
-                "total": "20.00"
+                "total": "25.00"
             }
         }]
     };
@@ -88,7 +85,7 @@ app.get('/success', (req, res) => {
         }
     });
 });
-app.get('/customer-online-pay', (req, res) => res.render('paypal.ejs'));
+
 app.get('/cancel', (req, res) => res.send('Cancelled (Đơn hàng đã hủy)'));
 let port = process.env.PORT || 7070;
 //if port is undefined, default to current 7070

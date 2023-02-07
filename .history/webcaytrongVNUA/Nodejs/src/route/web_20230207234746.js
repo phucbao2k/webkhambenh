@@ -7,7 +7,7 @@ import specialtyController from "../controllers/specialtyController.js";
 import clinicController from "../controllers/clinicController.js";
 import adminController from "../controllers/adminController.js";
 import handbookController from "../controllers/handbookController.js";
-import paymentController from "../controllers/paymentController.js";
+import pa
 let router = express.Router();
 export function initWebRoutes(app) {
     router.get('/', homeController.getHomePage);
@@ -15,7 +15,7 @@ export function initWebRoutes(app) {
     router.get('/about', homeController.getAboutPage);
     router.get('/crud', homeController.getCRUD);
     router.post('/post-crud', homeController.postCRUD);
-  
+
     router.get('/get-crud', homeController.displayGetCRUD);
     router.get('/edit-crud', homeController.getEditCRUD);
     router.post('/put-crud', homeController.putCRUD);

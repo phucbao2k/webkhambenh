@@ -4,8 +4,7 @@ import { configViewEngine } from "./config/viewEngine.js";
 import { initWebRoutes } from './route/web.js';
 import connectDB from "./config/connectDB.js";
 import _ from "lodash";
-import db from "./models/index.js";
-import emailService from "./services/emailService";
+import
 const paypal = require('paypal-rest-sdk');
 paypal.configure({
     'mode': 'sandbox', //sandbox or live
