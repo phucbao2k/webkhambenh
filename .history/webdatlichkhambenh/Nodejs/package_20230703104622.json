@@ -1,7 +1,7 @@
 {
   "name": "webkhambenh",
   "version": "1.0.0",
-  "description": "backend nodejs kltn",
+  "description": "backend nodejs ttcn",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,7 @@
     "fullstack",
     "nodejs",
     "express",
-    "kltn"
+    "ttcn"
   ],
   "author": "TaBaoPhuc",
   "license": "ISC",

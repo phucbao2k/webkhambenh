@@ -1,7 +1,7 @@
 {
-  "name": "webkhambenh",
+  "name": "webkham",
   "version": "1.0.0",
-  "description": "backend nodejs kltn",
+  "description": "backend nodejs ttcn",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,20 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phucbao2k/webkhambenh.git"
+    "url": "git+https://github.com/phucbao2k/webkham.git"
   },
   "keywords": [
     "fullstack",
     "nodejs",
     "express",
-    "kltn"
+    "ttcn"
   ],
   "author": "TaBaoPhuc",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/phucbao2k/webkhambenh/issues"
+    "url": "https://github.com/phucbao2k/webkham/issues"
   },
-  "homepage": "https://github.com/phucbao2k/webkhambenh#readme",
+  "homepage": "https://github.com/phucbao2k/webkham#readme",
   "dependencies": {
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
