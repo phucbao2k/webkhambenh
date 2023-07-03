@@ -59,7 +59,7 @@
             "email": "Email khách hàng",
             "address": "Địa chỉ liên lạc",
             "reason":"Lý do khám",
-            "plantName": "Tên bộ phận của cơ thể muốn khám",
+            "plantName": "Tên bộ phận  muốn khám",
             "gender": "Giới tính",
             "btnConfirm": "Xem chi tiết",
             "btnCancel":"Hủy",

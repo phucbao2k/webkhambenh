@@ -52,7 +52,7 @@ class HomeFooter extends Component {
                     </div>
                 </div>
                 <div className='max-1300 mx-auto text-center my-4'>
-                    <p className='mb-0 copy'>&copy; 2023 Tạ Bảo Phúc-<FormattedMessage id="home-footer.more-info" />
+                    <p className='mb-0 copy'>&copy; 202 Tạ Bảo Phúc-<FormattedMessage id="home-footer.more-info" />
                         <a href="https://www.youtube.com/c/H%E1%BB%8FiD%C3%A2nIT">&#8594;Click here &#8592;
                         </a>
                     </p>

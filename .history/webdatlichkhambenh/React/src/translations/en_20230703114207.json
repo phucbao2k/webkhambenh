@@ -83,7 +83,7 @@
             "info-booking": "Booking's Information",
             "status": "Booking status",
             "confirm": "Confirm",
-            "booking-done": "Send medical bills",
+            "booking-done": "Send medical bills for plants",
             "info-status": "S1: Pending, S2: Confirmed by Customer, S3: Confirmed by Doctor, S4: Canceled, S5: Paid, S6: Done!",
             "viewdoctor": "View Doctor's Detail",
             "viewbooking": "More...",
@@ -108,7 +108,7 @@
             "nameClinic":"Clinic's name",
             "addressClinic": "Clinic's address",
             "note": "Note",
-            "specialty": "Specialization",
+            "specialty": "Specialization (plant type)",
             "select-clinic": "Select clinic"
         }
     },
