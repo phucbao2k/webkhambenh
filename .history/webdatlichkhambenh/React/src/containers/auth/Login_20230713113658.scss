@@ -2,7 +2,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
 
 body {
-    background: rgb(34,193,195) !important;
+    background: rgb(34,193,195);
     // background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
     font-family: "work sans";
 
@@ -48,7 +48,7 @@ body {
                         outline: none;
                         border: none;
                         background: rgb(34, 193, 195);
-                      //  background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%);
+                        background: linear-gradient(135deg, rgba(34, 193, 195, 1) 0%);
                         font-size: 16px;
                         color: white;
                     }

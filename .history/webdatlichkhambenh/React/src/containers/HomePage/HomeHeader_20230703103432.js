@@ -5,7 +5,7 @@ import { LANGUAGES } from '../../utils';
 import * as actions from "../../store/actions";
 import { FormattedMessage } from 'react-intl';
 import { withRouter } from 'react-router';
-import logo from '../../assets/logo-vi.png';
+import logo from '../../assets/seed.jpg';
 import './reponsive-header.scss';
 class HomeHeader extends Component {
     constructor(props) {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { FormattedMessage } from 'react-intl';
 import './HomeFooter.scss';
-import logo from '../../assets/hvnn1.jpg';
+import logo from '../../assets/anh_fita.jpg';
 
 class HomeFooter extends Component {
 
