@@ -38,14 +38,14 @@
         "choose-date": "Chọn ngày",
         "save": "Lưu thông tin"
     },
-    "patient": {
-        "detail-doctor": {
+    "patient":{
+        "detail-doctor":{
             "schedule": "Lịch khám",
             "no-schedule": " Bác sĩ không có lịch hẹn khám trong thời gian này, vui lòng chọn ngày khác",
             "choose": "Chọn ",
             "book-free": " và đặt (miễn phí) "
         },
-        "extra-infor-doctor": {
+         "extra-infor-doctor": {
             "text-address": "Địa chỉ khám",
             "price": "Gía khám: ",
             "detail": "Xem chi tiết",
@@ -54,18 +54,18 @@
         },
         "booking-modal": {
             "title": "Thông tin đặt lịch khám bệnh",
-            "fullName": "Họ và tên",
-            "phoneNumber": "Số điện thoại",
+            "fullName" : "Họ và tên",
+            "phoneNumber":"Số điện thoại",
             "email": "Email khách hàng",
             "address": "Địa chỉ liên lạc",
-            "reason": "Lý do khám",
+            "reason":"Lý do khám",
             "plantName": "Tên bộ phận của cơ thể muốn khám",
             "gender": "Giới tính",
             "btnConfirm": "Xem chi tiết",
-            "btnCancel": "Hủy",
+            "btnCancel":"Hủy",
             "priceBooking": "Miễn phí đặt lịch",
             "price": "Gía khám: ",
-            "specialtyName": "Tên chuyên khoa",
+            "specialtyName":"Tên chuyên khoa",
             "avatar": "Hình ảnh bệnh nhân bị bệnh",
             "note": "Lưu ý: Nếu chưa có tài khoản, email bạn nhập vào mặc định sẽ là tài khoản mới của bạn",
             "upload": "Tải lên",
@@ -95,22 +95,22 @@
             "note": "Bạn có thể hủy lịch hẹn ở mục quản lý tài khoản"
         }
     },
-    "admin": {
-        "manage-doctor": {
-            "title": " Tạo thêm thông tin bác sĩ",
-            "select-doctor": "Chọn bác sĩ",
-            "intro": "Thông tin giới thiệu",
-            "add": "Tạo thông tin",
-            "save": "Lưu thông tin",
-            "price": "Gía khám bệnh",
-            "payment": "Phương thức thanh toán",
-            "province": "Tỉnh thành",
-            "nameClinic": "Tên phòng khám",
-            "addressClinic": "Địa chỉ phòng khám",
-            "note": "Ghi chú",
-            "specialty": "Chuyên khoa",
-            "select-clinic": "Chọn phòng khám"
-        }
+    "admin":{
+"manage-doctor":{
+    "title": " Tạo thêm thông tin bác sĩ",
+    "select-doctor": "Chọn bác sĩ",
+    "intro": "Thông tin giới thiệu",
+    "add": "Tạo thông tin",
+    "save": "Lưu thông tin",
+    "price": "Gía khám bệnh",
+    "payment": "Phương thức thanh toán",
+    "province": "Tỉnh thành",
+    "nameClinic": "Tên phòng khám",
+    "addressClinic": "Địa chỉ phòng khám",
+    "note": "Ghi chú",
+    "specialty":"Chuyên khoa",
+    "select-clinic": "Chọn phòng khám"
+}
     },
     "system": {
         "change-success": "Cập nhật thông tin thành công! Làm ơn đăng xuất và đăng nhập lại để nhận thấy sự thay đổi "
@@ -147,7 +147,7 @@
             "manage-handbook": "Quản lý cẩm nang-tin tức",
             "home": "Trang chủ",
             "common-diseases": "Tiêu đề của cẩm nang",
-            "specialty-name": "Tên chuyên ngành",
+            "specialty-name":"Tên chuyên ngành",
             "clinic-name": "Tên phòng khám",
             "address": "Địa chỉ",
             "detail": "Chi tiết"

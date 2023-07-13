@@ -19,12 +19,12 @@
     "banner": {
         "title1": "MEDICAL PLATFORM",
         "title2": "COMPREHENSIVE HEALTH CARE",
-        "child1": "Specialist of Bones and Joints",
-        "child2": "Cardiovascular Specialist",
-        "child3": "Neurological Specialist",
-        "child4": "Ear - Nose - Throat Specialist",
-        "child5": "Dental Specialist - Jaw - Face",
-        "child6": "Elective Specialist (All specialties)"
+        "child1": "Special of Bones and Joints",
+        "child2": "Cardiovascular examination",
+        "child3": "Neurological Examination",
+        "child4": "Ear - Nose - Throat Examination",
+        "child5": "Dental examination - Jaw - Face",
+        "child6": "Elective examination (All specialties)"
     },
     "carousel": {
         "carousel-1": "Popular specialties",
