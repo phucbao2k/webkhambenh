@@ -11,7 +11,6 @@
     "connected-react-router": "^6.9.1",
     "emitter": "0.0.5",
     "file-saver": "^2.0.5",
-    "fs": "^0.0.1-security",
     "lodash": "^4.17.21",
     "markdown-it": "^12.1.0",
     "moment": "^2.29.4",
@@ -54,9 +53,9 @@
     "xlsx": "^0.18.5"
   },
   "scripts": {
-    "start": "react-app-rewired start --openssl-legacy-provider",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
+    "start": "react-scripts start ",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -75,17 +74,6 @@
     ]
   },
   "devDependencies": {
-    "assert": "^2.0.0",
-    "buffer": "^6.0.3",
-    "crypto-browserify": "^3.12.0",
-    "https-browserify": "^1.0.0",
-    "os-browserify": "^0.3.0",
-    "process": "^0.11.10",
-    "react-app-rewired": "^2.2.1",
-    "react-select": "^4.3.1",
-    "sass": "^1.64.2",
-    "stream-browserify": "^3.0.0",
-    "stream-http": "^3.2.0",
-    "url": "^0.11.1"
+    "react-select": "^4.3.1"
   }
 }
