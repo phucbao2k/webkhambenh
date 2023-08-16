@@ -278,8 +278,7 @@ vì for/for-each() sẽ thay đôi dữ liệu phần tử trong array[] đó
   cần thêm tiền tố . vào trước mục đó, vd: res.data, res.header, res.config...
 
 
- ** KHI TẠO RELATIONSHIPS GIỮA CÁC COLLUMS (TRONG SQL):
-  CỘT NÀO CỦA BẢNG NÀO CÓ GIÁ TRỊ THUỘC VỀ CỘT KHÁC CỦA BẢNG KHÁC,
+  KHI TẠO RELATIONSHIPS GIỮA CÁC COLLUMS (TRONG SQL), CỘT NÀO CỦA BẢNG NÀO CÓ GIÁ TRỊ THUỘC VỀ CỘT KHÁC CỦA BẢNG KHÁC,
   KIỂU QUAN HỆ "A BELONGSTO B", TỨC LÀ GIÁ TRỊ CỘT A PHẢI THUỘC MỘT TRONG NHỮNG GIÁ TRỊ CỦA CỘT B,
   (TƯƠNG TỰ "statusId", "priceId", "provinceId",... BELONGSTO "keymap" TRONG BẢNG "Allcode").
 
