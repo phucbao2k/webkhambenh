@@ -17,7 +17,7 @@ module.exports = {
       patientId: {
         type: Sequelize.INTEGER
       },
-      gender: {
+      plantName: {
         type: Sequelize.STRING
       },
       specialtyName: {

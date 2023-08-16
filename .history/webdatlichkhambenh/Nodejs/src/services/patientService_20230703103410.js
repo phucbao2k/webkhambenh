@@ -55,7 +55,7 @@ let postBookAppointment = (data) => {
                             doctorId: data.doctorId,
                             patientId: user[0].id,
                             specialtyName: data.specialtyName,
-                            gender: data.gender,
+                            plantName: data.plantName,
                             timeType: data.timeType,
                             image: data.image,
                             date: data.date,
@@ -145,11 +145,11 @@ let getListBookingForPatient = (patientId, date) => {
                            
                       
                         
-                             include: [
-                                 {
-                                     model: db.Allcode, as: 'genderData', attributes:['valueEn', 'valueVi']
-                                 }
-                             ]
+                            // include: [
+                            //     {
+                            //         model: db.Allcode, as: 'genderData', attributes:['valueEn', 'valueVi']
+                            //     }
+                            // ]
                         },
                         {
                             model: db.Allcode, as: 'timeTypeDataPatient', attributes: ['valueEn', 'valueVi']
@@ -200,11 +200,11 @@ let getHistoryBookingForPatient = (patientId) => {
                             model: db.User, as: 'patientData',
                             attributes: ['email', 'firstName', 'address'],
                            
-                             include: [
-                                 {
-                                     model: db.Allcode, as: 'genderData', attributes:['valueEn', 'valueVi']
-                                 }
-                             ]
+                            // include: [
+                            //     {
+                            //         model: db.Allcode, as: 'genderData', attributes:['valueEn', 'valueVi']
+                            //     }
+                            // ]
                         },
                         {
                             model: db.Allcode, as: 'timeTypeDataPatient', attributes: ['valueEn', 'valueVi']

@@ -131,7 +131,8 @@ let createNewUser = (data) => {
                 //trong TH đây là tài khoản trắng(mới set roleId và một sô thông tin cơ bản qua booking modal)
                 let hashPasswordFromBcrypt = await hashUserPassword(data.password);
                 let user = await db.User.findOne({
-                    attributes: ['id', 'email', 'roleId', 'password', 'firstName', 'lastName', 'phoneNumber','gender'],
+                    attributes: ['id', 'email', 'roleId', 'password', 'firstName', 'lastName', 'phoneNumber','ge
+                    '],
                     where: { email: data.email },
                     raw: false,
                     //raw: false để đưa js object về sequelize object
@@ -143,7 +144,7 @@ let createNewUser = (data) => {
                     user.lastName = data.lastName;
                     user.address = data.address;
                     user.phoneNumber = data.phoneNumber;
-                    user.gender = data.gender;
+                    
                 }
                 await user.save();
             }

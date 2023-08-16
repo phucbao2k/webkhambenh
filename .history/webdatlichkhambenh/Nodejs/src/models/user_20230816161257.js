@@ -16,7 +16,7 @@ export default (sequelize, DataTypes) => {
       User.hasMany(models.Schedule, { foreignKey: 'doctorId', as: 'doctorData'})
       User.hasMany(models.Booking, {foreignKey: 'patientId', as: 'patientData'})
       User.hasMany(models.Booking, { foreignKey: 'doctorId', as: 'doctorNameData' })
-      User.hasMany(models.Booking, {foreignKey: 'gender', as:'genderBookingData'})
+      User.hasMany(models.
     }
   };
   User.init({

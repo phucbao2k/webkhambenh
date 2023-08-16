@@ -143,7 +143,7 @@ let createNewUser = (data) => {
                     user.lastName = data.lastName;
                     user.address = data.address;
                     user.phoneNumber = data.phoneNumber;
-                    user.gender = data.gender;
+                    user.gend
                 }
                 await user.save();
             }

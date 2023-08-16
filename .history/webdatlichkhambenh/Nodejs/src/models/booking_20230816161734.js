@@ -30,7 +30,7 @@ export default (sequelize, DataTypes) => {
     statusId: DataTypes.STRING,
     doctorId: DataTypes.INTEGER,
     patientId: DataTypes.INTEGER,
-    gender: DataTypes.STRING,
+    plantName: DataTypes.STRING,
     specialtyName: DataTypes.STRING,
     timeType: DataTypes.STRING,
     token: DataTypes.STRING,

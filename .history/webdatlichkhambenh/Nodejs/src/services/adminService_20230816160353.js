@@ -321,11 +321,11 @@ let getSearchBookingForAdminBooking = (phoneNumber) => {
                         {
                             model: db.User, as: 'patientData',
                             attributes: ['email', 'firstName', 'address'],
-                             include: [
-                                 {
-                                     model: db.Allcode, as: 'genderData', attributes:['valueEn', 'valueVi']
-                                 }
-                             ]
+                            // include: [
+                            //     {
+                            //         model: db.Allcode, as: 'genderData', attributes:['valueEn', 'valueVi']
+                            //     }
+                            // ]
                         },
                         {
                             model: db.Allcode, as: 'timeTypeDataPatient', attributes: ['valueEn', 'valueVi']

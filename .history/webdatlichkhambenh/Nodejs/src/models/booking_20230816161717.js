@@ -20,7 +20,7 @@ export default (sequelize, DataTypes) => {
       })
       Booking.belongsTo(models.Allcode, {
         foreignKey: 'gender', targetKey: 'keyMap',
-        as: 'genderTypeDataBooking'
+        as: 'priceTypeDataBooking'
       })
       Booking.belongsTo(models.User, { foreignKey: 'doctorId', targetKey: 'id', as: 'doctorNameData' })
     }
@@ -30,7 +30,7 @@ export default (sequelize, DataTypes) => {
     statusId: DataTypes.STRING,
     doctorId: DataTypes.INTEGER,
     patientId: DataTypes.INTEGER,
-    gender: DataTypes.STRING,
+    plantName: DataTypes.STRING,
     specialtyName: DataTypes.STRING,
     timeType: DataTypes.STRING,
     token: DataTypes.STRING,
