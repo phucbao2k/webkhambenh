@@ -5,7 +5,7 @@ import './BookingModal.scss';
 import { Modal } from 'reactstrap';
 import ProfileDoctor from '../ProfileDoctor';
 import _ from 'lodash';
-import DatePicker from '../../../../components/Input/DatePicker';
+import DatePicker from '../../../../'
 import { LANGUAGES, CommonUtils } from '../../../../utils';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
@@ -13,7 +13,6 @@ import moment from 'moment';
 import { toast } from "react-toastify";
 import { postPatientBookAppointment } from "../../../../services/userService";
 import Select from 'react-select';
-import * as actions from '../../../../store/actions';
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 class BookingModal extends Component {
     constructor(props) {
@@ -43,7 +42,7 @@ class BookingModal extends Component {
 
 
     async componentDidMount() {
-this.props.getGenders();
+
     }
 
     buildDataGender = (data) => {
@@ -67,11 +66,7 @@ this.props.getGenders();
             })
 
         }
-if ( this.props.genders !== prevProps.genders) {
-    this.setState({
-        genders: this.buildDataGender(this.props.genders)
-    })
-}
+
 
         //dataTime được lấy từ api getprofiledoctorbyid trong class Profiledoctor
         if (this.props.dataTime !== prevProps.dataTime) {
@@ -381,14 +376,7 @@ if ( this.props.genders !== prevProps.genders) {
                                     <input className="form-control"
                                         onChange={(event) => this.handleOnChangeInput(event, 'specialtyName')} />
                                 </div>
-                                <div className="col-6 form-group">
-                                    <label><FormattedMessage id="patient.booking-modal.birthday" /></label>
-                                   <DatePicker
-                                    onChange={this.handleOnChangeDatePicker}
-                                    className="form-control"
-                                    value={this.state.birthday}
-                                   />
-                                </div>
+
                             </div>
                         </div>
                         <div className="booking-modal-footer">
@@ -427,14 +415,13 @@ if ( this.props.genders !== prevProps.genders) {
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-        genders: state.admin.genders,
 
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-getGenders: () => dispatch(actions.fetchGenderStart())
+
     };
 };
 

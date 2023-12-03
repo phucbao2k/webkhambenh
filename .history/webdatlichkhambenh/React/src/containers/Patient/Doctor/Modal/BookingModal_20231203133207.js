@@ -5,15 +5,15 @@ import './BookingModal.scss';
 import { Modal } from 'reactstrap';
 import ProfileDoctor from '../ProfileDoctor';
 import _ from 'lodash';
-import DatePicker from '../../../../components/Input/DatePicker';
 import { LANGUAGES, CommonUtils } from '../../../../utils';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import moment from 'moment';
 import { toast } from "react-toastify";
-import { postPatientBookAppointment } from "../../../../services/userService";
+import { postPatientBookAppointment} from "../../../../services/userService";
 import Select from 'react-select';
-import * as actions from '../../../../store/actions';
+import TableManageUser from '../../../System/TableManageUser';
+import * as actions from '../../../';
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 class BookingModal extends Component {
     constructor(props) {
@@ -26,15 +26,15 @@ class BookingModal extends Component {
             specialtyName: '',
             selectedGender: '',
             doctorId: '',
-            genders: '',
+            genderArr: [],
             timeType: '',
             previewImgURL: '',
             image: '',
             isOpen: false,
             birthday: '',
             reasons: '',
-            priceId: '',
-            errors: []
+           priceId: '',
+           errors: []
         }
 
 
@@ -43,9 +43,9 @@ class BookingModal extends Component {
 
 
     async componentDidMount() {
-this.props.getGenders();
+        this.props.getGenderStart();
     }
-
+  
     buildDataGender = (data) => {
         let result = [];
         let language = this.props.language;
@@ -59,39 +59,44 @@ this.props.getGenders();
         }
         return result;
     }
-
+ 
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
             this.setState({
                 genders: this.buildDataGender(this.props.genders)
             })
-
+          
         }
-if ( this.props.genders !== prevProps.genders) {
-    this.setState({
-        genders: this.buildDataGender(this.props.genders)
-    })
-}
+        if (prevProps.genderRedux !== this.props.genderRedux
+
+        ) {
+            let arrGenders = this.props.genderRedux;
+            this.setState({
+                genderArr: arrGenders,
+                gender: arrGenders && arrGenders.length ? arrGenders[0].keyMap : ''
+
+            })
+        }
 
         //dataTime được lấy từ api getprofiledoctorbyid trong class Profiledoctor
-        if (this.props.dataTime !== prevProps.dataTime) {
-            if (this.props.dataTime && !_.isEmpty(this.props.dataTime)) {
+        if (this.props.dataTime !== prevProps.dataTime) { 
+           if (this.props.dataTime && !_.isEmpty(this.props.dataTime)) {
                 let doctorId = this.props.dataTime.doctorId;
                 let timeType = this.props.dataTime.timeType;
-                let priceId = this.props.dataTime.priceId;
+             let priceId = this.props.dataTime.priceId;
                 this.setState({
                     doctorId: doctorId,
                     timeType: timeType,
-                    priceId: priceId
+priceId: priceId
                 })
             }
-
+           
         }
-
-
+      
+        
     }
     // VỚI event.target.value, nó truy xuất giá trị của tất cả những đầu vào được gọi,
-    // bất kỳ thứ gì chèn vào đầu vào đều có thể được truy cập thông qua event.target.value
+ // bất kỳ thứ gì chèn vào đầu vào đều có thể được truy cập thông qua event.target.value
     handleOnChangeInput = (event, id) => {
         let valueInput = event.target.value;
         let stateCopy = { ...this.state };
@@ -105,7 +110,7 @@ if ( this.props.genders !== prevProps.genders) {
             birthday: date[0]
         })
     }
-    handleOnChangeDatePickers = (birthdays) => {
+    handleOnChangeDatePickers =(birthdays) =>{
         this.setState({
             birthdays: birthdays[0]
         })
@@ -142,21 +147,21 @@ if ( this.props.genders !== prevProps.genders) {
             let birthdays = language === LANGUAGES.VI ?
                 moment.unix(+dataTime.birthdays / 1000).format('dddd -DD/MM/YYYY') :
                 moment.unix(+dataTime.birthdays / 1000).locale('en').format('ddd- MM/DD/YYYY');
-
-
+         
+       
             return `${time} - ${date} `;
 
         }
         return ''
     }
     buildDoctorName = (dataTime) => {
-        let { language } = this.props;
-        if (dataTime && !_.isEmpty(dataTime)) {
+        let {language} = this.props;
+        if(dataTime && !_.isEmpty(dataTime)){
             let name = language === LANGUAGES.VI ?
-                `${dataTime.doctorData.lastName} ${dataTime.doctorData.firstName}`
-                :
+            `${dataTime.doctorData.lastName} ${dataTime.doctorData.firstName}`
+            :
                 `${dataTime.doctorData.firstName} ${dataTime.doctorData.lastName}`
-            return name;
+                return name;
         }
         return '';
     }
@@ -166,7 +171,7 @@ if ( this.props.genders !== prevProps.genders) {
         let result = [];
         let { language } = this.props;
         if (inputData && inputData.length > 0) {
-
+           
             if (type === 'PRICE') {
                 inputData.map((item, index) => {
                     let object = {};
@@ -177,21 +182,21 @@ if ( this.props.genders !== prevProps.genders) {
                     result.push(object);
                 })
             }
-
+           
 
         }
         return result;
     }
 
-
+   
     handleChangeSelect = (selectedOption) => {
         this.setState({
             selectedGender: selectedOption
         });
-        //  if (this.props.history) {
-        // console.log('baophuc2k check doctor', doctor);
-        // this.props.history.push(`/detail-doctor/${doctor.id}`);
-        // }
+    //  if (this.props.history) {
+    // console.log('baophuc2k check doctor', doctor);
+    // this.props.history.push(`/detail-doctor/${doctor.id}`);
+    // }
     }
     handleSubmit() {
 
@@ -206,7 +211,7 @@ if ( this.props.genders !== prevProps.genders) {
             toast.error("Invalid reasons input");
             errors.push("reasons");
         }
-
+    
         if (this.state.phoneNumber === "" || this.state.phoneNumber.length > 11) {
             toast.error("Invalid phone number input");
             errors.push("phoneNumber");
@@ -251,7 +256,7 @@ if ( this.props.genders !== prevProps.genders) {
         let date = new Date(this.state.birthday).getTime();
         // let birthdays = new Date(this.state.birthdays).getTime();
         let timeString = this.buildTimeBooking(this.props.dataTime);
-        let doctorName = this.buildDoctorName(this.props.dataTime);
+   let doctorName = this.buildDoctorName(this.props.dataTime);
 
         let res = await postPatientBookAppointment({
             fullName: this.state.fullName,
@@ -270,7 +275,7 @@ if ( this.props.genders !== prevProps.genders) {
             image: this.state.image,
             language: this.props.language,
             timeString: timeString,
-            doctorName: doctorName
+          doctorName: doctorName
         })
         if (res && res.errCode === 0) {
             toast.success("Booking a new appointment succeed!")
@@ -282,19 +287,19 @@ if ( this.props.genders !== prevProps.genders) {
         }
     }
     render() {
-        let { language } = this.props;
+        let {language}= this.props;
         let { isOpenModal, closeBookingClose, dataTime } = this.props;
-
+     
         let priceId = '';
         console.log('data Price', dataTime);
         let doctorId = '';
-
+       
         if (dataTime && !_.isEmpty(dataTime)) {
             doctorId = dataTime.doctorId;
             priceId = dataTime.priceId;
         }
-
-
+      
+       
         return (
             <>
 
@@ -319,9 +324,9 @@ if ( this.props.genders !== prevProps.genders) {
                                     dataTime={dataTime}
                                     isShowLinkDetail={false}
                                     isShowPrice={true}
-                                />
+                                    />
                             </div>
-
+                           
                             <div className="row">
                                 <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.fullName" /></label>
@@ -363,14 +368,14 @@ if ( this.props.genders !== prevProps.genders) {
                                         </div>
                                     </div>
                                 </div>
-
+                               
                                 <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.gender" /></label>
-                                    <Select
+                                        <Select
                                         value={this.state.selectedGender}
                                         onChange={this.handleChangeSelect}
-                                        options={this.state.genders} />
-                                </div>
+                                        options={this.state.genders}/>
+                                    </div> 
                                 <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.plantName" /></label>
                                     <input className="form-control"
@@ -381,18 +386,11 @@ if ( this.props.genders !== prevProps.genders) {
                                     <input className="form-control"
                                         onChange={(event) => this.handleOnChangeInput(event, 'specialtyName')} />
                                 </div>
-                                <div className="col-6 form-group">
-                                    <label><FormattedMessage id="patient.booking-modal.birthday" /></label>
-                                   <DatePicker
-                                    onChange={this.handleOnChangeDatePicker}
-                                    className="form-control"
-                                    value={this.state.birthday}
-                                   />
-                                </div>
+                              
                             </div>
                         </div>
                         <div className="booking-modal-footer">
-
+                          
                             <div className="note"> <FormattedMessage id="patient.booking-modal.note" /></div>
                             <button className="btn-booking-confirm"
                                 onClick={() => this.handleConfirmBooking()}>
@@ -427,14 +425,13 @@ if ( this.props.genders !== prevProps.genders) {
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-        genders: state.admin.genders,
-
+       
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-getGenders: () => dispatch(actions.fetchGenderStart())
+        getGenderStart: () => dispatch(actions.fetchGenderStart())
     };
 };
 

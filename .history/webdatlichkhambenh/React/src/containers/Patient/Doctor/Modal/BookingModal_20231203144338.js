@@ -427,14 +427,14 @@ if ( this.props.genders !== prevProps.genders) {
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-        genders: state.admin.genders,
+        gender
 
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-getGenders: () => dispatch(actions.fetchGenderStart())
+
     };
 };
 

@@ -383,11 +383,8 @@ if ( this.props.genders !== prevProps.genders) {
                                 </div>
                                 <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.birthday" /></label>
-                                   <DatePicker
-                                    onChange={this.handleOnChangeDatePicker}
-                                    className="form-control"
-                                    value={this.state.birthday}
-                                   />
+                                    <input className="form-control"
+                                        onChange={(event) => this.handleOnChangeInput(event, 'specialtyName')} />
                                 </div>
                             </div>
                         </div>
@@ -427,14 +424,13 @@ if ( this.props.genders !== prevProps.genders) {
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-        genders: state.admin.genders,
 
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-getGenders: () => dispatch(actions.fetchGenderStart())
+
     };
 };
 

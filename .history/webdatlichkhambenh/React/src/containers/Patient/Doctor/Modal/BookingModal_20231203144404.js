@@ -434,7 +434,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-getGenders: () => dispatch(actions.fetchGenderStart())
+getGenders
     };
 };
 

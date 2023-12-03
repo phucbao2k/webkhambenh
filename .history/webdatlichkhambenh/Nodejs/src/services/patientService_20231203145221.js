@@ -56,7 +56,7 @@ let postBookAppointment = (data) => {
                             doctorId: data.doctorId,
                             patientId: user[0].id,
                             specialtyName: data.specialtyName,
-                            gender: data.selectedGender,
+                            gender: data.gender,
                             timeType: data.timeType,
                             image: data.image,
                             date: data.date,

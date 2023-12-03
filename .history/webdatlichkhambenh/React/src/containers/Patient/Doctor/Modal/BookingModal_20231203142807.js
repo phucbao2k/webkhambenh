@@ -13,7 +13,7 @@ import moment from 'moment';
 import { toast } from "react-toastify";
 import { postPatientBookAppointment } from "../../../../services/userService";
 import Select from 'react-select';
-import * as actions from '../../../../store/actions';
+import 
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 class BookingModal extends Component {
     constructor(props) {
@@ -43,7 +43,7 @@ class BookingModal extends Component {
 
 
     async componentDidMount() {
-this.props.getGenders();
+
     }
 
     buildDataGender = (data) => {
@@ -67,11 +67,7 @@ this.props.getGenders();
             })
 
         }
-if ( this.props.genders !== prevProps.genders) {
-    this.setState({
-        genders: this.buildDataGender(this.props.genders)
-    })
-}
+
 
         //dataTime được lấy từ api getprofiledoctorbyid trong class Profiledoctor
         if (this.props.dataTime !== prevProps.dataTime) {
@@ -381,14 +377,7 @@ if ( this.props.genders !== prevProps.genders) {
                                     <input className="form-control"
                                         onChange={(event) => this.handleOnChangeInput(event, 'specialtyName')} />
                                 </div>
-                                <div className="col-6 form-group">
-                                    <label><FormattedMessage id="patient.booking-modal.birthday" /></label>
-                                   <DatePicker
-                                    onChange={this.handleOnChangeDatePicker}
-                                    className="form-control"
-                                    value={this.state.birthday}
-                                   />
-                                </div>
+
                             </div>
                         </div>
                         <div className="booking-modal-footer">
@@ -427,14 +416,13 @@ if ( this.props.genders !== prevProps.genders) {
 const mapStateToProps = state => {
     return {
         language: state.app.language,
-        genders: state.admin.genders,
 
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
-getGenders: () => dispatch(actions.fetchGenderStart())
+
     };
 };
 
