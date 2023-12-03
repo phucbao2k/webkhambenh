@@ -9,7 +9,7 @@ let sendSimpleEmail = async (dataSend) => {
         service: 'gmail',
         auth: {
             user: 'baophucta2k@gmail.com',
-            pass: 'vvxgonfmlgcfnwbx',
+            pass: 'wyukrympnbozbsjn',
         },
     });
     let info = await transporter.sendMail({
@@ -192,7 +192,7 @@ let sendAttachment = async (dataSend) => {
                 secure: false,
                 auth: {
                     user: 'baophucta2k@gmail.com',
-                    pass: 'vvxgonfmlgcfnwbx',
+                    pass: 'wyukrympnbozbsjn',
                 }
             });
             let info = await transporter.sendMail({
@@ -224,7 +224,7 @@ let sendCancelAttachment = async (dataSend) => {
                 secure: false,
                 auth: {
                     user: 'baophucta2k@gmail.com',
-                    pass: 'vvxgonfmlgcfnwbx',
+                    pass: 'wyukrympnbozbsjn',
                 }
             });
             let info = await transporter.sendMail({
@@ -249,7 +249,7 @@ let sendCancelPatientAttachment = async (dataSend) => {
                 secure: false,
                 auth: {
                     user: 'baophucta2k@gmail.com',
-                    pass: 'vvxgonfmlgcfnwbx',
+                    pass: 'wyukrympnbozbsjn',
                 }
             });
             let info = await transporter.sendMail({
@@ -274,7 +274,7 @@ let sendReBooking = async (dataSend) => {
                 secure: false,
                 auth: {
                     user: 'baophucta2k@gmail.com',
-                    pass: 'vvxgonfmlgcfnwbx',
+                    pass: 'wyukrympnbozbsjn',
                 }
             });
             let info = await transporter.sendMail({
