@@ -11,7 +11,7 @@ import 'react-image-lightbox/style.css';
 import moment from 'moment';
 import { toast } from "react-toastify";
 import { postPatientBookAppointment} from "../../../../services/userService";
-import Select from 'react-select';
+
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 class BookingModal extends Component {
     constructor(props) {

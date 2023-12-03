@@ -11,7 +11,6 @@ import 'react-image-lightbox/style.css';
 import moment from 'moment';
 import { toast } from "react-toastify";
 import { postPatientBookAppointment} from "../../../../services/userService";
-import Select from 'react-select';
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 class BookingModal extends Component {
     constructor(props) {
@@ -22,7 +21,7 @@ class BookingModal extends Component {
             email: '',
             address: '',
             specialtyName: '',
-            selectedGender: '',
+            // selectedGender: '',
             doctorId: '',
             genders: '',
             timeType: '',
@@ -44,25 +43,25 @@ class BookingModal extends Component {
        
     }
   
-    buildDataGender = (data) => {
-        let result = [];
-        let language = this.props.language;
-        if (data && data.length > 0) {
-            data.map(item => {
-                let object = {};
-                object.label = language === LANGUAGES.VI ? item.valueVi : item.valueEn;
-                object.value = item.keyMap;
-                result.push(object);
-            })
-        }
-        return result;
-    }
+    // buildDataGender = (data) => {
+    //     let result = [];
+    //     let language = this.props.language;
+    //     if (data && data.length > 0) {
+    //         data.map(item => {
+    //             let object = {};
+    //             object.label = language === LANGUAGES.VI ? item.valueVi : item.valueEn;
+    //             object.value = item.keyMap;
+    //             result.push(object);
+    //         })
+    //     }
+    //     return result;
+    // }
  
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
-            this.setState({
-                genders: this.buildDataGender(this.props.genders)
-            })
+            // this.setState({
+            //     genders: this.buildDataGender(this.props.genders)
+            // })
           
         }
        
@@ -178,15 +177,15 @@ priceId: priceId
     }
 
    
-    handleChangeSelect = (selectedOption) => {
-        this.setState({
-            selectedGender: selectedOption
-        });
+    // handleChangeSelect = (selectedOption) => {
+    //     this.setState({
+    //         selectedGender: selectedOption
+    //     });
     //  if (this.props.history) {
     // console.log('baophuc2k check doctor', doctor);
     // this.props.history.push(`/detail-doctor/${doctor.id}`);
     // }
-    }
+    // }
     handleSubmit() {
 
 
@@ -209,9 +208,17 @@ priceId: priceId
             toast.error("Invalid address input");
             errors.push("address");
         }
+        if (this.state.plantName === "") {
+            toast.error("Invalid plantName input");
+            errors.push("plantName");
+        }
         if (this.state.specialtyName === "") {
             toast.error("Invalid specialtyName input");
             errors.push("specialtyName");
+        }
+        if (this.state.image === "") {
+            toast.error("Invalid image input");
+            errors.push("image");
         }
 
         //email
@@ -256,8 +263,9 @@ priceId: priceId
             date: this.props.dataTime.date,
             birthday: date,
             // birthdays: birthdays,
+            plantName: this.state.plantName,
             specialtyName: this.state.specialtyName,
-            selectedGender: this.state.selectedGender.value,
+            // selectedGender: this.state.selectedGender.value,
             doctorId: this.state.doctorId,
             timeType: this.state.timeType,
             priceId: this.state.priceId,
@@ -358,13 +366,13 @@ priceId: priceId
                                     </div>
                                 </div>
                                
-                                <div className="col-6 form-group">
+                                {/* <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.gender" /></label>
                                         <Select
                                         value={this.state.selectedGender}
                                         onChange={this.handleChangeSelect}
                                         options={this.state.genders}/>
-                                    </div> 
+                                    </div> */}
                                 <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.plantName" /></label>
                                     <input className="form-control"

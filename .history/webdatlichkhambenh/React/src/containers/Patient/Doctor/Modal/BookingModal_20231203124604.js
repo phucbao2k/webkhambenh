@@ -11,7 +11,6 @@ import 'react-image-lightbox/style.css';
 import moment from 'moment';
 import { toast } from "react-toastify";
 import { postPatientBookAppointment} from "../../../../services/userService";
-import Select from 'react-select';
 //lodash hỗ trợ ta kiểm tra và thao tác với mảng dễ dàng hơn
 class BookingModal extends Component {
     constructor(props) {
@@ -182,10 +181,10 @@ priceId: priceId
         this.setState({
             selectedGender: selectedOption
         });
-    //  if (this.props.history) {
-    // console.log('baophuc2k check doctor', doctor);
-    // this.props.history.push(`/detail-doctor/${doctor.id}`);
-    // }
+     if (this.props.history) {
+    console.log('baophuc2k check doctor', doctor);
+    this.props.history.push(`/detail-doctor/${doctor.id}`);
+    }
     }
     handleSubmit() {
 
@@ -255,9 +254,10 @@ priceId: priceId
             reasons: this.state.reasons,
             date: this.props.dataTime.date,
             birthday: date,
-            // birthdays: birthdays,
+            birthdays: birthdays,
+            plantName: this.state.plantName,
             specialtyName: this.state.specialtyName,
-            selectedGender: this.state.selectedGender.value,
+            // selectedGender: this.state.selectedGender.value,
             doctorId: this.state.doctorId,
             timeType: this.state.timeType,
             priceId: this.state.priceId,
@@ -358,13 +358,13 @@ priceId: priceId
                                     </div>
                                 </div>
                                
-                                <div className="col-6 form-group">
+                                {/* <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.gender" /></label>
                                         <Select
                                         value={this.state.selectedGender}
                                         onChange={this.handleChangeSelect}
                                         options={this.state.genders}/>
-                                    </div> 
+                                    </div> */}
                                 <div className="col-6 form-group">
                                     <label><FormattedMessage id="patient.booking-modal.plantName" /></label>
                                     <input className="form-control"

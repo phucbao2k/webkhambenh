@@ -10,7 +10,7 @@ let postBookAppointment = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
             if (!data.email || !data.doctorId || !data.timeType || !data.specialtyName || !data.fullName
-                || !data.date || !data.address || !data.image || !data.phoneNumber || !data.priceId
+                || !data.date || !data.address || !data.phoneNumber || !data.priceId
             ) {
                 resolve({
                     errCode: 1,
