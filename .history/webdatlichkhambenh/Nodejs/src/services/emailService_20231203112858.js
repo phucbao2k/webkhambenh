@@ -191,8 +191,8 @@ let sendAttachment = async (dataSend) => {
                 port: 587,
                 secure: false,
                 auth: {
-                    user: process.env.EMAIL_APP,
-                    pass: process.env.EMAIL_APP_PASSWORD,
+                    user: 'baophucta2k@gmail.com',
+                    pass: 'vvxgonfmlgcfnwbx',
                 }
             });
             let info = await transporter.sendMail({
@@ -223,8 +223,8 @@ let sendCancelAttachment = async (dataSend) => {
                 port: 587,
                 secure: false,
                 auth: {
-                    user: process.env.EMAIL_APP,
-                    pass: process.env.EMAIL_APP_PASSWORD,
+                    user: 'baophucta2k@gmail.com',
+                    pass: 'vvxgonfmlgcfnwbx',
                 }
             });
             let info = await transporter.sendMail({
@@ -248,8 +248,8 @@ let sendCancelPatientAttachment = async (dataSend) => {
                 port: 587,
                 secure: false,
                 auth: {
-                    user: process.env.EMAIL_APP,
-                    pass: process.env.EMAIL_APP_PASSWORD,
+                    user: 'baophucta2k@gmail.com',
+                    pass: 'vvxgonfmlgcfnwbx',
                 }
             });
             let info = await transporter.sendMail({
@@ -273,8 +273,8 @@ let sendReBooking = async (dataSend) => {
                 port: 587,
                 secure: false,
                 auth: {
-                    user: process.env.EMAIL_APP,
-                    pass: process.env.EMAIL_APP_PASSWORD,
+                    user: 'baophucta2k@gmail.com',
+                    pass: 'vvxgonfmlgcfnwbx',
                 }
             });
             let info = await transporter.sendMail({
