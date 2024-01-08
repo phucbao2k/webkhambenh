@@ -111,6 +111,7 @@ app.post('/api/get-doctors-by-position', async (req, res) => {
                 name: doctor['specialityData.name'] || null,
             },
         }));
+
         res.json(mappedResult);
     } catch (error) {
         console.error('Error executing Sequelize query:', error);

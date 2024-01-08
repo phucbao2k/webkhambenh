@@ -12,19 +12,18 @@ const sequelize = new Sequelize(
     port: process.env.DB_PORT,
     dialect: process.env.DB_DIALECT,
     logging: false,
-    dialectOptions: {
-      // ssl: process.env.DB_SSL === 'true' ? {
-      //   require: true,
-      //   rejectUnauthorized: false
-      // } : {}
-    },
+    // dialectOptions: {
+    //   ssl: process.env.DB_SSL === 'true' ? {
+    //     require: true,
+    //     rejectUnauthorized: false
+    //   } : {}
+    // },
     query: {
       raw: true
     },
     timezone: "+07:00"
   }
 );
-
 async function connectDB() {
   try {
     await sequelize.authenticate();

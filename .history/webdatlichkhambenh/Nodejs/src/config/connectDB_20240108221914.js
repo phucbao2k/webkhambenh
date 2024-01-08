@@ -13,10 +13,7 @@ const sequelize = new Sequelize(
     dialect: process.env.DB_DIALECT,
     logging: false,
     dialectOptions: {
-      // ssl: process.env.DB_SSL === 'true' ? {
-      //   require: true,
-      //   rejectUnauthorized: false
-      // } : {}
+     
     },
     query: {
       raw: true

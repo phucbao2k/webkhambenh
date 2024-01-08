@@ -1,13 +1,13 @@
 const { Op } = require('sequelize');
 const { User, Doctor_Infor, Allcode, Speciality } = require('./src/models');
-const { db } = require('./src/models/index.js');
+const { db} = require('./src/models/index.js');
 import express from "express";
 import bodyParser from "body-parser";
 import { configViewEngine } from './src/config/viewEngine.js';
 import { initWebRoutes } from './route/web.js';
-import { connectDB } from './src/config/connectDB.js';
+import {connectDB } from './src/config/connectDB.js';
 import cors from 'cors';
-const searchFunction = require('./searchFunction');
+
 require('dotenv').config();
 let querystring = require('querystring');
 // Configure environment variables from .env file
@@ -36,15 +36,17 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Content-Type');
     res.header('Access-Control-Allow-Credentials', 'true');
     next();
-});
+}); 
 app.post('/api/search-doctor', async (req, res) => {
     const { searchTerm } = req.body;
+
     const searchCondition = {
         [Op.or]: [
             { 'valueVi': { [Op.like]: `%${searchTerm}%` } },
             { 'valueEn': { [Op.like]: `%${searchTerm}%` } },
         ],
     };
+
     try {
         const result = await Doctor_Infor.findAll({ where: searchCondition, raw: true });
         res.json(result);
@@ -111,13 +113,13 @@ app.post('/api/get-doctors-by-position', async (req, res) => {
                 name: doctor['specialityData.name'] || null,
             },
         }));
+
         res.json(mappedResult);
     } catch (error) {
         console.error('Error executing Sequelize query:', error);
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
-
 
 
 connectDB()

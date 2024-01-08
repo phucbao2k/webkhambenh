@@ -39,12 +39,14 @@ app.use((req, res, next) => {
 });
 app.post('/api/search-doctor', async (req, res) => {
     const { searchTerm } = req.body;
+
     const searchCondition = {
         [Op.or]: [
             { 'valueVi': { [Op.like]: `%${searchTerm}%` } },
             { 'valueEn': { [Op.like]: `%${searchTerm}%` } },
         ],
     };
+
     try {
         const result = await Doctor_Infor.findAll({ where: searchCondition, raw: true });
         res.json(result);
@@ -111,6 +113,7 @@ app.post('/api/get-doctors-by-position', async (req, res) => {
                 name: doctor['specialityData.name'] || null,
             },
         }));
+
         res.json(mappedResult);
     } catch (error) {
         console.error('Error executing Sequelize query:', error);
