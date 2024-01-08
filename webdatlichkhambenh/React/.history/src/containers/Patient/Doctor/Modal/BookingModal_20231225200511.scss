@@ -1,0 +1,125 @@
+.booking-modal-container {
+    width: 80%;
+    /* Thay vì width cố định, bạn có thể sử dụng % hoặc vw */
+    max-width: 600px;
+    /* Giới hạn chiều rộng tối đa để tránh quá mức trên màn hình lớn */
+    margin: 0 auto;
+    /* Canh giữa theo chiều ngang */
+}
+
+.booking-modal-content {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.booking-modal-header {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+
+    .left {
+        font-size: 15px;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .right {
+        cursor: pointer;
+        margin-left: 3px;
+    }
+    .note{
+        width: auto;
+        height: auto;
+    }
+}
+
+.booking-modal-body {
+    padding: 15px;
+}
+
+.booking-modal-footer {
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+.note {
+        width: auto;
+        height: auto;
+    }
+    button {
+        border: none;
+        outline: none;
+        padding: 5px 8px;
+        border-radius: 3px;
+    }
+
+    .btn-booking-confirm {
+        background-color: orange;
+    }
+
+    .btn-booking-cancel {
+        background-color: grey;
+        width: auto;
+        height: auto;
+    }
+
+    .btn-booking-check {
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 10px;
+        /* Thêm margin để giữ khoảng cách với các nút khác */
+    }
+
+    .btn-booking-check:hover {
+        background-color: #2980b9;
+    }
+}
+
+.preview-img-container {
+    .label-upload {
+        padding: 5px;
+        border-radius: 3px;
+        background: #ddd;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    .preview-image {
+        height: 50px;
+        width: 100%;
+        border: 1px solid #ddd;
+        background: center center no-repeat;
+        background-size: contain;
+        cursor: pointer;
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .booking-modal-container {
+        width: 100%;
+    }
+}

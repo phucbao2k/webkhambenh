@@ -1,47 +1,72 @@
-div._loading_overlay_wrapper{
+div._loading_overlay_wrapper {
     position: unset;
-    ._loading_overlay_overlay{
+
+    ._loading_overlay_overlay {
         z-index: 9122000;
     }
 }
-.manage-patient-container{
-    .m-p-title{
+
+.manage-patient-container {
+    .m-p-title {
         font-size: 15px;
         margin: 10px 0;
         text-align: center;
         text-transform: uppercase;
     }
-    .manage-patient-body{
+
+    .manage-patient-body {
         padding: 0 20px;
-        .table-manage-patient{
+
+        .table-manage-patient {
+
             table,
             th,
-            td{
+            td {
                 border: 1px solid black;
                 border-radius: collapse;
             }
+
             th,
-            td{
+            td {
                 padding: 5px;
                 text-align: left;
             }
-            button{
+
+            button {
                 border: none;
                 outline: none;
                 cursor: pointer;
             }
-            .mp-btn-confirm{
-                margin-right: 10px;
-                height: 30px;
+
+            .mp-btn-confirm,
+            .mp-btn-remedy {
+                height: auto;
                 border-radius: 3px;
+                margin-bottom: 10px; // Adjust spacing between buttons
+            }
+
+            .mp-btn-confirm {
+                margin-right: 10px;
                 background: orange;
             }
-            .mp-btn-remedy{
-                height: 30px;
-                border-radius: 3px;
+
+            .mp-btn-remedy {
                 background: #39dca0;
             }
         }
     }
-       
+
+    @media screen and (max-width: 767px) {
+
+        // Adjust styles for screens smaller than 768px wide
+        .manage-patient-body {
+            padding: 0 10px; // Adjust padding for smaller screens
+        }
+
+        .mp-btn-confirm,
+        .mp-btn-remedy {
+            margin-right: 0; // Remove right margin for smaller screens
+            margin-bottom: 5px; // Adjust spacing between buttons for smaller screens
+        }
+    }
 }

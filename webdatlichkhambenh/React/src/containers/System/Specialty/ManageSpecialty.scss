@@ -24,4 +24,18 @@
         padding-left: 3px;
         padding-right: 3px;
     }
+
+    @media screen and (max-width: 767px) {
+
+        /* Adjust styles for screens smaller than 768px wide */
+        .preview-image {
+            height: 30px;
+            /* Adjust the height for smaller screens */
+        }
+
+        .manage-doctor-editor {
+            margin-top: 1rem;
+            /* Adjust margin for smaller screens */
+        }
+    }
 }

@@ -1,0 +1,48 @@
+// Common styles for all screen sizes
+.profile-doctor-container {
+    .intro-doctor {
+        display: flex;
+        align-items: center;
+.view-detail-doctor{
+    color: blue($color: #000000) ;
+}
+        .content-left {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        .content-right {
+            width: calc(100% - 80px);
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+
+            .up {
+                font-weight: 600;
+            }
+
+            .down {
+                text-align: justify;
+            }
+        }
+    }
+
+    // Responsive styles
+    @media (max-width: 768px) {
+        .intro-doctor {
+            .content-left {
+                width: 60px;
+                height: 60px;
+            }
+
+            .content-right {
+                width: calc(100% - 60px);
+                padding-left: 10px;
+            }
+        }
+    }
+}

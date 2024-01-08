@@ -1,0 +1,39 @@
+// SearchDoctor.scss
+
+.search-bar-container {
+    position: relative;
+    width: 80%; // Set the desired width, for example, 80%
+    margin: auto; // Center the search bar
+
+    input {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .search-results {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+
+        li {
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #f0f0f0;
+            }
+        }
+    }
+
+    input:focus+.search-results {
+        display: block;
+    }
+}

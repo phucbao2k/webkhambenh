@@ -1,0 +1,89 @@
+.section-specialty {
+
+   
+    height: 150px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
+.specialty-container {
+    margin: 0 10px; 
+        display: flex;
+        flex-direction: column;
+
+    .specialty-header {
+        height: 60px;
+        margin-bottom: auto;
+        padding-top: auto;
+
+        .title-section {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .btn-section {
+            float: right;
+            padding: 10px 15px;
+            border: none;
+            outline: none;
+            display: block;
+            background: #ebebeb;
+            color: black;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            &:hover {
+                color: #fff;
+                background: #f7d800;
+            }
+        }
+    }
+
+        .specialty-body {
+            .slick-slider {
+                display: flex;
+            }
+    
+            .slick-slide {
+                margin-right: 10px; // Thêm khoảng cách giữa các slide
+            }
+    
+            .specialty-child {
+                margin-right: 10px; // Thêm khoảng cách giữa các phần tử (ảnh + nội dung)
+    
+                .bg-image {
+                    width: 100%; // Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của phần tử cha
+                    border-radius: 8px; // Bo góc hình ảnh nếu bạn muốn
+                    overflow: hidden; // Ẩn phần nào của hình ảnh vượt ra khỏi phần tử cha (nếu có)
+                }
+    
+                .position {
+                    text-align: center;
+                    padding: 10px 0;
+                }
+            }
+        }
+   @media only screen and (max-width: 768px) {
+    .slick-slider {
+            display: flex;
+            flex-wrap: nowrap; // Ngăn chặn trượt slide sang dòng mới
+            overflow-x: auto; // Cho phép cuộn ngang khi có nhiều hơn 2 slide
+        }
+    
+        .slick-list {
+            flex: 0 0 50%; // Chia đều không gian cho 2 slide
+            max-width: 50%; // Chia đều không gian cho 2 slide
+        }
+    
+        .specialty-child {
+            .specialty-name {
+                padding: 5px 0; // Giảm khoảng cách giữa các phần tử
+                margin: 4px; // Giảm margin để tránh chồng lên nhau
+            }
+        }
+   }
+   
+}

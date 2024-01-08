@@ -1,0 +1,188 @@
+{
+    "homeheader": {
+        "speciality": "Specialization ",
+        "searchdoctor": "Find a doctor by disease type",
+        "health-facility": "Medical facility",
+        "select-room": "Choose a clinic",
+        "doctor": "Doctor",
+        "select-doctor": "Choose a good doctor",
+        "fee": "Checkup fee",
+        "check-health": "Comprehensive examination",
+        "support": "Want to cooperate with us?",
+        "welcome": "Welcome",
+        "click": "Click here!",
+        "manage-account": "Manage account",
+        "handbook": "Handbook",
+        "solution": "Common diseases",
+        "select-speciality": "Select Specialty",
+        
+    },
+    "banner": {
+        "title1": "MEDICAL PLATFORM",
+        "title2": "COMPREHENSIVE HEALTH CARE",
+        "child1": "Specialist of Bones and Joints",
+        "child2": "Cardiovascular Specialist",
+        "child3": "Neurological Specialist",
+        "child4": "Ear - Nose - Throat Specialist",
+        "child5": "Dental Specialist - Jaw - Face",
+        "child6": "Elective Specialist (All specialties)"
+    },
+    "carousel": {
+        "carousel-1": "Popular specialties",
+        "carousel-2": "More",
+        "handbook": "Handbook - News",
+        "gooddoctor": "Our doctor"
+    },
+    "manage-schedule": {
+        "title": "Manage doctor's examination plan",
+        "choose-doctor": "Choose doctor",
+        "choose-date": "Choose date",
+        "save": "Save infor"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Schedule",
+            "no-schedule": "The doctor does not have an appointment during this time, please choose another date",
+            "choose": "Choose ",
+            "book-free": " and book (free)! ",
+            "more": "More Information"
+        },
+        "extra-infor-doctor": {
+            "text-address": "Address of examination",
+            "price": "Examination price: ",
+            "detail": "See details",
+            "payment": "Customers can pay fees in all forms. ",
+            "note": "Note: The above price is only the examination price, does not include the cost of other tests",
+            "hide-price": "Hide price list",
+            "pay": "Make online payment now !"
+        },
+        "booking-modal": {
+            "title": "Information to book a medical appointment",
+            "fullName": "First and last name (*Obligatory)",
+            "phoneNumber": "Phone number (*Obligatory)",
+            "email": "Customer's email address (*Obligatory)",
+            "address": "Contact address (*Obligatory)",
+            "reason": "Reason for examination (*Obligatory)",
+            "plantName": "Name of the body part you want to examine (*Obligatory)",
+            "gender": "Gender (*Obligatory)",
+            "btnConfirm": "Confirm",
+            "btnCancel": "Cancel",
+            "btnOffline": "Offline payment (Directly at the medical facility)",
+            "priceBooking": "Free booking",
+            "price": "Price: ",
+            "specialtyName": "Name of  specialty (*Obligatory)",
+            "avatar": "Pictures of sick",
+            "note": "Note: If you do not have an account, the email you enter will be your new account by default",
+           "note2": "Important: After booking an appointment (or paying online successfully), check your email, and confirm the appointment (including spam folder)",
+            "upload": "Upload",
+            "birthday": "Birthday (*Obligatory)",
+            "time": "Time",
+            "numerical-order": "Numerical order",
+            "view-image": "See attached photo",
+            "booking": "Book an appointment",
+            "total": "Total",
+            "manage-booking": "Confirmed Booking",
+            "manage-patient-booking": "Confirmed patient appointment",
+            "booking-history": "Booking history",
+            "check": "View more...",
+            "cancel-booking": "Cancel Booking",
+            "send": "Send",
+            "send-cancel": "Send cancellation reason information",
+            "info-booking": "Booking's Information",
+            "status": "Booking status",
+            "confirm": "Confirm",
+            "contact": "Want to become our partner? Contact 0981943577 now!",
+            "booking-done": "Send medical bills",
+            "info-status": "S1: Pending, S2: Confirmed by Customer, S3: Confirmed by Doctor, S4: Canceled, S5: Paid, S6: Done!",
+            "note_pay": "Paid but missed appointment? Look up payment results with transaction code to schedule a new appointment here...",
+            "viewdoctor": "View Doctor's Detail",
+            "viewbooking": "More...",
+            "doctorName": "Doctor's Name"
+        },
+        "email-confirm":{
+            "confirm": "Appointment confirmed successfully",
+            "dont-exist": "Appointment does not yet exist or has been confirmed!",
+            "note": "You can cancel your appointment in the account management section"
+        }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": "Create more doctor information",
+            "select-doctor": "Select Doctor",
+            "select-user-not-doctor": "Select a user who is not a doctor",
+            "position": "Level",
+            "intro": "Introduction information",
+            "add": "Create information",
+            "save": "Save information",
+            "price": "Price",
+            "payment": "Payment",
+            "province": "Province",
+            "nameClinic":"Clinic's name",
+            "addressClinic": "Clinic's address",
+            "note": "Note",
+            "specialty": "Specialization",
+            "select-clinic": "Select clinic / hospital"
+        }
+    },
+    "system": {
+        "change-success": "Updated info success! Please logout and re-login "
+    },
+    "create-user": {
+        "title": "Create new user",
+        "firstname": "First Name",
+        "lastname": "Last Name",
+        "invalid-feedback": "Please enter a valid value",
+        "email": "Email address",
+        "address": "Address",
+        "password": "Password",
+        "gender": "Gender",
+        "position": "Titles",
+        "roleid": "Position",
+        "phonenumber": "Phonenumber",
+        "image": "Image",
+        "agree": " Agree to terms and conditions.",
+        "confirm": "You must agree before submitting.",
+        "submit": "Confirm & Sign up"
+    },
+    "menu": {
+        "admin": {
+            "manage-user": "User System",
+            "manage-doctor": "Manage doctors",
+            "manage-admin": "Manage admins",
+            "crud": "Welcome!",
+            "crud-redux": "CRUD Redux",
+            "clinic": "Clinics",
+            "manage-clinic": "Manage clinics",
+            "specialty": "Specialties",
+            "manage-specialty": "Manage Specialties",
+            "handbook": "Handbook",
+            "manage-handbook": "Manage handbooks",
+            "home": "Home",
+            "common-diseases": "Handbook's title",
+            "specialty-name": "Specialty's name",
+            "clinic-name": "Clinic's name",
+            "address": "Address",
+            "detail": "Detail"
+        },
+        "doctor": {
+            "manage-schedule": "Manage Doctor's schedule",
+            "manage-patient": "Manage Doctor's customer"
+        }
+    },
+    "manage-user": {
+        "edit": "Edit user",
+        "save": "Save user"
+    },
+    "home-footer": {
+        "more-info": "This is the youtube channel where i learn web programming, you can visit for more information",
+        "co-operation": "Cooperation for development.",
+        "work-together": "Working together to reach new heights",
+        "catch-trend": "Catch the trend",
+        "treatment-trend": "Always at the forefront of medical treatment trends",
+        "customer": "Customer is center",
+        "priority": "Always put customers first, customer priority is number 1",
+        "iab": "Faculty of Information Technology - Vietnam National University of Agriculture",
+        "address":"Vietnam National University of Agriculture - Trau Quy Town - Gia Lam District - Hanoi City",
+        "bussiness": "Business registration number: 0106790291. Hanoi Department of Planning and Investment issued on March 16, 2015"
+    }
+}

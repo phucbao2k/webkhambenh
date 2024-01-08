@@ -1,0 +1,39 @@
+// SearchDoctor.scss
+
+.search-bar-container {
+    position: relative;
+    width: auto;
+    margin: auto; // Để thanh tìm kiếm nằm giữa màn hình
+
+    input {
+        width: 100%; // Để input mở rộng hết chiều ngang của thanh tìm kiếm
+        padding: 10px;
+        box-sizing: border-box; // Đảm bảo padding không làm tăng kích thước thực tế của input
+    }
+
+    .search-results {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none; // Ẩn kết quả khi chưa nhập gì
+
+        li {
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #f0f0f0;
+            }
+        }
+    }
+
+    input:focus+.search-results {
+        display: block; // Hiển thị kết quả khi input được focus
+    }
+}

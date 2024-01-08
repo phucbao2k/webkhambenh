@@ -1,0 +1,97 @@
+.div._loading_overlay_wrapper {
+    position: unset;
+
+    &._loading_overlay_overlay {
+        z-index: 9122000;
+    }
+}
+
+.manage-patient-container {
+    .m-p-title {
+        font-size: 15px;
+        margin: 10px 0;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .manage-patient-body {
+        padding: 0 20px;
+
+        .table-manage-patient {
+
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-radius: collapse;
+            }
+
+            th,
+            td {
+                padding: 10px; // Tăng padding cho cell
+                text-align: left;
+            }
+
+            button {
+                border: none;
+                outline: none;
+                cursor: pointer;
+            }
+
+            .mp-btn-confirm,
+            .mp-btn-remedy {
+                margin-right: 10px;
+                margin-bottom: 10px;
+                height: auto;
+                border-radius: 3px;
+                background: orange;
+            }
+
+            .mp-btn-remedy {
+                background: #39dca0;
+            }
+        }
+    }
+
+    .preview-img-container {
+        .label-upload {
+            padding: 10px; // Tăng padding cho label
+            border-radius: 3px;
+            background: #ddd;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        .preview-image {
+            height: 50px;
+            width: 100%;
+            border: 1px solid #ddd;
+            background: center center no-repeat;
+            background-size: contain;
+            cursor: pointer;
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        // Điều chỉnh kiểu dáng cho màn hình nhỏ hơn 768px
+
+        .manage-patient-body {
+            padding: 0 10px;
+        }
+
+        .mp-btn-confirm,
+        .mp-btn-remedy {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+
+        .preview-img-container {
+            .preview-image {
+                height: 30px;
+            }
+        }
+    }
+}

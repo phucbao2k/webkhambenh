@@ -1,0 +1,54 @@
+// Define variables for common styles
+$border-color: #ccc;
+$padding: 10px;
+$margin-bottom: 20px;
+
+// Container styles
+.doctor-detail-container {
+    display: flex;
+    flex-direction: column;
+border: 1px solid #ccc;
+    // Individual doctor styles
+    .doctor {
+        border: 1px solid $border-color;
+        padding: $padding;
+        margin-bottom: $margin-bottom;
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        // Specific styles based on content
+        .name {
+            font-weight: bold;
+        }
+
+        .address {
+            color: #007bff; // Blue color, you can change it
+        }
+
+        .price {
+            color: #28a745; // Green color, you can change it
+        }
+
+        .province {
+            color: #dc3545; // Red color, you can change it
+        }
+
+        .additional-info {
+            color: #ffc107; // Yellow color, you can change it
+        }
+    }
+
+    // Style to separate each doctor element
+    .doctor:not(:last-child) {
+        border-bottom: 1px solid $border-color;
+    }
+}

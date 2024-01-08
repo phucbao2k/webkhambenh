@@ -1,0 +1,100 @@
+.section-specialty {
+
+   
+    max-height: 100;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
+.specialty-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+    .specialty-header {
+        height: auto;
+        margin-bottom: auto;
+        padding-top: auto;
+
+        .title-section {
+            font-size: auto;
+            font-weight: 600;
+        }
+
+        .btn-section {
+            float: right;
+            padding: auto;
+            border: none;
+            outline: none;
+            display: block;
+            background: #ebebeb;
+            color: black;
+            cursor: pointer;
+            text-transform: uppercase;
+
+            &:hover {
+                color: #fff;
+                background: #f7d800;
+            }
+        }
+    }
+
+    .specialty-body {
+        
+        .specialty-child {
+            cursor: pointer;
+
+            .specialty-name {
+                padding: auto;
+                margin: 8px;
+            }
+
+            &:hover {
+                color: #45c3d2;
+            }
+        }
+
+
+
+
+
+        .slick-prev {
+            left: -10px !important;
+            z-index: 1000 !important;
+            height: 48px !important;
+            width: 44px !important;
+            background: #fff !important;
+            border: 2px solid #d7d7d7 !important;
+
+
+
+
+            &:hover {
+                background: #eceaea !important;
+            }
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            font-family: FontAwesome !important;
+            color: red !important;
+        }
+
+        .slick-next {
+            right: -5px !important;
+            z-index: 1000 !important;
+            height: 48px !important;
+            width: 44px !important;
+            background: #fff !important;
+            border: 2px solid #d7d7d7 !important;
+
+            &:hover {
+                background: #eceaea !important;
+            }
+        }
+    }
+
+}

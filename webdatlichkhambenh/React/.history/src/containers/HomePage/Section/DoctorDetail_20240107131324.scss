@@ -1,0 +1,33 @@
+// Define variables for common styles
+$border-color: #ccc;
+$padding: 10px;
+$margin-bottom: 20px;
+
+.doctor-detail-container {
+    padding: 20px;
+    border: 1px solid #ccc; // Viền kẻ cho toàn bộ container
+
+    h2 {
+        border-bottom: 1px solid #ccc; // Viền kẻ cho tiêu đề h2
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .doctor-info {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd; // Viền kẻ cho mỗi bác sĩ
+
+        p {
+            margin: 0;
+        }
+
+        .clinic-info,
+        .price-info,
+        .province-info,
+        .speciality-info {
+            padding: 10px;
+            border-top: 1px solid #ddd; // Viền kẻ cho mỗi thông tin cụ thể
+        }
+    }
+}

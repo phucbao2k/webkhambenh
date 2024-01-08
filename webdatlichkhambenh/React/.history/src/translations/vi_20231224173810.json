@@ -1,0 +1,181 @@
+{
+    "homeheader": {
+        "speciality": "Chuyên khoa",
+        "select-speciality": "Chọn chuyên khoa",
+        "searchdoctor": "Tìm bác sĩ theo loại bệnh lý",
+        "health-facility": "Cơ sở khám bệnh",
+        "select-room": "Chọn nơi khám bệnh",
+        "doctor": "Bác sĩ",
+        "select-doctor": "Chọn bác sĩ giỏi",
+        "fee": "Gói khám",
+        "check-health": "Khám toàn diện",
+        "support": "Muốn hợp tác với chúng tôi?",
+        "welcome": "Xin chào",
+        "click": "Bấm vào đây!",
+        "manage-account": "Quản lý tài khoản",
+        "handbook": "Cẩm nang-tin tức",
+        "solution": "Cẩm nang-tin tức"
+    },
+    "banner": {
+        "title1": "NỀN TẢNG Y TẾ",
+        "title2": "CHĂM SÓC SỨC KHỎE TOÀN DIỆN",
+        "child1": "Chuyên khoa về Xương khớp",
+        "child2": "Chuyên khoa về Tim mạch",
+        "child3": "Chuyên khoa về Thần kinh",
+        "child4": "Chuyên khoa về Tai - Mũi - Họng",
+        "child5": "Chuyên khoa về Răng - Hàm - Mặt",
+        "child6": "Khám tự chọn (Tất cả các chuyên khoa) "
+    },
+    "carousel": {
+        "carousel-1": "Chuyên khoa phổ biến",
+        "carousel-2": "Xem thêm",
+        "handbook": "Cẩm nang- Tin tức",
+        "gooddoctor": "Bác sĩ của chúng tôi"
+    },
+    "manage-schedule": {
+        "title": "Quản lý lịch khám của Bác Sỹ",
+        "choose-doctor": "Chọn Bác Sỹ",
+        "choose-date": "Chọn ngày",
+        "save": "Lưu thông tin"
+    },
+    "patient": {
+        "detail-doctor": {
+            "schedule": "Lịch khám",
+            "no-schedule": " Bác sĩ không có lịch hẹn khám trong thời gian này, vui lòng chọn ngày khác",
+            "choose": "Chọn ",
+            "book-free": " và đặt (miễn phí) ",
+            "more": "Xem thêm"
+        },
+        "extra-infor-doctor": {
+            "text-address": "Địa chỉ khám",
+            "price": "Gía khám: ",
+            "detail": "Xem chi tiết",
+            "payment": "Khách hàng có thể thanh toán chi phí bằng tất cả hình thức. ",
+            "note": "Lưu ý: Giá ở trên chỉ là giá khám, chưa bao gồm chi phí cho các xét nghiệm khác",
+            "hide-price": "Ẩn bảng giá",
+            "pay": "Thanh toán online!"
+        },
+        "booking-modal": {
+            "title": "Thông tin đặt lịch khám bệnh",
+            "fullName": "Họ và tên (*Bắt buộc)",
+            "phoneNumber": "Số điện thoại (*Bắt buộc)",
+            "email": "Email khách hàng (*Bắt buộc)",
+            "address": "Địa chỉ liên lạc (*Bắt buộc)",
+            "reason": "Lý do khám (*Bắt buộc)",
+            "plantName": "Tên bộ phận của cơ thể muốn khám (*Bắt buộc)",
+            "gender": "Giới tính (*Bắt buộc)",
+            "btnConfirm": "Xem chi tiết",
+            "btnCancel": "Hủy",
+            "btnOffline": "Thanh toán offline (Trực tiếp tại cơ sở y tế)",
+            "priceBooking": "Miễn phí đặt lịch",
+            "price": "Gía khám: ",
+            "specialtyName": "Tên chuyên khoa (*Bắt buộc)",
+            "avatar": "Hình ảnh bệnh nhân bị bệnh",
+            "note": "Lưu ý: Nếu chưa có tài khoản, email bạn nhập vào mặc định sẽ là tài khoản mới của bạn",
+            "note2": "Quan trọng: Sau khi đặt lịch khám thành công, hãy kiểm tra email của bạn và nhấn " (bao gồm cả mục thư rác) ",
+            "upload": "Tải lên",
+            "birthday": "Ngày sinh (*Bắt buộc)",
+            "time": "Thời gian",
+            "numerical-order": "STT",
+            "view-image": "Xem ảnh đính kèm",
+            "booking": "Đặt lịch hẹn",
+            "total": "Tổng cộng",
+            "manage-booking": "Lịch hẹn đã xác nhận",
+            "booking-history": "Lịch sử lịch hẹn",
+            "check": "Xem chi tiết",
+            "cancel-booking": "Hủy lịch hẹn",
+            "send": "Gửi",
+            "info-booking": "Thông tin đặt lịch khám bệnh",
+            "status": "Trạng thái",
+            "confirm": "Xác nhận",
+            "booking-done": "Gửi hóa đơn khám bệnh",
+            "info-status": "S1: Đang chờ, S2: Khách hàng đã xác nhận, S3: Bác sĩ đã xác nhận, S4: Đã hủy , S5: Đã thanh toán, S6: Đã khám xong",
+            "viewdoctor": "Đến xem thông tin bác sĩ",
+            "viewbooking": "Xem thêm...",
+            "doctorName": "Tên bác sĩ"
+        },
+        "email-confirm": {
+            "confirm": "Xác nhận lịch hẹn thành công",
+            "dont-exist": "Lịch hẹn chưa tồn tại hoặc đã được xác nhận!",
+            "note": "Bạn có thể hủy lịch hẹn ở mục quản lý tài khoản"
+        }
+    },
+    "admin": {
+        "manage-doctor": {
+            "title": " Tạo thêm thông tin bác sĩ",
+            "select-doctor": "Chọn bác sĩ",
+            "intro": "Thông tin giới thiệu",
+            "add": "Tạo thông tin",
+            "save": "Lưu thông tin",
+            "price": "Gía khám bệnh",
+            "payment": "Phương thức thanh toán",
+            "province": "Tỉnh thành",
+            "nameClinic": "Tên phòng khám",
+            "addressClinic": "Địa chỉ phòng khám",
+            "note": "Ghi chú",
+            "specialty": "Chuyên khoa",
+            "select-clinic": "Chọn phòng khám"
+        }
+    },
+    "system": {
+        "change-success": "Cập nhật thông tin thành công! Làm ơn đăng xuất và đăng nhập lại để nhận thấy sự thay đổi "
+    },
+    "create-user": {
+        "title": "Tạo người dùng mới",
+        "firstname": "Tên",
+        "lastname": "Tên đệm",
+        "invalid-feedback": "Làm ơn hãy nhập giá trị hợp lệ",
+        "email": "Email",
+        "address": "Địa chỉ",
+        "password": "Mật khẩu",
+        "gender": "Giới tính",
+        "position": "Vị trí",
+        "roleid": "Chức danh",
+        "phonenumber": "Số điện thoại",
+        "image": "Hình ảnh",
+        "agree": "Đồng ý với các điều khoản và điều kiện.",
+        "confirm": "Bạn cần đồng ý với các điều khoản và điều kiện.",
+        "submit": "Xác nhận- Đăng kí"
+    },
+    "menu": {
+        "admin": {
+            "manage-user": "Hệ thống người dùng",
+            "manage-doctor": "Quản lý bác sĩ",
+            "manage-admin": "Quản lý quản trị viên",
+            "crud": "Xin Chào!",
+            "crud-redux": "CRUD sử dụng Redux",
+            "clinic": "Phòng khám",
+            "manage-clinic": "Quản lí phòng khám",
+            "specialty": "Chuyên ngành",
+            "manage-specialty": "Các chuyên ngành",
+            "handbook": "Cẩm nang-tin tức",
+            "manage-handbook": "Quản lý cẩm nang-tin tức",
+            "home": "Trang chủ",
+            "common-diseases": "Tiêu đề của cẩm nang",
+            "specialty-name": "Tên chuyên ngành",
+            "clinic-name": "Tên phòng khám",
+            "address": "Địa chỉ",
+            "detail": "Chi tiết"
+        },
+        "doctor": {
+            "manage-schedule": "Quản lý lịch khám",
+            "manage-patient": "Quản lý khách hàng"
+        }
+    },
+    "manage-user": {
+        "edit": "Sửa thông tin",
+        "save": "Lưu thông tin"
+    },
+    "home-footer": {
+        "more-info": "Đây là kênh youtube mà tôi học lập trình web, bạn có thể ghé thăm để biết thêm nhiều thông tin hơn",
+        "co-operation": "Hợp tác cùng phát triển",
+        "work-together": "Cùng nhau hợp tác để vươn đến tầm cao mới",
+        "catch-trend": "Đón đầu xu hướng",
+        "treatment-trend": "Luôn đi đầu trong xu hướng khám chữa bệnh",
+        "customer": "Khách hàng là trung tâm",
+        "priority": "Luôn đặt khách hàng lên hàng đầu, ưu tiên khách hàng là số 1",
+        "iab": "Khoa Công nghệ Thông tin - Học Viện Nông Nghiệp Việt Nam",
+        "address": "Học viện nông nghiệp Việt Nam - Thị trấn Trâu Quỳ - Huyện Gia Lâm - Thành phố Hà Nội",
+        "bussiness": "Đăng kí kinh doanh số: 0106790291. Sở Kế hoạch Đầu tư Hà Nội cấp ngày 16/03/2015"
+    }
+}

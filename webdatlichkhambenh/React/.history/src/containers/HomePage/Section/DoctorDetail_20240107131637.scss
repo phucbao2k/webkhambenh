@@ -1,0 +1,41 @@
+.doctor-detail-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+
+    h2 {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .doctor-info {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+
+        p {
+            margin: 0;
+        }
+
+        .clinic-info,
+        .price-info,
+        .province-info,
+        .speciality-info {
+            padding: 10px;
+            border-top: 1px solid #ddd;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {
+        .doctor-info {
+            padding: 5px;
+
+            .clinic-info,
+            .price-info,
+            .province-info,
+            .speciality-info {
+                padding: 5px;
+            }
+        }
+    }
+}
